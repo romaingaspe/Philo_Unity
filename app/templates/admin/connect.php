@@ -16,7 +16,9 @@
         </div>
     </form>
 </div>
-
+<?php
+    var_dump($erreurs);
+?>
 <div class="center">
     <a class="btn waves-effect waves-light red darken-1" name="action" href="/nom_de_mon_projet/public/adhome">Retour</a>
 </div>
