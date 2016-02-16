@@ -1,6 +1,6 @@
 <header>
 	<nav>
-		<div class="container card-panel teal lighten-2">
+		<div class="container">
 			<a href="/Philo_Unity/public">
 				<img class="left" src="<?= $this->assetUrl('img/logo_final.png') ?>"></img>
 			</a>
