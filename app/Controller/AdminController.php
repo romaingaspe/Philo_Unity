@@ -1,7 +1,7 @@
 <?php
 
 namespace Controller;
-use Manager\VerifManager;
+
 use \W\Controller\Controller;
 
 class AdminController extends Controller
@@ -9,11 +9,7 @@ class AdminController extends Controller
 	public function connect()
 	{
 
-
-		$verif = new VerifManager($_POST['login']);
-
-		$params['erreurs'] = $verif->getErrors();
-		$this->show('admin/connect', $params);
+		$this->show('admin/connect');
 	}
 	public function deconnectTotale()
 	{
