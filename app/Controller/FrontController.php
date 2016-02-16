@@ -12,7 +12,15 @@ class FrontController extends Controller
 	 */
 	public function index()
 	{
-		$this->show('default/index');
+		$this->show('front/index');
+	}
+	public function profil()
+	{
+		$this->show('front/profil');
+	}
+	public function metier()
+	{
+		$this->show('front/metier');
 	}
 
 }

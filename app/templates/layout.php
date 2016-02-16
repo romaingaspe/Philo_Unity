@@ -9,21 +9,20 @@
 <body>
 	<header>
 		<nav>
-			<ul class="container">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Login</a></li>
-				<li><a href="#">Métiers</a></li>
-				<li><a href="#">Profils</a></li>
-			</ul>
+			<div class="container">
+				<ul class="right">
+					<li><a href="/Philo_Unity/public">Home</a></li>
+					<li><a href="metier">Métiers</a></li>
+					<li><a href="profil">Profils</a></li>
+					<li><a href="login">Login</a></li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 	<div class="container">
-
-
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
-
 		<footer>
 		</footer>
 	</div>
