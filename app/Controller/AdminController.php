@@ -10,17 +10,17 @@ class AdminController extends Controller
 	{
 		$this->show('admin/connect');
 	}
-	public function deconnect_totale()
+	public function deconnectTotale()
 	{
-		$this->show('admin/deconnect_totale');
+		$this->show('admin/deconnectTotale');
 	}
-	public function reini_pass()
+	public function reiniPass()
 	{
-		$this->show('admin/reini_pass');
+		$this->show('admin/reiniPass');
 	}
-	public function reini_pass_tok()
+	public function reiniPassTok()
 	{
-		$this->show('admin/reini_pass_tok');
+		$this->show('admin/reiniPassTok');
 	}
 
 }

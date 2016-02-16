@@ -6,21 +6,21 @@ use \W\Controller\Controller;
 
 class PortfolioController extends Controller
 {
-    public function all_works()
+    public function allWorks()
 	{
-		$this->show('Portfolio/all_works');
+		$this->show('Portfolio/allWorks');
 	}
     public function commentaires()
 	{
 		$this->show('Portfolio/commentaires');
 	}
-    public function gallery_projects()
+    public function galleryProjects()
 	{
-		$this->show('Portfolio/gallery_projects');
+		$this->show('Portfolio/galleryProjects');
 	}
-    public function projects_page()
+    public function projectsPage()
     {
-        $this->show('Portfolio/projects_page');
+        $this->show('Portfolio/projectsPage');
     }
 
 }

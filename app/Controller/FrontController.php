@@ -18,9 +18,9 @@ class FrontController extends Controller
 	{
 		$this->show('front/conditions');
 	}
-	public function contact_admin()
+	public function contactAdmin()
 	{
-		$this->show('front/contact_admin');
+		$this->show('front/contactAdmin');
 	}
 
 }

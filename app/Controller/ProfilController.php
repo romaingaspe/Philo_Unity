@@ -8,19 +8,19 @@ class ProfilController extends Controller
 {
     public function contact()
     {
-        $this->show('Profil/contact');
+        $this->show('profil/contact');
     }
-    public function updates_pages()
+    public function updatesPages()
     {
-        $this->show('Profil/updates_pages');
+        $this->show('profil/updatesPages');
     }
-    public function user_profil()
+    public function profilUser()
     {
-        $this->show('Profil/user_profil');
+        $this->show('profil/profilUser');
     }
     public function profilsAll()
     {
-        $this->show('Profil/profilsAll');
+        $this->show('profil/profilsAll');
     }
 
 }
