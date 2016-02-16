@@ -9,7 +9,7 @@ class AdminController extends Controller
 	public function connect()
 	{
 
-		$this->show('admin/connect', $params);
+		$this->show('admin/connect');
 	}
 	public function deconnectTotale()
 	{
