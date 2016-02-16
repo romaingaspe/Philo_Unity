@@ -20,23 +20,4 @@
 <div class="center">
     <a class="btn waves-effect waves-light red darken-1" name="action" href="/nom_de_mon_projet/public/adhome">Retour</a>
 </div>
-<?php 
-    if(!empty($errors)){
-        echo '<p class="red-text text-darken-1">';
-        echo implode('<br />', $errors);
-        echo '</p>';  
-    }
-    if(!empty($success)){
-        echo  '<p class="green-text text-darken-1">'.$success.'</p>';
-    }
-    echo 'utilisateur : '.$id['username'].'<br />';
-    echo 'email : '.$id['email'].'<br />';
-    if($id['role'] == 1){
-        echo 'role : Admin ';
-
-
-    }
-
-    var_dump($_SESSION);     
-         ?>
 <?php $this->stop('main_content') ?>
