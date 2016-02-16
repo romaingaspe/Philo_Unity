@@ -1,3 +1,5 @@
+
+<?php require_once'header.php' ?>
 <body>
 	<header>
 		<nav>
@@ -13,4 +15,5 @@
 			</div>
 		</nav>
 	</header>
-	
+
+<?php require_once'footer.php' ?>
