@@ -17,7 +17,7 @@
 				<ul class="right">
 					<li><a href="metier">Métiers</a></li>
 					<li><a href="profil">Profils</a></li>
-					<li><a href="login">Login</a></li>
+					<li><a href="connect">Se connecter</a></li>
 				</ul>
 			</div>
 		</nav>
