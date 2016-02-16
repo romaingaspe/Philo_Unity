@@ -1,28 +1,24 @@
 <?php
-/**
- * Basic fix for UserManager. Extends UserManager & Manager
- *
- * How-to :
- * 	- Place-it in \app\Manager
- * 	- In your controller add in header :
- *		use \Manager\FixUserManager;
- *
- * @author Axel Wargnier <axel@axessweb.fr>
- * @copyright WebForce3 2016
- */
-namespace Manager;
 
-class VerifManager {
+namespace Classes;
+
+class FormValidator {
 
 	protected $errors = array();
+
+
+	/*****
+		$verif = new FormValidator();
+		$verif->verifEmail($_POST['login']);
+		$params['erreurs'] = $verif->getErrors();
 
 	public function verifEmail($mail){
 
 		if(!filter_var($mail, FILTER_VALIDATE_URL) !== false){
-			$errors[] = 'Le lien est invalide';
+			$this->errors[] = 'Le lien est invalide';
 		}
 	}
-
+	****/
 
     /**
      * Get the value of Basic fix for UserManager. Extends UserManager & Manager
