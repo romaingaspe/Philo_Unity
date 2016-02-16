@@ -1,7 +1,7 @@
 <?php
 
 namespace Controller;
-use Classes\FormValidator;
+
 use \W\Controller\Controller;
 
 class AdminController extends Controller
