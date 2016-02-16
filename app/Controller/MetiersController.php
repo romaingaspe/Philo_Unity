@@ -4,7 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 
-class MetierController extends Controller
+class MetiersController extends Controller
 {
 
 }

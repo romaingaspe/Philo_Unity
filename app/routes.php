@@ -10,7 +10,7 @@
 		['GET', '/profil/portfolio/all_works', 'portfolio#all_works', 'all_works'],
 		['GET', '/profil/portfolio/gallery_projects', 'portfolio#gallery_projects', 'gallery_projects'],
 		['GET', '/profil/portfolio/projects_page', 'portfolio#projects_page', 'projects_page'],
-		['GET', '/profil/portfolio/comments', 'portfolio#comments', 'comments'],
+		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
 
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
 		['GET', '/profil/user_profil', 'profil#user_profil', 'user_profil'],
@@ -24,6 +24,6 @@
 		['GET|POST', 'admin/connect', 'admin#connect', 'connect'],
 		['GET|POST', 'admin/deconnect_totale', 'admin#deconnect_totale', 'deconnect_totale'],
 		['GET|POST', 'admin/reini_pass', 'admin#reini_pass', 'reini_pass'],
-		['GET|POST', 'admin/reini_pass_totale', 'admin#reini_pass_totale', 'reini_pass_totale'],
+		['GET|POST', 'admin/reini_pass_totale', 'admin#reini_pass_tok', 'reini_pass_tok'],
 
 	);
