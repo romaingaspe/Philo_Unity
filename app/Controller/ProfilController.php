@@ -14,9 +14,13 @@ class ProfilController extends Controller
     {
         $this->show('Profil/updates_pages');
     }
-    public function index()
+    public function user_profil()
     {
         $this->show('Profil/user_profil');
+    }
+    public function profilsAll()
+    {
+        $this->show('Profil/profilsAll');
     }
 
 }

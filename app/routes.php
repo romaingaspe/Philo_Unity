@@ -14,6 +14,7 @@
 
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
 		['GET', '/profil/user_profil', 'profil#user_profil', 'user_profil'],
+		['GET', '/profil_all', 'profil#profilsAll', 'profilsall'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 		['GET|POST', '/profil/updates_pages', 'profil#updates_pages', 'updates_pages'],
 
@@ -21,9 +22,9 @@
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],
 
 		/////////////////////////////ADMIN///////////////////////////////////////////////////////////
-		['GET|POST', 'admin/connect', 'admin#connect', 'connect'],
-		['GET|POST', 'admin/deconnect_totale', 'admin#deconnect_totale', 'deconnect_totale'],
-		['GET|POST', 'admin/reini_pass', 'admin#reini_pass', 'reini_pass'],
-		['GET|POST', 'admin/reini_pass_totale', 'admin#reini_pass_tok', 'reini_pass_tok'],
+		['GET|POST', '/admin/connect', 'admin#connect', 'connect'],
+		['GET|POST', '/admin/deconnect_totale', 'admin#deconnect_totale', 'deconnect_totale'],
+		['GET|POST', '/admin/reini_pass', 'admin#reini_pass', 'reini_pass'],
+		['GET|POST', '/admin/reini_pass_totale', 'admin#reini_pass_tok', 'reini_pass_tok'],
 
 	);

@@ -16,8 +16,8 @@
 				</a>
 				<ul class="right">
 					<li><a href="metiers">Métiers</a></li>
-					<li><a href="profil">Profils</a></li>
-					<li><a href="connect">Se connecter</a></li>
+					<li><a href="profil_all">Profils</a></li>
+					<li><a href="/Philo_Unity/public/admin/connect">Se connecter</a></li>
 				</ul>
 			</div>
 		</nav>
