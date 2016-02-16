@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
-
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/materialize.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
@@ -22,12 +21,15 @@
 			</div>
 		</nav>
 	</header>
-	<div class="container">
+	<div class="container section">
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
 		<footer>
 		</footer>
 	</div>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/materialize.js') ?>"></script>
+
 </body>
 </html>
