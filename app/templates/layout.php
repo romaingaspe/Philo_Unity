@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
 
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/materialize.css') ?>">
 </head>
 <body>
 	<div class="container">
 		<header>
-			<h1>W :: <?= $this->e($title) ?></h1>
+			<h1><?= $this->e($title) ?></h1>
 		</header>
 
 		<section>
