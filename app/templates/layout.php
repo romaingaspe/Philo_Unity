@@ -7,10 +7,18 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/materialize.css') ?>">
 </head>
 <body>
+	<header>
+		<nav>
+			<ul class="container">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Métiers</a></li>
+				<li><a href="#">Profils</a></li>
+			</ul>
+		</nav>
+	</header>
 	<div class="container">
-		<header>
-			<h1><?= $this->e($title) ?></h1>
-		</header>
+
 
 		<section>
 			<?= $this->section('main_content') ?>
