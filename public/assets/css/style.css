@@ -6,3 +6,67 @@ nav {
     color: #fff;
     background-color: #128b82;
 }
+/* ############################ START : PROPRIETES GLOBALES############################ */
+
+#pagination span{
+	padding: 1em;
+	background-color: #128B82;
+}
+
+
+/* ############################ END : PROPRIETES GLOBALES############################ */
+
+/* * * * * * * * PART : START METIERS ET SOUS CAT METIERS * * * * * * * */
+
+#main_photo{ /* div qui contient ma big img */
+	position: relative;
+	height: 25em;
+}
+.bigphoto{/* ma big img: fait 100% de #main_photo */
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+
+#allworks article img{
+	width: 100%;
+}
+#allworks .photo-work{
+	height:66%;
+}
+#allworks p{
+	height:33%;
+	padding: 3%;
+    text-align: justify;
+    background-color: #E9FCFB;
+}
+#allworks h6{
+	padding: 3%;
+	text-align: justify;
+}
+#allworks article{
+	margin-bottom: 3%;
+}
+#allworks h1{
+	background-color: #128B82;
+    padding: 1%;
+    color: #fff;
+}
+#allworks article h6{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+/* * * * * * * * PART : END METIERS ET SOUS CAT METIERS * * * * * * * */
+
+								/* ######## */
+
+/* * * * * * * * PART : START METIERS ET SOUS CAT METIERS * * * * * * * */
+
+
+
+/* * * * * * * * PART : END METIERS ET SOUS CAT METIERS * * * * * * * */
+
+								/* ######## */
