@@ -15,7 +15,7 @@
 					<img class="left" src="<?= $this->assetUrl('img/logo_final.png') ?>"></img>
 				</a>
 				<ul class="right">
-					<li><a href="metier">Métiers</a></li>
+					<li><a href="metiers">Métiers</a></li>
 					<li><a href="profil">Profils</a></li>
 					<li><a href="connect">Se connecter</a></li>
 				</ul>

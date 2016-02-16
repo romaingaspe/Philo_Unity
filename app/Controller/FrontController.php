@@ -14,13 +14,13 @@ class FrontController extends Controller
 	{
 		$this->show('front/index');
 	}
-	public function profil()
+	public function conditions()
 	{
-		$this->show('front/profil');
+		$this->show('front/conditions');
 	}
-	public function metier()
+	public function contact_admin()
 	{
-		$this->show('front/metier');
+		$this->show('front/contact_admin');
 	}
 
 }
