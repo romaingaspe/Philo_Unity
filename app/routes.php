@@ -3,7 +3,7 @@
 	$w_routes = array(
 		///////////////////////////FRONT/////////////////////////////////////////////////////////////
 		['GET', '/', 'Front#index', 'index'],
-		['GET', '/conditions', 'Front#cgu', 'conditions'],
+		['GET', '/conditions', 'Front#conditions', 'conditions'],
 		['GET|POST', '/contactadmin', 'Front#contactAdmin', 'contactAdmin'],
 
 		////////////////////////////PORTFOLIO////////////////////////////////////////////////////////
