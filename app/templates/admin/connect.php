@@ -1,8 +1,11 @@
 <?php $this->layout('layout2', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
+
+<div class="container section center" style="margin-top:50px">
 <div class="row center">
-    <form method="POST" class="col l6 offset-l3">
+  <h2>Connecte toi </h2>
+    <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
         <div class="input-field">
             <label for="login">Login</label>
             <input type="text" name="login" placeholder="Votre login">
@@ -18,7 +21,27 @@
     </form>
 </div>
 
+
 <div class="center">
     <a class="btn waves-effect waves-light red darken-1" name="action" href="/nom_de_mon_projet/public/adhome">Retour</a>
 </div>
+
+<?php
+    if(!empty($errors)){
+        echo '<p class="red-text text-darken-1">';
+        echo implode('<br />', $errors);
+        echo '</p>';
+    }
+    if(!empty($success)){
+        echo  '<p class="green-text text-darken-1">'.$success.'</p>';
+        session_start($_SESSION);
+    }
+
+
+
+    var_dump($_SESSION);
+
+
+?>
+
 <?php $this->stop('main_content') ?>

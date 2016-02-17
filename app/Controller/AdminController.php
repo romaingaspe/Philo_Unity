@@ -1,11 +1,11 @@
 <?php
 
-namespace Controller; 
+namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\BlogManager;
 use \W\Security\AuthentificationManager;
-use \W\Manager\UserManager;
+use \Manager\FixUserManager as UserManager;
 
 class AdminController extends Controller
 {
@@ -28,26 +28,32 @@ class AdminController extends Controller
 			}
 		}
 			if(count($errors) == 0){
+
+				// il n'y a pas d'erreurs, l'utilisateur a bien rentré un login correct et un pass
+				// si ces infos sont valides en BD
 				$userId = $login->isValidLoginInfo($_POST['login'], $_POST['pass']);
 				if(is_int($userId) && $userId != 0){
 					$userManager = new UserManager();
-					$userManager->setTable($app->getConfig('security_user_table'));
+					/*$userManager->setTable($app->getConfig('security_user_table'));*/
 					$userDatas = $userManager->find($userId);
+					// alors démarrer la session (logUserIn)
 					$login->logUserIn($userDatas);
-					$params['success'] = 'Benvenue vous êtes connecté(e) !';
+					// et rediriger vers l'accueil
+					$params['success'] = 'Bienvenue vous êtes connecté(e) !';
+
 				}
-				$params['id'] = $userDatas;
+				$this->redirectToRoute('index');
+				/*$params['id'] = $userDatas;*/
 			}
 			if(count($errors) > 0){
 				$params['errors'] = $errors;
-
 			}
 
 		$this->show('admin/connect', $params);
 	}
 
-		
-	
+
+
 	public function deconnectTotale()
 	{
 		$this->show('admin/deconnectTotale');
@@ -101,7 +107,7 @@ class AdminController extends Controller
 			if(count($errors) > 0){
 				$params['errors'] = $errors;
 			}
-		}		
+		}
 		$this->show('admin/reiniPass');
 	}
 	public function reiniPassTok()
