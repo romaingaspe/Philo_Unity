@@ -1,8 +1,8 @@
-<?php $this->layout('layout', ['title' => 'Login']) ?>
+<?php $this->layout('layout2', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
-<div class="row">
-    <form method="POST" class="col l6">
+<div class="row center">
+    <form method="POST" class="col l6 offset-l3">
         <div class="input-field">
             <label for="login">Login</label>
             <input type="text" name="login" placeholder="Votre login">
@@ -10,6 +10,7 @@
         <div class="input-field">
             <label for="pass">Mot de passe</label>
             <input type="text" name="pass" placeholder="Votre mot de passe">
+            <a href="/admin/reinipass">Vous avez perdu votre mot de passe ?</a>
         </div>
         <div class="input-field">
             <input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">

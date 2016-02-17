@@ -9,7 +9,6 @@ nav {
 /* ############################ START : PROPRIETES GLOBALES############################ */
 
 
-
 /* ############################ END : PROPRIETES GLOBALES############################ */
 
 /* * * * * * * * PART : START METIERS ET SOUS CAT METIERS * * * * * * * */
@@ -48,7 +47,7 @@ nav {
 }
 /*---FOOTER---*/
 footer div{
-	height: 200px;
+	height: 120px;
 }
 footer div h5 {
 	width: 100%
@@ -62,6 +61,29 @@ footer a{
 								/* ######## */
 
 /* * * * * * * * PART : START GALLERY PROJECTS * * * * * * * */
+
+/* ***** start : TYPO (texts) gallery projects***** */
+#presentation h5{
+	padding: 1%;
+	background-color: #128B82;
+	display: inline-block;
+	color: #fff;
+}
+#presentation h4{
+	color: #128B82;
+}
+div h6{
+	padding: 5%;
+	background-color: #128B82;
+	color: #fff;
+	display: inline-block;
+	text-transform: uppercase;
+}
+/* ***** end :TYPO (texts) gallery projects***** */
+#presentation img{
+	width: 100%;
+}
+
 
 
 
