@@ -1,9 +1,10 @@
 <?php $this->layout('layout2', ['title' => 'Contact']) ?>
 
 <?php $this->start('main_content') ?>
-<div class="container section center" style="margin-top:150px">
+<div class="container section center" style="margin-top:50px">
     <div class="row">
-        <form class="col l8 offset-l2">
+        <h2>Contacter l'administrateur</h2>
+        <form class="col l8 offset-l2" style="margin-top:50px">
             <div class="row">
                 <div class="input-field col l6">
                     <input placeholder="Prénom" id="prénom" type="text" class="validate">
