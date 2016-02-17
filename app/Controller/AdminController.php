@@ -34,7 +34,7 @@ class AdminController extends Controller
 					$userManager->setTable($app->getConfig('security_user_table'));
 					$userDatas = $userManager->find($userId);
 					$login->logUserIn($userDatas);
-					$params['success'] = 'Benvenue vous êtes connecté(e) !';
+					$params['success'] = 'Bienvenue vous êtes connecté(e) !';
 				}
 				$params['id'] = $userDatas;
 			}
