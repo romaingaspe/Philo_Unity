@@ -124,12 +124,9 @@ div h6{
 	width: 50%;
 	padding: 10px;
 }
-<<<<<<< HEAD
 #com-projects h7{
 	color: #128b82;
 }
-
-=======
 #cards-folio div.card-image div p{
     position: absolute;
     z-index: 3;
@@ -146,7 +143,35 @@ div h6{
 #cards-folio div.card-image div{
     position: relative;
 }
->>>>>>> origin/master
-
-								/* ######## */
+								
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
+
+							/* ######## */
+
+/* * * * * * * * PART : START GALLERY PROJECTS * * * * * * * */
+#titleprojet{
+	width: 30%;
+}
+#titleentete{
+	background-color: #e0f2f1;
+}
+#slideprojet{
+	margin-left: 2%;
+}
+#com-projects{
+	margin-top: 3%;
+	margin-left: 33.5%;
+	width: 50%;
+	padding: 10px;
+}
+#com-projects h7{
+	color: #128b82;
+}
+
+
+
+								
+
+/* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
+							
+						/* ######## */
