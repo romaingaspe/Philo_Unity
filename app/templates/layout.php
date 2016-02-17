@@ -3,14 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
-
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/materialize.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
 <body>
 	<?php $this->insert('partials/header') ?>
 
-	<div class="container section">
+	<div>
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
