@@ -12,7 +12,7 @@
 			<div class="col l6">
 				<h4>Paul-Emile DOUDAIN</h4>
 				<h5>Marquetteur</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vero dolor quidem possimus dicta consequatur aliquam, soluta minima voluptatibus officia maiores ipsam veritatis dolore dolorum eum, eligendi modi a commodi?</p>
+				<p class="teal lighten-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vero dolor quidem possimus dicta consequatur aliquam, soluta minima voluptatibus officia maiores ipsam veritatis dolore dolorum eum, eligendi modi a commodi?</p>
 			</div>
 	</section>
 	
@@ -65,55 +65,123 @@
 
 
 
-	<div class="container row isotope" style="position: relative; height: 583.5px;">
+	<div id="cards-folio" class="container row isotope" style="position: relative; height: 50em;">
 		<div class=" " style="position: absolute; left: 0px; top: 0px;">
 			<div class=" col l4 ">
 	  			<div class="card">
-	  				<div class="card-content">
-	          			<p class="area"><a href="">Projet Plateau</a></p>
+	  				<div class="card-content" style="padding: 7px;">
+	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
 	        			<a href="">
-	        			<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        				<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
 	        			</a>
 	  				</div>
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
-		  					<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					<div>
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+			  					</p>
+		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					</div>
 		  				</a>
 	  				</div>
 	  			</div>
   			</div>
   			<div class=" col l4 ">
 	  			<div class="card">
+	  				<div class="card-content" style="padding: 7px;">
+	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        				<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
-		  					<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					<div>
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+			  					</p>
+		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					</div>
 		  				</a>
-	  				</div>
-	  				<div class="card-content">
-	          			<p class="area"><a href="">Projet Plateau</a></p>
-	        			<a href="">
-	        			<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
-	        			</a>
 	  				</div>
 	  			</div>
   			</div>
   			<div class=" col l4 ">
 	  			<div class="card">
+	  				<div class="card-content" style="padding: 7px;">
+	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        				<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
-		  					<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					<div>
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+			  					</p>
+		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					</div>
 		  				</a>
-	  				</div>
-	  				<div class="card-content">
-	          			<p class="area"><a href="">Projet Plateau</a></p>
-	        			<a href="">
-	        			<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
-	        			</a>
 	  				</div>
 	  			</div>
   			</div>
-  			
-		</div>
+  			<div class=" col l4 ">
+	  			<div class="card">
+	  				<div class="card-content" style="padding: 7px;">
+	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        				<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
+	  				<div class="card-image waves-effect waves-block waves-light">
+		  				<a href="">
+		  					<div>
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+			  					</p>
+		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					</div>
+		  				</a>
+	  				</div>
+	  			</div>
+  			</div>
+  			<div class=" col l4 ">
+	  			<div class="card">
+	  				<div class="card-content" style="padding: 7px;">
+	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        				<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
+	  				<div class="card-image waves-effect waves-block waves-light">
+		  				<a href="">
+		  					<div>
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+			  					</p>
+		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					</div>
+		  				</a>
+	  				</div>
+	  			</div>
+  			</div>
+  			<div class=" col l4 ">
+	  			<div class="card">
+	  				<div class="card-content" style="padding: 7px;">
+	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        				<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
+	  				<div class="card-image waves-effect waves-block waves-light">
+		  				<a href="">
+		  					<div>
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+			  					</p>
+		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  					</div>
+		  				</a>
+	  				</div>
+	  			</div>
+  			</div>
+  		</div>
 	</div>
 
 
