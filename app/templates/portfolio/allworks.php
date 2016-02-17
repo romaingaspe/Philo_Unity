@@ -4,14 +4,14 @@
 <?php $this->start('main_content') ?>
 	<div id="main_photo" class="center-align">
 		<h5>Propulsé par:</h5>
-		<img class="bigphoto" src="/Philo_Unity/public/assets/img/philo.jpg" alt="">
+		<img class="bigphoto" src="<?= $this->assetUrl('img/philo.jpg') ?>" alt="">
 	</div>
 	<h1 class="center-align">Nos métiers</h1>
 	<section id="allworks" class="row">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<article class="col l4">
 			<div class="photo-work">
-				<img src="/Philo_Unity/public/assets/img/empty_works.png" alt=""><!-- couture.jpg -->
+				<img src="<?= $this->assetUrl('img/empty_works.png') ?>" alt=""><!-- couture.jpg -->
 			</div>
 			<div class="text-works">
 				<h6>Couture</h6>
@@ -21,7 +21,7 @@
 
 		<article class="col l4">
 			<div>
-				<img src="/Philo_Unity/public/assets/img/empty_works.png" alt="">
+				<img src="<?= $this->assetUrl('img/empty_works.png') ?>" alt="">
 			</div>	
 			<div class="text-works">
 				<h6>Marqueterie</h6>
@@ -30,7 +30,7 @@
 		</article>
 		<article class="col l4">
 			<div>
-				<img src="/Philo_Unity/public/assets/img/empty_works.png" alt="">
+				<img src="<?= $this->assetUrl('img/empty_works.png') ?>" alt="">
 			</div>	
 			<div class="text-works">
 				<h6>Sculpture</h6>
@@ -39,7 +39,7 @@
 		</article>
 		<article class="col l4">
 			<div>
-				<img src="/Philo_Unity/public/assets/img/empty_works.png" alt="">
+				<img src="<?= $this->assetUrl('img/empty_works.png') ?>" alt="">
 			</div>	
 			<div class="text-works">
 				<h6>Peinture</h6>
@@ -48,7 +48,7 @@
 		</article>
 		<article class="col l4">
 			<div>
-				<img src="/Philo_Unity/public/assets/img/empty_works.png" alt="">
+				<img src="<?= $this->assetUrl('img/empty_works.png') ?>" alt="">
 			</div>	
 			<div class="text-works">
 				<h6>Menuiserie</h6>
@@ -57,7 +57,7 @@
 		</article>
 		<article class="col l4">
 			<div>
-				<img src="/Philo_Unity/public/assets/img/empty_works.png" alt="">
+				<img src="<?= $this->assetUrl('img/empty_works.png') ?>" alt="">
 			</div>	
 			<div class="text-works">
 				<h6>Arts-Plastiques</h6>

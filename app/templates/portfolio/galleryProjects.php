@@ -1,11 +1,12 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
+<!-- Mon chemin d'accès url :profil/portfolio/galleryprojects -->
 <?php $this->start('main_content') ?>
 	<span><a href="">portefolio></a><a href="">gallerie des projets></a></span>
-	<section id="presentation">
+	<section id="presentation" class="container section">
 		<div class="row">
 			<div class="col l6">
-				<img src="" alt="">
+				<img src="<?= $this->assetUrl('img/ebeniste.jpg') ?>" alt="">
 			</div>
 			<div class="col l6">
 				<h4>Paul-Emile DOUDAIN</h4>
