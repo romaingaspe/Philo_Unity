@@ -91,19 +91,28 @@ div h6{
 
 								/* ######## */
 /* * * * * * * * PART : START GALLERY PROJECTS * * * * * * * */
-
-#barreproj{
-	margin-left: 16.5%;
-	color:  #128b82;
-	font-size: 20px;
-}
 #titleprojet{
-	width: 25%;
-	background-color: 
+	width: 30%;
+}
+#titleentete{
+	background-color: #e0f2f1;
 }
 #slideprojet{
-	margin-left: 7%;
+	margin-left: 2%;
 }
+#banner-project span:nth-child(){
+
+}
+#com-projects{
+	margin-top: 3%;
+	margin-left: 33.5%;
+	width: 50%;
+	padding: 10px;
+}
+#com-projects h7{
+	color: #128b82;
+}
+
 
 								/* ######## */
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */

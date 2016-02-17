@@ -7,3 +7,4 @@ app/templates/front/index.php
 app/templates/front/index.php
 app/templates/front/index.php
 *.php
+public/assets/css/style.css
