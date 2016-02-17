@@ -78,7 +78,7 @@
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
 		  					<div>
-		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
 			  					</p>
 		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 		  					</div>
@@ -97,7 +97,7 @@
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
 		  					<div>
-		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
 			  					</p>
 		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 		  					</div>
@@ -116,7 +116,7 @@
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
 		  					<div>
-		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
 			  					</p>
 		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 		  					</div>
@@ -135,7 +135,7 @@
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
 		  					<div>
-		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut!
 			  					</p>
 		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 		  					</div>
@@ -154,7 +154,7 @@
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
 		  					<div>
-		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
 			  					</p>
 		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 		  					</div>
@@ -173,7 +173,7 @@
 	  				<div class="card-image waves-effect waves-block waves-light">
 		  				<a href="">
 		  					<div>
-		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! Quod dolorem, quis modi, sed nobis necessitatibus quam cum aspernatur, quidem iste expedita alias.
+		  						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
 			  					</p>
 		  						<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 		  					</div>
