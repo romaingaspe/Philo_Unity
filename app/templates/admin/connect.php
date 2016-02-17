@@ -8,11 +8,11 @@
     <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
         <div class="input-field">
             <label for="login">Login</label>
-            <input type="text" name="login" placeholder="Votre login">
+            <input type="text" name="login" placeholder="Votre login" value="<?php if(isset($_POST['login'])){  echo $_POST['login'];} ?>">
         </div>
         <div class="input-field">
             <label for="pass">Mot de passe</label>
-            <input type="text" name="pass" placeholder="Votre mot de passe">
+            <input type="text" name="pass" placeholder="Votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
             <a href="/admin/reinipass">Vous avez perdu votre mot de passe ?</a>
         </div>
         <div class="input-field">
@@ -34,12 +34,8 @@
     }
     if(!empty($success)){
         echo  '<p class="green-text text-darken-1">'.$success.'</p>';
-        session_start($_SESSION);
+
     }
-
-
-
-    var_dump($_SESSION);
 
 
 ?>
