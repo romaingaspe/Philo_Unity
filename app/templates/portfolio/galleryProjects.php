@@ -3,18 +3,25 @@
 <!-- Mon chemin d'accès url :profil/portfolio/galleryprojects -->
 <?php $this->start('main_content') ?>
 	<span><a href="">portefolio></a><a href="">gallerie des projets></a></span>
-	<section id="presentation" class="container section">
-		<div class="row">
+	
+	<!-- 1ère ligne de présentation --> 
+	<section id="presentation" class="container row">
 			<div class="col l6">
 				<img src="<?= $this->assetUrl('img/ebeniste.jpg') ?>" alt="">
 			</div>
 			<div class="col l6">
 				<h4>Paul-Emile DOUDAIN</h4>
-				<h6>Marquetteur</h6>
+				<h5>Marquetteur</h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vero dolor quidem possimus dicta consequatur aliquam, soluta minima voluptatibus officia maiores ipsam veritatis dolore dolorum eum, eligendi modi a commodi?</p>
 			</div>
-		</div>
 	</section>
+	
+	<!-- 2ème ligne titre --> 
+	<div class="container">
+		<h6>Gallerie des projets</h6>
+	</div>
+
+	<!-- 3ème ligne gallerie -->
 	<section id="gallery">
 		<div class="row">
 		<article class="col l4">
