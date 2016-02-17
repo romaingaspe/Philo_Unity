@@ -19,6 +19,14 @@
 .carousel{
 	height: 900px;
 }
+.carousel h2{
+	margin: 0;
+}
+footer:before{
+	content: '';
+	display: block;
+	height: 150px;
+}
 /*Header*/
 nav img {
 	height: 40px;
