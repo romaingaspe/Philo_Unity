@@ -17,7 +17,7 @@
 	</section>
 	
 	<!-- 2ème ligne titre --> 
-	<div class="container">
+	<div class="container center-align">
 		<h6>Gallerie des projets</h6>
 	</div>
 
@@ -63,4 +63,64 @@
 		</div>
 	</section>
 
+
+
+	<div class="container row isotope" style="position: relative; height: 583.5px;">
+		<div class=" " style="position: absolute; left: 0px; top: 0px;">
+			<div class=" col l4 ">
+	  			<div class="card">
+	  				<div class="card-content">
+	          			<p class="area"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        			<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
+	  				<div class="card-image waves-effect waves-block waves-light">
+		  				<a href="">
+		  					<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  				</a>
+	  				</div>
+	  			</div>
+  			</div>
+  			<div class=" col l4 ">
+	  			<div class="card">
+	  				<div class="card-image waves-effect waves-block waves-light">
+		  				<a href="">
+		  					<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  				</a>
+	  				</div>
+	  				<div class="card-content">
+	          			<p class="area"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        			<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
+	  			</div>
+  			</div>
+  			<div class=" col l4 ">
+	  			<div class="card">
+	  				<div class="card-image waves-effect waves-block waves-light">
+		  				<a href="">
+		  					<img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+		  				</a>
+	  				</div>
+	  				<div class="card-content">
+	          			<p class="area"><a href="">Projet Plateau</a></p>
+	        			<a href="">
+	        			<span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+	        			</a>
+	  				</div>
+	  			</div>
+  			</div>
+  			
+		</div>
+	</div>
+
+
+
+
+                    
+                  
+      
+    
 <?php $this->stop('main_content') ?>
