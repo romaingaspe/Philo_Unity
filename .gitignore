@@ -1,9 +1,4 @@
 /vendor/
 /app/config.php
 /phpDocumentor.phar
-
-app/templates/front/index.php
-app/templates/front/index.php
-app/templates/front/index.php
-app/templates/front/index.php
 *.php
