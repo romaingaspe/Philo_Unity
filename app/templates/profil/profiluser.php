@@ -17,8 +17,8 @@
     </div>
     </div>
 </div>
-<a href="#" class="right-align"><h4>Voir le portfolio</h4></a>
-<div class="slider">
+<a  href="#" class="right-align"><h4>Voir le portfolio</h4></a>
+<div id="profilslide" class="slider">
    <ul class="slides">
      <li>
        <img src="http://lorempixel.com/1000/500/technics/1"> <!-- random image -->
