@@ -1,8 +1,12 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-	<h5 class="center">Propulsé par:</h5>
-	<img src="<?= $this->assetUrl('img/philo.jpg') ?>" alt="" class="responsive-img"/>
+	<div id="mainphoto">
+		<div class="row">
+			<p class="center white-text">Propulsé par la</p>
+			<img class="col l6 offset-l3"src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
+		</div>
+	</div>
 	<h1 class="center-align">COUTURE</h1>
 	<section id="allworks" class="row section container">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->

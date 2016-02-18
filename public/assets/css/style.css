@@ -1,14 +1,21 @@
+footer div ul {
+	margin: 0 !important;
+}
+.indicators{
+	z-index: 100;
+	padding: 15px 0;
+}
 /*--INDEX--*/
 
 #mainphoto{
 	background-image: url('../img/philo.jpg');
-	min-width: 100%;
+	width: 100%;
 	height: 900px;
+	background-size: cover;
 }
 #mainphoto p{
 	margin: 0 ;
 	font-size: 2em;
-	color: red;
 }
 #mainphoto .row {
 	padding-top: 300px;
@@ -21,11 +28,6 @@
 }
 .carousel h2{
 	margin: 0;
-}
-footer:before{
-	content: '';
-	display: block;
-	height: 150px;
 }
 /*Header*/
 nav img {
