@@ -5,7 +5,7 @@
   <div class="row center">
     <div class="col l6 offset-l3 center align card-panel teal lighten-2">
       <h3 class="white-text">Déconnexion</h3>
-      <p>Etes vous sur de vouloir vous déconnecter ?</p>
+      <p class="white-text">Etes vous sur de vouloir vous déconnecter ?</p>
     </div>
   <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
   <div class="input-field">
