@@ -30,11 +30,17 @@ i{
 	height: 900px;
 	background-size: cover;
 }
-#mainphoto p{
+#mainphoto3{
+	background-image: url('../img/philo_3.jpg');
+	width: 100%;
+	height: 900px;
+	background-size: cover;
+}
+#mainphoto p,#mainphoto2 p,#mainphoto3 p{
 	margin: 0 ;
 	font-size: 2em;
 }
-#mainphoto .row {
+#mainphoto .row,#mainphoto2 .row,#mainphoto3 .row {
 	padding-top: 300px;
 }
 .carousel-item{
