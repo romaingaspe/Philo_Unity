@@ -8,7 +8,6 @@
   </div>
     <form method="POST" class="col l6 offset-l3">
         <div class="input-field">
-            <label for="email">adresse email</label>
             <i class="material-icons prefix">email</i>
             <input type="text" name="email" placeholder="Votre email">
         </div>
