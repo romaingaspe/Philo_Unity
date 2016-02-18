@@ -14,14 +14,16 @@
 			</div>
 		</div>
 		<div class="row">
-			<div id="list-edit" class="col l4">
+			<div id="list-bouton-edit" class="col l4">
 				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
-				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
+				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre </a>
 				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
 			</div>
-			<div class="col l2">
-				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
-				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre projet</a>
+			<div id="bloc-projet-edit" class="col l2">
+				<a id="projet-edit" class="waves-effect waves-light btn">
+				Nom de mon projet 1</a>
+				<a id="projet-edit" class="waves-effect waves-light btn">
+				Nom de mon projet 1</a>
 			</div>
 			<div class="col l6">
 				<form >

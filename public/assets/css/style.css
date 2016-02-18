@@ -219,8 +219,6 @@ footer div div ul {
 
 
 
-
-
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 
 						/* ######## */
@@ -255,10 +253,24 @@ footer div div ul {
 
 #bouton-edit{
     height: 4.5em;
-    padding-top: 1em;
+    padding: 1em 0 0 0 ;
     width: 100%;
 }
 
+#bloc-projet-edit{
+	padding: 0;
+}
+#bloc-projet-edit a{
+	background-color: #e0f2f1;
+	color: #128B82;
+}
+    
+#projet-edit {
+    height: 3.5em;
+   /*  padding: 1em 0 0 0; */
+    width: 100%;
+    font-size: x-small;
+}
 
 
 
