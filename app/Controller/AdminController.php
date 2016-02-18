@@ -14,7 +14,7 @@ class AdminController extends Controller
 
 		$login = new AuthentificationManager();
 		$errors = array();
-		$params = []; // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
+		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
 		if(!empty($_POST)){
 			// Faire vérification des champs ICI
 			if(empty($_POST['login'])){
@@ -46,8 +46,10 @@ class AdminController extends Controller
 		$params['errors'] = $errors;
 		$this->show('admin/connect', $params);
 	}
-
-
+	public function deconnect()
+	{
+		$this->show('admin/deconnect');
+	}
 
 	public function deconnectTotale()
 	{
