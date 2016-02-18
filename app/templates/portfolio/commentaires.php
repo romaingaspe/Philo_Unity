@@ -4,7 +4,7 @@
 		<div class="container row">
 
 			<div id="banner-project" class="center-align card-panel hoverable grey lighten-2 col l8 offset-l2"
-		 			style=""><span class="left"style="background-color: #128b82;padding: 10px;color: transparent;">1 1
+		 			style="margin-top: 5%;"><span class="left"style="background-color: #128b82;padding: 10px;color: transparent;">1 1
 		 			</span>COMMENTAIRE<span class="right"style="background-color: #128b82;padding: 10px;color: transparent;">2 2
 		 			</span>
 			</div>
