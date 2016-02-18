@@ -34,24 +34,48 @@
 				Nom de mon projet 6</a>
 			</div>
 			<div id="form-update" class="col l6">
-				<h6>lalalalalalalalala</h6>
+				<h6 class="center-align nameProject">Nom de mon projet 1</h6>
 				<form class=" grey lighten-4">
 					<div class="row">
 						 <form>
-							 <div class="input-field col s12">
+							 <div class="champsText input-field col s12">
 							 	<textarea id="textarea1" class="materialize-textarea"></textarea>
-							 	<label for="textarea1">Textarea</label>
+							 	<label for="textarea1">Titre de votre projet</label>
 							</div>
-							<div class="input-field col s12">
+							<div class="champsText input-field col s12">
 								 	<textarea id="textarea1" class="materialize-textarea"></textarea>
-								 	<label for="textarea1">Textarea</label>
+								 	<label for="textarea1">Descriptif</label>
 	 						</div>
 						</form>
-						
-	 						 
- 						
-					 </div>
+					</div>
 				</form>
+				<div class="col l1 titre-doc-charge">
+					<h6>Titre</h6>
+				</div>
+				<form class="col l6">
+					<div class="row">
+						<div class="input-field">
+							<input id="input_text" type="text" length="10">
+							<label for="input_text">Input text</label>
+						</div>
+					</div>
+				</form>
+				<form action="#" class="col l5">
+					<div class="file-field input-field">
+						<div class="btn">
+							<input type="file">
+							<span>File</span>
+							
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" type="text">
+						</div>
+					</div>
+					
+				</form>
+				
+        
+        
 			</div>
 	        
 		</div>     
