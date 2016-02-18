@@ -310,12 +310,11 @@ footer div div ul {
 
 /******ZONE FORMULAIRE POUR GERER LES MODIFICATIONS******/
 
-#form-update label{
-    padding: 1em;
+#form-update{
+    padding: 0;
 }
 #form-update .champsText {
-    padding: 0 2em;
-    margin: 0;
+    margin: 1em;
 }
 h6.nameProject{
     background-color: #01579B;
@@ -333,6 +332,13 @@ h6.nameProject{
 	margin-right: 1em;
 }
 
+#form-update button{
+	margin-top: 10%;
+}
+/******Padding du contenu******/
+.gestionInfos{
+	margin-bottom: 16%;
+}
 /* * * * * * * * PART : END UPDATES-PAGES * * * * * * * */
 
 
