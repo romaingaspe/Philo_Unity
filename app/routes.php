@@ -16,7 +16,7 @@
 		['GET', '/profil/profiluser', 'profil#profiluser', 'profiluser'],
 		['GET', '/profils', 'profil#profilsAll', 'profilsall'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
-		['GET|POST', '/profil/update', 'profil#update', 'update'],
+		['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
 
 		////////////////////////////METIERS////////////////////////////////////////////////////////
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],

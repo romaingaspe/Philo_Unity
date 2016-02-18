@@ -74,7 +74,7 @@ footer a{
 #presentation h4{
 	color: #128B82;
 }
-div h6{
+#gallery-title h6{
 	padding: 2% 10%;
 	background-color: #128B82;
 	color: #fff;
@@ -96,9 +96,6 @@ div h6{
 	margin-top: 4em;
 	margin-bottom: 4em;
 }
-
-
-
 
 
 
@@ -175,3 +172,40 @@ div h6{
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 							
 						/* ######## */
+
+/* * * * * * * * PART : START GALLERY PROJECTS * * * * * * * */
+
+
+/* ***** start : TYPO (texts) gallery projects***** */
+#entete h6:nth-child(2){ /* nom et prenom de l'apprenant sous photo-gauche*/
+	padding: 3%;
+	background-color: #128B82;
+	display: inline-block;
+	color: #fff;
+	font-size: 1.2em;
+	width: 100%;
+	margin: 0 auto;
+}
+#entete h6:nth-child(1){/*Intitulé GESTION DES INFOS  */
+	padding: 5%;
+	background-color: #128B82;
+	display: inline-block;
+	color: #128b82;
+	font-size: 1.2em;
+	width: 100%;
+}
+
+/* ***** end :TYPO (texts) gallery projects***** */
+#entete img{
+	width: 100%;
+}
+
+#list-edit a{
+	display: block;
+}
+
+
+
+
+
+/* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
