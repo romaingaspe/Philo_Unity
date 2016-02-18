@@ -5,8 +5,8 @@
 	<div class="row">
 
 		<div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2"
-		 			style=""><span class="left"style="background-color: #128b82;padding: 10px;color: transparent;">1 1
-		 			</span>PROJETS<span class="right"style="background-color: #128b82;padding: 10px;color: transparent;">2 2
+		 			style=""><span class="left"style="background-color: #128b82;padding: 15px;color: transparent;">1 1
+		 			</span>PROJETS<span class="right"style="background-color: #128b82;padding: 15px;color: transparent;">2 2
 		 			</span>
 
 		</div>
