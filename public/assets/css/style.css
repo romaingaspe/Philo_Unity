@@ -235,8 +235,15 @@ footer div div ul {
 /* * * * * * * * PART : START COMMENTAIRE PROJECTS * * * * * * * */
 
 #image-entete img{
-	height: 300px;
+	height: 320px;
 	margin-bottom: 5%;
+}
+#image-entete h5{
+	background-color: #795548;
+	color: white;
+}
+#form-com label{
+	color: #128b82;
 }
 
 

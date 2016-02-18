@@ -12,14 +12,18 @@
 		</div>
 		<div class="container">
 		<div id="image-entete" class="row">
+			<h5 class="container center-align col l6 offset-l3">Dessus de table</h5>
 			<img class="col l6 offset-l3 responsive-img wp-post-image"src="<?= $this->assetUrl('img/marqueterie4.jpg') ?>">
 
 		</div>
 		</div>
 
-		<div class="container"style="width: 50%;background-color: #e0e0e0;">
+		<div id="form-com"class="container"style="width: 50%;">
 			<div class="row">
     			<form class="col s12">
+    			<div id="image-entete">
+    				<h5 class="container center-align ">Publier un commentaire </h5>
+    			</div>
       			<div class="row">
         			<div class="input-field col s6">
           			<input placeholder="Placeholder" id="first_name" type="text" class="validate">
@@ -34,8 +38,9 @@
           			<input id="last_name" type="text" class="validate">
           			<label for="last_name">posté un commentaire</label>
         			</div>
+        			<a class="waves-effect waves-light btn"style="float: right;">commenter</a>
       			</div>
-      			
+      		</form>
     		</form>
   			</div>			
 		</div>
