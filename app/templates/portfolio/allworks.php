@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	<h1 class="center-align">Nos métiers</h1>
-	<section id="allworks" class="row">
+	<section id="allworks" class="row container">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<article class="col l4">
 			<div class="photo-work">
