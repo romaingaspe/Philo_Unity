@@ -2,7 +2,7 @@ i{
 	color:white;
 }
 #profil{
-	height: 700px;
+	height: 600px;
 	padding-top: 50px;
 }
 #bandeau{
@@ -164,7 +164,7 @@ footer div div ul {
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 
 								/* ######## */
-								
+
 /* * * * * * * * PART : START GALLERY PROJECTS * * * * * * * */
 #titleprojet{
 	width: 30%;
@@ -283,7 +283,7 @@ footer div div ul {
 	background-color: #e0f2f1;
 	color: #128B82;
 }
-    
+
 #projet-edit {
     height: 3.5em;
    /*  padding: 1em 0 0 0; */
