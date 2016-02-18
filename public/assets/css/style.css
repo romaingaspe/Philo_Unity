@@ -9,11 +9,11 @@ i{
 	margin-top: 50px;
 }
 /*---SLIDER---*/
-.indicators{
+#profilslide.indicators{
 	z-index: 100;
 	padding: 15px 0;
 }
-.slider, .slides{
+#profilslide.slider, #profilslide .slides{
 	height: 800px !important;
 }
 /*--INDEX--*/
@@ -266,4 +266,3 @@ footer div div ul {
 
 
 						/* ######## */
-
