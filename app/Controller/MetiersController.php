@@ -8,6 +8,7 @@ class MetiersController extends Controller
 {
     public function metiers()
 	{
+        
 		$this->show('metiers/metiers');
 	}
 
