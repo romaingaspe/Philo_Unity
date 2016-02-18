@@ -1,5 +1,5 @@
 i{
-	color:white;	
+	color:white;
 }
 #profil{
 	height: 700px;
@@ -101,6 +101,12 @@ footer div h5 {
 footer a{
 	color: red;
 	width: 100%;
+}
+footer .row{
+	margin: 0;
+}
+footer div div ul {
+	padding-top: 50px;
 }
 /* * * * * * * * PART : END METIERS ET SOUS CAT METIERS * * * * * * * */
 
