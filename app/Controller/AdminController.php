@@ -48,6 +48,9 @@ class AdminController extends Controller
 	}
 	public function deconnect()
 	{
+		$login = new AuthentificationManager();
+		$userId = $login->logUserOut();
+
 		$this->show('admin/deconnect');
 	}
 

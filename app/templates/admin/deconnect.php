@@ -9,13 +9,17 @@
     </div>
   <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
   <div class="input-field">
-      <input type="submit" name="but" value="Oui, je le veux ;)!!!" class="waves-effect waves-light btn">
+      <input type="submit" name="but" value="deconnexion" class="waves-effect waves-light btn">
   </div>
   </form>
 </div>
   <div class="center">
       <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil</a>
   </div>
+
+<?php
+
+?>
 
 <?php $this->stop('main_content') ?>
 
