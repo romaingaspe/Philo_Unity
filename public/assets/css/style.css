@@ -1,3 +1,33 @@
+/*--INDEX--*/
+
+#mainphoto{
+	background-image: url('../img/philo.jpg');
+	min-width: 100%;
+	height: 900px;
+}
+#mainphoto p{
+	margin: 0 ;
+	font-size: 2em;
+	color: red;
+}
+#mainphoto .row {
+	padding-top: 300px;
+}
+.carousel-item{
+	width: 500px !important;
+}
+.carousel{
+	height: 900px;
+}
+.carousel h2{
+	margin: 0;
+}
+footer:before{
+	content: '';
+	display: block;
+	height: 150px;
+}
+/*Header*/
 nav img {
 	height: 40px;
 	margin-top: 12px;
@@ -140,7 +170,7 @@ footer a{
 #cards-folio div.card-image div{
     position: relative;
 }
-								
+
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 
 							/* ######## */
@@ -167,9 +197,10 @@ footer a{
 
 
 
-								
+
 
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
+<<<<<<< HEAD
 							
 						/* ######## */
 
@@ -209,3 +240,7 @@ footer a{
 
 
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
+=======
+
+						/* ######## */
+>>>>>>> origin/master
