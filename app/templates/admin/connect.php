@@ -1,11 +1,12 @@
-<?php var_dump($this) ?>
 <?php $this->layout('layout2', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
 
 <div class="container section center" style="margin-top:50px">
 <div class="row center">
-  <h1>Connecte toi </h1>
+  <div class="col l6 offset-l3 center align card-panel teal lighten-2">
+    <h3 class="white-text">Connexion</h3>
+  </div>
     <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
         <div class="input-field">
             <i class="material-icons prefix">account_circle</i>

@@ -14,6 +14,7 @@
 				<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Métiers<i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a href="/Philo_Unity/public/profils">Profils</a></li>
 				<li><a href="/Philo_Unity/public/admin/connect">Se connecter</a></li>
+				<li><a href="/Philo_Unity/public/admin/deconnect">Se deconnecter</a></li>
 			</ul>
 		</div>
 	</nav>
