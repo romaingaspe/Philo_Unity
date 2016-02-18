@@ -5,16 +5,18 @@
         <h1 class="center col l12  red accent-2">Section *Insérer Nom*</h1>
     </div>
     <div class="row" id="profil">
-        <div class=" col l8 offset-l2">
-        <img class="col l6" src="http://lorempixel.com/300/200/people/1" alt="" />
+        <div class=" col l8 offset-l3">
+        <?php
+        echo '<img class="col l3 responsive-img" src="'.$profil['photo'].'" alt="" id="trombi"/>'
+        ?>
         <div class="col l6">
-            <h2>Nom</h2>
-            <h3>Métier</h3>
-            <p>date</p>
-            <br />
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <?php
+            echo '<h2>'.$profil['prenom'].' '.$profil['nom'].'</h2>';
+            echo '<h3>Métier</h3>';
+            echo '<p>date</p>';
+            echo '<br />';
+            echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>';
+            ?>
         </div>
         </div>
     </div>

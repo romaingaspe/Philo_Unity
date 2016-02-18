@@ -12,7 +12,7 @@
 		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
 
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
-		['GET', '/profil/profiluser', 'profil#profiluser', 'profiluser'],
+		['GET', '/profil/profiluser/[:id]', 'profil#profiluser', 'profiluser'],
 		['GET', '/profils', 'profil#profilsAll', 'profilsall'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 		['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],

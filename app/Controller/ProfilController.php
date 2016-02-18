@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use Manager\FixUserManager;
 
 class ProfilController extends Controller
 {
@@ -14,9 +15,15 @@ class ProfilController extends Controller
     {
         $this->show('profil/updatesPages');
     }
-    public function profilUser()
+    public function profilUser($id)
     {
-        $this->show('profil/profilUser');
+
+        $prof = new FixUserManager();
+    	$profil = [
+    		'profil' => $prof->find($id),
+    		/*'username' => $user->find($art->find($id)['id_user'])['username'];*/
+    	];
+        $this->show('profil/profilUser', $profil);
     }
     public function profilsAll()
     {
