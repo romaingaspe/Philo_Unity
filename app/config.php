@@ -17,6 +17,13 @@ $w_config = [
 	'security_role_property' => 'role',				//nom de la colonne pour le "role"
 
 	'security_login_route_name' => 'connect',			//nom de la route affichant le formulaire de connexion
+
+		// phpmailer
+		'phpmailer_server' => 'smtp.mailgun.org', 		//Adresse du smtp
+		'phpmailer_port' => '587',						//Port
+		'phpmailer_user' => 'phpmailer@wf3.axw.ovh',	//utilisateur
+		'phpmailer_pass' => '123456789',				//mot de passe smtp
+
 ];
 
 require('routes.php');
