@@ -1,5 +1,5 @@
 <header>
-	<nav>
+	<nav class="brown">
 		<div class="container nav-wrapper">
 			<a href="/Philo_Unity/public">
 				<img class="left" src="<?= $this->assetUrl('img/logo_final.png') ?>"></img>

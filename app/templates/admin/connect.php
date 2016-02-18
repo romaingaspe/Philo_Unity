@@ -1,18 +1,21 @@
+<?php var_dump($this) ?>
 <?php $this->layout('layout2', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
 
 <div class="container section center" style="margin-top:50px">
 <div class="row center">
-  <h2>Connecte toi </h2>
+  <h1>Connecte toi </h1>
     <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
         <div class="input-field">
+            <i class="material-icons prefix">account_circle</i>
             <label for="login">Login</label>
-            <input type="text" name="login" placeholder="Votre login">
+            <input type="text" name="login" placeholder="Votre login" value="<?php if(isset($_POST['login'])){  echo $_POST['login'];} ?>">
         </div>
         <div class="input-field">
+            <i class="material-icons prefix">verified_user</i>
             <label for="pass">Mot de passe</label>
-            <input type="text" name="pass" placeholder="Votre mot de passe">
+            <input type="password" name="pass" placeholder="Votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
             <a href="/admin/reinipass">Vous avez perdu votre mot de passe ?</a>
         </div>
         <div class="input-field">
@@ -23,7 +26,7 @@
 
 
 <div class="center">
-    <a class="btn waves-effect waves-light red darken-1" name="action" href="/nom_de_mon_projet/public/adhome">Retour</a>
+    <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil </a>
 </div>
 
 <?php
@@ -34,12 +37,8 @@
     }
     if(!empty($success)){
         echo  '<p class="green-text text-darken-1">'.$success.'</p>';
-        session_start($_SESSION);
+
     }
-
-
-
-    var_dump($_SESSION);
 
 
 ?>

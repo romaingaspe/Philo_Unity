@@ -17,7 +17,7 @@
 	</section>
 	
 	<!-- 2ème ligne titre --> 
-	<div class="container center-align">
+	<div id="gallery-title" class="container center-align">
 		<h6>Gallerie des projets</h6>
 	</div>
 

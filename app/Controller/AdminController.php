@@ -11,48 +11,45 @@ class AdminController extends Controller
 {
 	public function connect()
 	{
-		$app = getApp();
-		$login = new AuthentificationManager;
+
+		$login = new AuthentificationManager();
 		$errors = array();
-		$params = []; // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
+		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
 		if(!empty($_POST)){
 			// Faire vérification des champs ICI
 			if(empty($_POST['login'])){
 				$errors[] = 'Le Login est vide';
 			}
-			if(!filter_var($_POST['login'], FILTER_VALIDATE_EMAIL) !== false){
+			elseif(!filter_var($_POST['login'], FILTER_VALIDATE_EMAIL) !== false){
 				$errors[] = 'Le Login est invalide';
 			}
 			if(empty($_POST['pass'])){
 				$errors[] = 'Le pass est vide';
 			}
-		}
 			if(count($errors) == 0){
-
 				// il n'y a pas d'erreurs, l'utilisateur a bien rentré un login correct et un pass
 				// si ces infos sont valides en BD
 				$userId = $login->isValidLoginInfo($_POST['login'], $_POST['pass']);
 				if(is_int($userId) && $userId != 0){
 					$userManager = new UserManager();
-					/*$userManager->setTable($app->getConfig('security_user_table'));*/
-					$userDatas = $userManager->find($userId);
+					$userDatas = $userManager->find($id);
 					// alors démarrer la session (logUserIn)
 					$login->logUserIn($userDatas);
 					// et rediriger vers l'accueil
 					$params['success'] = 'Bienvenue vous êtes connecté(e) !';
-
 				}
-				$this->redirectToRoute('index');
-				/*$params['id'] = $userDatas;*/
+				else {
+					$errors[] ='dommage !!!';
+				}
 			}
-			if(count($errors) > 0){
-				$params['errors'] = $errors;
-			}
-
+		}
+		$params['errors'] = $errors;
 		$this->show('admin/connect', $params);
 	}
-
-
+	public function deconnect()
+	{
+		$this->show('admin/deconnect');
+	}
 
 	public function deconnectTotale()
 	{
