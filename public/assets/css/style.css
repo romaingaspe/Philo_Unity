@@ -24,11 +24,23 @@ i{
 	height: 900px;
 	background-size: cover;
 }
-#mainphoto p{
+#mainphoto2{
+	background-image: url('../img/philo_2.jpeg');
+	width: 100%;
+	height: 900px;
+	background-size: cover;
+}
+#mainphoto3{
+	background-image: url('../img/philo_3.jpg');
+	width: 100%;
+	height: 900px;
+	background-size: cover;
+}
+#mainphoto p,#mainphoto2 p,#mainphoto3 p{
 	margin: 0 ;
 	font-size: 2em;
 }
-#mainphoto .row {
+#mainphoto .row,#mainphoto2 .row,#mainphoto3 .row {
 	padding-top: 300px;
 }
 .carousel-item{
@@ -149,11 +161,10 @@ footer div div ul {
 	margin-bottom: 4em;
 }
 
-
-
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 
 								/* ######## */
+								
 /* * * * * * * * PART : START GALLERY PROJECTS * * * * * * * */
 #titleprojet{
 	width: 30%;
@@ -213,15 +224,13 @@ footer div div ul {
 #com-projects h7{
 	color: #128b82;
 }
+/* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 
 
-
+						/* ######## */
 
 
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
-
-							
-						/* ######## */
 
 /* * * * * * * * PART : START COMMENTAIRE PROJECTS * * * * * * * */
 
@@ -263,10 +272,24 @@ footer div div ul {
 
 #bouton-edit{
     height: 4.5em;
-    padding-top: 1em;
+    padding: 1em 0 0 0 ;
     width: 100%;
 }
 
+#bloc-projet-edit{
+	padding: 0;
+}
+#bloc-projet-edit a{
+	background-color: #e0f2f1;
+	color: #128B82;
+}
+    
+#projet-edit {
+    height: 3.5em;
+   /*  padding: 1em 0 0 0; */
+    width: 100%;
+    font-size: x-small;
+}
 
 
 
@@ -274,12 +297,3 @@ footer div div ul {
 
 
 						/* ######## */
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master

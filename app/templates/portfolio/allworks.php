@@ -2,7 +2,7 @@
 
 
 <?php $this->start('main_content') ?>
-	<div id="mainphoto">
+	<div id="mainphoto2">
 		<div class="row">
 			<p class="center white-text">Propulsé par la</p>
 			<img class="col l6 offset-l3"src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />

@@ -1,11 +1,12 @@
-<?php var_dump($this) ?>
 <?php $this->layout('layout2', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
 
 <div class="container section center" style="margin-top:50px">
 <div class="row center">
-  <h1>Connecte toi </h1>
+  <div class="col l6 offset-l3 center align card-panel teal lighten-2">
+    <h3 class="white-text">Connexion</h3>
+  </div>
     <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
         <div class="input-field">
             <i class="material-icons prefix">account_circle</i>
@@ -16,7 +17,7 @@
             <i class="material-icons prefix">verified_user</i>
             <label for="pass">Mot de passe</label>
             <input type="password" name="pass" placeholder="Votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
-            <a href="/admin/reinipass">Vous avez perdu votre mot de passe ?</a>
+            <a href="reinipass">Vous avez perdu votre mot de passe ?</a>
         </div>
         <div class="input-field">
             <input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
