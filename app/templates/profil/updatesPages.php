@@ -7,7 +7,7 @@
 		<div id="entete" class="row">
 			<div class="col l4">
 				<img src="<?= $this->assetUrl('img/ebeniste2.jpg') ?>" alt="">
-				<h6 class="center-align">Pauline DOVES</h6>
+				<h6 class="center-align nom-prenom">Pauline DOVES</h6>
 			</div>
 			<div class="col l8  center-align">
 				<h6 class="center-align teal lighten-5">Gestion de vos informations</h6>
@@ -15,23 +15,34 @@
 		</div>
 		<div class="row">
 			<div id="list-edit" class="col l4">
-				<a class="waves-effect waves-light btn">Editer votre profil</a>
-				<a class="waves-effect waves-light btn">Editer votre projet</a>
-				<a class="waves-effect waves-light btn">Lire vos messages</a>
+				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
+				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
+				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
 			</div>
 			<div class="col l2">
-				<a class="waves-effect waves-light btn">Editer votre profil</a>
-				<a class="waves-effect waves-light btn">Editer votre projet</a>
+				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
+				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre projet</a>
 			</div>
-			<form class="col l6">
-				<!-- <div class="row"> -->
-					<div class="input-field col s6">
-					<i class="material-icons prefix">mode_edit</i>
-					<textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-					<label for="icon_prefix2">Votre message</label>
-					</div>
-				<!-- </div> -->
-			</form>
+			<div class="col l6">
+				<form >
+					<div class="row">
+						 <form class="">
+							 <div class="input-field col s12">
+							 	<textarea id="textarea1" class="materialize-textarea"></textarea>
+							 	<label for="textarea1">Textarea</label>
+							</div>
+						</form>
+					 </div>
+					 <div class="row">
+ 						 <form class="">
+	 						 <div class="input-field col s12">
+								 	<textarea id="textarea1" class="materialize-textarea"></textarea>
+								 	<label for="textarea1">Textarea</label>
+	 						</div>
+ 						</form>
+					 </div>
+				</form>
+			</div>
 	        
 		</div>     
     </section>

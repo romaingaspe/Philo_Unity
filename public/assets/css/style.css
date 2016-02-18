@@ -200,15 +200,16 @@ footer a{
 
 
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
-<<<<<<< HEAD
+
 							
 						/* ######## */
 
-/* * * * * * * * PART : START GALLERY PROJECTS * * * * * * * */
+/* * * * * * * * PART : START UPDATES-PAGES * * * * * * * */
 
 
-/* ***** start : TYPO (texts) gallery projects***** */
-#entete h6:nth-child(2){ /* nom et prenom de l'apprenant sous photo-gauche*/
+/* ***** start : TYPO (texts) update ***** */
+
+.nom-prenom{ /* nom et prenom de l'apprenant sous photo-gauche*/
 	padding: 3%;
 	background-color: #128B82;
 	display: inline-block;
@@ -231,16 +232,17 @@ footer a{
 	width: 100%;
 }
 
-#list-edit a{
-	display: block;
+#bouton-edit{
+    height: 4.5em;
+    padding-top: 1em;
+    width: 100%;
 }
 
 
 
 
+/* * * * * * * * PART : END UPDATES-PAGES * * * * * * * */
 
-/* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
-=======
 
 						/* ######## */
->>>>>>> origin/master
+
