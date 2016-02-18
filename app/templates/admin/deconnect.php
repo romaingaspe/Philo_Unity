@@ -17,12 +17,14 @@
       <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil</a>
   </div>
 
-
 <?php $this->stop('main_content') ?>
 
-<?php $this->layout('layout2', ['title' => 'Login']) ?>
+<!--en commentaire :
 
-<?php $this->start('main_content') ?>
+
+
+
+
 <div class="container section center" style="margin-top:50px">
   <div class="row center">
     <div class="col l6 offset-l3 center align card-panel teal lighten-2">
@@ -34,4 +36,5 @@
       <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil</a>
     </div>
 </div>
-<?php $this->stop('main_content') ?>
+
+-->
