@@ -33,7 +33,7 @@
 				<a id="projet-edit" class="waves-effect waves-light btn">
 				Nom de mon projet 6</a>
 			</div>
-			<div id="form_update" class="col l6">
+			<div id="form-update" class="col l6">
 				<h6>lalalalalalalalala</h6>
 				<form class=" grey lighten-4">
 					<div class="row">
@@ -42,13 +42,14 @@
 							 	<textarea id="textarea1" class="materialize-textarea"></textarea>
 							 	<label for="textarea1">Textarea</label>
 							</div>
-						</form>
-						<form class="">
-	 						 <div class="input-field col s12">
+							<div class="input-field col s12">
 								 	<textarea id="textarea1" class="materialize-textarea"></textarea>
 								 	<label for="textarea1">Textarea</label>
 	 						</div>
- 						</form>
+						</form>
+						
+	 						 
+ 						
 					 </div>
 				</form>
 			</div>
