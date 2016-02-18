@@ -164,9 +164,6 @@ footer div div ul {
 #slideprojet{
 	margin-left: 2%;
 }
-#banner-project span:nth-child(){
-
-}
 #com-projects{
 	margin-top: 3%;
 	margin-left: 33.5%;
@@ -222,6 +219,18 @@ footer div div ul {
 
 
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
+<<<<<<< HEAD
+							
+						/* ######## */
+
+/* * * * * * * * PART : START COMMENTAIRE PROJECTS * * * * * * * */
+
+#image-entete img{
+	width: 50%;
+	height: 300px;
+	margin-left: 21%;
+}
+=======
 
 						/* ######## */
 
@@ -266,3 +275,8 @@ footer div div ul {
 
 
 						/* ######## */
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
+>>>>>>> origin/master
