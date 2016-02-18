@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div id="list-bouton-edit" class="col l4">
+			<div id="list-edit" class="col l4">
 				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
 				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre </a>
 				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
@@ -25,10 +25,10 @@
 				<a id="projet-edit" class="waves-effect waves-light btn">
 				Nom de mon projet 1</a>
 			</div>
-			<div class="col l6">
-				<form >
+			<div id="form_update" class="col l6 grey lighten-4">
+				<form>
 					<div class="row">
-						 <form class="">
+						 <form>
 							 <div class="input-field col s12">
 							 	<textarea id="textarea1" class="materialize-textarea"></textarea>
 							 	<label for="textarea1">Textarea</label>

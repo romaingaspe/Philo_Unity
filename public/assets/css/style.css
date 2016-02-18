@@ -277,7 +277,7 @@ footer div div ul {
 }
 
 #bloc-projet-edit{
-	padding: 0;
+	padding: 0 0.75rem 0 0;
 }
 #bloc-projet-edit a{
 	background-color: #e0f2f1;
