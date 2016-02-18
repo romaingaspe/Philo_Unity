@@ -115,9 +115,6 @@ div h6{
 #slideprojet{
 	margin-left: 2%;
 }
-#banner-project span:nth-child(){
-
-}
 #com-projects{
 	margin-top: 3%;
 	margin-left: 33.5%;
@@ -175,3 +172,11 @@ div h6{
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 							
 						/* ######## */
+
+/* * * * * * * * PART : START COMMENTAIRE PROJECTS * * * * * * * */
+
+#image-entete img{
+	width: 50%;
+	height: 300px;
+	margin-left: 21%;
+}
