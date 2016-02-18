@@ -1,7 +1,9 @@
 $(document).ready(function(){
   $('.slider').slider({full_width: true});
-});
 
-$(document).ready(function(){
+  var H = $('.slider').height();
+  $('.slider').height(H-40);
+
+
   $('.carousel').carousel();
 });

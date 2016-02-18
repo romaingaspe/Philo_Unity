@@ -23,7 +23,8 @@
 
 		/////////////////////////////ADMIN///////////////////////////////////////////////////////////
 		['GET|POST', '/admin/connect', 'admin#connect', 'connect'],
-		['GET|POST', '/admin/deconnect', 'admin#deconnectTotale', 'deconnectTotale'],
+		['GET|POST', '/admin/deconnect', 'admin#deconnect', 'deconnect'],
+		['GET|POST', '/admin/deconnectTotale', 'admin#deconnectTotale', 'deconnectTotale'],
 		['GET|POST', '/admin/reinipass', 'admin#reiniPass', 'reiniPass'],
 		['GET|POST', '/admin/reinipasstoken', 'admin#reiniPassTok', 'reiniPassTok'],
 
