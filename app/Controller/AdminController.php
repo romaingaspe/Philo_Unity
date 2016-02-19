@@ -69,7 +69,9 @@ class AdminController extends Controller
 	public function reiniPass()
 	{
 		$login = new AuthentificationManager();
+		$userManager = new UserManager;
 		$errors = array();
+		$mail = new PHPMailer;
 		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
 		if(!empty($_POST)){
 			// Faire vérification des champs ICI
@@ -82,32 +84,17 @@ class AdminController extends Controller
 			// si pas d'erreurs,
 			if(count($errors) == 0){
 				// on va vérifier qu'il existe un utilisateur avec cet email dans la base
-				if (isset($_POST['email']) !== false) && emailExists($_POST['email']){
+				if($idUser = $userManager->emailExists($_POST['email'])){
 					$token = md5(uniqid());// on génère un 'token', identifiant unique
-					$userManager = new UserManager;
 					$idUser = $userManager->getUserByUsernameOrEmail($_POST['email'])['id']; //chercher id
-					$this->update(["confirmedToken" => $token, "dateConfirmedToken" =>date('Y-m-d',strtotime('+1 week'))], $idUser);	// on stocke le token dans la bdd pour cet utilisateur
-					$successLink = 'reiniPass.php?email='.$user['email'].'&token='.$token;// on crée le lien permettant à l'utilisateur de resaisir un nouveau mot de passe
-
-
-
-				} else {
-				// si non:
-					// message d'erreur: cette adresse mail ne correspond pas à un membre du site
-					$errors[] = 'L\'email n\'existe pas';
-				}
-				// si oui:
-					// on génère un 'token', identifiant unique
-				else{
-					// on stocke le token dans la bdd pour cet utilisateur
-
-					// on crée le lien permettant à l'utilisateur de resaisir un nouveau mot de passe
-					// ce lien doit contenir le token, c'est ce qui nous permettra de vérifier que l'utilisateur qui saisit le nouveau mot de passe est bien le propriétaire de l'adresse email (qui a cliqué sur le lien)
-
+					$userManager->update(["confirmedToken" => $token, "dateConfirmedToken" =>date('Y-m-d',strtotime('+1 week'))], $idUser);	// on stocke le token dans la bdd pour cet utilisateur
+					$successUrl = $this->generateUrl('reiniPassTok').'?email='.$_POST['email'].'&token='.$token;// on crée le lien permettant à l'utilisateur de resaisir un
+					$successLink = "http://localhost".$successUrl;
+					// nouveau mot de passe
 					// on envoie le mail avec le lien:
 					$app = getApp();
 
-					$mail = new PHPMailer;
+
 
 					//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 					$mail->setLanguage('fr', '../../vendor/phpmailer/phpmailer/language/');
@@ -130,10 +117,26 @@ class AdminController extends Controller
 					$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 						*/
 					$mail->isHTML(true);
-					$mail->Body = "Voici votre lien :";                  	// Set email format to HTML
+					$mail->Body = '<a href="'.$successLink.'">Reinitialisez votre mot de passe</a>';                  	// Set email format to HTML
 
 
-					if(!$mail->send()) {
+
+
+				} else {
+				// si non:
+					// message d'erreur: cette adresse mail ne correspond pas à un membre du site
+					$errors[] = 'L\'email n\'existe pas';
+				}
+				// si oui:
+					// on génère un 'token', identifiant unique
+
+					// on stocke le token dans la bdd pour cet utilisateur
+
+					// on crée le lien permettant à l'utilisateur de resaisir un nouveau mot de passe
+					// ce lien doit contenir le token, c'est ce qui nous permettra de vérifier que l'utilisateur qui saisit le nouveau mot de passe est bien le propriétaire de l'adresse email (qui a cliqué sur le lien)
+
+
+				if(!$mail->send()) {
 						$errors[] = 'L\'email n\'a pas pu être envoyé';
 						echo 'Mailer Error: ' . $mail->ErrorInfo;
 					} else {
@@ -144,7 +147,7 @@ class AdminController extends Controller
 		if(count($errors) > 0){
 			$params['errors'] = $errors;
 		}
-	}
+
 		$this->show('admin/reiniPass', $params);
 }
 	public function reiniPassTok()
