@@ -343,3 +343,23 @@ h6.nameProject{
 
 
 						/* ######## */
+
+
+/* * * * * * * * PART : END CONDITION * * * * * * * */
+
+#Objet-des-CGU{
+	margin-left: 15%;
+	text-align: center;
+}
+#Objet-des-CGU h4{
+	margin-left: 15%;
+	text-align: center;
+	color: white;
+	font-size: 1em;
+}
+#Objet-des-CGU p{
+	text-align: justify;
+}
+#couleur-font p{
+	color: white;
+}
