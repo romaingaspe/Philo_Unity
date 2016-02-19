@@ -51,7 +51,6 @@ class AdminController extends Controller
 	{
 		$login = new AuthentificationManager();
 		$userId = $login->logUserOut();
-
 		$this->show('admin/deconnect');
 	}
 
