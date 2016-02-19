@@ -9,11 +9,11 @@
       <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
         <div class="input-field">
             <i class="material-icons prefix">verified_user</i>
-            <input type="text" name="pass" placeholder="Votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
+            <input type="password" name="pass" placeholder="Votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
         </div>
           <div class="input-field">
               <i class="material-icons prefix">verified_user</i>
-              <input type="text" name="pass" placeholder="Saisissez de nouveau votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
+              <input type="password" name="confirm_pass" placeholder="Saisissez de nouveau votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
           </div>
           <div class="input-field">
               <input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">

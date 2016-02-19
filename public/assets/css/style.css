@@ -256,8 +256,10 @@ footer div div ul {
 /* * * * * * * * PART : START UPDATES-PAGES * * * * * * * */
 
 
-/* ***** start : TYPO (texts) update ***** */
-
+/* ******************************* start : TYPO (texts) update *************************** */
+section{
+	padding: 4% 0 0 0;
+}
 .nom-prenom{ /* nom et prenom de l'apprenant sous photo-gauche*/
 	padding: 3%;
 	background-color: #128B82;
@@ -274,9 +276,10 @@ footer div div ul {
 	color: #128b82;
 	font-size: 1.2em;
 	width: 100%;
+	margin: 0;
 }
+/* ******************************* end :TYPO (texts) update ******************************* */
 
-/* ***** end :TYPO (texts) update***** */
 #entete img{
 	width: 100%;
 }
@@ -310,12 +313,14 @@ footer div div ul {
 
 /******ZONE FORMULAIRE POUR GERER LES MODIFICATIONS******/
 
-#form-update label{
-    padding: 1em;
+#form-update{
+    padding: 0;
 }
 #form-update .champsText {
-    padding: 0 2em;
-    margin: 0;
+    margin: 1em;
+}
+.champsText #textarea1{
+	width: 94.5%;
 }
 h6.nameProject{
     background-color: #01579B;
@@ -324,7 +329,7 @@ h6.nameProject{
     color:#fff;
 
 }
-/****ZONE DOCUMENT CHARGE****/
+/****ZONE DOCUMENT CHARGE EN DESSOUS ZONE FORMULAIRE****/
 .titre-doc-charge h6{
 	padding-top: 1.75em;
     font-size: 1.2em;
@@ -332,6 +337,26 @@ h6.nameProject{
 .titre-doc-charge {
 	margin-right: 1em;
 }
+
+#form-update button{
+	margin-top: 10%;
+}
+.add{
+	font-size: 0.8em;
+}
+.btn-add{
+	padding:1%;
+}
+/******Padding du contenu******/
+.gestionInfos{
+	margin-bottom: 16%;
+}
+
+/* ########################### *** START : RESPONSIVES UPDATES-PAGES*** ###########################  */
+#list-button-edit .col_m4{
+	
+}
+/* ########################### *** STOP : RESPONSIVES UPDATES-PAGES*** ###########################  */
 
 /* * * * * * * * PART : END UPDATES-PAGES * * * * * * * */
 

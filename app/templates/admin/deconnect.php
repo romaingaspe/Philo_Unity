@@ -1,6 +1,7 @@
 <?php $this->layout('layout2', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
+<?php if($vue == true ):?>
 <div class="container section center" style="margin-top:50px">
   <div class="row center">
     <div class="col l6 offset-l3 center align card-panel teal lighten-2">
@@ -14,31 +15,26 @@
   </form>
 </div>
   <div class="center">
-      <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil</a>
+      <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil</a>
   </div>
 
-<?php
+<?php endif;?>
+<?php if($vue == false): ?>
 
-?>
+  <div class="container section center" style="margin-top:50px">
+    <div class="row center">
+      <div class="col l6 offset-l3 center align card-panel teal lighten-2">
+        <h3 class="white-text">Vous êtes déconnecté(e) </h3>
+        <p class="white-text">Philomathique Unity vous souhaite une excellente Journée :) </p>
+      </div>
+    </div>
+      <div class="center">
+
+        <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil</a>
+      </div>
+  </div>
+
+<?php endif; ?>
+<?php var_dump($vue) ?>
 
 <?php $this->stop('main_content') ?>
-
-<!--en commentaire :
-
-
-
-
-
-<div class="container section center" style="margin-top:50px">
-  <div class="row center">
-    <div class="col l6 offset-l3 center align card-panel teal lighten-2">
-      <h3 class="white-text">Vous êtes déconnecté(e) </h3>
-      <p class="white-text">Philomathique Unity vous souhaite une excellente Journée :) </p>
-    </div>
-  </div>
-    <div class="center">
-      <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil</a>
-    </div>
-</div>
-
--->
