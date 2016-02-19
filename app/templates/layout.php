@@ -21,8 +21,8 @@
 
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/materialize.js') ?>"></script>
+	<?= $this->section('script') ?>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
 
-	<?= $this->section('scripts') ?>
 </body>
 </html>

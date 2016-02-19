@@ -22,16 +22,25 @@
 			echo '</div>';
 			echo '</article>';
 		}
+
 		if($page != 1){
-			echo '<a class="pagination" href="metiers?page=1">'. 'First ' .'</a> ';
-			echo '<a class="pagination" href="metiers?page="'.($page-1).'">'.'< '.'</a>';
+			echo '<a class="pagination" href=1">'. 'First ' .'</a> ';
+			echo '<a class="pagination" href="'.($page-1).'">'.'< '.'</a>';
 		}
 		for($i=1; $i<=$totalpages; $i++){
-			echo '<a class="pagination" href="metiers?page='.$i.'">'.$i.' </a>';
+			echo '<a class="pagination" href='.$i.'">'.$i.' </a>';
 		}
 		if($page != $totalpages){
-			echo '<a class="pagination" href="metiers?page="'.($page+1).'">'.'>'.'</a> ';
-			echo '<a class="pagination" href="metiers?page='.$totalpages.'">'. ' Last' .'</a> ';
+			echo '<a class="pagination" href="'.($page+1).'">'.'>'.'</a> ';
+			echo '<a class="pagination" href='.$totalpages.'">'. ' Last' .'</a> ';
 		}
 		?>
+
 <?php $this->stop('main_content') ?>
+
+
+<?php $this->start('script') ?>
+	<script type="text/javascript">
+		var pageUrl = '<?= $this->url('paginationsmetiers') ?>';
+	</script>
+<?php $this->stop('script') ?>

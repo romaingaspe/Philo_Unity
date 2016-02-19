@@ -27,7 +27,11 @@ class MetiersController extends Controller
 
     public function ajaxmetiers(){
 
-
-        $this->showJson();
+        $metiersdb = new MetierManager;
+        $num = 6;
+        $page = $_GET['page'];
+        $start = ($page-1) * $num;
+        $metiers = $metiersdb->findAll('section', "ASC", $num, $start);
+        $this->showJson($metiers);
     }
 }
