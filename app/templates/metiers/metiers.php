@@ -9,6 +9,19 @@
 		</div>
 	</div>
 	<h1 class="center-align">Nos métiers</h1>
+	<?php
+		if($page != 1){
+			echo '<a class="pagination" href=1">'. 'First ' .'</a> ';
+			echo '<a class="pagination" href="'.($page-1).'">'.'< '.'</a>';
+		}
+		for($i=1; $i<=$totalpages; $i++){
+			echo '<a class="pagination" href="'.$i.'">'.$i.' </a>';
+		}
+		if($page != $totalpages){
+			echo '<a class="pagination" href="'.($page+1).'">'.'>'.'</a> ';
+			echo '<a class="pagination" href="'.$totalpages.'">'. ' Last' .'</a> ';
+		}
+	?>
 	<section id="allworks" class="row container">
 		<?php
 			foreach($metiers as $met){
@@ -19,24 +32,13 @@
 				echo '<div class="text-works">';
 				echo '<h6>'.$met['section'].'</h6>';
 				echo '<p>'.$met['description'].'</p>';
+				echo '<a href="'.$met['alias'].'">'.$met['section'].'</a>';
 				echo '</div>';
 				echo '</article>';
 			}
 		?>
 	</section>
-		<?php
-			if($page != 1){
-				echo '<a class="pagination" href=1">'. 'First ' .'</a> ';
-				echo '<a class="pagination" href="'.($page-1).'">'.'< '.'</a>';
-			}
-			for($i=1; $i<=$totalpages; $i++){
-				echo '<a class="pagination" href="'.$i.'">'.$i.' </a>';
-			}
-			if($page != $totalpages){
-				echo '<a class="pagination" href="'.($page+1).'">'.'>'.'</a> ';
-				echo '<a class="pagination" href="'.$totalpages.'">'. ' Last' .'</a> ';
-			}
-		?>
+
 
 <?php $this->stop('main_content') ?>
 
