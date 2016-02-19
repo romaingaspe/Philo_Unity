@@ -15,14 +15,18 @@ $(function(){
             url: pageUrl,
             data: data,
             success: function(reponse) {
-                console.log(reponse);
+                $('#allworks').empty()
                 $.each(reponse, function() {
-                    console.log($(this));
-                })
-                /*$('article')
+                    $('article')
                     .addClass('col')
                     .addClass('l4')
-                    .append($('div').append($('img').attr('src',xxx)))*/
+                    .append($('div').append($('img').attr('src', DANS LE TABLEAU)))
+                    .append($('div').addClass('text-works').append($('h6').append($('p'))
+                    console.log($(this));
+                    /*$*/
+
+                })
+
 
                 /*echo '<article class="col l4">';
                 echo '<div>';
