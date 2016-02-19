@@ -10,7 +10,7 @@
 	<h1 class="center-align">COUTURE</h1>
 	<section id="allworks" class="row section container">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
-		<article class="col l4">
+		<article class="col s12 m6 l4">
 			<div class="photo-work">
 				<img src="<?= $this->assetUrl('img/profil_perso.png') ?>" alt=""><!-- couture.jpg -->
 			</div>
@@ -18,7 +18,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum consectetur eveniet odio aliquam dolores repudiandae, nobis consequuntur inventore incidunt illo rerum, iusto, dolor voluptatum temporibus soluta magni, facilis quibusdam ab?</p>
 		</article>
 
-		<article class="col l4">
+		<article class="col s12 m6 l4">
 			<div>
 				<img src="<?= $this->assetUrl('img/profil_perso.png') ?>" alt="">
 			</div>
@@ -26,7 +26,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum consectetur eveniet odio aliquam dolores repudiandae, nobis consequuntur inventore incidunt illo rerum, iusto, dolor voluptatum temporibus soluta magni, facilis quibusdam ab?</p>
 		</article>
 
-		<article class="col l4">
+		<article class="col s12 m6 l4">
 			<div>
 				<img src="<?= $this->assetUrl('img/profil_perso.png') ?>" alt="">
 			</div>
@@ -34,7 +34,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae voluptatem amet, doloribus, facere dolorum numquam temporibus praesentium esse facilis officiis ipsum nesciunt, ad distinctio sequi autem magni tenetur ex. Laboriosam.</p>
 		</article>
 
-		<article class="col l4">
+		<article class="col s12 m6 l4">
 			<div>
 				<img src="<?= $this->assetUrl('img/profil_perso.png') ?>" alt="">
 			</div>
@@ -43,7 +43,7 @@
 
 		</article>
 
-		<article class="col l4">
+		<article class="col s12 m6 l4">
 			<div>
 				<img src="<?= $this->assetUrl('img/profil_perso.png') ?>" alt="">
 			</div>
@@ -51,7 +51,7 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, vel obcaecati, deleniti corporis minus inventore facere. Architecto voluptatibus nisi facilis. Fugiat, consequuntur, sint. Alias impedit sequi quod, nulla eveniet consequatur.</p>
 		</article>
 
-		<article class="col l4">
+		<article class="col s12 m6 l4">
 			<div>
 				<img src="<?= $this->assetUrl('img/profil_perso.png') ?>" alt="">
 			</div>

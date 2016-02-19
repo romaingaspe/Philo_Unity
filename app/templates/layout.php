@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/materialize.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" media="screen and (max-width: 1000px)" href="smallscreen.css" type="text/css" />
 </head>
 <body>
 	<?php $this->insert('partials/header') ?>
