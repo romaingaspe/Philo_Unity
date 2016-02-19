@@ -13,7 +13,7 @@
 	</div>
 	</div></br></br>
 
-	<div class="container col s6 m8 offset-m2 offset-l3 offset-s3 l6">
+	<div class="container">
 
 		<section id="Objet-des-CGU" class="row center-align col s6 m8 offset-m2 offset-l3 offset-s3 l6 container card-panel teal lighten-5">
 
@@ -23,7 +23,7 @@
 
 		<section id="cont-des-CGU" class="row center-align container center-align card-panel grey lighten-5">
 
-		<h4 class=" row center-align container center-align card-panel teal brown">1) Propriété intellectuelle</h4></br>
+		<h4 class="row center-align container center-align card-panel teal brown">1) Propriété intellectuelle</h4></br>
 
 			<p>Les marques "Philomatique et philomatique Unity" sont des marques déposées.Toute représentation et/ou reproduction et/ou exploitation partielle ou totale de ces marques, de quelque nature que ce soit, est totalement prohibée.<br><br>Tous les éléments de ce site, y compris les documents téléchargeables, sont libres de droit. A l’exception de l’iconographie, la reproduction des pages de ce site est autorisée à la condition d’y mentionner la source. Elles ne peuvent être utilisées à des fins commerciales et publicitaires.</p><br>
 		</section>

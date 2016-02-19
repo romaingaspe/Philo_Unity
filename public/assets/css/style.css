@@ -71,13 +71,19 @@ i{
 /***/		   padding: 200px 13px 0;
 /***/	  }
 /***/	}
+/**************** start  :RESPONSIVE page conditions ******************/;
+/***/ 
+/***/	
+/***/	
+/***/
+/***/
 /***/
 /***************** stopt : RESPONSIVE page Profils-all ***************/
 
 /* ############################ START : PROPRIETES GLOBALES############################ */
 
 /*Header*/
-nav img {
+nav div a img {
 	height: 40px;
 	margin-top: 12px;
 }
