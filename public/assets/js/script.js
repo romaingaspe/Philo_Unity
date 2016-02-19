@@ -4,10 +4,10 @@ $('.slider').height(H-40);
 $('.carousel').carousel();});
 
 $(function(){
-    $('.pagination').click(function(e){
+    $('.paginations').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
-
+        $(this).parent().removeClass('waves-effect').addClass('active');
         var data = {
             page: href
         }
@@ -31,5 +31,4 @@ $(function(){
             }
         })
     });
-
 })

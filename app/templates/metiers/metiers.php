@@ -10,17 +10,21 @@
 	</div>
 	<h1 class="center-align">Nos métiers</h1>
 	<?php
-		if($page != 1){
+		/*if($page != 1){
 			echo '<a class="pagination" href=1">'. 'First ' .'</a> ';
 			echo '<a class="pagination" href="'.($page-1).'">'.'< '.'</a>';
-		}
+		}*/
+		echo '<ul class="pagination">';
+
+
 		for($i=1; $i<=$totalpages; $i++){
-			echo '<a class="pagination" href="'.$i.'">'.$i.' </a>';
+			echo '<li class="waves-effect"><a class="paginations" href="'.$i.'">'.$i.' </a></li>';
 		}
-		if($page != $totalpages){
+		echo '</ul>';
+		/*if($page != $totalpages){
 			echo '<a class="pagination" href="'.($page+1).'">'.'>'.'</a> ';
 			echo '<a class="pagination" href="'.$totalpages.'">'. ' Last' .'</a> ';
-		}
+		}*/
 	?>
 	<section id="allworks" class="row container">
 		<?php
