@@ -15,8 +15,6 @@
 			echo '<a class="pagination" href="'.($page-1).'">'.'< '.'</a>';
 		}*/
 		echo '<ul class="pagination">';
-
-
 		for($i=1; $i<=$totalpages; $i++){
 			echo '<li class="waves-effect"><a class="paginations" href="'.$i.'">'.$i.' </a></li>';
 		}

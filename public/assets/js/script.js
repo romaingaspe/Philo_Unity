@@ -7,6 +7,7 @@ $(function(){
     $('.paginations').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
+        $('.pagination li').removeClass('active');
         $(this).parent().removeClass('waves-effect').addClass('active');
         var data = {
             page: href
