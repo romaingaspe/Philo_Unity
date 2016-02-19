@@ -20,11 +20,12 @@ $(function(){
                     var htmlMetier = $('<article>')
                     .addClass('col')
                     .addClass('l4')
+                    .append($('<div>')
+                        .append($('<img>').attr('src', reponse[m].photo)))
                     .append($('<div>').addClass('text-works')
                         .append($('<h6>').text(reponse[m].section))
                         .append($('<p>').text(reponse[m].description)))
-                    .append($('div')
-                        .append($('img').attr('src', reponse[m].photo)))
+
                     $('#allworks').append(htmlMetier);
                 }
             }
