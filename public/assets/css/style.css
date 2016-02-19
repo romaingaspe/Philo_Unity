@@ -85,8 +85,26 @@ nav {
     color: #fff;
     background-color: #128b82;
 }
-
-
+/* START : Entete pages cgu,commentaires et galleryproject */
+#banner-project span{
+	background-color: #128b82;
+	padding: 15px;
+	color: transparent;
+}
+#banner-project {
+	margin-top: 1%;
+}
+/* #####################"" */
+/* .banner-contained{
+	padding: 0;
+}
+.banner-contained .com{
+	background-color: white;
+	padding: 15px;
+	color:#fff;
+}
+ */
+/* END : Entete pages cgu,commentaires et galleryproject */
 /* ############################ END : PROPRIETES GLOBALES############################ */
 
 /* * * * * * * * PART : START METIERS ET SOUS CAT METIERS * * * * * * * */
@@ -184,7 +202,23 @@ footer div div ul {
 	margin-top: 4em;
 	margin-bottom: 4em;
 }
-
+.patch-rightside{
+	background-color: #128B82;
+	padding: 20px 2px !important;
+	color: transparent;
+}
+.patch-leftside{
+	background-color: #128B82;
+	padding: 20px 2px !important;
+	color: transparent;
+}
+.patch-centered{
+	padding: 20px 2px !important;
+}
+/* #gallery-title{
+	padding: 10px 0;
+}
+ */
 /* * * * * * * * PART : END GALLERY PROJECTS * * * * * * * */
 
 								/* ######## */

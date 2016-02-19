@@ -2,7 +2,6 @@
 
 <!-- Mon chemin d'accès url :profil/portfolio/galleryprojects -->
 <?php $this->start('main_content') ?>
-	<span><a href="">portefolio></a><a href="">gallerie des projets></a></span>
 	
 	<!-- 1ère ligne de présentation --> 
 	<section id="presentation" class="container row">
@@ -17,8 +16,10 @@
 	</section>
 	
 	<!-- 2ème ligne titre --> 
-	<div id="gallery-title" class="container center-align">
-		<h6>Gallerie des projets</h6>
+	<div id="gallery-title" class="container row">
+		<span class="col l1 center-align patch-leftside">2 2</span>
+		<span class="col l10 center-align patch-centered teal lighten-5">Gallerie des projets</span>
+		<span class="col l1 center-align patch-rightside">2 2</span>
 	</div>
 
 	<!-- 3ème ligne gallerie -->
