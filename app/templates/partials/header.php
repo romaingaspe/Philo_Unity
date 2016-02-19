@@ -7,8 +7,8 @@
 			<ul class="right">
 				<li><a href="/Philo_Unity/public/profils">Profils</a></li>
 				<li><a href="/Philo_Unity/public/metiers">Metiers</a></li>
-				<li><a href="/Philo_Unity/public/admin/connect">Se connecter</a></li>
-				<li><a href="/Philo_Unity/public/admin/deconnect">Se deconnecter</a></li>
+				<?php if(!$_SESSION) :?><li><a href="/Philo_Unity/public/admin/connect">Se connecter</a></li><?php endif;?>
+				<?php if($_SESSION) :?><li><a href="/Philo_Unity/public/admin/deconnect">Se deconnecter</a></li><?php endif;?>
 			</ul>
 		</div>
 	</nav>
