@@ -11,7 +11,7 @@ class MetiersController extends Controller
 	{
         $metiersdb = new MetierManager;
         $num = 6;
-        $page = $_GET['page'];
+        $page = 1;
         $start = ($page-1) * $num;
         $params['page']  = $page;
         $metiers = $metiersdb->findAll('section', "ASC", $num, $start);
