@@ -17,7 +17,7 @@
             <i class="material-icons prefix">verified_user</i>
             <label for="pass">Mot de passe</label>
             <input type="password" name="pass" placeholder="Votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
-            <a href="reinipass">Vous avez perdu votre mot de passe ?</a>
+            <a href="<?= $this->url('reiniPass') ?>">Vous avez perdu votre mot de passe ?</a>
         </div>
         <div class="input-field">
             <input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
@@ -27,7 +27,7 @@
 
 
 <div class="center">
-    <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil </a>
+    <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil </a>
 </div>
 
 <?php
