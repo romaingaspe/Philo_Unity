@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/materialize.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<?php $this->insert('partials/header') ?>
@@ -20,8 +21,8 @@
 
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/materialize.js') ?>"></script>
+	<?= $this->section('script') ?>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/script.js') ?>"></script>
 
-	<?= $this->section('scripts') ?>
 </body>
 </html>

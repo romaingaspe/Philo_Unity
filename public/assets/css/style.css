@@ -56,6 +56,24 @@ i{
 .carousel h2{
 	margin: 0;
 }
+/***************** start : RESPONSIVE page Profils-all ***************/
+/***/
+/***/	@media screen and (max-width: 900px) {
+/***/		 #mainphoto3{
+/***/		   height: 765px;
+/***/		 }
+/***/	}
+/***/	@media screen and (max-width: 550px) {
+/***/		#mainphoto3{
+/***/		   height: 510px;
+/***/		 }
+/***/		#mainphoto3 .row{
+/***/		   padding: 200px 13px 0;
+/***/	  }
+/***/	}
+/***/
+/***************** stopt : RESPONSIVE page Profils-all ***************/
+
 /* ############################ START : PROPRIETES GLOBALES############################ */
 
 /*Header*/
@@ -125,6 +143,7 @@ footer .row{
 footer div div ul {
 	padding-top: 50px;
 }
+
 /* * * * * * * * PART : END METIERS ET SOUS CAT METIERS * * * * * * * */
 
 								/* ######## */
