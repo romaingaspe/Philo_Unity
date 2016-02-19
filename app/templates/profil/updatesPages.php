@@ -3,7 +3,7 @@
 <?php $this->start('main_content') ?>
 
 	<h1 class="container center-align"></h1>
-	<section class="container">
+	<section class="container update-content">
 		<div id="entete" class="row">
 			<div class="col l4">
 				<img src="<?= $this->assetUrl('img/ebeniste2.jpg') ?>" alt="">

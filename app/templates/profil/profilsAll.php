@@ -4,7 +4,7 @@
 	<div id="mainphoto3">
 		<div class="row">
 			<p class="center white-text">Propulsé par la</p>
-			<img class="col l6 offset-l3"src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
+			<img class="col s12 col m8 offset-m2 col l6 offset-l3" src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
 		</div>
 	</div>
 	<h1 class="center-align">COUTURE</h1>
