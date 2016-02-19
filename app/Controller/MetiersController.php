@@ -9,12 +9,25 @@ class MetiersController extends Controller
 {
     public function metiers()
 	{
-
         $metiersdb = new MetierManager;
-        $metiers = $metiersdb->findAll('section', "ASC", 6);
+        $num = 6;
+        $page = $_GET['page'];
+        $start = ($page-1) * $num;
+        $params['page']  = $page;
+        $metiers = $metiersdb->findAll('section', "ASC", $num, $start);
         $params['metiers'] = $metiers;
+        $allmetiers = $metiersdb->findAll('section', "ASC");
+        $countmetiers = count($allmetiers) + 1 ;
+        $totalpages = ceil($countmetiers/$num);
+
+        $params['totalpages'] = $totalpages;
 
 		$this->show('metiers/metiers', $params);
 	}
 
+    public function ajaxmetiers(){
+
+
+        $this->showJson();
+    }
 }

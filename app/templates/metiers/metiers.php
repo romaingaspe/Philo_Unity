@@ -22,21 +22,16 @@
 			echo '</div>';
 			echo '</article>';
 		}
+		if($page != 1){
+			echo '<a class="pagination" href="metiers?page=1">'. 'First ' .'</a> ';
+			echo '<a class="pagination" href="metiers?page="'.($page-1).'">'.'< '.'</a>';
+		}
+		for($i=1; $i<=$totalpages; $i++){
+			echo '<a class="pagination" href="metiers?page='.$i.'">'.$i.' </a>';
+		}
+		if($page != $totalpages){
+			echo '<a class="pagination" href="metiers?page="'.($page+1).'">'.'>'.'</a> ';
+			echo '<a class="pagination" href="metiers?page='.$totalpages.'">'. ' Last' .'</a> ';
+		}
 		?>
-	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js)
-		<article class="col l4">
-			<div>
-				<img src="<?= $this->assetUrl('img/empty_works.png') ?>" alt="">
-			</div>
-			<div class="text-works">
-				<h6>Arts-Plastiques</h6>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur minus harum, laboriosam commodi ipsum nemo accusamus perferendis consectetur aliquid laudantium? Veritatis in dicta fuga ex inventore quas minima laboriosam sit!</p>
-			</div>
-		</article>
-	-->
-	</section>
-	<section id="pagination" class="row">
-		<span>1</span>
-	</section>
-
 <?php $this->stop('main_content') ?>
