@@ -32,6 +32,9 @@
             </div>
         </form>
     </div>
+    <div class="center">
+      <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil</a>
+    </div>
 </div>
 <?php $this->stop('main_content') ?>
 

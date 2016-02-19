@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-	<h1 class="container">updates_pages</h1>
+	<h1 class="container center-align"></h1>
 	<section class="container">
 		<div id="entete" class="row">
 			<div class="col l4">
@@ -10,16 +10,17 @@
 				<h6 class="center-align nom-prenom">Pauline DOVES</h6>
 			</div>
 			<div class="col l8  center-align">
-				<h6 class="center-align teal lighten-5">Gestion de vos informations</h6>
+				<h6 class="center-align teal lighten-5">Editer vos informations</h6>
 			</div>
 		</div>
 		<div class="row gestionInfos">
-			<div id="list-edit" class="col l4">
-				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
-				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre </a>
-				<a id="bouton-edit" class="waves-effect waves-light btn">Editer votre profil</a>
+			<div id="list-edit" class="col m12 l4">
+			<div></div>
+				<a id="bouton-edit" class=" col m4 waves-effect waves-light btn">Editer votre profil</a>
+				<a id="bouton-edit" class=" col m4 waves-effect waves-light btn">Editer votre </a>
+				<a id="bouton-edit" class=" col m4 waves-effect waves-light btn">Editer votre profil</a>
 			</div>
-			<div id="bloc-projet-edit" class="col l2">
+			<div id="bloc-projet-edit" class="col m12 l2">
 				<a id="projet-edit" class="waves-effect waves-light btn">
 				Nom de mon projet 1</a>
 				<a id="projet-edit" class="waves-effect waves-light btn">
@@ -49,10 +50,11 @@
 						</form>
 					</div>
 				</div>
-				<div class="grey lighten-4">
+				<div>
 					<div class="col l1 titre-doc-charge">
 						<h6>Titre</h6>
 					</div>
+				</div>
 					<form class="col l5">
 						<div class="row">
 							<div class="input-field">
@@ -72,6 +74,12 @@
 								<input class="file-path validate" type="text">
 							</div>
 						</div>
+						<div class="file-field input-field">
+							<div class="btn btn-add">
+								<input type="file">
+								<span class="add">Ajouter un fichier</span>
+							</div>
+						</div>
 					</form>
 					<div class="col l12 center-align">
 						<button class="btn waves-effect waves-light" type="submit" name="action">Enregistrer
@@ -79,7 +87,7 @@
 						</button>
 					</div>
 				</div>
-			</div>
+			
 			
 		</div>     
     </section>

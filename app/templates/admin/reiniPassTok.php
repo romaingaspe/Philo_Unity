@@ -21,7 +21,7 @@
       </form>
   </div>
   <div class="center">
-      <a class="btn waves-effect waves-light red darken-1" name="action" href="/Philo_Unity/public/">Retour à l'accueil </a>
+      <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil </a>
   </div>
 </div>
 

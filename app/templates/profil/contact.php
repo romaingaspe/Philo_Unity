@@ -5,7 +5,7 @@
 <h1>contact</h1>
 <div class="row ">
 
-    <form method="POST" class="col l6 offset-l3">
+    <form method="POST" class="col s12 m12 l6 offset-l3">
         <div class="input-field">
             <label for="nom">Nom</label>
             <input type="text" name="nom" placeholder="Votre nom">

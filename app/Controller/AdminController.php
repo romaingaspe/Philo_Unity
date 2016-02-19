@@ -37,7 +37,7 @@ class AdminController extends Controller
 					$login->logUserIn($userDatas);
 					// et rediriger vers l'accueil
 					$params['success'] = 'Bienvenue vous êtes connecté(e) !';
-
+					$this->redirectToRoute('index');
 				}
 				else {
 					$errors[] ='dommage !!!';
@@ -50,14 +50,21 @@ class AdminController extends Controller
 	public function deconnect()
 	{
 		$login = new AuthentificationManager();
-		$userId = $login->logUserOut();
-		$this->show('admin/deconnect');
+
+		$params = array();
+		if (empty($_POST)){
+			$vue = true;
+		}
+		 // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
+		if (!empty($_POST)){
+			$vue = false;
+			$userId = $login->logUserOut();
+		}
+
+		$params['vue'] = $vue;
+		$this->show('admin/deconnect',$params);
 	}
 
-	public function deconnectTotale()
-	{
-		$this->show('admin/deconnectTotale');
-	}
 	public function reiniPass()
 	{
 
@@ -135,5 +142,4 @@ class AdminController extends Controller
 
 		$this->show('admin/reiniPassTok');
 	}
-
 }
