@@ -5,10 +5,10 @@
 	
 	<!-- 1ère ligne de présentation --> 
 	<section id="presentation" class="container row">
-			<div class="col l6">
+			<div class="col m6 l6">
 				<img src="<?= $this->assetUrl('img/ebeniste.jpg') ?>" alt="">
 			</div>
-			<div class="col l6">
+			<div class="col m6 l6">
 				<h4>Paul-Emile DOUDAIN</h4>
 				<h5>Marquetteur</h5>
 				<p class="teal lighten-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vero dolor quidem possimus dicta consequatur aliquam, soluta minima voluptatibus officia maiores ipsam veritatis dolore dolorum eum, eligendi modi a commodi?</p>
@@ -17,58 +17,17 @@
 	
 	<!-- 2ème ligne titre --> 
 	<div id="gallery-title" class="container row">
-		<span class="col l1 center-align patch-leftside">2 2</span>
-		<span class="col l10 center-align patch-centered teal lighten-5">Gallerie des projets</span>
-		<span class="col l1 center-align patch-rightside">2 2</span>
+	<div class="col s12 m12 l12">
+		<span class="col s1 m1 l1 center-align patch-leftside">2</span>
+		<span class="col s10 m10 l10 center-align patch-centered teal lighten-5">Gallerie des projets</span>
+		<span class="col s1 m1 l1 center-align patch-rightside">2</span>
+		</div>
 	</div>
 
 	<!-- 3ème ligne gallerie -->
-	<section id="gallery">
-		<div class="row">
-		<article class="col l4">
-			<h7></h7>
-			<div><img src="" alt=""></div>
-			<p></p>
-		</article>
-
-		<article class="col l4">
-			<h7></h7>
-			<div><img src="" alt=""></div>
-			<p></p>
-		</article>
-
-		<article class="col l4">
-			<h7></h7>
-			<div><img src="" alt=""></div>
-			<p></p>
-		</article>
-
-		<article class="col l4">
-			<h7></h7>
-			<div><img src="" alt=""></div>
-			<p></p>
-		</article>
-
-		<article class="col l4">
-			<h7></h7>
-			<div><img src="" alt=""></div>
-			<p></p>
-		</article>
-
-		<article class="col l4">
-			<h7></h7>
-			<div><img src="" alt=""></div>
-			<p></p>
-		</article>
-			
-		</div>
-	</section>
-
-
-
 	<div id="cards-folio" class="container row isotope" style="position: relative; height: 50em;">
 		<div class=" " style="position: absolute; left: 0px; top: 0px;">
-			<div class=" col l4 ">
+			<div class=" col m6 l4 ">
 	  			<div class="card">
 	  				<div class="card-content" style="padding: 7px;">
 	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
@@ -87,7 +46,7 @@
 	  				</div>
 	  			</div>
   			</div>
-  			<div class=" col l4 ">
+  			<div class=" col m6 l4 ">
 	  			<div class="card">
 	  				<div class="card-content" style="padding: 7px;">
 	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
@@ -106,7 +65,7 @@
 	  				</div>
 	  			</div>
   			</div>
-  			<div class=" col l4 ">
+  			<div class=" col m6 l4 ">
 	  			<div class="card">
 	  				<div class="card-content" style="padding: 7px;">
 	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
@@ -125,7 +84,7 @@
 	  				</div>
 	  			</div>
   			</div>
-  			<div class=" col l4 ">
+  			<div class=" col m6 l4 ">
 	  			<div class="card">
 	  				<div class="card-content" style="padding: 7px;">
 	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
@@ -144,7 +103,7 @@
 	  				</div>
 	  			</div>
   			</div>
-  			<div class=" col l4 ">
+  			<div class=" col m6 l4 ">
 	  			<div class="card">
 	  				<div class="card-content" style="padding: 7px;">
 	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
@@ -163,7 +122,7 @@
 	  				</div>
 	  			</div>
   			</div>
-  			<div class=" col l4 ">
+  			<div class=" col m6 l4 ">
 	  			<div class="card">
 	  				<div class="card-content" style="padding: 7px;">
 	          			<p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
