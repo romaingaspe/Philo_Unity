@@ -3,28 +3,32 @@
 <?php $this->start('main_content') ?>
 
 	<div class="row">
-		<div id="banner-project" class="center-align card-panel hoverable grey lighten-2 col l8 offset-l2"
-		 			style="margin-top: 1%;"><span class="left"style="background-color: #128b82;padding: 15px;color: transparent;">1 1
-		 		</span>condition generale d'utilisation<span class="right"style="background-color: #128b82;padding: 15px;color: transparent;">2 2
-		 		</span>
+
+		<div id="banner-project" class="container center-align col s6 m8 offset-m2 offset-l3 offset-s3 l6 card-panel hoverable grey lighten-2"
+		 			style=""><span class="left"style="background-color: #128b82;padding: 15px;color: transparent;">1 1
+		 			</span>condition d'utilisation<span class="right"style="background-color: #128b82;padding: 15px;color: transparent;">2 2
+		 			</span>
+
+		</div>
+	</div>
 	</div></br></br>
 
-	<div class="container">
+	<div class="container col s6 m8 offset-m2 offset-l3 offset-s3 l6">
 
-		<section id="Objet-des-CGU" class=" row center-align container center-align card-panel teal lighten-5">
+		<section id="Objet-des-CGU" class="row center-align col s6 m8 offset-m2 offset-l3 offset-s3 l6 container card-panel teal lighten-5">
 
 			<p class="card-panel teal brown" style="color:white;">Le présent document a pour objet de définir les modalités et conditions dans lesquelles d’une part, Philomatique , ci-après dénommé l’EDITEUR, met à la disposition de ses utilisateurs le site, et les services disponibles sur le site et d’autre part, la manière par laquelle l’utilisateur accède au site et utilise ses services.Toute connexion au site est subordonnée au respect des présentes conditions.<br>
 
 			Pour l’utilisateur, le simple accès au site de l’EDITEUR à l’adresse URL suivante Philomatique Unity implique l’acceptation de l’ensemble des conditions décrites ci-après.</p></br>
 
-		<section id="Objet-des-CGU" class=" row center-align container center-align card-panel grey lighten-5">
+		<section id="cont-des-CGU" class="row center-align container center-align card-panel grey lighten-5">
 
 		<h4 class=" row center-align container center-align card-panel teal brown">1) Propriété intellectuelle</h4></br>
 
 			<p>Les marques "Philomatique et philomatique Unity" sont des marques déposées.Toute représentation et/ou reproduction et/ou exploitation partielle ou totale de ces marques, de quelque nature que ce soit, est totalement prohibée.<br><br>Tous les éléments de ce site, y compris les documents téléchargeables, sont libres de droit. A l’exception de l’iconographie, la reproduction des pages de ce site est autorisée à la condition d’y mentionner la source. Elles ne peuvent être utilisées à des fins commerciales et publicitaires.</p><br>
 		</section>
 
-		<section id="Objet-des-CGU" class=" row container center-align card-panel teal grey lighten-5">
+		<section id="cont-des-CGU" class="row container center-align card-panel teal grey lighten-5">
 
 		<h4 class=" row center-align container center-align card-panel teal brown">2) Liens hypertextes</h4></br>
 
@@ -33,7 +37,7 @@
 
 		</section>
 
-		<section id="Objet-des-CGU" class=" row container center-align card-panel teal grey lighten-5">
+		<section id="cont-des-CGU" class="row container center-align card-panel teal grey lighten-5">
 
 		<h4 class=" row center-align container center-align card-panel teal brown">3) Responsabilité de l’éditeur</h4></br>
 
@@ -52,7 +56,7 @@
 			L’EDITEUR ne pourra en aucun cas être tenu responsable de tout dommage de quelque nature qu’il soit résultant de l’interprétation ou de l’utilisation des informations et/ou documents disponibles sur ce site.</p></br>
 
 		</section>
-		<section id="Objet-des-CGU" class=" row container center-align card-panel teal grey lighten-5">
+		<section id="cont-des-CGU" class="row container center-align card-panel teal grey lighten-5">
 
 		<h4 class=" row center-align container center-align card-panel teal brown">4) Règles d'usage d'Internet</h4></br>
 
@@ -69,7 +73,7 @@
 			L’utilisateur reconnaît que l’EDITEUR ne dispose d’aucun moyen de contrôle sur le contenu des services accessibles sur Internet</p></br>
 
 		</section>
-		<section id="Objet-des-CGU" class=" row container center-align card-panel teal grey lighten-5">
+		<section id="cont-des-CGU" class="row container center-align card-panel teal grey lighten-5">
 
 		<h4 class=" row center-align container center-align card-panel teal brown">5) Droit applicable</h4></br>
 
@@ -79,7 +83,7 @@
 			Téléphone :05 56 52 23 26</p></br>
 
 		</section>
-		<section id="Objet-des-CGU" class=" row container center-align card-panel teal grey lighten-5">
+		<section id="cont-des-CGU" class="row container center-align card-panel teal grey lighten-5">
 
 		<h4 class=" row center-align container center-align card-panel teal brown">6) Accès au site</h4></br>
 
@@ -93,7 +97,7 @@
 
 		</section>
 
-		<section id="Objet-des-CGU" class=" row container center-align card-panel teal grey lighten-5">
+		<section id="cont-des-CGU" class="row container center-align card-panel teal grey lighten-5">
 
 		<h4 class=" row center-align container center-align card-panel teal brown">7) Modification des conditions d’utilisation</h4></br>
 

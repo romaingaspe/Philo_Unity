@@ -380,6 +380,9 @@ h6.nameProject{
 #Objet-des-CGU p{
 	text-align: justify;
 }
+#cont-des-CGU{
+	margin-left: 15%;
+}
 #couleur-font p{
 	color: white;
 }
