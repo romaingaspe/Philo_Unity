@@ -1,12 +1,12 @@
 <?php $this->layout('layout2', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
-<div class="container section center" style="margin-top:50px">
+<div class="container section center">
   <div class="row center">
-    <div class="col l6 offset-l3 center align card-panel teal lighten-2">
-      <h3 class="white-text">Reinitialiser votre mot de passe  </h3>
+    <div class="s8 offset-s2 col m8 offset-m2 l6 offset-l3 center align card-panel teal lighten-2 margetop">
+      <h3 class="white-text">Reinitialiser votre mot de passe</h3>
     </div>
-      <form method="POST" class="col l6 offset-l3" style="margin-top:50px">
+      <form method="POST" class="col s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
         <div class="input-field">
             <i class="material-icons prefix">verified_user</i>
             <input type="password" name="pass" placeholder="Votre mot de passe" value="<?php if(isset($_POST['pass'])){  echo $_POST['pass'];} ?>">
