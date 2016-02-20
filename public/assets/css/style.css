@@ -191,39 +191,7 @@ footer div div ul {
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  PART : END METIERS ET SOUS CAT METIERS*/
 
-<<<<<<< HEAD
 										/* ######## */
-=======
-						/* ######## */
-
-/***************** start :RESPONSIVE CONDITION *************/
-	
-		@media screen and (max-width: 990px) {
-			#Objet-des-CGU{
-				width: 60%;
-				margin-left: 20% !important;
-			}
-
-			#banner-project{
-				width: 100%;
-				margin: 0 !important;
-				}
-		    
-			#titre-CGU{
-				margin: 0 !important
-				}
-			}
-
-		@media screen and (max-width: 250px) {
-
-			#banner-project{
-				display: none;
-				}
-			}
-/***************** stop :RESPONSIVE CONDITION **************/
-
-/* * * * * * * * PART : END METIERS ET SOUS CAT METIERS * * * * * * * */
->>>>>>> origin/master
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *PART : START GALLERY PROJECTS*/
 
@@ -280,7 +248,7 @@ footer div div ul {
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END GALLERY PROJECTS*/
 
-								/* ######## */
+									/* ######## */
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START PROJECTS PAGE*/
 
@@ -340,8 +308,7 @@ footer div div ul {
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END PROJECTS PAGE*/
 
-											/* ######## */
-
+										/* ######## */
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START COMMENTAIRE PROJECTS*/
 
@@ -359,7 +326,8 @@ footer div div ul {
 padding-right: 1.35%;
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END COMMENTAIRE PROJECTS*/
-											/* ######## */
+
+										/* ######## */
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START UPDATES-PAGES*/
 
@@ -462,16 +430,11 @@ h6.nameProject{
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END UPDATES-PAGES*/
 
+										/* ######## */
 
-						/* ######## */
-
-
-<<<<<<< HEAD
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START CGU page*/
 
-=======
-/* * * * * * * * PART : END CONDITION * * * * * * * */
->>>>>>> origin/master
+
 #Objet-des-CGU{
 	margin-left: 15%;
 	margin-right: 15%;
@@ -493,5 +456,31 @@ h6.nameProject{
 #couleur-font p{
 	color: white;
 }
+
+/***************** start :RESPONSIVE CONDITION *************/
+	
+		@media screen and (max-width: 990px) {
+			#Objet-des-CGU{
+				width: 60%;
+				margin-left: 20% !important;
+			}
+
+			#banner-project{
+				width: 100%;
+				margin: 0 !important;
+				}
+		    
+			#titre-CGU{
+				margin: 0 !important
+				}
+			}
+
+		@media screen and (max-width: 250px) {
+
+			#banner-project{
+				display: none;
+				}
+			}
+/***************** stop :RESPONSIVE CONDITION **************/
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END CGU page*/
