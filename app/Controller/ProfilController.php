@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use Manager\FixUserManager;
+use Manager\MetierManager;
 
 class ProfilController extends Controller
 {
@@ -25,8 +26,11 @@ class ProfilController extends Controller
     	];
         $this->show('profil/profilUser', $profil);
     }
-    public function profilsAll()
+    public function profilsAll($section)
     {
+      $metier = new MetierManager;
+      $allusers = $metier->findAllUsers('prenom', 'ASC', 6, null , 'webforce' );
+      var_dump($allusers);
         $this->show('profil/profilsAll');
     }
 

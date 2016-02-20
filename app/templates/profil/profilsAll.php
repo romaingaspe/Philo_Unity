@@ -10,6 +10,8 @@
 	<h1 class="center-align">COUTURE</h1>
 	<section id="allworks" class="row section container">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
+		<?php
+		?>
 		<article class="col s12 m6 l4">
 			<div class="photo-work">
 				<img src="<?= $this->assetUrl('img/profil_perso.png') ?>" alt=""><!-- couture.jpg -->

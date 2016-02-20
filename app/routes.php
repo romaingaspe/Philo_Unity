@@ -13,13 +13,14 @@
 
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
 		['GET', '/profil/profiluser/[:id]', 'profil#profiluser', 'profiluser'],
-		['GET', '/profils', 'profil#profilsAll', 'profilsall'],
+
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 		['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
 
 		////////////////////////////METIERS////////////////////////////////////////////////////////
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],
 		['GET', '/metierspage', 'metiers#ajaxmetiers', 'paginationsmetiers'],
+		['GET', '/metiers/[a:section]/profilsAll', 'profil#profilsAll', 'profilsall'],
 
 		/////////////////////////////ADMIN///////////////////////////////////////////////////////////
 		['GET|POST', '/admin/connect', 'admin#connect', 'connect'],
