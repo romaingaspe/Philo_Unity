@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 19 Février 2016 à 16:13
+-- Généré le :  Sam 20 Février 2016 à 16:31
 -- Version du serveur :  10.1.9-MariaDB
 -- Version de PHP :  5.6.15
 
@@ -39,19 +39,6 @@ CREATE TABLE `commentaires` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `inscrit`
---
-
-CREATE TABLE `inscrit` (
-  `id_user` int(11) NOT NULL,
-  `id_metier` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `specialités` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `metiers`
 --
 
@@ -81,23 +68,43 @@ INSERT INTO `metiers` (`id`, `section`, `alias`, `photo`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `photos`
+--
+
+CREATE TABLE `photos` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_projet` int(11) NOT NULL,
+  `photo1` varchar(255) NOT NULL,
+  `caption1` varchar(80) NOT NULL,
+  `photo2` varchar(255) NOT NULL,
+  `caption2` varchar(80) NOT NULL,
+  `photo3` varchar(255) NOT NULL,
+  `caption3` varchar(80) NOT NULL,
+  `photo4` varchar(255) NOT NULL,
+  `caption4` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `projets`
 --
 
 CREATE TABLE `projets` (
   `id` int(11) NOT NULL,
-  `photo` varchar(255) NOT NULL,
   `description` text CHARACTER SET latin1 NOT NULL,
   `date_publish` date NOT NULL,
-  `id_user` int(11) NOT NULL
+  `id_user` int(11) NOT NULL,
+  `id_photos` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `projets`
 --
 
-INSERT INTO `projets` (`id`, `photo`, `description`, `date_publish`, `id_user`) VALUES
-(1, 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', 'VINCENT', '2016-02-18', 2);
+INSERT INTO `projets` (`id`, `description`, `date_publish`, `id_user`, `id_photos`) VALUES
+(1, 'VINCENT', '2016-02-18', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -116,16 +123,18 @@ CREATE TABLE `users` (
   `role` enum('Admin','user') NOT NULL,
   `linkedin` varchar(255) CHARACTER SET latin1 NOT NULL,
   `photo` varchar(255) NOT NULL,
-  `date_update` date NOT NULL
+  `date_update` date NOT NULL,
+  `id_metier` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateConfirmedToken`, `email`, `role`, `linkedin`, `photo`, `date_update`) VALUES
-(1, 'fatou', 'diaby', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'defelite33160@gmail.com', 'user', '', '', '2016-02-16'),
-(2, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16');
+INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateConfirmedToken`, `email`, `role`, `linkedin`, `photo`, `date_update`, `id_metier`) VALUES
+(1, 'fatou', 'diaby', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'defelite33160@gmail.com', 'user', '', '', '2016-02-16', 0),
+(2, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 0),
+(3, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 22);
 
 --
 -- Index pour les tables exportées
@@ -135,6 +144,12 @@ INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateC
 -- Index pour la table `metiers`
 --
 ALTER TABLE `metiers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `photos`
+--
+ALTER TABLE `photos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -159,6 +174,11 @@ ALTER TABLE `users`
 ALTER TABLE `metiers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
+-- AUTO_INCREMENT pour la table `photos`
+--
+ALTER TABLE `photos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT pour la table `projets`
 --
 ALTER TABLE `projets`
@@ -167,7 +187,7 @@ ALTER TABLE `projets`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
