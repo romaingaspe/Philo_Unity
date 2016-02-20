@@ -252,19 +252,19 @@ footer div div ul {
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START PROJECTS PAGE*/
 
-#titleprojet{
+/* #titleprojet{
 	width: 30%;
-}
+} */
 #titleentete{
 	background-color: #e0f2f1;
 }
-#slideprojet{
+/* #slideprojet{
 	margin-left: 2%;
-}
+} */
 #com-projects{
-	margin-top: 3%;
-	margin-left: 33.5%;
-	width: 50%;
+	margin-bottom: 3%;
+	/* margin-left: 33.5%;
+	width: 50%; */
 	padding: 10px;
 }
 #com-projects h7{
@@ -287,23 +287,30 @@ footer div div ul {
     position: relative;
 }
 
-#titleprojet{
-	width: 30%;
+#titleprojet h4{
+    background-color: #128b82;
+    margin-top: 0 !important;
+    font-size: 1.7em;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
 }
+
 #titleentete{
 	background-color: #e0f2f1;
 }
-#slideprojet{
-	margin-left: 2%;
-}
-#com-projects{
+
+/* #com-projects{      Fatou: J'ai mis cette effet de style en commentaire pour tester;
 	margin-top: 3%;
 	margin-left: 33.5%;
 	width: 50%;
 	padding: 10px;
-}
+} */
 #com-projects h7{
 	color: #128b82;
+}
+.btn-com-project{
+	margin: 3.35% 1.35%;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END PROJECTS PAGE*/
@@ -323,7 +330,7 @@ footer div div ul {
 #form-com label{
 	color: #128b82;
 }
-padding-right: 1.35%;
+
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END COMMENTAIRE PROJECTS*/
 
