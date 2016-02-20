@@ -76,11 +76,6 @@ i{
 
 /* ############################ START : PROPRIETES GLOBALES############################ */
 
-/* ne pas oublier de caler les margins à l' intitulé connexion */
-/* style="margin-top:50px"
-style="margin-top:50px" */
-
-
 /*Header*/
 nav div a img {
 	height: 40px;
@@ -91,26 +86,41 @@ nav {
     background-color: #128b82;
 }
 /* START : Entete pages cgu,commentaires et galleryproject */
-#banner-project span{
-	background-color: #128b82;
-	padding: 15px;
-	color: transparent;
-}
-#banner-project {
-	margin-top: 1%;
-}
-/* #####################"" */
-/* .banner-contained{
-	padding: 0;
-}
-.banner-contained .com{
-	background-color: white;
-	padding: 15px;
-	color:#fff;
-}
- */
+	#banner-project span{
+		background-color: #128b82;
+		padding: 15px;
+		color: transparent;
+	}
+	#banner-project {
+		margin-top: 1%;
+	}
+	/* ##################### */
+
+	/* .banner-contained{
+		padding: 0;
+	}
+	.banner-contained .com{
+		background-color: white;
+		padding: 15px;
+		color:#fff;
+	}*/
+
 /* END : Entete pages cgu,commentaires et galleryproject */
+
 /* ############################ END : PROPRIETES GLOBALES############################ */
+
+							      /* ######## */
+
+/* * * * * * * * PART : START : GALLERY PROJECTS * * * * * * * */
+
+/* ne pas oublier de caler les margins à l' intitulé connexion */
+.margetop{
+	margin-top:50px; 
+}
+
+/* * * * * * * * PART : END : METIERS ET SOUS CAT METIERS * * * * * * * */
+	
+							      /* ######## */					
 
 /* * * * * * * * PART : START METIERS ET SOUS CAT METIERS * * * * * * * */
 

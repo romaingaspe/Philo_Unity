@@ -4,10 +4,10 @@
 
 <div class="container section center">
     <div class="row center">
-        <div class="s6 offset-s3 col m6 offset-m3 l6 offset-l3 center align card-panel teal lighten-2">
+        <div class="s8 offset-s2 col m8 offset-m2 l6 offset-l3 center align card-panel teal lighten-2 margetop">
             <h3 class="white-text">Connexion</h3>
         </div>
-        <form method="POST" class="col l6 offset-l3">
+        <form method="POST" class="col s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
             <div class="input-field">
                 <i class="material-icons prefix">account_circle</i>
                 <label for="login">Login</label>
