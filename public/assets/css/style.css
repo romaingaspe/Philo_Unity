@@ -191,7 +191,39 @@ footer div div ul {
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  PART : END METIERS ET SOUS CAT METIERS*/
 
+<<<<<<< HEAD
 										/* ######## */
+=======
+						/* ######## */
+
+/***************** start :RESPONSIVE CONDITION *************/
+	
+		@media screen and (max-width: 990px) {
+			#Objet-des-CGU{
+				width: 60%;
+				margin-left: 20% !important;
+			}
+
+			#banner-project{
+				width: 100%;
+				margin: 0 !important;
+				}
+		    
+			#titre-CGU{
+				margin: 0 !important
+				}
+			}
+
+		@media screen and (max-width: 250px) {
+
+			#banner-project{
+				display: none;
+				}
+			}
+/***************** stop :RESPONSIVE CONDITION **************/
+
+/* * * * * * * * PART : END METIERS ET SOUS CAT METIERS * * * * * * * */
+>>>>>>> origin/master
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *PART : START GALLERY PROJECTS*/
 
@@ -434,12 +466,17 @@ h6.nameProject{
 						/* ######## */
 
 
+<<<<<<< HEAD
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START CGU page*/
 
+=======
+/* * * * * * * * PART : END CONDITION * * * * * * * */
+>>>>>>> origin/master
 #Objet-des-CGU{
 	margin-left: 15%;
-	text-align: center;
+	margin-right: 15%;
 }
+
 #Objet-des-CGU h4{
 	margin-left: 15%;
 	text-align: center;
@@ -448,9 +485,10 @@ h6.nameProject{
 }
 #Objet-des-CGU p{
 	text-align: justify;
+	padding: 7px;
 }
 #cont-des-CGU{
-	margin-left: 15%;
+	
 }
 #couleur-font p{
 	color: white;
