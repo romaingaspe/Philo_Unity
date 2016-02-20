@@ -109,18 +109,20 @@ nav {
 
 /* ############################ END : PROPRIETES GLOBALES############################ */
 
-							      /* ######## */
+							     
 
-/* * * * * * * * PART : START : GALLERY PROJECTS * * * * * * * */
+/*                   PART : START : CONNECT/DECONNECT/REINIPASS                    */
+/* ------------------------------------------------------------------------------ */
 
 /* ne pas oublier de caler les margins à l' intitulé connexion */
 .margetop{
 	margin-top:50px; 
 }
 
-/* * * * * * * * PART : END : METIERS ET SOUS CAT METIERS * * * * * * * */
+/*                     PART : END : CONNECT/DECONNECT/REINIPASS                    */
+/* ------------------------------------------------------------------------------ */
 	
-							      /* ######## */					
+							      				
 
 /* * * * * * * * PART : START METIERS ET SOUS CAT METIERS * * * * * * * */
 
@@ -176,6 +178,25 @@ footer .row{
 footer div div ul {
 	padding-top: 50px;
 }
+/***************** start : RESPONSIVE FOOTER ***************/
+/***/
+/***/	@media screen and (max-width: 700px) {
+/***/		 footer div{
+/***/		   height: 150px;
+/***/		 }
+/***/	}
+/***/	@media screen and (max-width: 450px) {
+			footer div{
+/***/		   height: 125px;
+/***/		 }
+
+/***/		footer div div ul {
+    			padding-top: 0px;
+			}
+/***/		
+/***/	}
+/***/
+/***************** stop : RESPONSIVE FOOTER ***************/
 
 /* * * * * * * * PART : END METIERS ET SOUS CAT METIERS * * * * * * * */
 
