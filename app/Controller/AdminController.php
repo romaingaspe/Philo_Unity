@@ -34,7 +34,7 @@ class AdminController extends Controller
 				$userId = $login->isValidLoginInfo($_POST['login'], $_POST['pass']);
 				if(is_int($userId) && $userId != 0){
 					$userManager = new UserManager();
-					$userDatas = $userManager->find($id);
+					$userDatas = $userManager->find($userId);
 					// alors démarrer la session (logUserIn)
 					$login->logUserIn($userDatas);
 					// et rediriger vers l'accueil

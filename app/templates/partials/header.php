@@ -1,4 +1,5 @@
 <header>
+	<?php var_dump($_SESSION);?>
 	<nav class="brown">
 		<div class="container nav-wrapper">
 			<a href="/Philo_Unity/public">
