@@ -21,6 +21,7 @@
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],
 		['GET', '/metierspage', 'metiers#ajaxmetiers', 'paginationsmetiers'],
 		['GET', '/metiers/[a:section]/profilsall', 'profil#profilsAll', 'profilsall'],
+		['GET', '/profilsall', 'metiers#ajaxprofils', 'paginationprofils'],
 
 		/////////////////////////////ADMIN///////////////////////////////////////////////////////////
 		['GET|POST', '/admin/connect', 'admin#connect', 'connect'],

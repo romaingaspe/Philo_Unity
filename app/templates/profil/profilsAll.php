@@ -9,6 +9,13 @@
 	</div>
 	<h1 class="center-align"><?php echo implode('', $sectionchoix);?></h1>
 	<section id="allworks" class="row section container">
+		<?php
+			echo '<ul class="pagination">';
+			for($i=1; $i<=$totalpages; $i++){
+				echo '<li class="waves-effect"><a class="paginations" href="'.$i.'">'.$i.' </a></li>';
+			}
+			echo '</ul>';
+		?>
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<?php
 		foreach($users as $use){
@@ -30,3 +37,9 @@
 	</section>
 
 <?php $this->stop('main_content') ?>
+
+<?php $this->start('script') ?>
+	<script type="text/javascript">
+		var pageUrl = '<?= $this->url('paginationprofils') ?>';
+	</script>
+<?php $this->stop('script') ?>

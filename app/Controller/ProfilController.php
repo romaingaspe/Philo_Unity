@@ -33,7 +33,7 @@ class ProfilController extends Controller
       $params['users'] = $allusers;
       $sectionchoix = $metier->findSection($section);
       $params['sectionchoix'] = $sectionchoix[0];
-        $this->show('profil/profilsAll', $params);
+      $this->show('profil/profilsAll', $params);
     }
 
 }

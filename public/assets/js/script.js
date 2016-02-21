@@ -26,7 +26,7 @@ $(function(){
                     .append($('<div>').addClass('text-works')
                         .append($('<h6>').text(reponse[m].section))
                         .append($('<p>').text(reponse[m].description)))
-                        .append($('<a>').text(reponse[m].section).attr('href', reponse[m].alias))
+                        .append($('<a>').text(reponse[m].section).attr('href', '/philo_unity/public/metiers/'+reponse[m].alias+'/profilsall'))
                     $('#allworks').append(htmlMetier);
                 }
             }
