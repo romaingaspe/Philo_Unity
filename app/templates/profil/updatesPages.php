@@ -17,8 +17,7 @@
 			<div id="list-edit" class="col m12 l4">
 			<div></div>
 				<a id="bouton-edit" class=" col m4 waves-effect waves-light btn">Editer votre profil</a>
-				<a id="bouton-edit" class=" col m4 waves-effect waves-light btn">Editer votre </a>
-				<a id="bouton-edit" class=" col m4 waves-effect waves-light btn">Editer votre profil</a>
+				<a id="bouton-edit" class=" col m4 waves-effect waves-light btn">Editer votre portefolio</a>
 			</div>
 			<div id="bloc-projet-edit" class="col m12 l2">
 				<a id="projet-edit" class="waves-effect waves-light btn">
