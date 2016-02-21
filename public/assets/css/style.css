@@ -126,6 +126,17 @@ footer div div ul {
 /***/
 /***************** end : RESPONSIVE FOOTER ***************/
 
+/***************** start : RESPONSIVE NAV HEADER ***************/
+
+		@media screen and (max-width: 475px){
+			#nav-resp{
+				background-color: #795548;
+				padding-right: 5px;
+			}
+		}
+
+/***************** stop : RESPONSIVE NAV HEADER ***************/
+
 /* START : ENTETE pages cgu, commentaires et galleryproject */
 
 	#banner-project span{
