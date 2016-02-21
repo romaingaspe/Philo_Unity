@@ -6,7 +6,7 @@
 			</a>
 			<ul id="dropdown1" class="dropdown-content">
 			  <li><a href="<?php echo '/philo_unity/public/profil/profiluser/'.$_SESSION['user']['id'] ?>">Mon profil</a></li>
-			  <li><a href="#!">Mon Portfolio</a></li>
+			  <li><a href="<?= $this->url('galleryProjects') ?>">Mon Portfolio</a></li>
 			  <li class="divider"></li>
 			  <li><a href="<?= $this->url('update') ?>">Mes infos</a></li>
 			</ul>
