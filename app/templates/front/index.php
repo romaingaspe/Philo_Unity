@@ -10,31 +10,14 @@
 </div>
 <div id="carous" class="">
 	<div class="carousel">
-		<a class="carousel-item" href="#one!">
-			<h2 class="center">Machin truc</h2>
-			<img src="http://lorempixel.com/600/600/people/1">
-			<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-		</a>
-		<a class="carousel-item" href="#two!">
-			<h2 class="center">Machin truc</h2>
-			<img src="http://lorempixel.com/600/600/people/2">
-			<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-		</a>
-		<a class="carousel-item" href="#three!">
-			<h2 class="center">Machin truc</h2>
-			<img src="http://lorempixel.com/600/600/people/3">
-			<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-		</a>
-		<a class="carousel-item" href="#four!">
-			<h2 class="center">Machin truc</h2>
-			<img src="http://lorempixel.com/600/600/people/4">
-			<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-		</a>
-		<a class="carousel-item" href="#five!"
-			><h2 class="center">Machin truc</h2>
-			<img src="http://lorempixel.com/600/600/people/5">
-			<p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-		</a>
+		<?php
+		foreach ($users as $use){
+			echo '<a class="carousel-item" href="/philo_unity/public/profil/profiluser/'.$use['id'].'">';
+			echo '<h2 class="center">'.$use['prenom'].$use['nom'].'</h2>';
+			echo '<img src="'.$use['photo'].'">';
+			echo '<p class="truncate">'.$use['description'].'</p></a>';
+		}
+		?>
 	</div>
 </div>
 <?php $this->stop('main_content') ?>

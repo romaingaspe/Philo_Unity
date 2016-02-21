@@ -3,7 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-
+use Manager\FixUserManager;
 class FrontController extends Controller
 {
 
@@ -12,7 +12,10 @@ class FrontController extends Controller
 	 */
 	public function index()
 	{
-		$this->show('front/index');
+		$profils = new FixUserManager();
+		$profilselect = $profils->findAll('date_update', 'ASC', 6);
+		$params['users'] = $profilselect;
+		$this->show('front/index', $params);
 	}
 	public function conditions()
 	{

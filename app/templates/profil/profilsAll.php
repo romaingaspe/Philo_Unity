@@ -10,9 +10,9 @@
 	<h1 class="center-align"><?php echo implode('', $sectionchoix);?></h1>
 	<section id="allworks" class="row section container">
 		<?php
-			echo '<ul class="pagination">';
+			echo '<ul class="pagination2">';
 			for($i=1; $i<=$totalpages; $i++){
-				echo '<li class="waves-effect"><a class="paginations" href="'.$i.'">'.$i.' </a></li>';
+				echo '<li class="waves-effect"><a class="paginations2" href="'.$i.'">'.$i.' </a></li>';
 			}
 			echo '</ul>';
 		?>

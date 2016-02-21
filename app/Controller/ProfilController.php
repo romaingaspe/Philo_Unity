@@ -19,9 +19,9 @@ class ProfilController extends Controller
     public function profilUser($id)
     {
 
-        $prof = new FixUserManager();
+      $prof = new FixUserManager();
     	$profil = [
-    		'profil' => $prof->find($id),
+    	  'profil' => $prof->find($id),
     		/*'username' => $user->find($art->find($id)['id_user'])['username'];*/
     	];
         $this->show('profil/profilUser', $profil);
@@ -29,8 +29,10 @@ class ProfilController extends Controller
     public function profilsAll($section)
     {
       $metier = new MetierManager;
+      /*Tableau es profils par section*/
       $allusers = $metier->findMetier($section);
       $params['users'] = $allusers;
+      /*Affichage du nom de la section*/
       $sectionchoix = $metier->findSection($section);
       $params['sectionchoix'] = $sectionchoix[0];
       $this->show('profil/profilsAll', $params);
