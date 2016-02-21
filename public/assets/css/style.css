@@ -1,5 +1,6 @@
-img.circle.valign{
-	margin-top:0;
+#circleprofil{
+	max-height: 40px;
+	max-width: 40px;
 }
 i{
 	color:white;
