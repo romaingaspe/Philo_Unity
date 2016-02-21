@@ -205,6 +205,20 @@ footer div div ul {
 
 										/* ######## */
 
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START RESPONSIVE METIERS ET SOUS CAT METIERS*/
+
+			@media screen and (max-width: 900px){
+				#allworks img{
+					width: 25em;
+				}
+			}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  PART : END RESPONSIVE METIERS ET SOUS CAT METIERS*/
+
+										/* ######## */
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *PART : START GALLERY PROJECTS*/
 
 /*--------- start : TYPO (texts) gallery projects---------*/

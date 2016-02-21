@@ -27,7 +27,7 @@
 	<section id="allworks" class="row container">
 		<?php
 			foreach($metiers as $met){
-				echo '<article class="col l4">';
+				echo '<article class="col s12 m6 l4">';
 				echo '<div>';
 				echo '<img src="'.$met['photo'].'" alt="">';
 				echo '</div>';
