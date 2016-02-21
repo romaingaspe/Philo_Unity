@@ -20,7 +20,7 @@
 		////////////////////////////METIERS////////////////////////////////////////////////////////
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],
 		['GET', '/metierspage', 'metiers#ajaxmetiers', 'paginationsmetiers'],
-		['GET', '/metiers/[a:section]/profilsAll', 'profil#profilsAll', 'profilsall'],
+		['GET', '/metiers/[a:section]/profilsall', 'profil#profilsAll', 'profilsall'],
 
 		/////////////////////////////ADMIN///////////////////////////////////////////////////////////
 		['GET|POST', '/admin/connect', 'admin#connect', 'connect'],

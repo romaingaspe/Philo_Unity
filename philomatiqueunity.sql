@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 20 Février 2016 à 16:31
+-- Généré le :  Dim 21 Février 2016 à 10:24
 -- Version du serveur :  10.1.9-MariaDB
 -- Version de PHP :  5.6.15
 
@@ -120,6 +120,7 @@ CREATE TABLE `users` (
   `confirmedToken` varchar(255) DEFAULT NULL,
   `dateConfirmedToken` datetime DEFAULT NULL,
   `email` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `description` varchar(255) NOT NULL,
   `role` enum('Admin','user') NOT NULL,
   `linkedin` varchar(255) CHARACTER SET latin1 NOT NULL,
   `photo` varchar(255) NOT NULL,
@@ -131,10 +132,10 @@ CREATE TABLE `users` (
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateConfirmedToken`, `email`, `role`, `linkedin`, `photo`, `date_update`, `id_metier`) VALUES
-(1, 'fatou', 'diaby', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'defelite33160@gmail.com', 'user', '', '', '2016-02-16', 0),
-(2, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 0),
-(3, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 22);
+INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateConfirmedToken`, `email`, `description`, `role`, `linkedin`, `photo`, `date_update`, `id_metier`) VALUES
+(1, 'fatou', 'diaby', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'defelite33160@gmail.com', '', 'user', '', '', '2016-02-16', 0),
+(2, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', '', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 0),
+(3, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Bonjour je m''appelle Vincent, j''aime les assos !', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 22);
 
 --
 -- Index pour les tables exportées

@@ -29,9 +29,11 @@ class ProfilController extends Controller
     public function profilsAll($section)
     {
       $metier = new MetierManager;
-      $allusers = $metier->findAllUsers('prenom', 'ASC', 6, null , 'webforce' );
-      var_dump($allusers);
-        $this->show('profil/profilsAll');
+      $allusers = $metier->findMetier($section);
+      $params['users'] = $allusers;
+      $sectionchoix = $metier->findSection($section);
+      $params['sectionchoix'] = $sectionchoix[0];
+        $this->show('profil/profilsAll', $params);
     }
 
 }

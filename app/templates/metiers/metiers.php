@@ -34,7 +34,7 @@
 				echo '<div class="text-works">';
 				echo '<h6>'.$met['section'].'</h6>';
 				echo '<p>'.$met['description'].'</p>';
-				echo '<a href="metiers/'.$met['alias'].'/profilsAll">'.$met['section'].'</a>';
+				echo '<a href="metiers/'.$met['alias'].'/profilsall">'.$met['section'].'</a>';
 				echo '</div>';
 				echo '</article>';
 			}
