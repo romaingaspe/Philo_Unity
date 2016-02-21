@@ -1,7 +1,6 @@
-#trombi{
-	
+img.circle.valign{
+	margin-top:0;
 }
-
 i{
 	color:white;
 }
@@ -128,7 +127,7 @@ footer div div ul {
 /***/		footer div div ul {
     			padding-top: 0px;
 			}
-/***/		
+/***/
 /***/	}
 /***/
 /***************** end : RESPONSIVE FOOTER ***************/
@@ -160,17 +159,17 @@ footer div div ul {
 
 /* ################################## END : PROPRIETES GLOBALES################################## */
 
-							     
+
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START : CONNECT/DECONNECT/REINIPASS*/
 
 /* ne pas oublier de caler les margins à l' intitulé connexion */
 .margetop{
-	margin-top:50px; 
-}                                     
+	margin-top:50px;
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END : CONNECT/DECONNECT/REINIPASS*/
-	
-							      		/* ######## */		
+
+							      		/* ######## */
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START METIERS ET SOUS CAT METIERS*/
 
@@ -278,12 +277,12 @@ footer div div ul {
 	color: #128B82;
 }
 #cards-folio{
-	position: relative; 
+	position: relative;
 	height: 50em;
 }
 #cards-global-content{
-	position: absolute; 
-	left: 0px; 
+	position: absolute;
+	left: 0px;
 	top: 0px;
 }
 
@@ -378,7 +377,7 @@ div #slideprojet{
 
 } */
 #image-entete img{
-	height: 50%; 
+	height: 50%;
 	margin-bottom: 5%;
 }
 #image-entete h5{
@@ -430,8 +429,8 @@ section.update-content{
 	width: 100%;
 }
 
-/******* ZONE'#bouton-edit' : les boutons sur la gauche de la page d'update/ 
- * permettrons d'accéder aux champs à modifier selon la catégorie 
+/******* ZONE'#bouton-edit' : les boutons sur la gauche de la page d'update/
+ * permettrons d'accéder aux champs à modifier selon la catégorie
  * (ex: profil ou projets) *******/
 
 #bouton-edit{
@@ -521,14 +520,14 @@ h6.nameProject{
 	padding: 7px;
 }
 #cont-des-CGU{
-	
+
 }
 #couleur-font p{
 	color: white;
 }
 
 /***************** start :RESPONSIVE CGU *************/
-	
+
 		@media screen and (max-width: 990px) {
 			#Objet-des-CGU{
 				width: 60%;
@@ -539,7 +538,7 @@ h6.nameProject{
 				width: 100%;
 				margin: 0 !important;
 				}
-		    
+
 			#titre-CGU{
 				margin: 0 !important
 				}
