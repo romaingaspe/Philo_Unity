@@ -5,7 +5,7 @@
 	<div id="mainphoto2">
 		<div class="row">
 			<p class="center white-text">Propulsé par la</p>
-			<img class="col l6 offset-l3"src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
+			<img id="resp-logo" class="col s12"src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
 		</div>
 	</div>
 	<h1 class="center-align">Nos métiers</h1>
