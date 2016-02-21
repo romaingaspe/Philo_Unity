@@ -107,7 +107,7 @@ class AdminController extends Controller
 					$mail->Port = $app->getConfig('phpmailer_port');                                    // TCP port to connect to
 
 					$mail->setFrom($_POST['email']);
-					$mail->addAddress('offres@vincentmartinat.com', 'vincent');     // Add a recipient
+					$mail->addAddress($_POST['email']);     // Add a recipient
 					//$mail->addAddress($_POST['email']);               // Name is optional
 					$mail->addReplyTo('offres@vincentmartinat.com', 'Information');
 					/*$mail->addCC('cc@example.com');
@@ -117,7 +117,7 @@ class AdminController extends Controller
 					$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 						*/
 					$mail->isHTML(true);
-					$mail->Body = '<a href="'.$successLink.'">Reinitialisez votre mot de passe</a>';                  	// Set email format to HTML
+					$mail->Body = '<a href="'.$successLink.'">Reinitialisez votre mot de passe en cliquant sur cette phrase ce liens est valable une semaine après merci de refaire une demande.</a>';                  	// Set email format to HTML
 
 
 
@@ -154,5 +154,34 @@ class AdminController extends Controller
 	{
 
 		$this->show('admin/reiniPassTok');
+	}
+	public function inscription()
+	{
+		$this->allowTo(['admin']);
+		$login = new AuthentificationManager();
+		$userManager = new UserManager;
+		$errors = array();
+		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
+		if(!empty($_POST)){
+			// Faire vérification des champs ICI
+			if(empty($_POST['nom'])){
+				$errors[] = 'le nom est vide';
+			}
+			if(empty($_POST['prenom'])){
+				$errors[] = 'le prenom est vide';
+			}
+			if(empty($_POST['email'])){
+				$errors[] = 'l\'email est vide';
+			}
+			if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
+				$errors[] = 'L\'email est invalide';
+			}
+			if(count($errors) == 0){
+				// il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd
+				
+				$this->insert($_POST['nom'],$_POST['prenom'],$_POST['email'])
+
+		$params['errors'] = $errors;
+		$this->show('admin/insertProfil', $params);
 	}
 }
