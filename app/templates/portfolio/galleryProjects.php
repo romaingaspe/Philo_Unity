@@ -25,8 +25,8 @@
 	</div>
 
 	<!-- 3ème ligne gallerie -->
-	<div id="cards-folio" class="container row isotope" style="position: relative; height: 50em;">
-		<div class=" " style="position: absolute; left: 0px; top: 0px;">
+	<div id="cards-folio" class="container row isotope">
+		<div id="cards-global-content"> <!-- div qui contient toutes mes cartes de projets -->
 			<div class=" col m6 l4 ">
 	  			<div class="card">
 	  				<div class="card-content" style="padding: 7px;">
