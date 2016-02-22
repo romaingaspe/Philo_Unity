@@ -6,17 +6,14 @@
 			</a>
 			<ul id="dropdown1" class="dropdown-content">
 			  <li><a href="<?= $this->url('profiluser').$_SESSION['user']['id'] ?>">Mon profil</a></li>
-			  <li><a href="<?= $this->url('galleryProjects') ?>">Mon Portfolio</a></li>
 			  <li class="divider"></li>
 			  <li><a href="<?= $this->url('update') ?>">Mes infos</a></li>
 			</ul>
 			<ul id="nav-resp" class=" col s12 m6 l4 right">
-
 				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
-
-				<?php if(!$_SESSION) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
-				<?php if($_SESSION) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
-				<?php if($_SESSION) :?>
+				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
+				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
+				<?php if($w_user) :?>
 					<li>
 						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">
 								<img src="<?= $_SESSION['user']['photo'] ?>" alt="" class="left " id="circleprofil"/>
