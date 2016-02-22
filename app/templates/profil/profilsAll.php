@@ -40,6 +40,6 @@
 
 <?php $this->start('script') ?>
 	<script type="text/javascript">
-		var pageUrl = '<?= $this->url('paginationprofils', ['section'=>$section]) ?>';
+		var pageUrl = '<?= $this->url('paginationprofils') ?>';
 	</script>
 <?php $this->stop('script') ?>

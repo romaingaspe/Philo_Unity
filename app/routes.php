@@ -5,6 +5,7 @@
 		['GET', '/', 'Front#index', 'index'],
 		['GET', '/conditions', 'Front#conditions', 'conditions'],
 		['GET|POST', '/contactadmin', 'Front#contactAdmin', 'contactAdmin'],
+		['GET|POST', '/recherche', 'Front#recherche', 'recherche'],
 
 		////////////////////////////PORTFOLIO////////////////////////////////////////////////////////
 		['GET', '/profil/portfolio/[:id]', 'portfolio#galleryProjects', 'galleryProjects'],
@@ -13,7 +14,6 @@
 
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
 		['GET', '/profil/profiluser/[:id]', 'profil#profiluser', 'profiluser'],
-
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 		['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
 
@@ -21,7 +21,7 @@
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],
 		['GET', '/metierspage', 'metiers#ajaxmetiers', 'paginationsmetiers'],
 		['GET', '/metiers/[a:section]/profilsall', 'profil#profilsAll', 'profilsall'],
-		['GET', '/profilsall', 'metiers#ajaxprofils', 'paginationprofils'],
+		['GET', '/metiers/[a:section]/profilsall/pagination', 'profil#ajaxprofils', 'paginationprofils'],
 
 		/////////////////////////////ADMIN///////////////////////////////////////////////////////////
 		['GET|POST', '/admin/connect', 'admin#connect', 'connect'],

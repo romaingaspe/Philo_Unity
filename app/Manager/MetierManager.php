@@ -48,7 +48,4 @@ class MetierManager extends \W\Manager\UserManager {
   	$sth->execute();
   	return $sth->fetchAll();
   }
-  public function ajaxprofils(){
-
-  }
 }
