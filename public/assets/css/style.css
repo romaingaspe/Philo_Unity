@@ -49,9 +49,19 @@ i{
 }
 .carousel-item{
 	width: 500px !important;
+
+}
+.carousel-item img{
+	object-fit: cover;
+	height: 500px;
 }
 .carousel{
 	height: 900px;
+}
+footer::before{
+	content: '';
+	display: block;
+	height: 100px;
 }
 .carousel h2{
 	margin: 0;
