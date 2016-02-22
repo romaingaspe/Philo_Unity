@@ -2,10 +2,10 @@
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Dim 21 Février 2016 à 20:13
--- Version du serveur :  10.1.8-MariaDB
--- Version de PHP :  5.5.30
+-- Host: 127.0.0.1
+-- Generation Time: Feb 22, 2016 at 05:07 PM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `philomatiqueunity`
+-- Database: `philomatiqueunity`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaires`
+-- Table structure for table `commentaires`
 --
 
 CREATE TABLE `commentaires` (
@@ -35,7 +35,7 @@ CREATE TABLE `commentaires` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `commentaires`
+-- Dumping data for table `commentaires`
 --
 
 INSERT INTO `commentaires` (`id`, `iduserspost`, `idprojet`, `comments`, `date`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `commentaires` (`id`, `iduserspost`, `idprojet`, `comments`, `date`)
 -- --------------------------------------------------------
 
 --
--- Structure de la table `metiers`
+-- Table structure for table `metiers`
 --
 
 CREATE TABLE `metiers` (
@@ -56,7 +56,7 @@ CREATE TABLE `metiers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `metiers`
+-- Dumping data for table `metiers`
 --
 
 INSERT INTO `metiers` (`id`, `section`, `alias`, `photo`, `description`) VALUES
@@ -73,68 +73,63 @@ INSERT INTO `metiers` (`id`, `section`, `alias`, `photo`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `photos`
+-- Table structure for table `photos`
 --
 
 CREATE TABLE `photos` (
   `id` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
   `id_projet` int(11) NOT NULL,
-  `photo1` varchar(255) NOT NULL,
-  `caption1` varchar(80) NOT NULL,
-  `photo2` varchar(255) NOT NULL,
-  `caption2` varchar(80) NOT NULL,
-  `photo3` varchar(255) NOT NULL,
-  `caption3` varchar(80) NOT NULL,
-  `photo4` varchar(255) NOT NULL,
-  `caption4` varchar(80) NOT NULL
+  `photo` varchar(255) NOT NULL,
+  `caption` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `photos`
+-- Dumping data for table `photos`
 --
 
-INSERT INTO `photos` (`id`, `id_user`, `id_projet`, `photo1`, `caption1`, `photo2`, `caption2`, `photo3`, `caption3`, `photo4`, `caption4`) VALUES
-(1, 1, 2, 'http://blog.gaborit-d.com/wp-content/uploads/2014/01/Sculpture-by-Matt-Buckley-11.jpg', 'Sculpture aigle', 'http://blog.gaborit-d.com/wp-content/uploads/2014/01/Sculpture-by-Matt-Buckley-9.jpg', 'Sculpture Tigre', 'http://2.bp.blogspot.com/-c9pI9hI25pQ/U2x4XwZwKWI/AAAAAAAAu-0/PkXkicXiWzk/s1600/hare-figure-resin-sculpture-by-matt-buckley-p2619-2525_zoom.jpg', 'sculpture lievre', 'https://pbs.twimg.com/media/B939y1tIgAAx_9u.jpg', 'Sculpture pharaon'),
-(2, 1, 3, 'http://erikdemaine.org/curved/Wedge/400.jpg', 'curved', 'http://erikdemaine.org/curved/Wedge/thumbs/AB4A0199_medium.jpg', 'baby curved', 'http://erikdemaine.org/curved/McClellan/H0232-H0237_square_400.jpg', 'curved in vase', 'http://erikdemaine.org/curved/QR/thumbs/0471-011_medium.jpg', 'damier'),
-(3, 1, 4, 'http://maison3.advcdn.net/images/medias/000/031/000031299/600.jpg', 'Sable cubique', 'http://maison2.advcdn.net/images/medias/000/031/000031298/600.jpg', 'Sable nostalgie', 'http://www.lepoint.fr/images/2014/11/12/2916045-639306-jpg_2549896.jpg', 'Du jamais vue', 'http://lejollyroger.com/wp-content/uploads/2015/07/Touquet-Sculpture-de-Sable-01.jpg', 'Personnage sur plage'),
-(4, 1, 5, 'https://c1.staticflickr.com/7/6059/6338461990_7828cf326e_b.jpg', 'Uké simple', 'http://www.wonderful-art.fr/wp-content/uploads/2012/11/ukulele11.jpg', 'Gravure uke', 'http://images.fineartamerica.com/images-medium-large/handpainted-pono-concert-ukulele-jean-groberg.jpg', 'Paint uké art', 'http://orig07.deviantart.net/57d7/f/2012/104/4/3/ukulele_by_adrift_dreams-d4w7enp.jpg', 'Dolly uké'),
-(5, 2, 6, 'http://ekladata.com/GZUu4Bc4-dLV8K4j--v9b_VyltY.jpg', 'Le tracteur bleu', 'http://www.pleinchamp.com/var/ca_pleinchamp/storage/images/plein_champ/home/actualites-machinisme/le-deutz-fahr-ttv-7250-elu-tracteur-de-l-annee-2013/35455914-1-fre-FR/le-deutz-fahr-ttv-7250-elu-tracteur-de-l-annee-2013.jpg', 'Le tracteur vert', 'http://www.agriaffaires.com/img_318/tracteur/tracteur.jpg', 'Le tracteur jaune', '', ''),
-(6, 2, 7, 'http://www.jolpress.com/sites/default/files/styles/article_content_big/public/field/image/picasso.jpg?itok=mAMwgjHr', 'Les copines', 'http://www.arts-reproductions.com/uploads/painting/image/2915/original_ly07abstract404.jpg', 'Le rêve', 'http://art-contemporain-graal.fr/artiste-contemporain/photos-artistes-oeuvres/oeuvres/oeuvre-d-art-zdz403.jpg', 'Cavalier du jour', 'http://www.consostatic.com/wp-content/uploads/2016/02/sexe-corps-sexualite-ban.jpg', 'Je rebondis sur mon un autre projet Éco-orgasme, allez-y faire un tour !Bises!'),
-(7, 2, 8, 'http://estunart.fr/wp-content/uploads/2016/01/box-eco-orgasme-300x300.jpg', 'Post-it ecommandements', 'http://www.oolution.com/bloog/wp-content/uploads/2015/07/carte_commandos_eco-orgasme.jpg', 'Nous sommes partout', 'http://www.generationscobayes.org/sites/default/files/bannieresoireeecoorgasme.jpg', 'Une fête pour essayer de comprendre le concept !', 'http://alerte-environnement.fr/wp-content/uploads/2013/12/GC.png', 'Venez à nous pour plus d''infos !');
+INSERT INTO `photos` (`id`, `id_projet`, `photo`, `caption`) VALUES
+(1, 2, 'http://blog.gaborit-d.com/wp-content/uploads/2014/01/Sculpture-by-Matt-Buckley-11.jpg', 'Sculpture aigle'),
+(2, 3, 'http://erikdemaine.org/curved/Wedge/400.jpg', 'curved'),
+(3, 4, 'http://maison3.advcdn.net/images/medias/000/031/000031299/600.jpg', 'Sable cubique'),
+(4, 5, 'https://c1.staticflickr.com/7/6059/6338461990_7828cf326e_b.jpg', 'Uké simple'),
+(5, 6, 'http://ekladata.com/GZUu4Bc4-dLV8K4j--v9b_VyltY.jpg', 'Le tracteur bleu'),
+(6, 7, 'http://www.jolpress.com/sites/default/files/styles/article_content_big/public/field/image/picasso.jpg?itok=mAMwgjHr', 'Les copines'),
+(7, 8, 'http://estunart.fr/wp-content/uploads/2016/01/box-eco-orgasme-300x300.jpg', 'Post-it ecommandements');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `projets`
+-- Table structure for table `projets`
 --
 
 CREATE TABLE `projets` (
   `id` int(11) NOT NULL,
+  `project_title` varchar(155) NOT NULL,
   `description` text CHARACTER SET latin1 NOT NULL,
   `date_publish` date NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `id_photos` int(11) NOT NULL
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `projets`
+-- Dumping data for table `projets`
 --
 
-INSERT INTO `projets` (`id`, `description`, `date_publish`, `id_user`, `id_photos`) VALUES
-(1, 'VINCENT', '2016-02-18', 2, 0),
-(2, 'Sculpture sur pierre\r\n\r\nIncroyable et généreuse création,sculpté dans la pierre ces œuvres seront vous porter dans leurs aventures ou histoires...\r\nPrenez garde à votre imagination, elle pourrait vous transporter loin dans ce visionnage ...\r\nBon c''était pour créer du contenu !\r\n\r\nblablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', '2016-02-21', 1, 1),
-(3, 'Origami un monde qui se créé et n''arrêtera pas de grandir.\r\nLe plis, l''histoire du plis remonte à ...blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', '2016-02-20', 1, 2),
-(4, ' blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', '2016-02-13', 1, 3),
-(5, 'L''ukulélé est un instrument à cordes pincées traditionnel des îles Hawaï, proche du cavaquinho portugais dont il est une adaptation.\r\n\r\nSouvent bon marché et à la mode dans la première moitié du xxe siècle, ce petit instrument polyvalent composante indispensable d’un orchestre hawaïen fut rapidement adopté par divers courants musicaux – de la chanson populaire au jazz – parfois parce qu’il apportait une dimension humoristique ou exotique à un ensemble.', '2016-02-18', 1, 5),
-(6, 'Ma passion pour les tracteurs a commencé à l''âde de 4 ans. Dés que j''ai eu mon premier tracteur je me suis senti investi d''un grand rôle: CONQUÉRIR LES TRACTEURS DU MON ENTIER !!\r\nJe me suis lancé dans ma propre industrie de tracteur, je prévois d''ouvrir un musée, ''le grand musée des tracteurs du monde entier''\r\nVoici ma collection de tracteurs !!\r\n\r\nLaissez moi des messages, des bisous !!\r\n', '2016-02-21', 2, 6),
-(7, 'Une œuvre d’art, ou un objet d''art, est un objet ou une création artistique ou esthétique. C''est généralement un élément fait par un artiste.\r\n\r\nEn particulier, un chef-d''œuvre était anciennement la preuve de l''excellence que devait présenter le compagnon pour être promu à la maîtrise dans sa corporation.\r\n\r\nJe vous laisse ma collection d''oeuvre d''art en autocollant !\r\nDisponible également en poster, pour plus d''infos me contacter !\r\n\r\nAu plaisir !', '2016-02-17', 2, 7),
-(8, 'Le regroupement d’associations Générations Cobayes continue sa campagne de prévention santé à destination… de tous. Leur slogan : « pour que l’on puisse tous continuer à se faire du bien sans se faire du mal ». Bienvenue dans le monde de l’éco-orgasme.\r\nPour la Saint-Valentin, découvrez les 7 commandements de l’éco-orgasme\r\nLa Saint-Valentin approche et si on les magasins se frottent les mains, ici nous resteront très concrets, en partageant avec vous ce « Petit manuel à l’intention de tous ceux qui aiment se faire plaisir sans se faire mal« .\r\nCertes l’amour, ce sont les petites attentions, les petites joies, les moments partagés, mais parfois, ne nous leurrons pas, cela termine sous la couette (ou dans le foin, hein) (ça pique un peu mais chacun son truc). Et là, là pour notre santé nous ne faisons pas forcément ce qu’il faut.\r\n\r\nEn savoir plus sur http://www.consoglobe.com/eco-orgasme-sexe-sante-cg#X7ELMfgXruqyGsK3.99', '2016-02-16', 2, 8);
+INSERT INTO `projets` (`id`, `project_title`, `description`, `date_publish`, `id_user`) VALUES
+(1, 'Moi', 'VINCENT', '2016-02-18', 2),
+(2, 'D''art d''art', 'Sculpture sur pierre\r\n\r\nIncroyable et généreuse création,sculpté dans la pierre ces œuvres seront vous porter dans leurs aventures ou histoires...\r\nPrenez garde à votre imagination, elle pourrait vous transporter loin dans ce visionnage ...\r\nBon c''était pour créer du contenu !\r\n\r\nblablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', '2016-02-21', 1),
+(3, 'Pliage à l''étalage', 'Origami un monde qui se créé et n''arrêtera pas de grandir.\r\nLe plis, l''histoire du plis remonte à ...blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', '2016-02-20', 1),
+(4, 'Text title', ' blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla', '2016-02-13', 1),
+(5, 'Mélodie du bonheur', 'L''ukulélé est un instrument à cordes pincées traditionnel des îles Hawaï, proche du cavaquinho portugais dont il est une adaptation.\r\n\r\nSouvent bon marché et à la mode dans la première moitié du xxe siècle, ce petit instrument polyvalent composante indispensable d’un orchestre hawaïen fut rapidement adopté par divers courants musicaux – de la chanson populaire au jazz – parfois parce qu’il apportait une dimension humoristique ou exotique à un ensemble.', '2016-02-18', 1),
+(6, 'Ma passion du tracteur', 'Ma passion pour les tracteurs a commencé à l''âde de 4 ans. Dés que j''ai eu mon premier tracteur je me suis senti investi d''un grand rôle: CONQUÉRIR LES TRACTEURS DU MON ENTIER !!\r\nJe me suis lancé dans ma propre industrie de tracteur, je prévois d''ouvrir un musée, ''le grand musée des tracteurs du monde entier''\r\nVoici ma collection de tracteurs !!\r\n\r\nLaissez moi des messages, des bisous !!\r\n', '2016-02-21', 2),
+(7, 'Magnifique', 'Une œuvre d’art, ou un objet d''art, est un objet ou une création artistique ou esthétique. C''est généralement un élément fait par un artiste.\r\n\r\nEn particulier, un chef-d''œuvre était anciennement la preuve de l''excellence que devait présenter le compagnon pour être promu à la maîtrise dans sa corporation.\r\n\r\nJe vous laisse ma collection d''oeuvre d''art en autocollant !\r\nDisponible également en poster, pour plus d''infos me contacter !\r\n\r\nAu plaisir !', '2016-02-17', 2),
+(8, 'Cobayes pour la vie', 'Le regroupement d’associations Générations Cobayes continue sa campagne de prévention santé à destination… de tous. Leur slogan : « pour que l’on puisse tous continuer à se faire du bien sans se faire du mal ». Bienvenue dans le monde de l’éco-orgasme.\r\nPour la Saint-Valentin, découvrez les 7 commandements de l’éco-orgasme\r\nLa Saint-Valentin approche et si on les magasins se frottent les mains, ici nous resteront très concrets, en partageant avec vous ce « Petit manuel à l’intention de tous ceux qui aiment se faire plaisir sans se faire mal« .\r\nCertes l’amour, ce sont les petites attentions, les petites joies, les moments partagés, mais parfois, ne nous leurrons pas, cela termine sous la couette (ou dans le foin, hein) (ça pique un peu mais chacun son truc). Et là, là pour notre santé nous ne faisons pas forcément ce qu’il faut.\r\n\r\nEn savoir plus sur http://www.consoglobe.com/eco-orgasme-sexe-sante-cg#X7ELMfgXruqyGsK3.99', '2016-02-16', 2),
+(9, 'Ce qui me parle', 'Une œuvre d’art, ou un objet d''art, est un objet ou une création artistique ou esthétique. C''est généralement un élément fait par un artiste.\r\n\r\nEn particulier, un chef-d''œuvre était anciennement la preuve de l''excellence que devait présenter le compagnon pour être promu à la maîtrise dans sa corporation.\r\n\r\nJe vous laisse ma collection d''oeuvre d''art en autocollant !\r\nDisponible également en poster, pour plus d''infos me contacter !\r\n\r\nAu plaisir !', '2016-02-17', 2),
+(10, 'Une oeuvre qui me parle', 'Une œuvre d’art, ou un objet d''art, est un objet ou une création artistique ou esthétique. C''est généralement un élément fait par un artiste.\r\n\r\nEn particulier, un chef-d''œuvre était anciennement la preuve de l''excellence que devait présenter le compagnon pour être promu à la maîtrise dans sa corporation.\r\n\r\nJe vous laisse ma collection d''oeuvre d''art en autocollant !\r\nDisponible également en poster, pour plus d''infos me contacter !\r\n\r\nAu plaisir !', '2016-02-17', 2);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -154,11 +149,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateConfirmedToken`, `email`, `description`, `role`, `linkedin`, `photo`, `date_update`, `id_metier`) VALUES
-(1, 'fatou', 'diaby', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', '243fb297f6653444bc874ffdc97944ab', '2016-02-28 00:00:00', 'fatou.chance@gmail.com', '', 'user', '', 'http://mediaafrik.com/wp-content/uploads/2013/09/LA-REINE-DE-MERO%C3%A9-La-Candace-Amanishakh%C3%A9to.jpg', '2016-02-16', 1),
+(1, 'fatou', 'diaby', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', '243fb297f6653444bc874ffdc97944ab', '2016-02-28 00:00:00', 'fatou.chance@gmail.com', 'La vie est belle les oiseaux chante,le feu ça brûle et l''eau ça mouille !!', 'user', '', 'http://mediaafrik.com/wp-content/uploads/2013/09/LA-REINE-DE-MERO%C3%A9-La-Candace-Amanishakh%C3%A9to.jpg', '2016-02-16', 1),
 (2, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', '', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 0),
 (3, 'vincent', 'martinat', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Bonjour je m''appelle Vincent, j''aime les assos !', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'https://media.licdn.com/media/p/5/000/295/0f0/3057ba8.jpg', '2016-02-16', 22),
 (4, 'vincent2', 'martinat2', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Bonjour je m''appelle Vincent, j''aime les assos !', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'http://lorempixel.com/g/400/400/', '2016-02-17', 22),
@@ -170,54 +165,54 @@ INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateC
 (10, 'vincent8', 'martinat8', '$2y$10$dzKBPRYascgFbbD2TMsdNeIlDN4INRpHsC3iiapf2AmNlUeKpuuCe', NULL, NULL, 'philo@vincentmartinat.com', 'Bonjour je m''appelle Vincent, j''aime les assos !', 'Admin', 'https://www.linkedin.com/in/vincentmartinat', 'http://lorempixel.com/g/400/400/', '2016-02-19', 21);
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `metiers`
+-- Indexes for table `metiers`
 --
 ALTER TABLE `metiers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `photos`
+-- Indexes for table `photos`
 --
 ALTER TABLE `photos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `projets`
+-- Indexes for table `projets`
 --
 ALTER TABLE `projets`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `metiers`
+-- AUTO_INCREMENT for table `metiers`
 --
 ALTER TABLE `metiers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
--- AUTO_INCREMENT pour la table `photos`
+-- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT pour la table `projets`
+-- AUTO_INCREMENT for table `projets`
 --
 ALTER TABLE `projets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
