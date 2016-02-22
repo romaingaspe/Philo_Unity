@@ -28,6 +28,7 @@ class FrontController extends Controller
 	}
 	public function recherche()
 	{
+		$search = new rechercheGlobale();
 		$this->show('front/recherche');
 	}
 
