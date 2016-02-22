@@ -1,7 +1,6 @@
 <?php $this->layout('layout', ['title' => 'Recherche']) ?>
 
 <?php $this->start('main_content') ?>
-}
 <form class="container section" action="" method="GET">
 	<label for="search">Recherche</label>
 	<input type="text" name="search">

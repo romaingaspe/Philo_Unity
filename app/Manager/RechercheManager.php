@@ -4,6 +4,7 @@ namespace Manager;
 
 class RechercheManager extends \W\Manager\UserManager {
 
+
     public function rechercheGlobale($search){
 
 		$sql = ("SELECT * FROM users WHERE nom  LIKE :search OR prenom LIKE :search COLLATE utf8_bin");
