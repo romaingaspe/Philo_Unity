@@ -11,6 +11,11 @@
 			  <li><a href="<?= $this->url('update') ?>">Mes infos</a></li>
 			</ul>
 			<ul id="nav-resp" class=" col s12 m6 l4 right">
+				<form class="container section" action="<?= $this->url('recherche') ?>" method="GET">
+					<label for="search">Recherche</label>
+					<input type="text" name="search">
+					<input type="submit">
+				</form>
 				<li><a href="/Philo_Unity/public/metiers?page=1">Metiers</a></li>
 				<?php if(!$_SESSION) :?><li><a href="/Philo_Unity/public/admin/connect">Se connecter</a></li><?php endif;?>
 				<?php if($_SESSION) :?><li><a href="/Philo_Unity/public/admin/deconnect">Se deconnecter</a></li><?php endif;?>
