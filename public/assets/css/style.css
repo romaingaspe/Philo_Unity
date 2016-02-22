@@ -183,7 +183,8 @@ footer div div ul {
 	height: 15em;
 }
 #allworks .photo-work{
-	height:66%;
+	object-fit: cover;
+	height: 300px;
 }
 #allworks p{
 	height:25em;

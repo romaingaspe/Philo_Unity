@@ -30,7 +30,11 @@ class ProfilController extends Controller
     {
       $metier = new MetierManager;
       /*Tableau es profils par section*/
-      $allusers = $metier->findMetier($section);
+      $num = 6;
+      $page = 1;
+      $start = ($page-1) * $num;
+      $params['page']  = $page;
+      $allusers = $metier->findMetier($section, 'nom' , $num, $start);
       $params['users'] = $allusers;
       /*Affichage du nom de la section*/
       $sectionchoix = $metier->findSection($section);

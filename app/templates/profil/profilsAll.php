@@ -21,7 +21,7 @@
 		foreach($users as $use){
 			echo '<article class="col s12 m6 l4">';
 			echo '<div>';
-			echo '<img class="photo-work" src="'.$use['photo'].'" alt="">';
+			echo '<img class="photo-work responsive-img" src="'.$use['photo'].'" alt="">';
 			echo '</div>';
 			echo '<div class="text-works">';
 			echo '<h6>'.$use['prenom'].' '.$use['nom'].'</h6>';

@@ -150,13 +150,12 @@ class AdminController extends Controller
 
 		$this->show('admin/reiniPass', $params);
 }
-	public function reiniPassTok()
-	{
+	public function reiniPassTok(){
 
 		$this->show('admin/reiniPassTok');
 	}
-	public function inscription()
-	{
+
+	public function inscription(){
 		$this->allowTo(['admin']);
 		$login = new AuthentificationManager();
 		$userManager = new UserManager;
@@ -178,10 +177,11 @@ class AdminController extends Controller
 			}
 			if(count($errors) == 0){
 				// il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd
-				
-				$this->insert($_POST['nom'],$_POST['prenom'],$_POST['email'])
 
+				$this->insert($_POST['nom'],$_POST['prenom'],$_POST['email']);
+			}
+		}
 		$params['errors'] = $errors;
 		$this->show('admin/insertProfil', $params);
+		}
 	}
-}
