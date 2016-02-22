@@ -35,27 +35,33 @@ class FrontController extends Controller
 		}
 		if(empty($_GET['valeur'])){
 			$params['error'] = 'Veuillez choisir un paramètre de recherche';
+			$params['resultatUser'] = [];
+			$params['resultatMetier'] = [];
 		}
-		$recherche = new RechercheManager();
-		if(!empty($_GET["search"])){
-			$search = strip_tags($_GET["search"]);
-			if($_GET['valeur'] == 'user'){
-				$resultatuser = $recherche->rechercheUsers($search);
-				$params['resultatUser'] = $resultatuser;
-				$params['resultatMetier'] = [];
-			}
-			if($_GET['valeur'] == 'metier'){
-				$resultatmetier = $recherche->rechercheMetier($search);
-				$params['resultatMetier'] = $resultatmetier;
-				$params['resultatUser'] = [];
-			}
+		if(!empty($_GET['search']) && strlen($_GET['search']) < 3){
+			$params['error'] = 'Votre recherche doit faire plus de 3 caractères';
+			$params['resultatUser'] = [];
+			$params['resultatMetier'] = [];
 		}
 		else{
-			$params['resultat'] = [];
+			$recherche = new RechercheManager();
+			if(!empty($_GET["search"])){
+				$search = strip_tags($_GET["search"]);
+				if($_GET['valeur'] == 'user'){
+					$resultatuser = $recherche->rechercheUsers($search);
+					$params['resultatUser'] = $resultatuser;
+					$params['resultatMetier'] = [];
+				}
+				if($_GET['valeur'] == 'metier'){
+					$resultatmetier = $recherche->rechercheMetier($search);
+					$params['resultatMetier'] = $resultatmetier;
+					$params['resultatUser'] = [];
+				}
+			}
+			else{
+				$params['resultat'] = [];
+			}
 		}
-
 		$this->show('front/recherche', $params);
-
 	}
-
 }
