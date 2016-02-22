@@ -5,6 +5,7 @@
 		['GET', '/', 'Front#index', 'index'],
 		['GET', '/conditions', 'Front#conditions', 'conditions'],
 		['GET|POST', '/contactadmin', 'Front#contactAdmin', 'contactAdmin'],
+		['GET|POST', '/recherche', 'Front#recherche', 'recherche'],
 
 		////////////////////////////PORTFOLIO////////////////////////////////////////////////////////
 		['GET', '/profil/portfolio/galleryprojects', 'portfolio#galleryProjects', 'galleryProjects'],
@@ -13,7 +14,6 @@
 
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
 		['GET', '/profil/profiluser/[:id]', 'profil#profiluser', 'profiluser'],
-
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 		['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
 

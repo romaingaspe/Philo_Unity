@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use Manager\FixUserManager;
+use Manager\RechercheManager;
 class FrontController extends Controller
 {
 
@@ -24,6 +25,10 @@ class FrontController extends Controller
 	public function contactAdmin()
 	{
 		$this->show('front/contactAdmin');
+	}
+	public function recherche()
+	{
+		$this->show('front/recherche');
 	}
 
 }
