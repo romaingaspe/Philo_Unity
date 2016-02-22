@@ -50,6 +50,15 @@ i{
 .carousel-item{
 	width: 500px !important;
 }
+.carousel-item img{
+	object-fit: cover;
+	height: 500px;
+}
+footer::before{
+	display:block;
+	content: '';
+	height: 100px;
+}
 .carousel{
 	height: 900px;
 }
