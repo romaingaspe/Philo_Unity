@@ -3,3 +3,5 @@
 /phpDocumentor.phar
 
 app/config.php
+app/Controller/AdminController.php
+*.php
