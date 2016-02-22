@@ -261,7 +261,12 @@ footer div div ul {
 
 #presentation img{
 	width: 100%;
+	object-fit: cover;
+	height: 300px;
 }
+
+	
+
 #presentation p{
 	padding: 3%;
 }
