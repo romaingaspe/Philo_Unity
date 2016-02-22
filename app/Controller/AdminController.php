@@ -11,6 +11,44 @@ use \config;
 
 class AdminController extends Controller
 {
+	public function insertProfil(){
+		$this->allowTo(['Admin']);
+		$login = new AuthentificationManager();
+		$userManager = new UserManager;
+		$errors = array();
+		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
+		// Faire vérification des champs ICI
+		if(!empty($_POST)){
+			// Faire vérification des champs ICI
+			if(empty($_POST['nom'])){
+				$errors[] = 'le nom est vide';
+			}
+			if(empty($_POST['prenom'])){
+				$errors[] = 'le prenom est vide';
+			}
+			if(empty($_POST['email'])){
+				$errors[] = 'l\'email est vide';
+			}
+			if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
+				$errors[] = 'L\'email est invalide';
+			}
+			if (empty($_POST['pass'])) {
+				$errors[]='le mot de passe est vide';
+			}
+			// il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
+			if(count($errors) == 0){
+				
+				$userId->insert([$_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['pass']=>md5(uniqid($_POST['pass']))]);
+			}
+			// sinon on affiche les erreurs:
+			else{
+				$params['errors'] = $errors;
+			}
+			$params['success'] = 'votre nouveau profil à bien été enregistré !';
+		}
+		
+		$this->show('admin/insertprofil', $params);
+	}
 	public function connect()
 	{
 
@@ -96,19 +134,20 @@ class AdminController extends Controller
 
 
 
-					//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+																	//$mail->SMTPDebug = 3;             // Enable verbose debug output
 					$mail->setLanguage('fr', '../../vendor/phpmailer/phpmailer/language/');
-					$mail->isSMTP();                                      // Set mailer to use SMTP
-					$mail->Host = $app->getConfig("phpmailer_server");  // Specify main and backup SMTP servers
-					$mail->SMTPAuth = true;                               // Enable SMTP authentication
-					$mail->Username = $app->getConfig("phpmailer_user");                 // SMTP username
-					$mail->Password = $app->getConfig("phpmailer_pass");                           // SMTP password
-					$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+					$mail->isSMTP();  // Set mailer to use SMTP
+					
+					$mail->send() ;                                   								
+					$mail->Host = $app->getConfig("phpmailer_server");  								// Specify main and backup SMTP servers
+					$mail->SMTPAuth = true;                               								// Enable SMTP authentication
+					$mail->Username = $app->getConfig("phpmailer_user");                				 // SMTP username
+					$mail->Password = $app->getConfig("phpmailer_pass");                           		// SMTP password
+					$mail->SMTPSecure = 'tls';                            								// Enable TLS encryption, `ssl` also accepted
 					$mail->Port = $app->getConfig('phpmailer_port');                                    // TCP port to connect to
 
-					$mail->setFrom($_POST['email']);
-					$mail->addAddress($_POST['email']);     // Add a recipient
-					//$mail->addAddress($_POST['email']);               // Name is optional
+					$mail->setFrom($_POST['email'],'vous même');    	// Add a recipient
+					$mail->addAddress($_POST['email']);     //$mail->addAddress($_POST['email']);               // Name is optional
 					$mail->addReplyTo('offres@vincentmartinat.com', 'Information');
 					/*$mail->addCC('cc@example.com');
 					$mail->addBCC('bcc@example.com');
@@ -151,37 +190,43 @@ class AdminController extends Controller
 		$this->show('admin/reiniPass', $params);
 }
 	public function reiniPassTok(){
-
-		$this->show('admin/reiniPassTok');
-	}
-
-	public function inscription(){
-		$this->allowTo(['admin']);
 		$login = new AuthentificationManager();
-		$userManager = new UserManager;
+		$userManager = new UserManager();
 		$errors = array();
 		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
-		if(!empty($_POST)){
-			// Faire vérification des champs ICI
-			if(empty($_POST['nom'])){
-				$errors[] = 'le nom est vide';
-			}
-			if(empty($_POST['prenom'])){
-				$errors[] = 'le prenom est vide';
-			}
-			if(empty($_POST['email'])){
-				$errors[] = 'l\'email est vide';
-			}
-			if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
-				$errors[] = 'L\'email est invalide';
-			}
-			if(count($errors) == 0){
-				// il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd
+		//verifier et recuperer le token et email puis :
 
-				$this->insert($_POST['nom'],$_POST['prenom'],$_POST['email']);
-			}
-		}
-		$params['errors'] = $errors;
-		$this->show('admin/insertProfil', $params);
-		}
+		
+			//récuperer les infos du formulaire
+				if(!empty($_POST)){
+					// Faire vérification des champs ICI
+					if (empty($_POST['pass'])) {
+						$errors[]='le mot de passe est vide';
+					}
+					if (empty($_POST['confirm_pass'])) {
+						$errors[]='la confirmation du mot de passe est vide';
+					}
+					
+					//les deux soient identiques 
+					// mettre à jour le mot de passe 
+					if(count($errors) == 0){
+						// on va vérifier qu'il existe un utilisateur avec cet email dans la base
+				        if($idUser = $userManager->emailExists($_GET['email'])){					
+						$idUser = $userManager->getUserByUsernameOrEmail($_GET['email'])['id']; //chercher id
+						$userManager->update(["password" => md5(uniqid($_POST['pass']))], $idUser);	// Modifie une ligne en fonction d'un identifiant et on stocke le nouveau mot de passe dans la bdd pour cet utilisateur
+						}
+						else{
+							$params['error'] = 'votre mot de passe n\'a pas pu etre changer!!!'; 
+						}
+					
+					}
+					$params['success'] = 'votre nouveau mot de passe à bien été changé !';
+				}
+				
+				$this->show('admin/reiniPassTok', $params);
+				//$this->redirectToRoute('index');
+				var_dump($success);
 	}
+
+	
+}

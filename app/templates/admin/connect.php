@@ -30,17 +30,11 @@
     <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil </a>
 </div>
 
-<?php
-    if(!empty($errors)){
-        echo '<p class="red-text text-darken-1">';
-        echo implode('<br />', $errors);
-        echo '</p>';
-    }
-    if(!empty($success)){
-        echo  '<p class="green-text text-darken-1">'.$success.'</p>';
+<? if(!empty($errors)):?>
+    <p class="red-text text-darken-1">
+        <?= implode('<br />', $errors);?>
+    </p>
+<? endif;?>
 
-    }
-
-?>
 
 <?php $this->stop('main_content') ?>

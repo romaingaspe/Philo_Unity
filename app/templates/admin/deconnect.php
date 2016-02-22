@@ -35,6 +35,4 @@
   </div>
 
 <?php endif; ?>
-<?php var_dump($vue) ?>
-
 <?php $this->stop('main_content') ?>

@@ -30,6 +30,7 @@
     if(!empty($success)){
         echo  '<p class="green-text text-darken-1">'.$success.'</p>';
     }
+    var_dump($success);
 ?>
 
 <?php $this->stop('main_content') ?>
