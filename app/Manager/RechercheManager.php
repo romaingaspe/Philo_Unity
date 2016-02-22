@@ -2,15 +2,15 @@
 
 namespace Manager;
 
-class MetierManager extends \W\Manager\UserManager {
+class RechercheManager extends \W\Manager\UserManager {
 
-    public function rechercheGlobale(){
-        
-        $search = strip_tags($_GET["search"]);
-		$req = $bdd->prepare("SELECT * FROM users WHERE nom  LIKE :search OR prenom LIKE :search COLLATE utf8_bin");
-		$req->bindValue(":search", '%'.$search.'%', PDO::PARAM_STR);
-		if($req->execute()){
-			$users = $req->fetchAll();
+    public function rechercheGlobale($search){
+
+		$sql = ("SELECT * FROM users WHERE nom  LIKE :search OR prenom LIKE :search COLLATE utf8_bin");
+        $sth = $this->dbh->prepare($sql);
+		$sth->bindValue(":search", '%'.$search.'%');
+		if($sth->execute()){
+			return $sth->fetchAll();
     	}
     	else {
     		$err[] = "Une erreur est survenue.";
