@@ -11,6 +11,44 @@ use \config;
 
 class AdminController extends Controller
 {
+	public function insertProfil(){
+		$this->allowTo(['Admin']);
+		$login = new AuthentificationManager();
+		$userManager = new UserManager;
+		$errors = array();
+		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
+		// Faire vérification des champs ICI
+		if(!empty($_POST)){
+			// Faire vérification des champs ICI
+			if(empty($_POST['nom'])){
+				$errors[] = 'le nom est vide';
+			}
+			if(empty($_POST['prenom'])){
+				$errors[] = 'le prenom est vide';
+			}
+			if(empty($_POST['email'])){
+				$errors[] = 'l\'email est vide';
+			}
+			if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
+				$errors[] = 'L\'email est invalide';
+			}
+			if (empty($_POST['pass'])) {
+				$errors[]='le mot de passe est vide';
+			}
+			// il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
+			if(count($errors) == 0){
+				
+				$userId->insert([$_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['pass']=>md5(uniqid($_POST['pass']))]);
+			}
+			// sinon on affiche les erreurs:
+			else{
+				$params['errors'] = $errors;
+			}
+			$params['success'] = 'votre nouveau profil à bien été enregistré !';
+		}
+		
+		$this->show('admin/insertprofil', $params);
+	}
 	public function connect()
 	{
 
@@ -189,33 +227,6 @@ class AdminController extends Controller
 				//$this->redirectToRoute('index');
 				var_dump($success);
 	}
-	public function inscription(){
-		$this->allowTo(['admin']);
-		$login = new AuthentificationManager();
-		$userManager = new UserManager;
-		$errors = array();
-		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
-		if(!empty($_POST)){
-			// Faire vérification des champs ICI
-			if(empty($_POST['nom'])){
-				$errors[] = 'le nom est vide';
-			}
-			if(empty($_POST['prenom'])){
-				$errors[] = 'le prenom est vide';
-			}
-			if(empty($_POST['email'])){
-				$errors[] = 'l\'email est vide';
-			}
-			if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
-				$errors[] = 'L\'email est invalide';
-			}
-			if(count($errors) == 0){
-				// il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd
 
-				$this->insert($_POST['nom'],$_POST['prenom'],$_POST['email']);
-			}
-		}
-		$params['errors'] = $errors;
-		$this->show('admin/insertProfil', $params);
-		}
-	}
+	
+}

@@ -28,6 +28,6 @@
 		['GET|POST', '/admin/deconnect', 'admin#deconnect', 'deconnect'],
 		['GET|POST', '/admin/reinipass', 'admin#reiniPass', 'reiniPass'],
 		['GET|POST', '/admin/reinipasstoken', 'admin#reiniPassTok', 'reiniPassTok'],
-        ['GET|POST', '/admin/insertprofils', 'admin#insertProfil', 'insertProfil'],
+        ['GET|POST', '/admin/insertprofil', 'admin#insertProfil', 'insertProfil'],
 
 	);
