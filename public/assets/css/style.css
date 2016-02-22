@@ -313,6 +313,10 @@ footer div div ul {
 #cards-folio div.card-image div{
     position: relative;
 }
+#cards-folio img{
+	object-fit: cover;
+	height: 270px;
+}
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END GALLERY PROJECTS*/
