@@ -322,12 +322,16 @@ footer div div ul {
 	object-fit: cover;
 	height: 270px;
 }
-#cards-folio .car-image p{
-	/* object-fit: cover;
-	height: 270px; */
+#cards-folio .card-image p{
+	object-fit: cover;
+	height: 60px;
 	max-width: 100%;
 }
-
+#cards-folio .card-title{
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END GALLERY PROJECTS*/
 
 									/* ######## */

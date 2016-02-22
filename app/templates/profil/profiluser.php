@@ -39,7 +39,7 @@
 						</div>
 						<div class="card-image waves-effect waves-block waves-light">
 							<a href="">
-								<div>
+								<div class="description">
 									<p><?= $projet['description']?></p>
 									<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 								</div>
