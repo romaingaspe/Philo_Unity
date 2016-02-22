@@ -7,15 +7,14 @@
 		['GET|POST', '/contactadmin', 'Front#contactAdmin', 'contactAdmin'],
 		['GET|POST', '/recherche', 'Front#recherche', 'recherche'],
 
-		////////////////////////////PORTFOLIO////////////////////////////////////////////////////////
-		['GET', '/profil/portfolio/[:id]', 'portfolio#galleryProjects', 'galleryProjects'],
-		['GET', '/profil/portfolio/projectspage', 'portfolio#projectsPage', 'projectsPage'],
-		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
-
+		
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
-		['GET', '/profil/profiluser/[:id]', 'profil#profiluser', 'profiluser'],
+		['GET', '/profil/profiluser/[:id]', 'Profil#profilUser', 'profiluser'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 		['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
+
+		['GET', '/profil/portfolio/projectspage', 'portfolio#projectsPage', 'projectsPage'],
+		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
 
 		////////////////////////////METIERS////////////////////////////////////////////////////////
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],

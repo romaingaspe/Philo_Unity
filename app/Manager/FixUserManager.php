@@ -26,4 +26,28 @@ class FixUserManager extends \W\Manager\UserManager {
 		return;
 	}
 
+	public function getUserProjects($id) {
+		if (!is_numeric($id)){
+			return false;
+		}
+
+		$sql = "SELECT * FROM projets WHERE id_user = :id";
+		$sth = $this->dbh->prepare($sql);
+		$sth->bindValue(":id", $id);
+		$sth->execute();
+
+		$projets = $sth->fetchAll();
+
+		foreach ($projets as &$projet) {
+			$sql = "SELECT * FROM `photos` WHERE id_projet = :id";
+			$sth = $this->dbh->prepare($sql);
+			$sth->bindValue(":id", $projet['id']);
+			$sth->execute();
+
+			$projet['photos'] = $sth->fetchAll();
+		}
+		return $projets;
+	}
+
+
 }

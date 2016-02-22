@@ -19,13 +19,15 @@ class ProfilController extends Controller
     public function profilUser($id)
     {
 
-      $prof = new FixUserManager();
-    	$profil = [
-    	  'profil' => $prof->find($id),
-    		/*'username' => $user->find($art->find($id)['id_user'])['username'];*/
+      $userManager = new FixUserManager();
+    	$params = [
+    	  'profil' => $userManager->find($id),
+        'projets' => $userManager->getUserProjects($id)
     	];
-        $this->show('profil/profilUser', $profil);
+      $this->show('profil/profilUser', $params);
+
     }
+
     public function profilsAll($section)
     {
       $metier = new MetierManager;
