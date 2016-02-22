@@ -36,10 +36,22 @@ class ProfilController extends Controller
       $params['page']  = $page;
       $allusers = $metier->findMetier($section, 'nom' , $num, $start);
       $params['users'] = $allusers;
+      $getusers = $metier->findMetier($section, 'nom');
+      $countusers = count($getusers);
+      $totalpages = ceil($countusers/$num);
+      $params['totalpages'] = $totalpages;
       /*Affichage du nom de la section*/
       $sectionchoix = $metier->findSection($section);
       $params['sectionchoix'] = $sectionchoix[0];
       $this->show('profil/profilsAll', $params);
     }
+    public function ajaxprofils(){
 
+        $profilsdb = new MetierManager;
+        $num = 6;
+        $page = $_GET['page'];
+        $start = ($page-1) * $num;
+        $profils = $profilsdb->findAll('section', "ASC", $num, $start);
+        $this->showJson($profils);
+    }
 }
