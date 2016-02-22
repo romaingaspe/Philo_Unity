@@ -8,7 +8,7 @@
 		['GET|POST', '/recherche', 'Front#recherche', 'recherche'],
 
 		////////////////////////////PORTFOLIO////////////////////////////////////////////////////////
-		['GET', '/profil/portfolio/galleryprojects', 'portfolio#galleryProjects', 'galleryProjects'],
+		['GET', '/profil/portfolio/[:id]', 'portfolio#galleryProjects', 'galleryProjects'],
 		['GET', '/profil/portfolio/projectspage', 'portfolio#projectsPage', 'projectsPage'],
 		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
 
