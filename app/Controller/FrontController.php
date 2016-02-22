@@ -31,17 +31,23 @@ class FrontController extends Controller
 		if(empty($_GET["search"])){
 			$params['resultatUser'] = [];
 			$params['resultatMetier'] = [];
+			$params['error'] = 'Veuillez saisir une recherche';
+		}
+		if(empty($_GET['valeur'])){
+			$params['error'] = 'Veuillez choisir un paramètre de recherche';
 		}
 		$recherche = new RechercheManager();
 		if(!empty($_GET["search"])){
 			$search = strip_tags($_GET["search"]);
-			$resultatuser = $recherche->rechercheUsers($search);
-			$params['resultatUser'] = $resultatuser;
-			$resultatmetier = $recherche->rechercheMetier($search);
-			$params['resultatMetier'] = $resultatmetier;
-
-			if(empty($resultatuser) && empty($resultatmetier)){
-				$params['error'] = 'La recherche n\'a donné aucun résultat';
+			if($_GET['valeur'] == 'user'){
+				$resultatuser = $recherche->rechercheUsers($search);
+				$params['resultatUser'] = $resultatuser;
+				$params['resultatMetier'] = [];
+			}
+			if($_GET['valeur'] == 'metier'){
+				$resultatmetier = $recherche->rechercheMetier($search);
+				$params['resultatMetier'] = $resultatmetier;
+				$params['resultatUser'] = [];
 			}
 		}
 		else{

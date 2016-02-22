@@ -6,10 +6,11 @@
 	<form class="container section" action="<?= $this->url('recherche') ?>" method="GET">
 		<label for="search">Recherche</label>
 		<input type="text" name="search">
-		<input type="radio" name="valeur" value="metier">Par Métier
-		<br />
-		<input type="radio" name="valeur" value="user">Par Utilisateur
-		<br />
+			<input name="valeur" type="radio" id="test1" value="user"/>
+			<label for="test1">Par Utilisateur</label>
+			<input name="valeur" type="radio" id="test2" value="metier" />
+			<label for="test2">Par Métier</label>
+			<br />
 		<input type="submit">
 	</form>
 <?php foreach ($resultatUser as $resuse):?>
