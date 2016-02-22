@@ -5,14 +5,8 @@
 				<img class="left" src="<?= $this->assetUrl('img/logo_final.png') ?>"></img>
 			</a>
 			<ul id="dropdown1" class="dropdown-content">
-<<<<<<< HEAD
-			  <li><a href="<?php echo '/philo_unity/public/profil/profiluser/'.$_SESSION['user']['id'] ?>">Mon profil</a></li>
-=======
-
 			  <li><a href="<?= $this->url('profiluser').$_SESSION['user']['id'] ?>">Mon profil</a></li>
-
 			  <li><a href="<?= $this->url('galleryProjects') ?>">Mon Portfolio</a></li>
->>>>>>> origin/master
 			  <li class="divider"></li>
 			  <li><a href="<?= $this->url('update') ?>">Mes infos</a></li>
 			</ul>
