@@ -4,7 +4,7 @@ $('.slider').height(H-40);
 $('.carousel').carousel();});
 
 $(function(){
-    $('.paginations').click(function(e){
+    $('.paginations.paginmet').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         $('.pagination li').removeClass('active');
@@ -34,10 +34,10 @@ $(function(){
     });
   })
 $(function(){
-    $('.paginations2').click(function(e){
+    $('.paginations.paginprofil').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
-        $('.pagination2 li').removeClass('active');
+        $('.pagination li').removeClass('active');
         $(this).parent().removeClass('waves-effect').addClass('active');
         var data = {
             page: href
