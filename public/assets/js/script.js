@@ -33,7 +33,7 @@ $(function(){
         })
     });
   })
-/*$(function(){
+$(function(){
     $('.paginations2').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
@@ -46,6 +46,7 @@ $(function(){
             url: pageUrl,
             data: data,
             success: function(reponse) {
+                console.log(reponse);
                 $('#allworks').empty();
                 for (m in reponse) {
                     var htmlProfils = $('<article>')
@@ -62,4 +63,4 @@ $(function(){
             }
         })
     });
-})*/
+})
