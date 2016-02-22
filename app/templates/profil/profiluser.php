@@ -5,11 +5,11 @@
         <h1 class="center col l12  red accent-2">Section *Insérer Nom*</h1>
     </div>
     <div class="row" id="profil">
-        <div class=" col l8 offset-l3">
+        <div id="img-prof-use" class=" col l8 offset-l3">
         <?php
-        echo '<img class="col l3 responsive-img" src="'.$profil['photo'].'" alt="" id="trombi"/>'
+        echo '<img class="col l3 m4 s12 offset-m2 s1" src="'.$profil['photo'].'" alt="" id="trombi"/>'
         ?>
-        <div class="col l6">
+        <div id="profil-desc" class="col l6 offset-s3">
             <?php
             echo '<h2>'.$profil['prenom'].' '.$profil['nom'].'</h2>';
             echo '<h3>Métier</h3>';
@@ -20,11 +20,11 @@
         </div>
         </div>
     </div>
-    <a  href="#" class="right-align"><h4>Voir le portfolio</h4></a>
-    <div id="profilslide" class="slider">
+    <a  href="#" id="font-folio" class="center-align"><h4>Voir le portfolio</h4></a>
+    <div id="profilslide" class="slider center-ali">
        <ul class="slides ">
          <li>
-           <img src="http://lorempixel.com/1000/500/technics/1"> <!-- random image -->
+           <img class="responsive-img" src="http://lorempixel.com/1000/500/technics/1"> <!-- random image -->
            <div class="caption center-align">
              <h3>This is our big Tagline!</h3>
              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
