@@ -26,7 +26,7 @@ $(function(){
                     .append($('<div>').addClass('text-works')
                         .append($('<h6>').text(reponse[m].section))
                         .append($('<p>').text(reponse[m].description)))
-                        .append($('<a>').text(reponse[m].section).attr('href', '/philo_unity/public/metiers/'+reponse[m].alias+'/profilsall'))
+                        .append($('<a>').text(reponse[m].section).attr('href', '/philo_unity/public/metiers/'+reponse[m].alias+'/profilsall?page=1'))
                     $('#allworks').append(htmlMetier);
                 }
             }
@@ -46,6 +46,7 @@ $(function(){
             url: pageUrl,
             data: data,
             success: function(reponse) {
+                console.log(reponse);
                 $('#allworks').empty();
                 for (m in reponse) {
                     var htmlProfils = $('<article>')
