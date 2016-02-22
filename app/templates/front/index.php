@@ -10,14 +10,13 @@
 </div>
 <div id="carous" class="">
 	<div class="carousel">
-		<?php
-		foreach ($users as $use){
-			echo '<a class="carousel-item" href="/philo_unity/public/profil/profiluser/'.$use['id'].'">';
-			echo '<h2 class="center">'.$use['prenom'].$use['nom'].'</h2>';
-			echo '<img src="'.$use['photo'].'">';
-			echo '<p class="truncate">'.$use['description'].'</p></a>';
-		}
-		?>
+		<?php foreach ($users as $use):?>
+			<a class="carousel-item" href="/philo_unity/public/profil/profiluser/<?= $use['id'] ?>">
+				<h2 class="center"><?= $use['prenom'].' '.$use['nom']?></h2>
+				<img src="<?= $use['photo'] ?>">
+				<p class="truncate"><?= $use['description'] ?></p>
+			</a>
+		<?php endforeach;?>
 	</div>
 </div>
 <?php $this->stop('main_content') ?>

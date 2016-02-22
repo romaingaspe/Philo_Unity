@@ -9,39 +9,29 @@
 		</div>
 	</div>
 	<h1 class="center-align">Nos métiers</h1>
-	<?php
-		/*if($page != 1){
-			echo '<a class="pagination" href=1">'. 'First ' .'</a> ';
-			echo '<a class="pagination" href="'.($page-1).'">'.'< '.'</a>';
-		}*/
-		echo '<ul class="pagination">';
-		for($i=1; $i<=$totalpages; $i++){
-			echo '<li class="waves-effect"><a class="paginations" href="'.$i.'">'.$i.' </a></li>';
-		}
-		echo '</ul>';
-		/*if($page != $totalpages){
-			echo '<a class="pagination" href="'.($page+1).'">'.'>'.'</a> ';
-			echo '<a class="pagination" href="'.$totalpages.'">'. ' Last' .'</a> ';
-		}*/
-	?>
+	<div class="container">
+		<ul class="pagination center" >
+			<?php for($i=1; $i<=$totalpages; $i++):?>
+				<li class="waves-effect">
+					<a class="paginations paginmet" href="<?= $i?>"><?= $i?></a>
+				</li>
+			<?php endfor;?>
+		</ul>
+	</div>
 	<section id="allworks" class="row container">
-		<?php
-			foreach($metiers as $met){
-				echo '<article class="col s12 m6 l4">';
-				echo '<div>';
-				echo '<img src="'.$met['photo'].'" alt="">';
-				echo '</div>';
-				echo '<div class="text-works">';
-				echo '<h6>'.$met['section'].'</h6>';
-				echo '<p>'.$met['description'].'</p>';
-				echo '<a href="metiers/'.$met['alias'].'/profilsall">'.$met['section'].'</a>';
-				echo '</div>';
-				echo '</article>';
-			}
-		?>
+		<?php foreach ($metiers as $met):?>
+				<article class="col s12 m6 l4">
+					<div>
+						<img src="<?= $met['photo']?>" alt="">
+					</div>
+					<div class="text-works">
+						<h6><?= $met['section']?></h6>
+						<p><?= $met['description']?></p>
+						<a href="metiers/<?= $met['alias']?>/profilsall"><?= $met['section']?></a>
+					</div>
+				</article>
+		<?php endforeach;?>
 	</section>
-
-
 <?php $this->stop('main_content') ?>
 
 <?php $this->start('script') ?>
