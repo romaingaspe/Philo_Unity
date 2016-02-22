@@ -38,7 +38,12 @@ class AdminController extends Controller
 			// il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
 			if(count($errors) == 0){
 				
-				$userId->insert([$_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['pass']=>md5(uniqid($_POST['pass']))]);
+				$userManager->insert([
+					'nom' 		=> $_POST['nom'],
+					'prenom' 	=> $_POST['prenom'],
+					'email' 	=> $_POST['email'],
+					'password' 	=> password_hash($_POST['pass'],PASSWORD_DEFAULT)
+				]);
 			}
 			// sinon on affiche les erreurs:
 			else{
@@ -123,9 +128,12 @@ class AdminController extends Controller
 			if(count($errors) == 0){
 				// on va vérifier qu'il existe un utilisateur avec cet email dans la base
 				if($idUser = $userManager->emailExists($_POST['email'])){
-					$token = md5(uniqid());// on génère un 'token', identifiant unique
+					$token = password_hash($_POST['pass'],PASSWORD_DEFAULT);// on génère un 'token', identifiant unique
 					$idUser = $userManager->getUserByUsernameOrEmail($_POST['email'])['id']; //chercher id
-					$userManager->update(["confirmedToken" => $token, "dateConfirmedToken" =>date('Y-m-d',strtotime('+1 week'))], $idUser);	// on stocke le token dans la bdd pour cet utilisateur
+					$userManager->update([
+						"confirmedToken" 		=> $token,
+						"dateConfirmedToken" 	=>date('Y-m-d',strtotime('+1 week'))
+						], $idUser);	// on stocke le token dans la bdd pour cet utilisateur
 					$successUrl = $this->generateUrl('reiniPassTok').'?email='.$_POST['email'].'&token='.$token;// on crée le lien permettant à l'utilisateur de resaisir un
 					$successLink = "http://localhost".$successUrl;
 					// nouveau mot de passe
@@ -211,9 +219,11 @@ class AdminController extends Controller
 					// mettre à jour le mot de passe 
 					if(count($errors) == 0){
 						// on va vérifier qu'il existe un utilisateur avec cet email dans la base
-				        if($idUser = $userManager->emailExists($_GET['email'])){					
-						$idUser = $userManager->getUserByUsernameOrEmail($_GET['email'])['id']; //chercher id
-						$userManager->update(["password" => md5(uniqid($_POST['pass']))], $idUser);	// Modifie une ligne en fonction d'un identifiant et on stocke le nouveau mot de passe dans la bdd pour cet utilisateur
+				        if($idUser = $userManager->emailExists($_GET['email'])){
+
+							$idUser = $userManager->getUserByUsernameOrEmail($_GET['email'])['id']; //chercher id
+							$userManager->update([
+								"password" => password_hash($_POST['pass'],PASSWORD_DEFAULT)], $idUser);	// Modifie une ligne en fonction d'un identifiant et on stocke le nouveau mot de passe dans la bdd pour cet utilisateur
 						}
 						else{
 							$params['error'] = 'votre mot de passe n\'a pas pu etre changer!!!'; 
