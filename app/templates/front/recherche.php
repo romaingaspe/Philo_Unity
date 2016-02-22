@@ -3,6 +3,15 @@
 <?php $this->start('main_content') ?>
 
 <section id="allworks" class="row section container">
+	<form class="container section" action="<?= $this->url('recherche') ?>" method="GET">
+		<label for="search">Recherche</label>
+		<input type="text" name="search">
+		<input type="radio" name="valeur" value="metier">Par Métier
+		<br />
+		<input type="radio" name="valeur" value="user">Par Utilisateur
+		<br />
+		<input type="submit">
+	</form>
 <?php foreach ($resultatUser as $resuse):?>
 	<article class="col s12 m6 l4">
 		<div>
