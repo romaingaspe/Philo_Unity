@@ -21,16 +21,13 @@
 <div class="center margetop">
     <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil</a>
 </div>
-<?php
-    if(!empty($errors)){
-        echo '<p class="red-text text-darken-1">';
-        echo implode('<br />', $errors);
-        echo '</p>';
-    }
-    if(!empty($success)){
-        echo  '<p class="green-text text-darken-1">'.$success.'</p>';
-    }
-    var_dump($success);
-?>
+<? if(!empty($errors)):?>
+    <p class="red-text text-darken-1">
+        <?= implode('<br />', $errors);?>
+    </p>
+<? endif;?>
 
+<? if(!empty($success)):?>
+    <p class="red-text text-darken-1"><?= $success?></p>
+<? endif;?>
 <?php $this->stop('main_content') ?>
