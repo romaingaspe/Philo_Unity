@@ -28,11 +28,18 @@ class FrontController extends Controller
 	}
 	public function recherche()
 	{
+		$params= array();
 		$recherche = new RechercheManager();
-		$search = strip_tags($_GET["search"]);
-		$result = $recherche->rechercheGlobale($search);
-		$params['resultat'] = $result;
+		if(!empty($_GET["search"])){
+			$search = strip_tags($_GET["search"]);
+			$result = $recherche->rechercheGlobale($search);
+			$params['resultat'] = $result;
+		}
+		else{
+			$params['resultat'] = [];
+		}
 		$this->show('front/recherche', $params);
+
 	}
 
 }
