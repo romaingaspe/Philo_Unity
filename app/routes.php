@@ -7,7 +7,7 @@
 		['GET|POST', '/contactadmin', 'Front#contactAdmin', 'contactAdmin'],
 
 		////////////////////////////PORTFOLIO////////////////////////////////////////////////////////
-		['GET', '/profil/portfolio/galleryprojects', 'portfolio#galleryProjects', 'galleryProjects'],
+		['GET', '/profil/portfolio/[:id]', 'portfolio#galleryProjects', 'galleryProjects'],
 		['GET', '/profil/portfolio/projectspage', 'portfolio#projectsPage', 'projectsPage'],
 		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
 

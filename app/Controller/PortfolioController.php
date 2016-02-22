@@ -14,10 +14,6 @@ class PortfolioController extends Controller
 	{
 		$this->show('Portfolio/commentaires');
 	}
-    public function galleryProjects()
-	{
-		$this->show('Portfolio/galleryProjects');
-	}
     public function projectsPage()
     {
         $this->show('Portfolio/projectsPage');

@@ -1,14 +1,149 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-    <div class="row" id="bandeau">
-        <h1 class="center col l12  red accent-2">Section *Insérer Nom*</h1>
+  
+  <!-- 1ère ligne de présentation --> 
+  <section id="presentation" class="container row">
+      <div class="col m6 l6">
+        <img class="responsive-img" src="<?= $profil['photo'] ?>" alt=""/>
+      </div>
+      <div class="col m6 l6">
+        <h4><?= $profil['prenom'].' '.$profil['nom'] ?></h4>
+        <h5><?= $profil['id_metier']?></h5>
+        <p class="teal lighten-5"><?= $profil['description']?></p>
+      </div>
+  </section>
+  
+  <!-- 2ème ligne titre --> 
+  <div id="gallery-title" class="container row">
+  <div class="col s12 m12 l12">
+    <span class="col s1 m1 l1 center-align patch-leftside">2</span>
+    <span class="col s10 m10 l10 center-align patch-centered teal lighten-5">Gallerie des projets</span>
+    <span class="col s1 m1 l1 center-align patch-rightside">2</span>
     </div>
-    <div class="row" id="profil">
-        <div class=" col l8 offset-l3">
-        <?php
-        echo '<img class="col l3 responsive-img" src="'.$profil['photo'].'" alt="" id="trombi"/>'
-        ?>
+  </div>
+
+  <!-- 3ème ligne gallerie -->
+  <div id="cards-folio" class="container row isotope">
+    <div id="cards-global-content"> <!-- div qui contient toutes mes cartes de projets -->
+      <div class=" col m6 l4 ">
+          <div class="card">
+            <div class="card-content" style="padding: 7px;">
+                  <p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+                <a href="">
+                  <span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+                </a>
+            </div>
+            <div class="card-image waves-effect waves-block waves-light">
+              <a href="">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
+                  </p>
+                  <img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class=" col m6 l4 ">
+          <div class="card">
+            <div class="card-content" style="padding: 7px;">
+                  <p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+                <a href="">
+                  <span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+                </a>
+            </div>
+            <div class="card-image waves-effect waves-block waves-light">
+              <a href="">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
+                  </p>
+                  <img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class=" col m6 l4 ">
+          <div class="card">
+            <div class="card-content" style="padding: 7px;">
+                  <p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+                <a href="">
+                  <span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+                </a>
+            </div>
+            <div class="card-image waves-effect waves-block waves-light">
+              <a href="">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
+                  </p>
+                  <img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class=" col m6 l4 ">
+          <div class="card">
+            <div class="card-content" style="padding: 7px;">
+                  <p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+                <a href="">
+                  <span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+                </a>
+            </div>
+            <div class="card-image waves-effect waves-block waves-light">
+              <a href="">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut!
+                  </p>
+                  <img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class=" col m6 l4 ">
+          <div class="card">
+            <div class="card-content" style="padding: 7px;">
+                  <p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+                <a href="">
+                  <span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+                </a>
+            </div>
+            <div class="card-image waves-effect waves-block waves-light">
+              <a href="">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
+                  </p>
+                  <img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class=" col m6 l4 ">
+          <div class="card">
+            <div class="card-content" style="padding: 7px;">
+                  <p class="area" style="margin:0 auto;"><a href="">Projet Plateau</a></p>
+                <a href="">
+                  <span class="card-title activator brown-text text-darken-4">Le Café Des Bois</span>
+                </a>
+            </div>
+            <div class="card-image waves-effect waves-block waves-light">
+              <a href="">
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, libero. Sit voluptatibus voluptate minus, voluptatem aut! 
+                  </p>
+                  <img width="640" height="480" src="<?= $this->assetUrl('img/ebenisterie.jpg') ?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+        <img class="col l3 responsive-img" src="<?= $profil['photo'] ?>" alt="" id="trombi"/>
         <div class="col l6">
             <?php
             echo '<h2>'.$profil['prenom'].' '.$profil['nom'].'</h2>';
@@ -19,38 +154,5 @@
             ?>
         </div>
         </div>
-    </div>
-    <a  href="#" class="right-align"><h4>Voir le portfolio</h4></a>
-    <div id="profilslide" class="slider">
-       <ul class="slides ">
-         <li>
-           <img src="http://lorempixel.com/1000/500/technics/1"> <!-- random image -->
-           <div class="caption center-align">
-             <h3>This is our big Tagline!</h3>
-             <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-           </div>
-         </li>
-         <li>
-           <img src="http://lorempixel.com/1000/500/technics/2"> <!-- random image -->
-           <div class="caption left-align">
-             <h3>Left Aligned Caption</h3>
-             <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-           </div>
-         </li>
-         <li>
-           <img src="http://lorempixel.com/1000/500/technics/3"> <!-- random image -->
-           <div class="caption right-align">
-             <h3>Right Aligned Caption</h3>
-             <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-           </div>
-         </li>
-         <li>
-           <img src="http://lorempixel.com/1000/500/technics/4"> <!-- random image -->
-           <div class="caption center-align">
-             <h3>This is our big Tagline!</h3>
-             <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-           </div>
-         </li>
-       </ul>
-     </div>
+   
 <?php $this->stop('main_content') ?>
