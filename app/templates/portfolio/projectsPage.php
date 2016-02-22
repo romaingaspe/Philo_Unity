@@ -11,6 +11,8 @@
 
 		</div>
 	</div>
+  <?php var_dump($projets);?>
+
   <section id="description" class="container section">
     <div class="row">
       <div id="titleprojet" class="col s12 m12 l4">

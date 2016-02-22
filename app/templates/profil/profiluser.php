@@ -31,15 +31,17 @@
 			<?php foreach($projets as $projet):?>
 				<div class=" col m6 l4 ">
 					<div class="card">
-						<div class="card-content" style="padding: 7px;">
-							<p class="area" style="margin:0 auto;"><a href=""><?= $projet['project_title']?></a></p>
-							<a href="">
+						<div class="card-content">
+							<p class="area">
+								<a href=""><?= $projet['project_title']?></a>
+							</p>
+							<a href="<?= $this->url('projectsPage')?>">
 								<span class="card-title activator brown-text text-darken-4"><?= $projet['date_publish']?></span>
 							</a>
 						</div>
 						<div class="card-image waves-effect waves-block waves-light">
-							<a href="">
-								<div class="description">
+							<a href="<?= $this->url('projectsPage')?>">
+								<div>
 									<p><?= $projet['description']?></p>
 									<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
 								</div>

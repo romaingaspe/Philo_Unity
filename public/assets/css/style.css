@@ -332,6 +332,12 @@ footer div div ul {
     font-weight: 300;
     font-style: italic;
 }
+#card-folio .area{
+	margin:0 auto;
+}
+#card-folio.card-content{
+	padding: 7px;
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END GALLERY PROJECTS*/
 
 									/* ######## */
