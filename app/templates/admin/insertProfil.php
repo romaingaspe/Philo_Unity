@@ -1,4 +1,4 @@
-<?php $this->layout('layout2',['title' => 'Accueil']) ?>
+<?php $this->layout('layout2',['title' => 'inscription']) ?>
 <?php $this->start('main_content') ?>
     <div class="container center">
         <h1>Inserer un nouvelle utilisateur</h1>
@@ -35,7 +35,7 @@
         <?= '</p>' ?>
 <?php endif; ?> 
 <?php if(!empty($success)) :?>   
-        <?= "<p class='green-text text-darken-1'>'.$success.'</p>"?>
+        <p class='green-text text-darken-1'><?=$success?></p>>
 <?php endif; ?> 
 
 <?php $this->stop('main_content') ?>
