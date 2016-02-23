@@ -33,6 +33,7 @@ $(function(){
                     .addClass('center')
                         .append($('<h6>').text(reponse[m].section))
                         .append($('<p>').text(reponse[m].description))
+                        .append($('<br>'))
                         .append($('<a>').text(reponse[m].section).attr('href', '/philo_unity/public/metiers/'+reponse[m].alias+'/profilsall')))
                     $('#allworks').append(htmlMetier);
                 }
@@ -64,6 +65,7 @@ $(function(){
                     .addClass('center')
                         .append($('<h6>').text(reponse[m].prenom+reponse[m].nom))
                         .append($('<p>').text(reponse[m].description))
+                        .append($('<br>'))
                         .append($('<a>').text('Voir le Profil').attr('href', reponse[m].alias)))
                     $('#allworks').append(htmlProfils);
                 }
