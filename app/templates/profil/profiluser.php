@@ -28,27 +28,27 @@
 	
 		<div id="cards-folio" class="container row isotope">
 			<div id="cards-global-content"> <!-- div qui contient toutes mes cartes de projets -->
-			<?php foreach($projets as $projet):?>
-				<div class=" col m6 l4 ">
-					<div class="card">
-						<div class="card-content">
-							<p class="area">
-								<a href="<?= $this->url('projectsPage')?>"><?= $projet['project_title']?>
-							</p>
-							<a href="<?= $this->url('projectsPage')?>">
+				<?php foreach($projets as $projet):?>
+					<div class=" col m6 l4 ">
+						<div class="card">
+							<div class="card-content">
+								<p class="area">
+									<a href=""><?= $projet['project_title']?></a>
+								</p>
+								<a href="<?= $this->url('projectsPage')?>">
 								<span class="card-title activator brown-text text-darken-4"><?= $projet['date_publish']?></span>
-							</a>
-						</div>
-						<div class="card-image waves-effect waves-block waves-light">
-							<a href="<?= $this->url('projectsPage')?>">
-								<div>
-									<p><?= mb_substr($projet['description'], 0 , 130)?>...</p>
-									<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
-								</div>
+								</a>
+							</div>
+							<div class="card-image waves-effect waves-block waves-light">
+								<a href="<?= $this->url('projectsPage')?>">
+									<div>
+										<p><?= mb_substr($projet['description'], 0 , 130)?>...</p>
+										<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+									</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			<?php endforeach;?>
+				<?php endforeach;?>
 			</div>
 		</div>
 	
