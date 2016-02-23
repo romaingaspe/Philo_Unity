@@ -349,10 +349,12 @@ footer div div ul {
 									/* ######## */
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START PROJECTS PAGE*/
+#banner-project span{
+	background-color: #128b82;
+	padding: 15px;
+	color: transparent;
+}
 
-/* #titleprojet{
-	width: 30%;
-} */
 #titleentete{
 	background-color: #e0f2f1;
 }
@@ -374,18 +376,14 @@ div #slideprojet{
 }
 #titleprojet p{
 	margin-bottom: 10px;
+	background-color: #e0f2f1;
+	padding: 10px;
 }
 
 #titleentete{
 	background-color: #e0f2f1;
 }
 
-/* #com-projects{      Fatou: J'ai mis cette effet de style en commentaire pour tester;
-	margin-top: 3%;
-	margin-left: 33.5%;
-	width: 50%;
-	padding: 10px;
-} */
 #com-project h7{
 	color: #128b82;
 }
@@ -407,6 +405,7 @@ div #slideprojet{
 .link-com-project{
 	margin: 3.35% 0;
 }
+
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END PROJECTS PAGE*/
 

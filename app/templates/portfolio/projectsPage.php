@@ -3,21 +3,21 @@
 <?php $this->start('main_content') ?>
 	<p>portfolio>galerie des projets>projets1></p>
 	<div class="row">
-
-		<div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2"
-		 			style=""><span class="left"style="background-color: #128b82;padding: 15px;color: transparent;">1 1
-		 			</span>PROJETS<span class="right"style="background-color: #128b82;padding: 15px;color: transparent;">2 2
-		 			</span>
-
-		</div>
-	</div>
-  <?php var_dump($projets);?>
+    <div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2">
+      <span class="left">1 1
+  		</span>
+        PROJETS
+      <span class="right">2 2
+  		</span>
+    </div>
+  </div>
+ 
 
   <section id="description" class="container section">
     <div class="row">
       <div id="titleprojet" class="col s12 m12 l4">
-        <h4 style="background-color: #128b82;margin-top: 0 !important;font-size: 1.7em;text-align: center;color: white;">Dessus de table</h4>
-        <p style="background-color: #e0f2f1;padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vero dolor quidem possimus dicta consequatur aliquam, soluta minima voluptatibus officia maiores ipsam veritatis dolore dolorum eum, eligendi modi a commodi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur, dignissimos. Assumenda rem dolorum corporis unde eveniet hic voluptas repudiandae eaque illo velit cupiditate porro, non blanditiis consectetur totam ullam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam perferendis eaque perspiciatis harum neque, repudiandae ducimus saepe tenetur consectetur nostrum. Enim necessitatibus quos, dolorem? Impedit explicabo cumque voluptatum tempora Lorem ipsum dolor sit amet, consectetur </p>
+        <h4>Dessus de table</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vero dolor quidem possimus dicta consequatur aliquam, soluta minima voluptatibus officia maiores ipsam veritatis dolore dolorum eum, eligendi modi a commodi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur, dignissimos. Assumenda rem dolorum corporis unde eveniet hic voluptas repudiandae eaque illo velit cupiditate porro, non blanditiis consectetur totam ullam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam perferendis eaque perspiciatis harum neque, repudiandae ducimus saepe tenetur consectetur nostrum. Enim necessitatibus quos, dolorem? Impedit explicabo cumque voluptatum tempora Lorem ipsum dolor sit amet, consectetur </p>
       </div>
       <div id="slideprojet" class="col s12 m12 l8 slider">
           <ul class="slides">

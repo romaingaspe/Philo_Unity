@@ -33,7 +33,7 @@
 					<div class="card">
 						<div class="card-content">
 							<p class="area">
-								<a href=""><?= $projet['project_title']?></a>
+								<a href="<?= $this->url('projectsPage')?>"><?= $projet['project_title']?>
 							</p>
 							<a href="<?= $this->url('projectsPage')?>">
 								<span class="card-title activator brown-text text-darken-4"><?= $projet['date_publish']?></span>
