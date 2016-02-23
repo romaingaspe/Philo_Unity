@@ -31,7 +31,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<button type="submit" class="btn waves-effect waves-light col l4 offset-l4" id="searchbut">cherche!</button>
+						<button type="submit" class="btn waves-effect waves-light" id="searchbut">cherche</button>
 					</div>
 				</form>
 			</ul>
@@ -51,13 +51,13 @@
 						</div>
 					</div>
 					<div>
-						<button type="submit" class="btn waves-effect waves-light col l4 offset-l4" id="searchbut">cherche!</button>
+						<button type="submit" class="btn waves-effect waves-light col l4 offset-l4" id="searchbut">cherche</button>
 					</div>
 				</form>
 			</ul>
 			<ul id="mobile-demo" class=" col s12 m6 l4 right side-nav">
 				<li>
-					<a href="#" class="dropdown-button grey lighten-2" data-beloworigin="true" data-activates="dropdown3" >
+					<a href="#" class="dropdown-button grey lighten-2" data-beloworigin="true" data-activates="dropdown3" id="menudrop">
 					<i class="material-icons search">search</i>
 					</a>
 				</li>
