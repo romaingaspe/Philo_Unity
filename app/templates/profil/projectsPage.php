@@ -1,12 +1,12 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-	<p>portfolio>galerie des projets>projets1></p>
+
 	<div class="row">
     <div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2">
       <span class="left">1 1
   		</span>
-        PROJETS
+        PROJETS:
       <span class="right">2 2
   		</span>
     </div>

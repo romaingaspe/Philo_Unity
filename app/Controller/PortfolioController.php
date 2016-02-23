@@ -3,7 +3,6 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-use Manager\FixUserManager;
 
 class PortfolioController extends Controller
 {
@@ -15,15 +14,9 @@ class PortfolioController extends Controller
 	{
 		$this->show('Portfolio/commentaires');
 	}
-    public function projectsPage($id)
+    public function projectsPage()
     {
-    	$userManager = new FixUserManager();
-    	$params = [
-        	'profil' => $userManager->find($id),
-            'projets' => $userManager->getUserProjects($id)
-    	];
-
-        $this->show('Portfolio/projectsPage', $params);
+        $this->show('Portfolio/projectsPage');
     }
 
 }

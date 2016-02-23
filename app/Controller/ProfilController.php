@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use Manager\FixUserManager;
 use Manager\MetierManager;
+use Manager\ProjetManager;
 
 class ProfilController extends Controller
 {
@@ -26,6 +27,15 @@ class ProfilController extends Controller
     	];
       $this->show('profil/profilUser', $params);
 
+    }
+
+    public function projectsPage($id)
+    { 
+      $projet = new ProjetManager(); // methode manager qui va chercher le projet d'id $id 
+      $params['projet'] = $projet->find($id);
+
+
+      $this->show('profil/projectsPage', $params);
     }
 
     public function profilsAll($section)

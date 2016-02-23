@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-  
+
   <!-- 1ère ligne de présentation --> 
   <section id="presentation" class="container row">
       <div class="col m6 l6">
@@ -33,14 +33,14 @@
 					<div class="card">
 						<div class="card-content">
 							<p class="area">
-								<a href="<?= $this->url('projectsPage')?>"><?= $projet['project_title']?>
+								<a href="<?= $this->url('projectsPage',['id' => $projet['id']])?>"><?= $projet['project_title']?>
 							</p>
-							<a href="<?= $this->url('projectsPage')?>">
+							<a href="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
 								<span class="card-title activator brown-text text-darken-4"><?= $projet['date_publish']?></span>
 							</a>
 						</div>
 						<div class="card-image waves-effect waves-block waves-light">
-							<a href="<?= $this->url('projectsPage')?>">
+							<a href="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
 								<div>
 									<p><?= mb_substr($projet['description'], 0 , 130)?>...</p>
 									<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
