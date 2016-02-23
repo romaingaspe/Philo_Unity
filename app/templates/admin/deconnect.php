@@ -4,7 +4,7 @@
 <?php if($vue == true ):?>
 <div class="container section center margetop">
   <div class="row center">
-    <div class="s8 offset-s2 col m8 offset-m2 l6 offset-l3 center align card-panel teal lighten-2">
+    <div class="s8 offset-s2 col m8 offset-m2 l6 offset-l3 center align card-panel brown lighten-2">
       <h3 class="white-text">Déconnexion</h3>
       <p class="white-text">Etes vous sur de vouloir vous déconnecter ?</p>
     </div>
@@ -21,9 +21,9 @@
 <?php endif;?>
 <?php if($vue == false): ?>
 
-  <div class="container section center" style="margin-top:50px">
+  <div class="container section center">
     <div class="row center">
-      <div class="col l6 offset-l3 center align card-panel teal lighten-2">
+      <div class="col l6 offset-l3 center align card-panel brown lighten-2">
         <h3 class="white-text">Vous êtes déconnecté(e) </h3>
         <p class="white-text">Philomathique Unity vous souhaite une excellente Journée :) </p>
       </div>
