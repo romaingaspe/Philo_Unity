@@ -35,7 +35,7 @@
 					</div>
 				</form>
 			</ul>
-			<ul id="nav-resp" class=" col s12 m6 l4 right">
+			<ul id="mobile-demo" class=" col s12 m6 l4 right side-nav">
 				<li>
 					<a href="#" class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" data-activates="dropdown2" >
 					<i class="material-icons search">search</i>
@@ -54,6 +54,26 @@
 					</li>
 				<?php endif;?>
 			</ul>
+			<ul id="nav-resp" class=" col s12 m6 l4 right hide-on-med-and-down">
+				<li>
+					<a href="#" class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" data-activates="dropdown2" >
+					<i class="material-icons search">search</i>
+					</a>
+				</li>
+				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
+				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
+				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
+				<?php if($w_user)  :?>
+					<li>
+						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">
+								<img src="<?= $_SESSION['user']['photo'] ?>" alt="" class="left " id="circleprofil"/>
+						&nbsp;&nbsp;&nbsp;Mon profil
+						<i class="material-icons right">arrow_drop_down</i>
+					</a>
+					</li>
+				<?php endif;?>
+			</ul>
+			<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
 		</div>
 	</nav>
 </header>
