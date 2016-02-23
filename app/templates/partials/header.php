@@ -11,6 +11,9 @@
 			  	<?php if($w_user['role']=='Admin'):?>
 	  			<li><a href="<?= $this->url('insertProfil') ?>">entrer un nouveau user</a></li>
 	  			<?php endif;?>
+	  			<?php if($w_user['role']=='Admin'):?>
+	  			<li><a href="<?= $this->url('insertSection') ?>">entrer une nouvelle section</a></li>
+	  			<?php endif;?>
 			</ul>
 			<ul id="dropdown2" class="dropdown-content">
 				<form class="white" action="<?= $this->url('recherche') ?>" method="GET">
