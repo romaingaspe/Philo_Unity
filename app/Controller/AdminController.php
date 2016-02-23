@@ -82,14 +82,14 @@ class AdminController extends Controller
 
 			// il n'y a pas d'erreurs,  inserer la section a bien rentré en bdd :
 			if(count($errors) == 0){
-
 				$userManager->insert([
+					'section' 	  => $_POST['section'],
 					'alias' 		  => $_POST['alias'],
 					'description' => $_POST['description'],
-					'section' 	  => $_POST['section'],
 					'photo' 	    => $_POST['photo'],
 				]);
 			}
+
 			// sinon on affiche les erreurs:
 			else{
 				$params['errors'] = $errors;
@@ -97,7 +97,7 @@ class AdminController extends Controller
 			$params['success'] = 'votre nouvelle section à bien été rajouté !';
 		}
 
-		$this->show('admin/insertSection', $params);
+		$this->show('admin/insertsection', $params);
 	}
 	public function connect()
 	{

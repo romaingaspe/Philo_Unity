@@ -28,5 +28,5 @@
 		['GET|POST', '/admin/reinipass', 'admin#reiniPass', 'reiniPass'],
 		['GET|POST', '/admin/reinipasstoken', 'admin#reiniPassTok', 'reiniPassTok'],
     ['GET|POST', '/admin/insertprofil', 'admin#insertProfil', 'insertProfil'],
-		['GET|POST', '/admin/insertSection', 'admin#insertSection', 'insertSection'],
+		['GET|POST', '/admin/insertsection', 'admin#insertSection', 'insertSection'],
 	);
