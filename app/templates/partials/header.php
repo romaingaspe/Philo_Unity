@@ -16,27 +16,31 @@
 	  			<?php endif;?>
 			</ul>
 			<ul id="dropdown2" class="dropdown-content">
-				<form class="white" action="<?= $this->url('recherche') ?>" method="GET">
-
-					<div class="input-field white col l4">
-						<input type="search" name="search">
+				<form class="center " action="<?= $this->url('recherche') ?>" method="GET">
+					<div class="row" id="search">
+						<input type="search" name="search" class="col l8 offset-l2 black-text" placeholder="Votre recherche">
 					</div>
-					<div class="input-field white col l4">
-						<input name="valeur" type="radio" id="test1" value="user"/>
-						<label for="test1">Par Utilisateur</label>
+					<div class="input-field row">
+						<div class="col l6">
+							<input name="valeur" type="radio" id="test1" value="user"/>
+							<label for="test1">Par Utilisateur</label>
+						</div>
+						<div class="col l6">
+							<input name="valeur" type="radio" id="test2" value="metier" />
+							<label for="test2">Par Métier</label>
+						</div>
 					</div>
-					<div class="input-field white col l4">
-						<input name="valeur" type="radio" id="test2" value="metier" />
-						<label for="test2">Par Métier</label>
+					<div class="row">
+						<button type="submit" class="btn waves-effect waves-light col l4 offset-l4" id="searchbut">cherche!</button>
 					</div>
-						<br />
-					<input type="submit">
 				</form>
 			</ul>
 			<ul id="nav-resp" class=" col s12 m6 l4 right">
-				<a href="#" class="dropdown-button" data-beloworigin="true" data-hover="true" data-activates="dropdown2" id="loginfo">
+				<li>
+					<a href="#" class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" data-activates="dropdown2" >
 					<i class="material-icons search">search</i>
-				</a>
+					</a>
+				</li>
 				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
 				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>

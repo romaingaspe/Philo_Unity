@@ -1,3 +1,9 @@
+.container .row{
+	margin: 0 0 1em 0;
+}
+#search{
+	margin-top: 15px;
+}
 #circleprofil{
 	max-height: 40px;
 	max-width: 40px;
@@ -265,7 +271,7 @@ footer div div ul {
 	height: 300px;
 }
 
-	
+
 
 #presentation p{
 	padding: 3%;
