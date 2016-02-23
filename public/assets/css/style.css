@@ -335,8 +335,8 @@ footer div div ul {
 #card-folio .area{
 	margin:0 auto;
 }
-#card-folio.card-content{
-	padding: 7px;
+.card .card-content{
+	padding: 9px 9px 0 !important;
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END GALLERY PROJECTS*/
 
