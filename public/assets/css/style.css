@@ -261,7 +261,12 @@ footer div div ul {
 
 #presentation img{
 	width: 100%;
+	object-fit: cover;
+	height: 300px;
 }
+
+	
+
 #presentation p{
 	padding: 3%;
 }
@@ -313,8 +318,26 @@ footer div div ul {
 #cards-folio div.card-image div{
     position: relative;
 }
-
-
+#cards-folio img{
+	object-fit: cover;
+	height: 270px;
+}
+#cards-folio .card-image p{
+	object-fit: cover;
+	height: 60px;
+	max-width: 100%;
+}
+#cards-folio .card-title{
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+}
+#card-folio .area{
+	margin:0 auto;
+}
+#card-folio.card-content{
+	padding: 7px;
+}
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END GALLERY PROJECTS*/
 
 									/* ######## */

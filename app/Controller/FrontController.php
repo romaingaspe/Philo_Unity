@@ -28,12 +28,12 @@ class FrontController extends Controller
 	}
 	public function recherche()
 	{
-		if(empty($_GET["search"])){
+		if(empty($_GET["search"]) && empty($_GET['valeur'])){
 			$params['resultatUser'] = [];
 			$params['resultatMetier'] = [];
 			$params['error'] = 'Veuillez saisir une recherche';
 		}
-		if(empty($_GET['valeur'])){
+		if(!empty($_GET['search']) && empty($_GET['valeur'])){
 			$params['error'] = 'Veuillez choisir un paramètre de recherche';
 			$params['resultatUser'] = [];
 			$params['resultatMetier'] = [];
@@ -58,10 +58,8 @@ class FrontController extends Controller
 					$params['resultatUser'] = [];
 				}
 			}
-			else{
-				$params['resultat'] = [];
-			}
 		}
+
 		$this->show('front/recherche', $params);
 	}
 }
