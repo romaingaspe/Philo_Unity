@@ -15,6 +15,7 @@
 
 		['GET|POST', '/profil/updatesprofil', 'profil#updatesProfil', 'updatesprofil'],				
 
+
 		['GET', '/profil/portfolio/projectspage/[:id]', 'Profil#projectsPage', 'projectsPage'],
 
 		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
@@ -32,4 +33,5 @@
 		['GET|POST', '/admin/reinipasstoken', 'admin#reiniPassTok', 'reiniPassTok'],
     ['GET|POST', '/admin/insertprofil', 'admin#insertProfil', 'insertProfil'],
 		['GET|POST', '/admin/insertsection', 'admin#insertSection', 'insertSection'],
+		['GET|POST', '/admin/insertProjets', 'admin#insertProjets', 'insertProjets'],
 	);
