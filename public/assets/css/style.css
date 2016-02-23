@@ -110,7 +110,7 @@ footer div h5 {
 footer .row{
 	margin: 0;
 }
-footer div div ul {
+footer div div ul, footer div div ul.col.l6{
 	padding-top: 50px;
 }
 /***************** start : RESPONSIVE SUR BIG IMAGE ***************/
@@ -160,6 +160,7 @@ footer div div ul {
 			}
 		}
 
+
 /***************** stop : RESPONSIVE NAV HEADER ***************/
 
 /* START : ENTETE pages cgu, commentaires et galleryproject */
@@ -205,7 +206,7 @@ footer div div ul {
 	height: 300px;
 }
 #allworks p{
-	height:25em;
+	height:18em;
 	padding: 3%;
     text-align: justify;
     background-color: #E9FCFB;
