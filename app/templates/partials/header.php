@@ -1,7 +1,7 @@
 <header>
 	<nav class="brown">
 		<div class="container nav-wrapper">
-			<a href="/Philo_Unity/public">
+			<a href="<?= $this->url('index') ?>">
 				<img class="left" src="<?= $this->assetUrl('img/logo_final.png') ?>"></img>
 			</a>
 			<ul id="dropdown1" class="dropdown-content">

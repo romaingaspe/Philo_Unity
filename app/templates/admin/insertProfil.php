@@ -11,7 +11,7 @@
                 <div class="input-field">
                     <label for="prenom">Prénom</label>
                     <input type="text" name="prenom" placeholder="Votre Prénom">
-                </div>        
+                </div>
                 <div class="input-field">
                     <label for="email">E-mail</label>
                     <input type="text" name="email" placeholder="Votre email">
@@ -30,13 +30,12 @@
     </div>
 
 <?php if(!empty($errors)) :?>
-        <?= "<p class='red-text text-darken-1'>"?>
-        <?= "implode('<br />', $errors)" ?>
-        <?= '</p>' ?>
-<?php endif; ?> 
-<?php if(!empty($success)) :?>   
-        <?= "<p class='green-text text-darken-1'>'.$success.'</p>"?>
-<?php endif; ?> 
+        <p class='red-text text-darken-1'>
+        <?= implode('<br />', $errors)?>
+        </p>
+<?php endif; ?>
+<?php if(!empty($success)) :?>  
+        <p class='green-text text-darken-1'><?=$success?></p>
+<?php endif; ?>
 
 <?php $this->stop('main_content') ?>
-

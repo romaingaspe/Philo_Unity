@@ -37,9 +37,10 @@
 		</div>
 	</article>
 <?php endforeach;?>
-<?php if (!empty($error)) {
-	echo '<h5>'.$error.'</h5>';
-}?>
+
+<?php if (!empty($error)) :?>
+	<h5><?=$error?></h5>
+<?php endif;?>
 </section>
 
 <?php $this->stop('main_content') ?>
