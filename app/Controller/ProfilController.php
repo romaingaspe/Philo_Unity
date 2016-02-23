@@ -7,8 +7,6 @@ use \W\Controller\Controller;
 use Manager\FixUserManager;
 
 use \W\Security\AuthentificationManager;
-
-use Manager\MetierManager;
 use Manager\ProjetManager;
 
 class ProfilController extends Controller
@@ -24,7 +22,9 @@ class ProfilController extends Controller
         $dirUpload = 'photo/profiluser';
         $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
         $login = new AuthentificationManager();
-        $FixUserManager = new FixUserManager;
+        $userManager = new FixUserManager;
+        $infosUser = $this->getUser();
+
         $errors = array();
         $params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
         // Faire vérification des champs ICI
@@ -51,31 +51,28 @@ class ProfilController extends Controller
           if (empty($_POST['linkedin'])) {
             $errors[]='Votre linkedin ne doit pas est vide';
           }
-          if(empty($_POST['photo'])){
-            $errors[] = 'veuiller entrer une photo';
-          }
           
           // il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
           if(count($errors) == 0){
 
-            $UserManager->update([
+            $userManager->update([
               'nom'               => $_POST['nom'],
               'prenom'            => $_POST['prenom'],
               'email'             => $_POST['email'],
               'description'       =>$_POST['description'],
-              'photo'             => $_POST['photo'],
-              'date_update'       => 'NOW',
+              'date_update'       => 'NOW()',
+            ],$infosUser['id']);
+            $login->refreshUser();
 
-
-            ]);
-
+            $params['success'] = 'votre nouveau profil à bien été enregistré !';
           }
           // sinon on affiche les erreurs:
           else{
-        $params['errors'] = $errors;
-      }
-      $params['success'] = 'votre nouveau profil à bien été enregistré !';
-    }
+        
+            $params['errors'] = $errors;
+          }
+        }
+        $params['user'] = $infosUser;
         $this->show('profil/updatesprofil', $params);
       }
             
@@ -83,7 +80,7 @@ class ProfilController extends Controller
     public function profilUser($id)
     {
 
-      $FixUserManager = new FixUserManager();
+      $userManager = new FixUserManager();
     	$params = [
     	  'profil' => $userManager->find($id),
         // récupérer la liste de projets de cet utilisateur

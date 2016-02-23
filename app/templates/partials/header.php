@@ -5,9 +5,9 @@
 				<img class="left" src="<?= $this->assetUrl('img/logo_final.png') ?>"></img>
 			</a>
 			<ul id="dropdown1" class="dropdown-content">
-				<li><a href="<?= $this->url('profiluser').$_SESSION['user']['id'] ?>">Mon profil</a></li>
+				<li><a href="<?= $this->url('profiluser', ['id' => $_SESSION['user']['id'] ])?>">Mon profil</a></li>
 			  	<li class="divider"></li>
-			  	<li><a href="<?= $this->url('update') ?>">Mes infos</a></li>
+			  	<li><a href="<?= $this->url('updateProfil') ?>">Mes infos</a></li>
 			  	<?php if($w_user['role']=='Admin'):?>
 	  			<li><a href="<?= $this->url('insertProfil') ?>">Entrer un nouvel utilisateur</a></li>
 	  			<?php endif;?>
