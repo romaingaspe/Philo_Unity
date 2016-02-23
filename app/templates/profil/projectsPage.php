@@ -45,42 +45,42 @@
   <section class="container comments-bloc">
 
     <!-- formulaire -->
-    <?php if($w_user) :?> 
-        <div id="form-com"class="container">
-          <div class="row">
-            <form class="col s12" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
-              <h5 class="container center-align ">Publier un commentaire </h5>
-              <div class="row">
-                <div class="input-field col s12 m12 l12">
-                  <input id="last_name" type="text" class="validate">
-                  <label for="last_name">titre de votre commentaire</label>
-                </div>
-                <div id="line-postcom" class="input-field col s12 m12 l12">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">votre commentaire</label>
-                </div>
-              </div>
-              <div class="col s12 m12 l12">
-                  <a class="waves-effect waves-light btn right">Envoyer</a>
-              </div>
-            </form>
-          </div>
-        </div>   
-    
-      <!-- commentaires -->
+  <?php if($w_user) :?> 
+      <div id="form-com"class="">
+        <div class="row">
 
-      <h5 class="center-align">Derniers commentaires sur le projet</h5>
-      <div id="com-project" class="grey lighten-2 ">
-          <h7>gorginette</h7>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-          <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
-      </div>
-      <div id="com-project" class="grey lighten-2">
-          <h7>pascalette</h7>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-          <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
-      </div>
-    
+        <!-- commentaires -->
+        <div class="col s12 m12 l4">
+          <h5 class="center-align">Derniers commentaires sur le projet</h5>
+          <div id="com-project" class="grey lighten-2 ">
+              <h7>gorginette</h7>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+              <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
+          </div>
+          <div id="com-project" class="grey lighten-2">
+              <h7>pascalette</h7>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+              <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
+          </div>
+        </div>
+          <form class="col s12 m12 l8" method="POST" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
+            <h5 class="container center-align ">Publier un commentaire </h5>
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">titre de votre commentaire</label>
+              </div>
+              <div id="line-postcom" class="input-field col s12 m12 l12">
+                  <textarea id="last_name" type="text" class="materialize-textarea validate"></textarea>
+                  <label for="last_name">votre commentaire</label>
+              </div>
+            </div>
+            <div class="col s12 m12 l12">
+                <button type="submit" class="waves-effect waves-light btn right">Envoyer</button>
+            </div>
+          </form>  
+      </div>  
+    </div>
       <?php endif;?>  
 
     <?php if(!$w_user) :?><!-- zone de commentaires où j'afficherai 'commentaires' tout court -->
