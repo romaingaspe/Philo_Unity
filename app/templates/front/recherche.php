@@ -35,7 +35,7 @@
 <?php endforeach;?>
 
 <?php if (!empty($error)) :?>
-	<h5><?=$error?></h5>
+	<h5 class="center"><?=$error?></h5>
 <?php endif;?>
 </section>
 
