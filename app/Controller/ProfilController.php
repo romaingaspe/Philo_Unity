@@ -2,9 +2,10 @@
 
 namespace Controller;
 
+use Manager\MetierManager;
 use \W\Controller\Controller;
 use Manager\FixUserManager;
-use Manager\MetierManager;
+use \W\Security\AuthentificationManager;
 use Manager\ProjetManager;
 
 class ProfilController extends Controller
@@ -13,10 +14,68 @@ class ProfilController extends Controller
     {
         $this->show('profil/contact');
     }
-    public function updatesPages()
+    public function updatesProfil()
     {
-        $this->show('profil/updatesPages');
-    }
+        $this->allowTo(['user','Admin']);
+        $maxSize = 3024 * 3000; // 1Ko * 1000 = 1Mo
+        $dirUpload = 'photo/profiluser';
+        $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
+        $login = new AuthentificationManager();
+        $userManager = new FixUserManager;
+        $infosUser = $this->getUser();
+
+        $errors = array();
+        $params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
+        // Faire vérification des champs ICI
+        if(!empty($_POST)){
+          // Faire vérification des champs ICI
+          if(empty($_POST['nom'])){
+            $errors[] = 'le nom est vide';
+          }
+          if(empty($_POST['prenom'])){
+            $errors[] = 'le prenom est vide';
+          }
+          if(empty($_POST['email'])){
+            $errors[] = 'l\'email est vide';
+          }
+          if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
+            $errors[] = 'L\'email est invalide';
+          }
+          if (empty($_POST['description'])) {
+            $errors[]='Votre description ne doit pas est vide';
+          }
+          if (empty($_POST['description'])) {
+            $errors[]='Votre description ne doit pas est vide';
+          }
+          if (empty($_POST['linkedin'])) {
+            $errors[]='Votre linkedin ne doit pas est vide';
+          }
+
+          // il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
+          if(count($errors) == 0){
+
+            $userManager->update([
+              'nom'               => $_POST['nom'],
+              'prenom'            => $_POST['prenom'],
+              'email'             => $_POST['email'],
+              'description'       =>$_POST['description'],
+              'date_update'       => 'NOW()',
+            ],$infosUser['id']);
+            $login->refreshUser();
+
+            $params['success'] = 'votre nouveau profil à bien été enregistré !';
+          }
+          // sinon on affiche les erreurs:
+          else{
+        
+            $params['errors'] = $errors;
+          }
+        }
+        $params['user'] = $infosUser;
+        $this->show('profil/updatesprofil', $params);
+      }
+
+
     public function profilUser($id)
     {
 

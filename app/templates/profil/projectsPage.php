@@ -2,8 +2,6 @@
 
 <?php $this->start('main_content') ?>
 
-<?php var_dump($photos) ?>
-
   <div class="row">
     <div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2">
       <span class="left">1 1
@@ -18,42 +16,45 @@
   <section id="description" class="container section">
     <div class="row">
       <div id="titleprojet" class="col s12 m12 l4">
-        <h4>Dessus de table</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vero dolor quidem possimus dicta consequatur aliquam, soluta minima voluptatibus officia maiores ipsam veritatis dolore dolorum eum, eligendi modi a commodi?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, pariatur, dignissimos. Assumenda rem dolorum corporis unde eveniet hic voluptas repudiandae eaque illo velit cupiditate porro, non blanditiis consectetur totam ullam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam perferendis eaque perspiciatis harum neque, repudiandae ducimus saepe tenetur consectetur nostrum. Enim necessitatibus quos, dolorem? Impedit explicabo cumque voluptatum tempora Lorem ipsum dolor sit amet, consectetur </p>
+        <h4><?= $projet['project_title']?></h4>
+        <p><?= $projet['description']?></p>
       </div>
       <div id="slideprojet" class="col s12 m12 l8 slider">
-          <ul class="slides">
+        <ul class="slides">
+          <?php foreach($photos as $pictures):?>
             <li>
-              <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+              <img src="<?= $pictures['photo']?>"> <!-- random image -->
               <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
-              </div>
+                <h3><?= $pictures['caption']?></h3>
+                <h5 class="light grey-text text-darken-2">Projet<?= $projet['project_title']?></h5>
+                </div>
             </li>
-            <li>
-              <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-              <div class="caption left-align">
-                <h3>Left Aligned Caption</h3>
-                <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-              <div class="caption right-align">
-                <h3>Right Aligned Caption</h3>
-                <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
-              </div>
-            </li>
-            <li>
-              <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-              <div class="caption center-align">
-                <h3>This is our big Tagline!</h3>
-                <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
-              </div>
-            </li>
-          </ul>
+          <?php endforeach;?>
+        </ul>
+           <!--  <li>
+             <img src="http://lorempixel.com/580/250/nature/2"> random image
+             <div class="caption left-align">
+               <h3>Left Aligned Caption</h3>
+               <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
+             </div>
+           </li>
+           <li>
+             <img src="http://lorempixel.com/580/250/nature/3"> random image
+             <div class="caption right-align">
+               <h3>Right Aligned Caption</h3>
+               <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
+             </div>
+           </li>
+           <li>
+             <img src="http://lorempixel.com/580/250/nature/4"> random image
+             <div class="caption center-align">
+               <h3>This is our big Tagline!</h3>
+               <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
+             </div>
+           </li> -->
+          
           <div id="comment-btn" class="col s12 m12 l12 ">
-              <a class="waves-effect waves-light btn right link-com-project">commenter</a>
+              <a class="waves-effect waves-light btn right link-com-project" href="<?= $this->url('commentaires',['id' => $projet['id']])?>">commenter</a>
           </div>
       </div>
       
