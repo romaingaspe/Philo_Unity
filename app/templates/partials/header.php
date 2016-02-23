@@ -35,9 +35,29 @@
 					</div>
 				</form>
 			</ul>
+			<ul id="dropdown3" class="dropdown-content">
+				<form class="center" action="<?= $this->url('recherche') ?>" method="GET">
+					<div class="col l6" id="search">
+						<input type="search" name="search" class="col l8 offset-l2 black-text" placeholder="Votre recherche">
+					</div>
+					<div class="input-field">
+						<div class="col l6">
+							<input name="valeur" type="radio" id="test1" value="user"/>
+							<label for="test1">Par Utilisateur</label>
+						</div>
+						<div class="col l6">
+							<input name="valeur" type="radio" id="test2" value="metier" />
+							<label for="test2">Par Métier</label>
+						</div>
+					</div>
+					<div>
+						<button type="submit" class="btn waves-effect waves-light col l4 offset-l4" id="searchbut">cherche!</button>
+					</div>
+				</form>
+			</ul>
 			<ul id="mobile-demo" class=" col s12 m6 l4 right side-nav">
 				<li>
-					<a href="#" class="dropdown-button" data-beloworigin="true" data-hover="true" data-constrainwidth="false" data-activates="dropdown2" >
+					<a href="#" class="dropdown-button grey lighten-2" data-beloworigin="true" data-activates="dropdown3" >
 					<i class="material-icons search">search</i>
 					</a>
 				</li>
