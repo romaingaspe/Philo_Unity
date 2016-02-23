@@ -19,8 +19,8 @@ class PortfolioController extends Controller
     {
     	$userManager = new FixUserManager();
     	$params = [
-    	  'profil' => $userManager->find($id),
-        'projets' => $userManager->getUserProjects($id)
+        	'profil' => $userManager->find($id),
+            'projets' => $userManager->getUserProjects($id)
     	];
 
         $this->show('Portfolio/projectsPage', $params);
