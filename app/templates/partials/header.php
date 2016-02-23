@@ -12,22 +12,28 @@
 	  			<li><a href="<?= $this->url('insertProfil') ?>">entrer un nouveau user</a></li>
 	  			<?php endif;?>
 			</ul>
+			<ul id="dropdown2" class="dropdown-content">
+				<form class="white" action="<?= $this->url('recherche') ?>" method="GET">
+
+					<div class="input-field white col l4">
+						<input type="search" name="search">
+					</div>
+					<div class="input-field white col l4">
+						<input name="valeur" type="radio" id="test1" value="user"/>
+						<label for="test1">Par Utilisateur</label>
+					</div>
+					<div class="input-field white col l4">
+						<input name="valeur" type="radio" id="test2" value="metier" />
+						<label for="test2">Par Métier</label>
+					</div>
+						<br />
+					<input type="submit">
+				</form>
+			</ul>
 			<ul id="nav-resp" class=" col s12 m6 l4 right">
-					<form class="row" action="<?= $this->url('recherche') ?>" method="GET">
-						<div class="input-field white col l4">
-							<input type="text" name="search">
-						</div>
-						<div class="input-field white col l4">
-							<input name="valeur" type="radio" id="test1" value="user"/>
-							<label for="test1">Par Utilisateur</label>
-						</div>
-						<div class="input-field white col l4">
-							<input name="valeur" type="radio" id="test2" value="metier" />
-							<label for="test2">Par Métier</label>
-						</div>
-							<br />
-						<input type="submit"><i class="material-icons search">search</i>
-					</form>
+				<a href="#" class="dropdown-button" data-beloworigin="true" data-hover="true" data-activates="dropdown2" id="loginfo">
+					<i class="material-icons search">search</i>
+				</a>
 				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
 				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
