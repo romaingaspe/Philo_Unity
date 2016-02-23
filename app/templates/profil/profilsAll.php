@@ -25,18 +25,15 @@
 				<div>
 					<img class="photo-work responsive-img" src="<?= $use['photo']?>" alt="">
 				</div>
-				<div class="text-works">
+				<div class="text-works center">
 					<h6><?= $use['prenom'].' '.$use['nom']?></h6>
-					<p><?= $use['description']?></p>
+					<p><?= mb_substr($use['description'], 0 , 400 )?></p>
+					<br>
 					<a href="/philo_unity/public/profil/profiluser/<?= $use['id']?>">Visiter le Profil</a>
 				</div>
 			</article>
 		<?php endforeach;?>
 	</section>
-	<section id="pagination" class="row ">
-		<span>1</span>
-	</section>
-
 <?php $this->stop('main_content') ?>
 
 <?php $this->start('script') ?>
