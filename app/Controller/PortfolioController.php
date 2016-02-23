@@ -19,7 +19,7 @@ class PortfolioController extends Controller
     {
     	$userManager = new FixUserManager();
     	$params = [
-    	  'profil' => $userManager->find($id),
+    	 'profil' => $userManager->find($id),
         'projets' => $userManager->getUserProjects($id)
     	];
 
