@@ -1,9 +1,14 @@
-<?php $this->layout('layout', ['title' => 'Recherche']) ?>
+<?php if (!empty($error)) :?>
+	<?=$this->layout('layout2', ['title' => 'Recherche'])?>
+<?php endif;?>
+<?php if (empty($error)) :?>
+	<?=$this->layout('layout', ['title' => 'Recherche'])?>
+<?php endif;?>
 
 <?php $this->start('main_content') ?>
 
 <section id="allworks" class="row section container">
-	
+
 <?php foreach ($resultatUser as $resuse):?>
 	<article class="col s12 m6 l4">
 		<div>
