@@ -28,20 +28,18 @@ class FrontController extends Controller
 	}
 	public function recherche()
 	{
+		$params['resultatUser'] = [];
+		$params['resultatMetier'] = [];
 		if(empty($_GET["search"]) && empty($_GET['valeur'])){
-			$params['resultatUser'] = [];
-			$params['resultatMetier'] = [];
 			$params['error'] = 'Veuillez saisir une recherche';
 		}
-		if(!empty($_GET['search']) && empty($_GET['valeur'])){
+		elseif(empty($_GET['valeur']) && !empty($_GET['search'])){
 			$params['error'] = 'Veuillez choisir un paramètre de recherche';
-			$params['resultatUser'] = [];
-			$params['resultatMetier'] = [];
+
 		}
-		if(!empty($_GET['search']) && strlen($_GET['search']) < 3){
+		elseif(!empty($_GET['search']) && strlen($_GET['search']) < 3){
 			$params['error'] = 'Votre recherche doit faire plus de 3 caractères';
-			$params['resultatUser'] = [];
-			$params['resultatMetier'] = [];
+
 		}
 		else{
 			$recherche = new RechercheManager();
@@ -49,13 +47,21 @@ class FrontController extends Controller
 				$search = strip_tags($_GET["search"]);
 				if($_GET['valeur'] == 'user'){
 					$resultatuser = $recherche->rechercheUsers($search);
-					$params['resultatUser'] = $resultatuser;
-					$params['resultatMetier'] = [];
+					if(empty($resultatuser)){
+						$params['error'] = 'Votre recherche n\'a donné aucun résultat';
+					}
+					else{
+						$params['resultatUser'] = $resultatuser;
+					}
 				}
 				if($_GET['valeur'] == 'metier'){
 					$resultatmetier = $recherche->rechercheMetier($search);
-					$params['resultatMetier'] = $resultatmetier;
-					$params['resultatUser'] = [];
+					if(empty($resultatmetier)){
+						$params['error'] = 'Votre recherche n\'a donné aucun résultat';
+					}
+					else{
+						$params['resultatMetier'] = $resultatmetier;
+					}
 				}
 			}
 		}

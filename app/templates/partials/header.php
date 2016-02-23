@@ -10,6 +10,21 @@
 			  <li><a href="<?= $this->url('update') ?>">Mes infos</a></li>
 			</ul>
 			<ul id="nav-resp" class=" col s12 m6 l4 right">
+					<form class="row" action="<?= $this->url('recherche') ?>" method="GET">
+						<div class="input-field white col l4">
+							<input type="text" name="search">
+						</div>
+						<div class="input-field white col l4">
+							<input name="valeur" type="radio" id="test1" value="user"/>
+							<label for="test1">Par Utilisateur</label>
+						</div>
+						<div class="input-field white col l4">
+							<input name="valeur" type="radio" id="test2" value="metier" />
+							<label for="test2">Par Métier</label>
+						</div>
+							<br />
+						<input type="submit"><i class="material-icons search">search</i>
+					</form>
 				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
 				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
