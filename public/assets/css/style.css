@@ -365,6 +365,9 @@ footer div div ul, footer div div ul.col.l6{
 div #slideprojet{
 	padding: 0 !important;
 }
+div #slideprojet h5{
+	color:#fff !important;
+}
 
 #titleprojet{
     padding: 0 0.5% 0 0;
@@ -420,8 +423,9 @@ div #slideprojet{
 
 } */
 #image-entete img{
-	height: 50%;
-	margin-bottom: 5%;
+	object-fit: contain;
+    height: 480px;
+
 }
 #image-entete h5{
 	background-color: #795548;
