@@ -6,6 +6,7 @@ use \W\Controller\Controller;
 use \Manager\BlogManager;
 use \W\Security\AuthentificationManager;
 use \Manager\FixUserManager as UserManager;
+use Manager\MetierManager;
 use \PHPMailer;
 use \config;
 
@@ -57,7 +58,7 @@ class AdminController extends Controller
 	public function insertSection(){
 		$this->allowTo(['Admin']);
 		$login = new AuthentificationManager();
-		$userManager = new UserManager;
+		$MetierManager = new MetierManager;
 		$errors = array();
 		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
 		// Faire vérification des champs ICI
@@ -82,7 +83,7 @@ class AdminController extends Controller
 
 			// il n'y a pas d'erreurs,  inserer la section a bien rentré en bdd :
 			if(count($errors) == 0){
-				$userManager->insert([
+				$MetierManager->insert([
 					'section' 	  => $_POST['section'],
 					'alias' 		  => $_POST['alias'],
 					'description' => $_POST['description'],
