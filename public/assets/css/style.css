@@ -1,3 +1,9 @@
+.collapsible-header{
+	margin: 0 !important;
+}
+.collapsible li.active{
+	background-color: white !important;
+}
 .container .row{
 	margin: 0 0 1em 0;
 }

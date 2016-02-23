@@ -3,6 +3,12 @@ var H = $('.slider').height();
 $('.slider').height(H-40);
 $('.carousel').carousel();});
 $(".button-collapse").sideNav({  edge: 'right'});
+$(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+});
+
 $(function(){
     $('.paginations.paginmet').click(function(e){
         e.preventDefault();

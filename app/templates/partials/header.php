@@ -35,31 +35,33 @@
 					</div>
 				</form>
 			</ul>
-			<ul id="dropdown3" class="dropdown-content">
-				<form class="center" action="<?= $this->url('recherche') ?>" method="GET">
-					<div class="col l6" id="search">
-						<input type="search" name="search" class="col l8 offset-l2 black-text" placeholder="Votre recherche">
-					</div>
-					<div class="input-field">
-						<div class="col l6">
-							<input name="valeur" type="radio" id="test1" value="user"/>
-							<label for="test1">Par Utilisateur</label>
-						</div>
-						<div class="col l6">
-							<input name="valeur" type="radio" id="test2" value="metier" />
-							<label for="test2">Par Métier</label>
-						</div>
-					</div>
-					<div>
-						<button type="submit" class="btn waves-effect waves-light col l4 offset-l4" id="searchbut">cherche</button>
-					</div>
-				</form>
-			</ul>
 			<ul id="mobile-demo" class=" col s12 m6 l4 right side-nav">
-				<li>
-					<a href="#" class="dropdown-button grey lighten-2" data-beloworigin="true" data-activates="dropdown3" id="menudrop">
-					<i class="material-icons search">search</i>
-					</a>
+				<li class="white">
+					<ul data-collapsible="accordion" class="collapsible">
+						<li>
+							<div class="collapsible-header">
+								<p class="black-text">Recherche</p>
+							</div>
+							<form class="center collapsible-body" action="<?= $this->url('recherche') ?>" method="GET" >
+								<div class="col l6" id="search">
+									<input type="search" name="search" class="col l8 offset-l2 black-text" placeholder="Votre recherche">
+								</div>
+								<div class="input-field">
+									<div class="col l6">
+										<input name="valeur" type="radio" id="test1" value="user"/>
+										<label for="test1">Par Utilisateur</label>
+									</div>
+									<div class="col l6">
+										<input name="valeur" type="radio" id="test2" value="metier" />
+										<label for="test2">Par Métier</label>
+									</div>
+								</div>
+								<div>
+									<button type="submit" class="btn waves-effect waves-light col l4 offset-l4" id="searchbut">cherche</button>
+								</div>
+							</form>
+						</li>
+					</ul>
 				</li>
 				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
 				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
