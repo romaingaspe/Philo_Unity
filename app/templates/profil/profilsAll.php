@@ -28,7 +28,6 @@
 				<div class="text-works center">
 					<h6><?= $use['prenom'].' '.$use['nom']?></h6>
 					<p><?= mb_substr($use['description'], 0 , 400 )?></p>
-					<br>
 					<a href="/philo_unity/public/profil/profiluser/<?= $use['id']?>">Visiter le Profil</a>
 				</div>
 			</article>

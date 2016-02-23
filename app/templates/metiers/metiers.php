@@ -27,7 +27,6 @@
 					<div class="text-works center">
 						<h6><?= $met['section']?></h6>
 						<p><?= mb_substr($met['description'], 0 , 400 )?></p>
-						<br>
 						<a href="metiers/<?= $met['alias']?>/profilsall"><?= $met['section']?></a>
 					</div>
 				</article>
