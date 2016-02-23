@@ -32,8 +32,8 @@ class ProfilController extends Controller
     }
 
     public function projectsPage($id)
-    { 
-      $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id 
+    {
+      $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
         'projet' => $projetManager->find($id),
         // récupérer la liste de photos de ce projet
@@ -73,4 +73,46 @@ class ProfilController extends Controller
         $profils = $profilsdb->findMetier($section, 'nom' , $num, $start);
         $this->showJson($profils);
     }
+
+
+    public function insertProjects(){
+      $this->allowTo(['user','Admin']);
+        $login = new AuthentificationManager();
+        $ProjectManager = new ProjectManager;
+        $errors = array();
+        $params = array();
+
+        $maxSize = 3024 * 3000;
+        $dirUpload = 'photo';
+        $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
+
+        if(!empty($_POST)){
+
+          if(empty($_POST['project_title'])){
+            $errors[] = 'le titre est vide';
+}
+        if(empty($_POST['description'])){
+          $errors[] = 'la description du projet est vide';
+}
+        if(empty($_POST['photo'])){
+          $errors[] = 'veuiller entrer une photo de votre projet';
+}
+
+
+        if(count($errors) == 0){
+          $ProjectManager->update([
+            'project_title' 	  => $_POST['project_title'],
+            'description' 			=> $_POST['description'],
+            'photo' 	    			=> $_POST['photo'],
+      ]);
+}
+
+    else{
+      $params['errors'] = $errors;
+    }
+    $params['success'] = 'votre nouveaux projet à bien été rajouté !';
+
+
+  $this->show('userId/insertProject', $params);
+}
 }

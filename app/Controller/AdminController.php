@@ -98,7 +98,7 @@ class AdminController extends Controller
 			$params['success'] = 'votre nouvelle section à bien été rajouté !';
 		}
 
-		$this->show('admin/insertsection', $params);
+		$this->show('admin/insertSection', $params);
 	}
 	public function connect()
 	{
