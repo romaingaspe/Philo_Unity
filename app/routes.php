@@ -12,8 +12,11 @@
 		['GET', '/profil/profiluser/[:id]', 'Profil#profilUser', 'profiluser'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 		['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
+
 		['GET|POST', '/profil/updatesprofil', 'profil#updatesProfil', 'updatesprofil'],				
-		['GET', '/profil/portfolio/projectspage', 'portfolio#projectsPage', 'projectsPage'],
+
+		['GET', '/profil/portfolio/projectspage/[:id]', 'Profil#projectsPage', 'projectsPage'],
+
 		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
 
 		////////////////////////////METIERS////////////////////////////////////////////////////////

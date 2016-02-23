@@ -5,10 +5,11 @@ namespace Controller;
 use Manager\MetierManager;
 use \W\Controller\Controller;
 use Manager\FixUserManager;
-use Manager\userManager;
-use Controller\AdminController;
+
 use \W\Security\AuthentificationManager;
 
+use Manager\MetierManager;
+use Manager\ProjetManager;
 
 class ProfilController extends Controller
 {
@@ -84,11 +85,26 @@ class ProfilController extends Controller
 
       $FixUserManager = new FixUserManager();
     	$params = [
-    	  'profil' => $FixUserManager->find($id),
-        'projets' => $FixUserManager->getUserProjects($id)
+    	  'profil' => $userManager->find($id),
+        // récupérer la liste de projets de cet utilisateur
+        // pour les afficher dans la vue profilUser
+        'projets' => $userManager->getUserProjects($id)
     	];
       $this->show('profil/profilUser', $params);
 
+    }
+
+    public function projectsPage($id)
+    { 
+      $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id 
+      $params = [
+        'projet' => $projetManager->find($id),
+        // récupérer la liste de photos de ce projet
+        // pour les afficher dans la vue projectsPage
+        'photos'=> $projetManager->getProjectPhotos($id)
+      ];
+
+      $this->show('profil/projectsPage', $params);
     }
 
     public function profilsAll($section)

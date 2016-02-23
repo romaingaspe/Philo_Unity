@@ -1,3 +1,9 @@
+.collapsible-header{
+	margin: 0 !important;
+}
+.collapsible li.active{
+	background-color: white !important;
+}
 .container .row{
 	margin: 0 0 1em 0;
 }
@@ -87,6 +93,7 @@ nav div a img {
 	margin-top: 12px;
 }
 nav {
+	height: 64px !important;
     color: #fff;
     background-color: #128b82;
 }
@@ -99,10 +106,6 @@ footer div{
 }
 footer div h5 {
 	width: 100%
-}
-footer a{
-	color: red;
-	width: 100%;
 }
 footer .row{
 	margin: 0;

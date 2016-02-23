@@ -1,14 +1,16 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-	<p>portfolio>galerie des projets>projets1></p>
-	<div class="row">
+
+<?php var_dump($photos) ?>
+
+  <div class="row">
     <div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2">
       <span class="left">1 1
-  		</span>
-        PROJETS
+      </span>
+        PROJETS:
       <span class="right">2 2
-  		</span>
+      </span>
     </div>
   </div>
  
@@ -61,26 +63,26 @@
   <section class="container comments-bloc">
     <h5 class="center-align">Derniers commentaires sur le projet</h5>
     <div id="com-project" class="grey lighten-2 ">
-  			<h7>gorginette</h7>
-  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi 		enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-  			<p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>			
-  	</div>
-  	<div id="com-project" class="grey lighten-2">
-  			<h7>pascalette</h7>
-  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-  			<p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p>	
-  	</div>
+        <h7>gorginette</h7>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+        <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
+    </div>
+    <div id="com-project" class="grey lighten-2">
+        <h7>pascalette</h7>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+        <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
+    </div>
   </section>
     <div id="pagi-project" style="text-align: center;">
-  		<ul class="pagination">
-  				<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-  				<li class="active"><a href="#!">1</a></li>
-  				<li class="waves-effect"><a href="#!">2</a></li>
-  				<li class="waves-effect"><a href="#!">3</a></li>
-  				<li class="waves-effect"><a href="#!">4</a></li>
-  				<li class="waves-effect"><a href="#!">5</a></li>
-  				<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  		</ul>
-  	</div>
+      <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li class="active"><a href="#!">1</a></li>
+          <li class="waves-effect"><a href="#!">2</a></li>
+          <li class="waves-effect"><a href="#!">3</a></li>
+          <li class="waves-effect"><a href="#!">4</a></li>
+          <li class="waves-effect"><a href="#!">5</a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    </div>
 
 <?php $this->stop('main_content') ?>
