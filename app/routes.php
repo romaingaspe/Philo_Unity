@@ -7,7 +7,7 @@
 		['GET|POST', '/contactadmin', 'Front#contactAdmin', 'contactAdmin'],
 		['GET|POST', '/recherche', 'Front#recherche', 'recherche'],
 
-		
+
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
 		['GET', '/profil/profiluser/[:id]', 'Profil#profilUser', 'profiluser'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
@@ -27,6 +27,6 @@
 		['GET|POST', '/admin/deconnect', 'admin#deconnect', 'deconnect'],
 		['GET|POST', '/admin/reinipass', 'admin#reiniPass', 'reiniPass'],
 		['GET|POST', '/admin/reinipasstoken', 'admin#reiniPassTok', 'reiniPassTok'],
-        ['GET|POST', '/admin/insertprofil', 'admin#insertProfil', 'insertProfil'],
-
+    ['GET|POST', '/admin/insertprofil', 'admin#insertProfil', 'insertProfil'],
+		['GET|POST', '/admin/insertSection', 'admin#insertSection', 'insertSection'],
 	);
