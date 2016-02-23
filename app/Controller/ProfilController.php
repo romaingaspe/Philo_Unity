@@ -5,7 +5,6 @@ namespace Controller;
 use Manager\MetierManager;
 use \W\Controller\Controller;
 use Manager\FixUserManager;
-
 use \W\Security\AuthentificationManager;
 use Manager\ProjetManager;
 
@@ -51,7 +50,7 @@ class ProfilController extends Controller
           if (empty($_POST['linkedin'])) {
             $errors[]='Votre linkedin ne doit pas est vide';
           }
-          
+
           // il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
           if(count($errors) == 0){
 
@@ -75,8 +74,8 @@ class ProfilController extends Controller
         $params['user'] = $infosUser;
         $this->show('profil/updatesprofil', $params);
       }
-            
-        
+
+
     public function profilUser($id)
     {
 
@@ -92,8 +91,8 @@ class ProfilController extends Controller
     }
 
     public function projectsPage($id)
-    { 
-      $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id 
+    {
+      $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
         'projet' => $projetManager->find($id),
         // récupérer la liste de photos de ce projet

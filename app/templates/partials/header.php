@@ -40,7 +40,7 @@
 					<ul data-collapsible="accordion" class="collapsible">
 						<li>
 							<div class="collapsible-header white">
-								<p class="black-text">Recherche</p>
+								<p class="black-text"><i class="material-icons search black-text">search</i>Recherche</p>
 							</div>
 							<form class="center collapsible-body" action="<?= $this->url('recherche') ?>" method="GET" >
 								<div class="col l6" id="search">
