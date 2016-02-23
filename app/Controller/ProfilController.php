@@ -23,6 +23,8 @@ class ProfilController extends Controller
       $userManager = new FixUserManager();
     	$params = [
     	  'profil' => $userManager->find($id),
+        // récupérer la liste de projets de cet utilisateur
+        // pour les afficher dans la vue profilUser
         'projets' => $userManager->getUserProjects($id)
     	];
       $this->show('profil/profilUser', $params);
@@ -31,9 +33,13 @@ class ProfilController extends Controller
 
     public function projectsPage($id)
     { 
-      $projet = new ProjetManager(); // methode manager qui va chercher le projet d'id $id 
-      $params['projet'] = $projet->find($id);
-
+      $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id 
+      $params = [
+        'projet' => $projetManager->find($id),
+        // récupérer la liste de photos de ce projet
+        // pour les afficher dans la vue projectsPage
+        'photos'=> $projetManager->getProjectPhotos($id)
+      ];
 
       $this->show('profil/projectsPage', $params);
     }
