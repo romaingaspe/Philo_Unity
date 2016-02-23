@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-
+<?php var_dump($photos) ?>
   <div class="row">
     <div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2">
       <span class="left">1 1
@@ -31,49 +31,73 @@
             </li>
           <?php endforeach;?>
         </ul>
-           <!--  <li>
-             <img src="http://lorempixel.com/580/250/nature/2"> random image
-             <div class="caption left-align">
-               <h3>Left Aligned Caption</h3>
-               <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
-             </div>
-           </li>
-           <li>
-             <img src="http://lorempixel.com/580/250/nature/3"> random image
-             <div class="caption right-align">
-               <h3>Right Aligned Caption</h3>
-               <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
-             </div>
-           </li>
-           <li>
-             <img src="http://lorempixel.com/580/250/nature/4"> random image
-             <div class="caption center-align">
-               <h3>This is our big Tagline!</h3>
-               <h5 class="light grey-text text-darken-2">Here's our small slogan.</h5>
-             </div>
-           </li> -->
           
-          <div id="comment-btn" class="col s12 m12 l12 ">
-              <a class="waves-effect waves-light btn right link-com-project" href="<?= $this->url('commentaires',['id' => $projet['id']])?>">commenter</a>
-          </div>
+          <!-- <div id="comment-btn" class="col s12 m12 l12 ">
+              <a class="waves-effect waves-light btn right link-com-project">commenter</a>
+          </div> -->
       </div>
-      
     </div>
-    
   </section>
+
+  
+
+  <!-- zone de commentaires où j'afficherai 'commentaire et formulaire' -->
   <section class="container comments-bloc">
-    <h5 class="center-align">Derniers commentaires sur le projet</h5>
-    <div id="com-project" class="grey lighten-2 ">
-        <h7>gorginette</h7>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-        <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
-    </div>
-    <div id="com-project" class="grey lighten-2">
-        <h7>pascalette</h7>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-        <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
-    </div>
+
+    <!-- formulaire -->
+    <?php if($w_user) :?> 
+        <div id="form-com"class="container">
+          <div class="row">
+            <form class="col s12" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
+              <h5 class="container center-align ">Publier un commentaire </h5>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">titre de votre commentaire</label>
+                </div>
+                <div id="line-postcom" class="input-field col s12 m12 l12">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">votre commentaire</label>
+                </div>
+              </div>
+              <div class="col s12 m12 l12">
+                  <a class="waves-effect waves-light btn right">Envoyer</a>
+              </div>
+            </form>
+          </div>
+        </div>   
+    
+      <!-- commentaires -->
+
+      <h5 class="center-align">Derniers commentaires sur le projet</h5>
+      <div id="com-project" class="grey lighten-2 ">
+          <h7>gorginette</h7>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+          <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
+      </div>
+      <div id="com-project" class="grey lighten-2">
+          <h7>pascalette</h7>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+          <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
+      </div>
+    
+      <?php endif;?>  
+
+    <?php if(!$w_user) :?><!-- zone de commentaires où j'afficherai 'commentaires' tout court -->
+      <h5 class="center-align">Derniers commentaires sur le projet</h5>
+      <div id="com-project" class="grey lighten-2 ">
+          <h7>gorginette</h7>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+          <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
+      </div>
+      <div id="com-project" class="grey lighten-2">
+          <h7>pascalette</h7>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
+          <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
+      </div>
+    <?php endif;?>
   </section>
+
     <div id="pagi-project" style="text-align: center;">
       <ul class="pagination">
           <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>

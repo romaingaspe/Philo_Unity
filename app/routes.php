@@ -16,9 +16,7 @@
 		['GET|POST', '/profil/updatesprofil', 'profil#updatesProfil', 'updateProfil'],			
 
 
-		['GET', '/profil/portfolio/projectspage/[:id]', 'Profil#projectsPage', 'projectsPage'],
-
-		['GET', '/profil/portfolio/commentaires', 'portfolio#commentaires', 'commentaires'],
+		['GET|POST', '/profil/portfolio/projectspage/[:id]', 'Profil#projectsPage', 'projectsPage'],
 
 		////////////////////////////METIERS////////////////////////////////////////////////////////
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],
