@@ -39,7 +39,7 @@
 				<li class="white">
 					<ul data-collapsible="accordion" class="collapsible">
 						<li>
-							<div class="collapsible-header">
+							<div class="collapsible-header white">
 								<p class="black-text">Recherche</p>
 							</div>
 							<form class="center collapsible-body" action="<?= $this->url('recherche') ?>" method="GET" >
@@ -63,9 +63,9 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
-				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
-				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
+				<li class="white"><a href="<?= $this->url('metiers') ?>" class="white">Metiers</a></li>
+				<?php if(!$w_user) :?><li class="white"><a href="<?= $this->url('connect') ?>" class="white">Se connecter</a></li><?php endif;?>
+				<?php if($w_user) :?><li class="white"><a href="<?= $this->url('deconnect') ?>" class="white">Se deconnecter</a></li><?php endif;?>
 				<?php if($w_user)  :?>
 					<li>
 						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">

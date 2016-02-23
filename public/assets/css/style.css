@@ -93,6 +93,7 @@ nav div a img {
 	margin-top: 12px;
 }
 nav {
+	height: 64px !important;
     color: #fff;
     background-color: #128b82;
 }
