@@ -251,11 +251,11 @@ class ProfilController extends Controller
     public function ajaxpaginallprofiles(){
 
 
-        $allprofiles = new FixUserManager();
+        $allsusers = new FixUserManager;
         $num = 6;
         $page = 1;
         $start = ($page-1) * $num;
-        $all = $allprofiles->findAll('nom' , 'ASC', $num, $start);
+        $all = $allsusers->findAll('section', "ASC", $num, $start);
         $this->showJson($all);
     }
 }
