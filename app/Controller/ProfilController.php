@@ -2,11 +2,11 @@
 
 namespace Controller;
 
-use Manager\MetierManager;
 use \W\Controller\Controller;
+//use Manager\MetierManager;
 use Manager\FixUserManager;
 use \W\Security\AuthentificationManager;
-use Manager\ProjetManager;
+//use Manager\ProjetManager;
 
 class ProfilController extends Controller
 {
@@ -67,7 +67,7 @@ class ProfilController extends Controller
           }
           // sinon on affiche les erreurs:
           else{
-        
+
             $params['errors'] = $errors;
           }
         }
@@ -90,8 +90,7 @@ class ProfilController extends Controller
 
     }
 
-    public function projectsPage($id)
-    {
+    public function projectsPage($id){
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
         'projet' => $projetManager->find($id),
@@ -137,15 +136,13 @@ class ProfilController extends Controller
     public function insertProjects(){
       $this->allowTo(['user','Admin']);
         $login = new AuthentificationManager();
-        $ProjectManager = new ProjectManager;
+        $projectmanager = new ProjectManager();
         $errors = array();
         $params = array();
 
         $maxSize = 3024 * 3000;
         $dirUpload = 'photo';
         $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
-
-        if(!empty($_POST)){
 
           if(empty($_POST['project_title'])){
             $errors[] = 'le titre est vide';
@@ -172,6 +169,6 @@ class ProfilController extends Controller
     $params['success'] = 'votre nouveaux projet à bien été rajouté !';
 
 
-  $this->show('userId/insertProject', $params);
+  $this->show('profil/insertProject', $params);
 }
 }
