@@ -95,7 +95,7 @@ class ProfilController extends Controller
     }
 
     public function projectsPage($id){
-
+      $userManager = new FixUserManager();
       $commentaireManager = new CommentaireManager();// methode manager qui va verifier mon tableau
       $post = array();
       $err = array();
@@ -137,7 +137,7 @@ class ProfilController extends Controller
           }
         }
       }
-      $userManager = new FixUserManager();
+      
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
         'projet' => $projetManager->find($id),
@@ -204,33 +204,18 @@ class ProfilController extends Controller
         if(empty($_POST['description'])){
           $errors[] = 'la description du projet est vide';
         }
-
-        if(empty($_FILES['photo'])){
-          $errors[] = 'veuiller entrer une photo de votre projet';
-        }
-
-        elseif($_FILES['photo']['size'] >$maxSize){
-          $errors[] = 'l\'image exède le poids autorisé';
-        }
-
-        $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
-
-        if(!in_array($fileMineType, $mineTypeAllowed)){
-          $errors[] = 'le fichier n\'est pas une image';
-        }
-
         if(count($errors) == 0){
           $ProjectManager->update([
           'project_title' 	=> $_POST['project_title'],
           'description' 		=> $_POST['description'],
-          'photo' 	    	=> $_POST['photo'],
+          
           ]);
         }
 
         else{
           $params['errors'] = $errors;
         }
-        $params['success'] = 'votre nouveaux projet à bien été rajouté !';
+        $params['success'] = 'votre nouveaux projet à bien été rajouté vous pouvez rajouter des images plus tard !';
         $this->show('profil/insertProject', $params);
     }
     public function allprofiles(){

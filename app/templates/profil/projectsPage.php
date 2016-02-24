@@ -51,20 +51,20 @@
               <div id="com-project" class="grey lighten-2 ">
                   <h7><?= $coms['titre']?></h7>
                   <p><?= $coms['comments']?></p>
-                  <p style="font-style: italic;font-size: 0.8em;">publié le<?= $coms['date']?></p>     
+                  <p class="date-publi">publié le<?= $coms['date']?></p>     
               </div>
             <?php endforeach;?> 
           </div>
           <!-- Pb d'ajout de texte intempestif en base de données
           J'essaie de régler ce problème, je teste donc avec un nouveau contenu de texte si ma page se recharge sans rajouter du texte en base de données... -->
-          <?php var_dump($utilisateur) ?>
+          
           <form class="col s12 m12 l8" method="POST" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
             <?php if($formError):?>
-              <p style="color:red"><?= $erreurs ?></p>
+              <p class="error"><?= $erreurs ?></p>
             <?php endif;?>  
 
             <?php if($formValid):?>
-              <p style="color:green">Votre commentaire a bien été envoyé !</p>
+              <p class="valid">Votre commentaire a bien été envoyé !</p>
             <?php endif;?>  
     
             <h5 class="container center-align ">Publier un commentaire </h5>
@@ -88,17 +88,14 @@
     <?php endif;?>  
 
     <?php if(!$w_user) :?><!-- zone de commentaires où j'afficherai 'les commentaires', si je ne suis pas inscrit -->
-      <h5 class="center-align">Derniers commentaires sur le projet</h5>
-      <div id="com-project" class="grey lighten-2 ">
-          <h7>gorginette</h7>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-          <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
-      </div>
-      <div id="com-project" class="grey lighten-2">
-          <h7>pascalette</h7>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-          <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
-      </div>
+      <?php foreach($commentaires as $coms):?>
+          <h5 class="center-align">Commentaire de <?= $utilisateur['prenom'].' '.$utilisateur['nom']?></h5>
+          <div id="com-project" class="grey lighten-2 ">
+              <h7><?= $coms['titre']?></h7>
+              <p><?= $coms['comments']?></p>
+              <p class="date-publi">publié le<?= $coms['date']?></p>     
+          </div>
+        <?php endforeach;?> 
     <?php endif;?>
   </section>
 
