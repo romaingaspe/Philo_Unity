@@ -253,7 +253,7 @@ class ProfilController extends Controller
     public function allprofiles(){
 
         $num = 6;
-        $page = $_GET['page'];
+        $page = 1;
         $start = ($page-1) * $num;
         $allprofiles = new FixUserManager();
         $allcount = $allprofiles->findAll();
@@ -264,5 +264,15 @@ class ProfilController extends Controller
         $params['totalpages'] = $totalpages;
 
         $this->show('profil/allprofiles', $params);
+    }
+    public function ajaxpaginallprofiles(){
+
+
+        $allprofiles = new FixUserManager();
+        $num = 6;
+        $page = 1;
+        $start = ($page-1) * $num;
+        $all = $allprofiles->findAll('nom' , 'ASC', $num, $start);
+        $this->showJson($all);
     }
 }

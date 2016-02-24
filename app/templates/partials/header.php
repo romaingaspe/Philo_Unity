@@ -64,7 +64,7 @@
 					</ul>
 				</li>
 				<li class="white"><a href="<?= $this->url('metiers') ?>" class="white">Metiers</a></li>
-				<li class="white"><a href="<?= $this->url('allprofiles'), '?page=1' ?>" class="white">Les profils</a></li>
+				<li class="white"><a href="<?= $this->url('allprofiles') ?>" class="white">Les profils</a></li>
 				<?php if(!$w_user) :?><li class="white"><a href="<?= $this->url('connect') ?>" class="white">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li class="white"><a href="<?= $this->url('deconnect') ?>" class="white">Se deconnecter</a></li><?php endif;?>
 				<?php if($w_user)  :?>
@@ -84,7 +84,7 @@
 					</a>
 				</li>
 				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
-				<li><a href="<?= $this->url('allprofiles'), '?page=1'  ?>">Les profils</a></li>
+				<li><a href="<?= $this->url('allprofiles')  ?>">Les profils</a></li>
 				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
 				<?php if($w_user)  :?>
