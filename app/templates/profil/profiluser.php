@@ -44,7 +44,10 @@
 							<a href="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
 								<div>
 									<p><?= mb_substr($projet['description'], 0 , 130)?>...</p>
-									<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class="responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+									<div class="contain-img">
+										<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class=" hov-zoom responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+									</div>
+									
 								</div>
 						</div>
 					</div>
