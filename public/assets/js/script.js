@@ -9,6 +9,14 @@ $(document).ready(function(){
     });
 });
 
+/*$(function(){
+    $('.paginations.paginallprofil').click(function(e){
+        e.preventDefault();
+        $('.pagination li').removeClass('active');
+        $(this).parent().removeClass('waves-effect').addClass('active');
+    })
+});*/
+
 $(function(){
     $('.paginations.paginmet').click(function(e){
         e.preventDefault();
