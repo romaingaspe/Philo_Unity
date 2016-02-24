@@ -95,6 +95,7 @@ class ProfilController extends Controller
     }
 
     public function projectsPage($id){
+
       $userManager = new FixUserManager();
       $commentaireManager = new CommentaireManager();// methode manager qui va verifier mon tableau
       $post = array();
@@ -148,7 +149,7 @@ class ProfilController extends Controller
         'erreurs'=> implode('<br>', $err),
         'formValid' => $formValid,
         'formError' => $formError,
-        'utilisateur'=> $userManager->find($id),
+        'user' => $this->getUser(),
       ];
 
 

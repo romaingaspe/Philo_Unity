@@ -47,7 +47,7 @@
           <!-- commentaires -->
           <div class="affich-com col s12 m12 l4">
             <?php foreach($commentaires as $coms):?>
-              <h5 class="center-align">Commentaire de <?= $utilisateur['prenom'].' '.$utilisateur['nom']?></h5>
+              <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
               <div id="com-project" class="grey lighten-2 ">
                   <h7><?= $coms['titre']?></h7>
                   <p><?= $coms['comments']?></p>
@@ -98,17 +98,5 @@
         <?php endforeach;?> 
     <?php endif;?>
   </section>
-
-    <div id="pagi-project" style="text-align: center;">
-      <ul class="pagination">
-          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-          <li class="active"><a href="#!">1</a></li>
-          <li class="waves-effect"><a href="#!">2</a></li>
-          <li class="waves-effect"><a href="#!">3</a></li>
-          <li class="waves-effect"><a href="#!">4</a></li>
-          <li class="waves-effect"><a href="#!">5</a></li>
-          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-      </ul>
-    </div>
 
 <?php $this->stop('main_content') ?>
