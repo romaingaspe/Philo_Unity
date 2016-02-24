@@ -91,19 +91,60 @@ class ProfilController extends Controller
     }
 
     public function projectsPage($id){
+    
+      $post = array();
+      $err = array();
+      $formError = false;
+      $formValid = false;
+
+      // On vérifie notre formulaire
+      if(!empty($_POST)){
+        foreach ($_POST as $key => $value) {
+          $post[$key] = $value;
+        }
+
+        if (empty($post['title'])){
+        $err[] = 'Le titre ne peut être vide !';    
+        }
+        elseif (strlen($post['title'])<3 || strlen($post['title'])>40) {
+        $err[] = 'Votre titre doit faire au moins 3caractères et ne peut excéder 40 caractères!';    
+        }
+
+        if (empty($post['content'])){
+        $err[] = 'Votre commentaire ne peut être vide!';    
+        }
+        elseif (strlen($post['content'])>400) {
+        $err[] = 'Votre commentaire a atteint la limite de caractères autotisés, veuillez saisir un commentaire inférieur à 400 caractères!';    
+        }
+
+        if (count($err)>0) {
+          $formError = true;
+        }
+
+        else{
+          $user = $this->getUser();
+          if($user) {
+            $formValid =true;
+
+            
+
+            $commentaireProjet = new CommentaireManager();// methode manager qui va verifier mon tableau
+            // s'il n'y a pas d'erreur je créée un tableau 
+            $commentaireProjet->insert($post);            
+          }
+        }
+      }
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
-
-
-
       $params = [
         'projet' => $projetManager->find($id),
         // récupérer la liste de photos de ce projet
         // pour les afficher dans la vue projectsPage
         'photos'=> $projetManager->getProjectPhotos($id),
-
       ];
+      
+      
+      $this->show('profil/projectsPage', $params); 
 
-      $this->show('profil/projectsPage', $params);
     }
 
     public function profilsAll($section)

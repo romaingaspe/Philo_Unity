@@ -3,28 +3,40 @@
 namespace Manager;
 
 class CommentaireManager extends extends \W\Manager\Manager{
-  /*public function insert(array $commentaires, $stripTags = true)
-  {
+  $post = array();
+  $err = array();
+  $formError = false;
+  $formValid = false;
 
-    $colNames = array_keys($commentaires);
-    $colNamesString = implode(", ", $colNames);
-
-    $sql = "INSERT INTO commentaires (titre,comments,date) VALUES (";
-    foreach($commentaires as $key => $value){
-      $sql .= ":$key, ";
-    }
-    $sql = substr($sql, 0, -2);
-    $sql .= ")";
-
-    $sth = $this->dbh->prepare($sql);
-    foreach($commentaires as $key => $value){
-      $value = ($stripTags) ? strip_tags($value) : $value;
-      $sth->bindValue(":".$key, $value);
+  // On vérifie notre formulaire
+  if(!empty($_POST)){
+    foreach ($_POST as $key => $value) {
+      $post[$key] = $value;
     }
 
-    if (!$sth->execute()){
-      return false;
+    if (empty($post['title'])){
+    $err[] = 'Le titre ne peut être vide !';    
     }
-    return $this->find($this->lastInsertId());
-  }*/
+    elseif (strlen($post['title'])<3 || strlen($post['title'])>40) {
+    $err[] = 'Votre titre doit faire au moins 3caractères et ne peut excéder 40 caractères!';    
+    }
+
+    if (empty($post['content'])){
+    $err[] = 'Votre commentaire ne peut être vide!';    
+    }
+    elseif (strlen($post['content'])>400) {
+    $err[] = 'Votre commentaire a atteint la limite de caractères autotisés, veuillez saisir un commentaire inférieur à 400 caractères!';    
+    }
+
+    if (empty($post['userId']) && !is_numeric($_POST['userId'])){
+    $err[] = 'Tu ne dois pas modifier le code source petit malin :-)!';
+    }
+
+    if (count($err)>0) {
+      $formError = true;
+    }
+
+    else{
+      $formValid =true;
+    }
 }
