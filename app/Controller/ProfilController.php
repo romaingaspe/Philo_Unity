@@ -147,9 +147,12 @@ class ProfilController extends Controller
             $formValid =true;
 
 
+
             $formValid = true;
             $post['idprojet'] = $id; // Je récupère l'$id en paramètre du controleur projectsPage
             $post['iduserspost'] = $user['id'];// Je récupère l'$id de mon utilisateur en paramètre du controleur projectsPage
+
+
 
 
             $commentaireProjet = new CommentaireManager();// methode manager qui va verifier mon tableau
