@@ -150,13 +150,13 @@ class ProfilController extends Controller
 
           if(empty($_POST['project_title'])){
             $errors[] = 'le titre est vide';
-}
+        }
         if(empty($_POST['description'])){
           $errors[] = 'la description du projet est vide';
-}
+        }
         if(empty($_POST['photo'])){
           $errors[] = 'veuiller entrer une photo de votre projet';
-}
+        }
 
 
         if(count($errors) == 0){
@@ -164,15 +164,30 @@ class ProfilController extends Controller
             'project_title' 	  => $_POST['project_title'],
             'description' 			=> $_POST['description'],
             'photo' 	    			=> $_POST['photo'],
-      ]);
-}
+            ]);
+        }
 
-    else{
-      $params['errors'] = $errors;
+        else{
+          $params['errors'] = $errors;
+        }
+        $params['success'] = 'votre nouveaux projet à bien été rajouté !';
+
+
+        $this->show('profil/insertProject', $params);
     }
-    $params['success'] = 'votre nouveaux projet à bien été rajouté !';
+    public function allprofiles(){
 
+        $num = 6;
+        $page = $_GET['page'];
+        $start = ($page-1) * $num;
+        $allprofiles = new FixUserManager();
+        $allcount = $allprofiles->findAll();
+        $all = $allprofiles->findAll('nom' , 'ASC', $num, $start);
+        $countusers = count($allcount);
+        $totalpages = ceil($countusers/$num);
+        $params['users'] = $all;
+        $params['totalpages'] = $totalpages;
 
-  $this->show('profil/insertProject', $params);
-}
+        $this->show('profil/allprofiles', $params);
+    }
 }

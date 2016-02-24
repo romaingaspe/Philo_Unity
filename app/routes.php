@@ -11,7 +11,7 @@
 		////////////////////////////PROFIL////////////////////////////////////////////////////////
 		['GET', '/profil/profiluser/[:id]', 'Profil#profilUser', 'profiluser'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
-
+		['GET', '/profil/allprofiles', 'Profil#allprofiles', 'allprofiles'],
 		['GET|POST', '/profil/insertprojects', 'profil#insertProjects', 'insertProjects'],
 		//['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
 
