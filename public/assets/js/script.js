@@ -36,10 +36,10 @@ $(function(){
                         .append($('<img>').attr('src', reponse[m].photo).addClass('photo-work').addClass('responsive-img')))
                     .append($('<div>').addClass('text-works')
                     .addClass('center')
-                        .append($('<h6>').text(reponse[m].prenom+reponse[m].nom))
+                        .append($('<h6>').text(reponse[m].prenom+' '+reponse[m].nom))
                         .append($('<p>').text(reponse[m].description))
                         .append($('<br>'))
-                        .append($('<a>').text('Voir le Profil').attr('href', reponse[m].alias)))
+                        .append($('<a>').text('Voir le Profil').attr('href',  '/philo_unity/public/profil/profiluser/'+reponse[m].id)))
                     $('#allworks').append(htmlProfils);
                 }
             }
@@ -102,10 +102,10 @@ $(function(){
                         .append($('<img>').attr('src', reponse[m].photo).addClass('photo-work').addClass('responsive-img')))
                     .append($('<div>').addClass('text-works')
                     .addClass('center')
-                        .append($('<h6>').text(reponse[m].prenom+reponse[m].nom))
+                        .append($('<h6>').text(reponse[m].prenom+' '+reponse[m].nom))
                         .append($('<p>').text(reponse[m].description))
                         .append($('<br>'))
-                        .append($('<a>').text('Voir le Profil').attr('href', reponse[m].alias)))
+                        .append($('<a>').text('Voir le Profil').attr('href', '/philo_unity/public/profil/profiluser/'+reponse[m].id)))
                     $('#allworks').append(htmlProfils);
                 }
             }
