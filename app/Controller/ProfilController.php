@@ -17,9 +17,6 @@ class ProfilController extends Controller
     public function updatesProfil()
     {
         $this->allowTo(['user','Admin']);
-        $maxSize = 3024 * 3000; // 1Ko * 1000 = 1Mo
-        $dirUpload = 'photo/profiluser';
-        $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
         $login = new AuthentificationManager();
         $userManager = new FixUserManager;
         $infosUser = $this->getUser();
@@ -32,21 +29,27 @@ class ProfilController extends Controller
           if(empty($_POST['nom'])){
             $errors[] = 'le nom est vide';
           }
+
           if(empty($_POST['prenom'])){
             $errors[] = 'le prenom est vide';
           }
+
           if(empty($_POST['email'])){
             $errors[] = 'l\'email est vide';
           }
+
           if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) !== false){
             $errors[] = 'L\'email est invalide';
           }
+
           if (empty($_POST['description'])) {
             $errors[]='Votre description ne doit pas est vide';
           }
+
           if (empty($_POST['description'])) {
             $errors[]='Votre description ne doit pas est vide';
           }
+          
           if (empty($_POST['linkedin'])) {
             $errors[]='Votre linkedin ne doit pas est vide';
           }
@@ -71,8 +74,8 @@ class ProfilController extends Controller
             $params['errors'] = $errors;
           }
         }
-        $params['user'] = $infosUser;
-        $this->show('profil/updatesprofil', $params);
+          $params['user'] = $infosUser;
+          $this->show('profil/updatesprofil', $params);
       }
 
 
@@ -179,7 +182,8 @@ class ProfilController extends Controller
 
 
     public function insertProjects(){
-      $this->allowTo(['user','Admin']);
+        $this->allowTo(['user','Admin']);
+
         $login = new AuthentificationManager();
         $projectmanager = new ProjectManager();
         $errors = array();
@@ -191,29 +195,40 @@ class ProfilController extends Controller
 
           if(empty($_POST['project_title'])){
             $errors[] = 'le titre est vide';
-}
-        if(empty($_POST['description'])){
+          }
+
+          if(empty($_POST['description'])){
           $errors[] = 'la description du projet est vide';
-}
-        if(empty($_POST['photo'])){
+          }
+
+          if(empty($_FILES['photo'])){
           $errors[] = 'veuiller entrer une photo de votre projet';
-}
+          }
 
+          elseif($_FILES['photo']['size'] >$maxSize){
+          $errors[] = 'l\'image exède le poids autorisé';
+          }
 
-        if(count($errors) == 0){
+          $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
+
+          if(!in_array($fileMineType, $mineTypeAllowed)){
+          $errors[] = 'le fichier n\'est pas une image';
+          }
+
+          if(count($errors) == 0){
           $ProjectManager->update([
             'project_title' 	  => $_POST['project_title'],
             'description' 			=> $_POST['description'],
-            'photo' 	    			=> $_POST['photo'],
-      ]);
-}
+            'photo' 	    			=> $_FILES['photo'],
+          ]);}
 
-    else{
-      $params['errors'] = $errors;
+          else{
+          $params['errors'] = $errors;
+
+          }
+          $params['success'] = 'votre nouveaux projet à bien été rajouté !';
+
+
+          $this->show('profil/insertProject', $params);
     }
-    $params['success'] = 'votre nouveaux projet à bien été rajouté !';
-
-
-  $this->show('profil/insertProject', $params);
-}
 }
