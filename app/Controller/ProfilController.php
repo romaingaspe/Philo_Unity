@@ -3,10 +3,10 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-//use Manager\MetierManager;
+use Manager\MetierManager;
 use Manager\FixUserManager;
 use \W\Security\AuthentificationManager;
-//use Manager\ProjetManager;
+use Manager\ProjetManager;
 
 class ProfilController extends Controller
 {
