@@ -14,7 +14,7 @@
 		['GET', '/profil/allprofiles/ajaxpaginallprofiles', 'Profil#ajaxpaginallprofiles', 'ajaxpaginallprofiles'],
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
 
-		['GET|POST', '/profil/insertprojects', 'profil#insertProjects', 'insertProjects'],
+		['GET|POST', '/profil/insertprojects', 'profil#insertProjects', 'insertProject'],
 		//['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
 
 		['GET|POST', '/profil/updatesprofil', 'profil#updatesProfil', 'updateProfil'],

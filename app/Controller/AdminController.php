@@ -188,7 +188,7 @@ class AdminController extends Controller
 
 
 
-																	//$mail->SMTPDebug = 3;             // Enable verbose debug output
+					//$mail->SMTPDebug = 3;             												// Enable verbose debug output
 					$mail->setLanguage('fr', '../../vendor/phpmailer/phpmailer/language/');
 					$mail->isSMTP();  // Set mailer to use SMTP
 

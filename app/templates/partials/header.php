@@ -16,18 +16,18 @@
 	  			<?php endif;?>
 			</ul>
 			<ul id="dropdown2" class="dropdown-content">
-				<form class="center" action="<?= $this->url('recherche') ?>" method="GET">
+				<form class="center " action="<?= $this->url('recherche') ?>" method="GET">
 					<div class="row" id="search">
 						<input type="search" name="search" class="col l8 offset-l2 black-text" placeholder="Votre recherche">
 					</div>
 					<div class="input-field row">
 						<div class="col l6">
-							<input name="valeur" type="radio" id="1" class="with-gap" value="user"/>
-							<label for="1">Par Utilisateur</label>
+							<input name="valeur" type="radio" id="test1" value="user"/>
+							<label for="test1">Par Utilisateur</label>
 						</div>
 						<div class="col l6">
-							<input class="with-gap" name="valeur" type="radio" id="2" value="metier" />
-							<label for="2">Par Métier</label>
+							<input name="valeur" type="radio" id="test2" value="metier" />
+							<label for="test2">Par Métier</label>
 						</div>
 					</div>
 					<div class="row">
@@ -48,12 +48,12 @@
 								</div>
 								<div class="input-field">
 									<div class="col l6">
-										<input name="valeur" type="radio" id="1" value="user"/>
-										<label for="1">Par Utilisateur</label>
+										<input name="valeur" type="radio" id="test1" value="user"/>
+										<label for="test1">Par Utilisateur</label>
 									</div>
 									<div class="col l6">
-										<input name="valeur" type="radio" id="2" value="metier" />
-										<label for="2">Par Métier</label>
+										<input name="valeur" type="radio" id="test2" value="metier" />
+										<label for="test2">Par Métier</label>
 									</div>
 								</div>
 								<div>
@@ -64,13 +64,13 @@
 					</ul>
 				</li>
 				<li class="white"><a href="<?= $this->url('metiers') ?>" class="white">Metiers</a></li>
-				<li class="white"><a href="<?= $this->url('allprofiles')?>" class="white">Les profils</a></li>
+				<li class="white"><a href="<?= $this->url('allprofiles') ?>" class="white">Les profils</a></li>
 				<?php if(!$w_user) :?><li class="white"><a href="<?= $this->url('connect') ?>" class="white">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li class="white"><a href="<?= $this->url('deconnect') ?>" class="white">Se deconnecter</a></li><?php endif;?>
 				<?php if($w_user)  :?>
 					<li>
 						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">
-								<img src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="" class="left " id="circleprofil"/>
+								<img src="<?= $this->assetUrl($w_user['photo']) ?>" alt="" class="left circle  profilePic" id="circleprofil"/>
 						&nbsp;&nbsp;&nbsp;Mon profil
 						<i class="material-icons right">arrow_drop_down</i>
 					</a>
@@ -84,13 +84,13 @@
 					</a>
 				</li>
 				<li><a href="<?= $this->url('metiers') ?>">Metiers</a></li>
-				<li><a href="<?= $this->url('allprofiles') ?>">Les profils</a></li>
+				<li><a href="<?= $this->url('allprofiles')  ?>">Les profils</a></li>
 				<?php if(!$w_user) :?><li><a href="<?= $this->url('connect') ?>">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li><a href="<?= $this->url('deconnect') ?>">Se deconnecter</a></li><?php endif;?>
 				<?php if($w_user)  :?>
 					<li>
 						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">
-								<img src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="" class="left " id="circleprofil"/>
+								<img src="<?= $this->assetUrl($w_user['photo']) ?>" alt="" class="left circle  profilePic" id="circleprofil"/>
 						&nbsp;&nbsp;&nbsp;Mon profil
 						<i class="material-icons right">arrow_drop_down</i>
 					</a>

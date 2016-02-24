@@ -2,7 +2,7 @@
 
 namespace Manager;
 
-class ProjetManager extends \W\Manager\UserManager {
+class PhotoManager extends \W\Manager\UserManager {
 
     public function getProjectPhotos($id){
 
@@ -14,5 +14,4 @@ class ProjetManager extends \W\Manager\UserManager {
         return $sth->fetchAll();
 
     }
-    
 }

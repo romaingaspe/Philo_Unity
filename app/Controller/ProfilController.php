@@ -121,9 +121,6 @@ class ProfilController extends Controller
           $nameAvatar = $infosUser['id'].$_FILES['photo']['name'];
           //Pour que le nom soit unique et eviter les probleme de nom de fichier on l'incrémente de l'id appartenant à user
 
-          //chose à faire supprimer ou remplacer le ficher 
-          
-
           // On upload le fichier
           //$uploadAvatar = move_uploaded_file(filename, destination)
           $uploadAvatar=move_uploaded_file($tmp_name, $uploads_dir_avatar.'/'.$nameAvatar);
@@ -131,11 +128,13 @@ class ProfilController extends Controller
           //chemin virtuel du dossier pour insertion BD
           $data = [
                   "photo" => 'avatar/'.$nameAvatar
+                  ,
           ];
-          $params['picUrl'] = $data['photo'];
+          $params['picUrl'] = $_SERVER['REDIRECT_W_BASE'].'/assets/'.$data['photo'];
 
           //on met à jour la bdd
           $userManager->update($data, $infosUser['id']);
+          $login->refreshUser();
           $validForm =true;
         }
       }
@@ -143,7 +142,58 @@ class ProfilController extends Controller
       $params['valide'] = $validForm;
       $this->showJson($params);
     }
+    public function updateProjet(){
+  
+      $this->allowTo(['user','Admin']);
+      $login = new AuthentificationManager();
+      $projetsManager = new FixUserManager;
+      $infosUser = $this->getUser();  
+      $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png','image/gif');
+      $errors =[];
+      $validForm = false;
 
+
+      //fichier image projet
+      if(isset($_FILES['photo']) && $_FILES['photo']['size'] !=0){
+        $maxSize = 3*100*1024; //3Mo
+
+        $finfo =new \finfo();
+
+        // On vérifie la taille du fichier
+        if($_FILES['photo']['size'] > $maxSize){
+          $errors[]='Ficher trop volumineux';
+        }
+        if (count($errors)==0) {
+          // chemin matériel du dossier pr upload fichier
+          $uploads_dir_projet = $_SERVER['DOCUMENT_ROOT'].$_SERVER['REDIRECT_W_BASE'].'/assets/projet';
+          $tmp_name = $_FILES['photo']['tmp_name'];
+          $nameProjet = $infosUser['id'].$_FILES['photo']['name'];
+          //Pour que le nom soit unique et eviter les probleme de nom de fichier on l'incrémente de l'id appartenant à projets
+
+          //chose à faire supprimer ou remplacer le ficher 
+          
+
+          // On upload le fichier
+          //$uploadProjet = move_uploaded_file(filename, destination)
+          $uploadProjet=move_uploaded_file($tmp_name, $uploads_dir_projet.'/'.$nameProjet);
+
+          //chemin virtuel du dossier pour insertion BD
+          $data = [
+                  "photo" => 'projet/'.$nameProjet
+                  ,
+          ];
+          $params['picUrl'] = $_SERVER['REDIRECT_W_BASE'].'/assets/'.$data['photo'];
+
+          //on met à jour la bdd
+          $projetsManager->update($data, $infosUser['id']);
+          $login->refreshUser();
+          $validForm =true;
+        }
+      }
+      $params['errors'] = implode(', ',$errors);
+      $params['valide'] = $validForm;
+      $this->showJson($params);
+    }
     public function projectsPage($id){
 
       $userManager = new FixUserManager();
@@ -191,7 +241,7 @@ class ProfilController extends Controller
 
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
-        'projet' => $projetManager->find($id),
+        'projets' => $projetManager->find($id),
         // récupérer la liste de photos de ce projet
         // pour les afficher dans la vue projectsPage
         'photos'=> $projetManager->getProjectPhotos($id),
@@ -200,6 +250,7 @@ class ProfilController extends Controller
         'formValid' => $formValid,
         'formError' => $formError,
         'user' => $this->getUser(),
+
       ];
 
 
@@ -238,16 +289,19 @@ class ProfilController extends Controller
     }
 
 
-    public function insertProjects(){
+    public function insertProject(){
         $this->allowTo(['user','Admin']);
 
         $login = new AuthentificationManager();
         $projectmanager = new ProjectManager();
+        $userManager = new FixUserManager;
+        $infosUser = $this->getUser();  
         $errors = array();
         $params = array();
         $maxSize = 3024 * 3000;
         $dirUpload = 'photo';
         $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
+        $validForm =false;
 
         if(empty($_POST['project_title'])){
             $errors[] = 'le titre est vide';
@@ -256,9 +310,41 @@ class ProfilController extends Controller
           $errors[] = 'la description du projet est vide';
         }
         if(count($errors) == 0){
+          $projets=$ProjectManager->insert([
+          'project_title'   => $_POST['project_title'],
+          'description'     => $_POST['description'],
+          'date_publish'    => 'NOW()',
+
+          ]);
+        }
+        else{
+          $params['errors'] = $errors;
+        }
+        
+        //fichier image projets
+        if(isset($_FILES['photo']) && $_FILES['photo']['size'] !=0){
+          $maxSize = 3*100*1024; //3Mo
+
+          $finfo =new \finfo();
+
+          // On vérifie la taille du fichier
+          if($_FILES['photo']['size'] > $maxSize){
+            $errors[]='Ficher trop volumineux';
+          }
+        if(count($errors) == 0){
+          // chemin matériel du dossier pr upload fichier
+          $uploads_dir_projets = $_SERVER['DOCUMENT_ROOT'].$_SERVER['REDIRECT_W_BASE'].'/assets/projets';
+          $tmp_name = $_FILES['photo']['tmp_name'];
+          $nameAvatar = $infosUser['id'].$_FILES['photo']['name'];
+          //Pour que le nom soit unique et eviter les probleme de nom de fichier on l'incrémente de l'id appartenant à user
+          //supprimer ou remplacer le fichier 
+
+
           $ProjectManager->update([
           'project_title' 	=> $_POST['project_title'],
           'description' 		=> $_POST['description'],
+
+          'date_publish'    => 'NOW()',
 
           ]);
         }

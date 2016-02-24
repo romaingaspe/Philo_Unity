@@ -6,10 +6,12 @@
 	<section class="container update-content">
 
 		<div id="entete" class="row">
-
+			
 			<div class="col l4">
+				<h6 class="center-align nom-prenom"><?php if(isset($w_user['nom'])){  echo $w_user['nom'];} ?></h6>
 
-				<img id='pic' src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="">
+				<img class="profilePic" src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="">
+
 				<form id="upload" action="<?= $this->url('updatePhoto') ?>" method="POST" enctype="multipart/form-data">
 					<div class="file-field input-field">
 						<div class="btn btn-add">
@@ -21,9 +23,9 @@
 						</div>
 					</div>
 				</form>
-
-				<h6 class="center-align nom-prenom"><?php if(isset($w_user['nom'])){  echo $w_user['nom'];} ?></h6>
-                <p id='message'></p>
+				<p id='message'></p>
+				
+                
 			</div>
 			<div class="col l8 right  center-align">
 				<h6 class="center-align teal lighten-5">Editer vos informations</h6>
@@ -80,7 +82,7 @@
 		      				</div>
 		      				<div class="collapsible-body">
 		      					<div class="row">
-	  								<form method="POST" class="col l8 offset-l2" >
+	  								<form method="POST" class="col l8 offset-l2" action="<?= $this->url('updatePhotoProjet') ?>" method="POST" enctype="multipart/form-data">
 	        							<div class="input-field">
 	              							<label for="project_title">Titre projet</label>
 	                  						<input type="text" name="project_title" placeholder="titre projet">
@@ -93,7 +95,63 @@
 	        							<div class="input-field margetop">
 	                  						<input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
 	        							</div>
+
+					<div class="file-field input-field">
+						<div class="btn btn-add">
+							<span class="add">photo </span>
+							<input type="file"  id="photo" name="photo">
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" type="text">
+						</div>
+					</div>
+				</form>
+	        							<br>
+									    <div class="container center">
+											<?php if(!empty($errors)) :?>
+									        	<p class='red-text text-darken-1'>
+									        	<?= implode('<br />', $errors)?>
+									        	</p>
+											<?php endif; ?>
+											<?php if(!empty($success)) :?>
+									        	<p class='green-text text-darken-1'><?=$success?></p>
+											<?php endif; ?>
+										</div>
 	      							</form>
+      							</div>
+      						</div>
+    					</li>
+    					<li>
+		      				<div class="collapsible-header"><i class="material-icons">whatshot</i>Modifier projet 1
+		      				</div>
+		      				<div class="collapsible-body">
+		      					<div class="row">
+	  								<form method="POST" class="col l8 offset-l2" >
+	        							<div class="input-field">
+	              							<label for="project_title">Titre projet</label>
+	                  						<input type="text" name="project_title" placeholder="titre projet">
+	        							</div>
+								        <div class="input-field">
+								            <label for="description">description projet</label>
+								            <input type="text" name="description" placeholder="description">
+								        </div>
+
+              							
+	        							<div class="input-field margetop">
+	                  						<input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
+	        							</div>
+	      							</form>
+	      							<br>
+								    <div class="container center">
+										<?php if(!empty($errors)) :?>
+								        	<p class='red-text text-darken-1'>
+								        	<?= implode('<br />', $errors)?>
+								        	</p>
+										<?php endif; ?>
+										<?php if(!empty($success)) :?>
+								        	<p class='green-text text-darken-1'><?=$success?></p>
+										<?php endif; ?>
+									</div>
       							</div>
       						</div>
     					</li>

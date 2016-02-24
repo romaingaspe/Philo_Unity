@@ -18,7 +18,7 @@ $(function() {
                 console.log(response);
                 $('#message').empty();
                 if(response.valide) {
-                	$('#pic').attr('src',response.picUrl);
+                	$('.profilePic').attr('src',response.picUrl);
                 	$('#message').text('Votre avatar a été mis à jour');
                 } else {
                 	$('#message').text(response.errors);
