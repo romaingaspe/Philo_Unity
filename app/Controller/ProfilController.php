@@ -137,7 +137,7 @@ class ProfilController extends Controller
           }
         }
       }
-      
+
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
         'projet' => $projetManager->find($id),
@@ -208,7 +208,7 @@ class ProfilController extends Controller
           $ProjectManager->update([
           'project_title' 	=> $_POST['project_title'],
           'description' 		=> $_POST['description'],
-          
+
           ]);
         }
 
@@ -236,11 +236,11 @@ class ProfilController extends Controller
     public function ajaxpaginallprofiles(){
 
 
-        $allsusers = new FixUserManager;
+        $allsusers = new FixUserManager();
         $num = 6;
-        $page = 1;
+        $page = $_GET['page'];
         $start = ($page-1) * $num;
-        $all = $allsusers->findAll('section', "ASC", $num, $start);
+        $all = $allsusers->findAll('nom', "ASC", $num, $start);
         $this->showJson($all);
     }
 }
