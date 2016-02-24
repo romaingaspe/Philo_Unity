@@ -14,7 +14,11 @@
 			<a class="carousel-item" href="/philo_unity/public/profil/profiluser/<?= $use['id'] ?>">
 				<h2 class="center"><?= $use['prenom'].' '.$use['nom']?></h2>
 				<img src="<?= $use['photo'] ?>">
-				<p class="truncate"><?= $use['description'] ?></p>
+				<?php if(strlen($use['description']) > 100):?>
+				<p><?= mb_substr($use['description'], 0 , 100).'...' ?></p>
+				<?php else:?>
+				<p><?=$use['description']?></p>
+				<?php endif;?>
 			</a>
 		<?php endforeach;?>
 	</div>
