@@ -213,47 +213,35 @@ class ProfilController extends Controller
             $errors[] = 'le titre est vide';
         }
         if(empty($_POST['description'])){
-          $errors[] = 'la description du projet est vide';
+        $errors[] = 'la description du projet est vide';
         }
-        if(empty($_POST['photo'])){
-          $errors[] = 'veuiller entrer une photo de votre projet';
+
+        if(empty($_FILES['photo'])){
+        $errors[] = 'veuiller entrer une photo de votre projet';
         }
-          }
 
-          if(empty($_POST['description'])){
-          $errors[] = 'la description du projet est vide';
-          }
+        elseif($_FILES['photo']['size'] >$maxSize){
+        $errors[] = 'l\'image exède le poids autorisé';
+        }
 
-          if(empty($_FILES['photo'])){
-          $errors[] = 'veuiller entrer une photo de votre projet';
-          }
+        $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
 
-          elseif($_FILES['photo']['size'] >$maxSize){
-          $errors[] = 'l\'image exède le poids autorisé';
-          }
+        if(!in_array($fileMineType, $mineTypeAllowed)){
+        $errors[] = 'le fichier n\'est pas une image';
+        }
 
-          $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
-
-          if(!in_array($fileMineType, $mineTypeAllowed)){
-          $errors[] = 'le fichier n\'est pas une image';
-          }
-
-          if(count($errors) == 0){
-          $ProjectManager->update([
-            'project_title' 	  => $_POST['project_title'],
-            'description' 			=> $_POST['description'],
-            'photo' 	    			=> $_POST['photo'],
-            ]);
+        if(count($errors) == 0){
+        $ProjectManager->update([
+        'project_title' 	=> $_POST['project_title'],
+        'description' 		=> $_POST['description'],
+        'photo' 	    	=> $_POST['photo'],
+        ]);
         }
 
         else{
           $params['errors'] = $errors;
         }
         $params['success'] = 'votre nouveaux projet à bien été rajouté !';
-            'photo' 	    			=> $_FILES['photo'],
-          ]);
-        }
-
         $this->show('profil/insertProject', $params);
     }
     public function allprofiles(){
