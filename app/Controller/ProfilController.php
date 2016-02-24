@@ -93,6 +93,56 @@ class ProfilController extends Controller
       $this->show('profil/profilUser', $params);
 
     }
+    public function updatePhoto(){
+  
+      $this->allowTo(['user','Admin']);
+      $login = new AuthentificationManager();
+      $userManager = new FixUserManager;
+      $infosUser = $this->getUser();  
+      $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png','image/gif');
+      $errors =[];
+      $validForm = false;
+
+
+      //fichier image avatar
+      if(isset($_FILES['photo']) && $_FILES['photo']['size'] !=0){
+        $maxSize = 3*100*1024; //3Mo
+
+        $finfo =new \finfo();
+
+        // On vérifie la taille du fichier
+        if($_FILES['photo']['size'] > $maxSize){
+          $errors[]='Ficher trop volumineux';
+        }
+        if (count($errors)==0) {
+          // chemin matériel du dossier pr upload fichier
+          $uploads_dir_avatar = $_SERVER['DOCUMENT_ROOT'].$_SERVER['REDIRECT_W_BASE'].'/assets/avatar';
+          $tmp_name = $_FILES['photo']['tmp_name'];
+          $nameAvatar = $infosUser['id'].$_FILES['photo']['name'];
+          //Pour que le nom soit unique et eviter les probleme de nom de fichier on l'incrémente de l'id appartenant à user
+
+          //chose à faire supprimer ou remplacer le ficher 
+          
+
+          // On upload le fichier
+          //$uploadAvatar = move_uploaded_file(filename, destination)
+          $uploadAvatar=move_uploaded_file($tmp_name, $uploads_dir_avatar.'/'.$nameAvatar);
+
+          //chemin virtuel du dossier pour insertion BD
+          $data = [
+                  "photo" => 'avatar/'.$nameAvatar
+          ];
+          $params['picUrl'] = $data['photo'];
+
+          //on met à jour la bdd
+          $userManager->update($data, $infosUser['id']);
+          $validForm =true;
+        }
+      }
+      $params['errors'] = implode(', ',$errors);
+      $params['valide'] = $validForm;
+      $this->showJson($params);
+    }
 
     public function projectsPage($id){
 

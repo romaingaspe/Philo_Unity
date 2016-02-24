@@ -18,6 +18,7 @@
 		//['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
 
 		['GET|POST', '/profil/updatesprofil', 'profil#updatesProfil', 'updateProfil'],
+		['POST', '/profil/updatephoto', 'profil#updatePhoto', 'updatePhoto'],
 
 
 

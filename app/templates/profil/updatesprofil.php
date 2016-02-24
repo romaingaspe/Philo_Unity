@@ -9,18 +9,21 @@
 
 			<div class="col l4">
 
-				<img src="<?php if(isset($w_user['photo'])){  echo $w_user['photo'];} ?>" alt="">
-				<form action="" method="POST">
+				<img id='pic' src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="">
+				<form id="upload" action="<?= $this->url('updatePhoto') ?>" method="POST" enctype="multipart/form-data">
 					<div class="file-field input-field">
 						<div class="btn btn-add">
-							<input type="file" name="photo">
-							<span class="add">Ajouter/modifier photo profil </span>
+							<span class="add">photo </span>
+							<input type="file"  id="photo" name="photo">
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" type="text">
 						</div>
 					</div>
 				</form>
 
 				<h6 class="center-align nom-prenom"><?php if(isset($w_user['nom'])){  echo $w_user['nom'];} ?></h6>
-                
+                <p id='message'></p>
 			</div>
 			<div class="col l8 right  center-align">
 				<h6 class="center-align teal lighten-5">Editer vos informations</h6>
@@ -101,3 +104,6 @@
 		</div>
 	</section>
 <?php $this->stop('main_content') ?>				
+<?php $this->start('script') ?>
+<script src="<?= $this->assetUrl('js/updateProfil.js') ?>"></script>
+<?php $this->stop('script') ?>	

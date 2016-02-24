@@ -5,7 +5,7 @@
   <!-- 1ère ligne de présentation --> 
   <section id="presentation" class="container row">
       <div class="col m6 l6">
-        <img class="responsive-img" src="<?= $profil['photo'] ?>" alt=""/>
+        <img class="responsive-img" src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="gfr"/>
       </div>
       <div class="col m6 l6">
         <h4><?= $profil['prenom'].' '.$profil['nom'] ?></h4>

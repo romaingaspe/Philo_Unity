@@ -70,7 +70,7 @@
 				<?php if($w_user)  :?>
 					<li>
 						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">
-								<img src="<?= $_SESSION['user']['photo'] ?>" alt="" class="left " id="circleprofil"/>
+								<img src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="" class="left " id="circleprofil"/>
 						&nbsp;&nbsp;&nbsp;Mon profil
 						<i class="material-icons right">arrow_drop_down</i>
 					</a>
@@ -90,7 +90,7 @@
 				<?php if($w_user)  :?>
 					<li>
 						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">
-								<img src="<?= $_SESSION['user']['photo'] ?>" alt="" class="left " id="circleprofil"/>
+								<img src="<?php if(isset($w_user['photo'])){ echo $this->assetUrl($w_user['photo']);} ?>" alt="" class="left " id="circleprofil"/>
 						&nbsp;&nbsp;&nbsp;Mon profil
 						<i class="material-icons right">arrow_drop_down</i>
 					</a>
