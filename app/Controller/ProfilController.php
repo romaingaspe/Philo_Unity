@@ -95,7 +95,7 @@ class ProfilController extends Controller
     }
 
     public function projectsPage($id){
-
+      $userManager = new FixUserManager();
       $commentaireManager = new CommentaireManager();// methode manager qui va verifier mon tableau
       $post = array();
       $err = array();
@@ -137,7 +137,7 @@ class ProfilController extends Controller
           }
         }
       }
-      $userManager = new FixUserManager();
+      
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
         'projet' => $projetManager->find($id),
