@@ -1,3 +1,9 @@
+.louil{
+	height: 600px !important;
+}
+.slida{
+	height: 100%;
+}
 #presentation{
 	font-size: 1.5em;
 }
@@ -45,6 +51,15 @@ i{
 #profilslide.indicators{
 	z-index: 100;
 	padding: 15px 0;
+
+}
+.indicator-item{
+	background-color: transparent !important;
+
+}
+.indicator-item.active{
+	background-color: transparent !important;
+
 }
 #profilslide.slider, #profilslide .slides{
 	height: 800px !important;
