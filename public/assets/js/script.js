@@ -27,25 +27,25 @@ $(function(){
             success: function(reponse) {
                 $('#allworks').empty();
                 for (m in reponse) {
-                    var htmlMetier = $('<article>')
+                    var htmlProfils = $('<article>')
                     .addClass('col')
-                    .addClass('s12')
-                    .addClass('m6')
                     .addClass('l4')
+                    .addClass('m6')
+                    .addClass('s12')
                     .append($('<div>')
                         .append($('<img>').attr('src', reponse[m].photo).addClass('photo-work').addClass('responsive-img')))
                     .append($('<div>').addClass('text-works')
                     .addClass('center')
-                        .append($('<h6>').text(reponse[m].section))
+                        .append($('<h6>').text(reponse[m].prenom+reponse[m].nom))
                         .append($('<p>').text(reponse[m].description))
                         .append($('<br>'))
-                        .append($('<a>').text(reponse[m].section).attr('href', '/philo_unity/public/metiers/'+reponse[m].alias+'/profilsall')))
-                    $('#allworks').append(htmlMetier);
+                        .append($('<a>').text('Voir le Profil').attr('href', reponse[m].alias)))
+                    $('#allworks').append(htmlProfils);
                 }
             }
         })
     });
- })
+})
 $(function(){
     $('.paginations.paginmet').click(function(e){
         e.preventDefault();
@@ -77,7 +77,7 @@ $(function(){
             }
         })
     });
- })
+  })
 $(function(){
     $('.paginations.paginprofil').click(function(e){
         e.preventDefault();
