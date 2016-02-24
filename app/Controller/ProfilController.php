@@ -92,11 +92,15 @@ class ProfilController extends Controller
 
     public function projectsPage($id){
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
+
+
+
       $params = [
         'projet' => $projetManager->find($id),
         // récupérer la liste de photos de ce projet
         // pour les afficher dans la vue projectsPage
-        'photos'=> $projetManager->getProjectPhotos($id)
+        'photos'=> $projetManager->getProjectPhotos($id),
+
       ];
 
       $this->show('profil/projectsPage', $params);

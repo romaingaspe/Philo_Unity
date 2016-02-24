@@ -39,7 +39,7 @@
           			<label for="last_name">votre commentaire</label>
         			</div>
               <div class="col s12 m12 l12">
-        			<a class="waves-effect waves-light btn right">commenter</a></div>
+        			<a class="waves-effect waves-light btn right">Envoyer</a></div>
       			</div>
       		</form>
     		</form>
