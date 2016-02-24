@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
 <?php $this->start('main_content') ?>
-<?php var_dump($photos) ?>
+
   <div class="row">
     <div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2">
       <span class="left">1 1
@@ -41,7 +41,7 @@
 
   
 
-  <!-- zone de commentaires où j'afficherai 'commentaire et formulaire' -->
+  <!-- zone de commentaires où j'afficherai 'commentaire et formulaire' si je suis inscrit-->
   <section class="container comments-bloc">
 
     <!-- formulaire -->
@@ -64,15 +64,24 @@
           </div>
         </div>
           <form class="col s12 m12 l8" method="POST" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
+          <?php if($formError):?>
+            <p style="color:red"><?=implode('<br>', $err)?></p>
+          <?php endif;?>  
+          <?php if($formValid):?>
+            <p style="color:green">Votre commentaire a bien été envoyé !</p>';
+          <?php endif;?>  
+    
+  
             <h5 class="container center-align ">Publier un commentaire </h5>
             <div class="row">
               <div class="input-field col s12 m12 l12">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">titre de votre commentaire</label>
+                <input id="title" type="text" class="validate" name="title">
+                <label for="title">titre de votre commentaire</label>
               </div>
               <div id="line-postcom" class="input-field col s12 m12 l12">
-                  <textarea id="last_name" type="text" class="materialize-textarea validate"></textarea>
-                  <label for="last_name">votre commentaire</label>
+                  <textarea id="content" type="text" class="materialize-textarea validate" name=""></textarea>
+                  <label for="content">votre commentaire</label>
+                  <p class="left" style="padding-top: 5%; padding-left: 1%; color: darkgrey; font-size: 75%;">0/400 caractères</p>
               </div>
             </div>
             <div class="col s12 m12 l12">
@@ -83,7 +92,7 @@
     </div>
       <?php endif;?>  
 
-    <?php if(!$w_user) :?><!-- zone de commentaires où j'afficherai 'commentaires' tout court -->
+    <?php if(!$w_user) :?><!-- zone de commentaires où j'afficherai 'les commentaires', si je ne suis pas inscrit -->
       <h5 class="center-align">Derniers commentaires sur le projet</h5>
       <div id="com-project" class="grey lighten-2 ">
           <h7>gorginette</h7>
