@@ -20,6 +20,9 @@ class ProfilController extends Controller
         $login = new AuthentificationManager();
         $userManager = new FixUserManager;
         $infosUser = $this->getUser();
+        $maxSize = 3024 * 3000;
+        $dirUpload = 'photo';
+        $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
 
         $errors = array();
         $params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
@@ -49,9 +52,22 @@ class ProfilController extends Controller
           if (empty($_POST['description'])) {
             $errors[]='Votre description ne doit pas est vide';
           }
-          
+
           if (empty($_POST['linkedin'])) {
             $errors[]='Votre linkedin ne doit pas est vide';
+          }
+          if(empty($_FILES['photo'])){
+          $errors[] = 'veuiller entrer une photo de votre projet';
+          }
+
+          elseif($_FILES['photo']['size'] >$maxSize){
+          $errors[] = 'l\'image exède le poids autorisé';
+          }
+
+          $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
+
+          if(!in_array($fileMineType, $mineTypeAllowed)){
+          $errors[] = 'le fichier n\'est pas une image';
           }
 
           // il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
@@ -62,6 +78,7 @@ class ProfilController extends Controller
               'prenom'            => $_POST['prenom'],
               'email'             => $_POST['email'],
               'description'       =>$_POST['description'],
+              'photo'             => $_FILES['photo'],
               'date_update'       => 'NOW()',
             ],$infosUser['id']);
             $login->refreshUser();
@@ -94,7 +111,7 @@ class ProfilController extends Controller
     }
 
     public function projectsPage($id){
-    
+
       $post = array();
       $err = array();
       $formError = false;
@@ -107,17 +124,17 @@ class ProfilController extends Controller
         }
 
         if (empty($post['title'])){
-        $err[] = 'Le titre ne peut être vide !';    
+        $err[] = 'Le titre ne peut être vide !';
         }
         elseif (strlen($post['title'])<3 || strlen($post['title'])>40) {
-        $err[] = 'Votre titre doit faire au moins 3caractères et ne peut excéder 40 caractères!';    
+        $err[] = 'Votre titre doit faire au moins 3caractères et ne peut excéder 40 caractères!';
         }
 
         if (empty($post['content'])){
-        $err[] = 'Votre commentaire ne peut être vide!';    
+        $err[] = 'Votre commentaire ne peut être vide!';
         }
         elseif (strlen($post['content'])>400) {
-        $err[] = 'Votre commentaire a atteint la limite de caractères autotisés, veuillez saisir un commentaire inférieur à 400 caractères!';    
+        $err[] = 'Votre commentaire a atteint la limite de caractères autotisés, veuillez saisir un commentaire inférieur à 400 caractères!';
         }
 
         if (count($err)>0) {
@@ -127,14 +144,17 @@ class ProfilController extends Controller
         else{
           $user = $this->getUser();
           if($user) {
+            $formValid =true;
+
+
             $formValid = true;
             $post['idprojet'] = $id; // Je récupère l'$id en paramètre du controleur projectsPage
             $post['iduserspost'] = $user['id'];// Je récupère l'$id de mon utilisateur en paramètre du controleur projectsPage
-            
+
 
             $commentaireProjet = new CommentaireManager();// methode manager qui va verifier mon tableau
-            // s'il n'y a pas d'erreur je créée un tableau 
-            $commentaireProjet->insert($post);            
+            // s'il n'y a pas d'erreur je créée un tableau
+            $commentaireProjet->insert($post);
           }
         }
       }
@@ -145,9 +165,9 @@ class ProfilController extends Controller
         // pour les afficher dans la vue projectsPage
         'photos'=> $projetManager->getProjectPhotos($id),
       ];
-      
-      
-      $this->show('profil/projectsPage', $params); 
+
+
+      $this->show('profil/projectsPage', $params);
 
     }
 
@@ -189,47 +209,58 @@ class ProfilController extends Controller
         $projectmanager = new ProjectManager();
         $errors = array();
         $params = array();
-
         $maxSize = 3024 * 3000;
         $dirUpload = 'photo';
         $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
 
-          if(empty($_POST['project_title'])){
+        if(empty($_POST['project_title'])){
             $errors[] = 'le titre est vide';
-          }
+        }
+        if(empty($_POST['description'])){
+        $errors[] = 'la description du projet est vide';
+        }
 
-          if(empty($_POST['description'])){
-          $errors[] = 'la description du projet est vide';
-          }
+        if(empty($_FILES['photo'])){
+        $errors[] = 'veuiller entrer une photo de votre projet';
+        }
 
-          if(empty($_FILES['photo'])){
-          $errors[] = 'veuiller entrer une photo de votre projet';
-          }
+        elseif($_FILES['photo']['size'] >$maxSize){
+        $errors[] = 'l\'image exède le poids autorisé';
+        }
 
-          elseif($_FILES['photo']['size'] >$maxSize){
-          $errors[] = 'l\'image exède le poids autorisé';
-          }
+        $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
 
-          $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
+        if(!in_array($fileMineType, $mineTypeAllowed)){
+        $errors[] = 'le fichier n\'est pas une image';
+        }
 
-          if(!in_array($fileMineType, $mineTypeAllowed)){
-          $errors[] = 'le fichier n\'est pas une image';
-          }
+        if(count($errors) == 0){
+        $ProjectManager->update([
+        'project_title' 	=> $_POST['project_title'],
+        'description' 		=> $_POST['description'],
+        'photo' 	    	=> $_POST['photo'],
+        ]);
+        }
 
-          if(count($errors) == 0){
-          $ProjectManager->update([
-            'project_title' 	  => $_POST['project_title'],
-            'description' 			=> $_POST['description'],
-            'photo' 	    			=> $_FILES['photo'],
-          ]);}
-
-          else{
+        else{
           $params['errors'] = $errors;
+        }
+        $params['success'] = 'votre nouveaux projet à bien été rajouté !';
+        $this->show('profil/insertProject', $params);
+    }
+    public function allprofiles(){
 
-          }
-          $params['success'] = 'votre nouveaux projet à bien été rajouté !';
+        $num = 6;
+        $page = $_GET['page'];
+        $start = ($page-1) * $num;
+        $allprofiles = new FixUserManager();
+        $allcount = $allprofiles->findAll();
+        $all = $allprofiles->findAll('nom' , 'ASC', $num, $start);
+        $countusers = count($allcount);
+        $totalpages = ceil($countusers/$num);
+        $params['users'] = $all;
+        $params['totalpages'] = $totalpages;
 
-
-          $this->show('profil/insertProject', $params);
+        $this->show('profil/allprofiles', $params);
     }
 }
