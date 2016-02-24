@@ -7,6 +7,7 @@ use Manager\MetierManager;
 use Manager\FixUserManager;
 use \W\Security\AuthentificationManager;
 use Manager\ProjetManager;
+use Manager\CommentaireManager;
 
 class ProfilController extends Controller
 {
@@ -112,6 +113,7 @@ class ProfilController extends Controller
 
     public function projectsPage($id){
 
+      $commentaireManager = new CommentaireManager();// methode manager qui va verifier mon tableau
       $post = array();
       $err = array();
       $formError = false;
@@ -123,17 +125,17 @@ class ProfilController extends Controller
           $post[$key] = $value;
         }
 
-        if (empty($post['title'])){
+        if (empty($post['titre'])){
         $err[] = 'Le titre ne peut être vide !';
         }
-        elseif (strlen($post['title'])<3 || strlen($post['title'])>40) {
+        elseif (strlen($post['titre'])<3 || strlen($post['titre'])>100) {
         $err[] = 'Votre titre doit faire au moins 3caractères et ne peut excéder 40 caractères!';
         }
 
-        if (empty($post['content'])){
+        if (empty($post['comments'])){
         $err[] = 'Votre commentaire ne peut être vide!';
         }
-        elseif (strlen($post['content'])>400) {
+        elseif (strlen($post['comments'])>400) {
         $err[] = 'Votre commentaire a atteint la limite de caractères autotisés, veuillez saisir un commentaire inférieur à 400 caractères!';
         }
 
@@ -143,30 +145,27 @@ class ProfilController extends Controller
 
         else{
           $user = $this->getUser();
-          if($user) {
-            $formValid =true;
-
-
-
+          if($user){
             $formValid = true;
             $post['idprojet'] = $id; // Je récupère l'$id en paramètre du controleur projectsPage
-            $post['iduserspost'] = $user['id'];// Je récupère l'$id de mon utilisateur en paramètre du controleur projectsPage
+            $post['iduserspost'] = $user['id'];// Je récupère l'$id de mon utilisateur par la fonction user utilisé dans mon controller de base
 
-
-
-
-            $commentaireProjet = new CommentaireManager();// methode manager qui va verifier mon tableau
-            // s'il n'y a pas d'erreur je créée un tableau
-            $commentaireProjet->insert($post);
+            $commentaireManager->insert($post);// s'il n'y a pas d'erreur je créée un tableau
           }
         }
       }
+      $userManager = new FixUserManager();
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
       $params = [
         'projet' => $projetManager->find($id),
         // récupérer la liste de photos de ce projet
         // pour les afficher dans la vue projectsPage
         'photos'=> $projetManager->getProjectPhotos($id),
+        'commentaires' => $commentaireManager->getProjectCommentaires($id),
+        'erreurs'=> implode('<br>', $err),
+        'formValid' => $formValid,
+        'formError' => $formError,
+        'utilisateur'=> $userManager->find($id),
       ];
 
 
@@ -220,29 +219,29 @@ class ProfilController extends Controller
             $errors[] = 'le titre est vide';
         }
         if(empty($_POST['description'])){
-        $errors[] = 'la description du projet est vide';
+          $errors[] = 'la description du projet est vide';
         }
 
         if(empty($_FILES['photo'])){
-        $errors[] = 'veuiller entrer une photo de votre projet';
+          $errors[] = 'veuiller entrer une photo de votre projet';
         }
 
         elseif($_FILES['photo']['size'] >$maxSize){
-        $errors[] = 'l\'image exède le poids autorisé';
+          $errors[] = 'l\'image exède le poids autorisé';
         }
 
         $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
 
         if(!in_array($fileMineType, $mineTypeAllowed)){
-        $errors[] = 'le fichier n\'est pas une image';
+          $errors[] = 'le fichier n\'est pas une image';
         }
 
         if(count($errors) == 0){
-        $ProjectManager->update([
-        'project_title' 	=> $_POST['project_title'],
-        'description' 		=> $_POST['description'],
-        'photo' 	    	=> $_POST['photo'],
-        ]);
+          $ProjectManager->update([
+          'project_title' 	=> $_POST['project_title'],
+          'description' 		=> $_POST['description'],
+          'photo' 	    	=> $_POST['photo'],
+          ]);
         }
 
         else{

@@ -31,56 +31,51 @@
             </li>
           <?php endforeach;?>
         </ul>
-          
-          <!-- <div id="comment-btn" class="col s12 m12 l12 ">
-              <a class="waves-effect waves-light btn right link-com-project">commenter</a>
-          </div> -->
       </div>
     </div>
   </section>
 
-  
 
   <!-- zone de commentaires où j'afficherai 'commentaire et formulaire' si je suis inscrit-->
   <section class="container comments-bloc">
 
     <!-- formulaire -->
-  <?php if($w_user) :?> 
+    <?php if($w_user) :?> 
       <div id="form-com"class="">
         <div class="row">
 
-        <!-- commentaires -->
-        <div class="col s12 m12 l4">
-          <h5 class="center-align">Derniers commentaires sur le projet</h5>
-          <div id="com-project" class="grey lighten-2 ">
-              <h7>gorginette</h7>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi    enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-              <p style="font-style: italic;font-size: 0.8em;">posté le 02/03/2156</p>     
+          <!-- commentaires -->
+          <div class="affich-com col s12 m12 l4">
+            <?php foreach($commentaires as $coms):?>
+              <h5 class="center-align">Commentaire de <?= $utilisateur['prenom'].' '.$utilisateur['nom']?></h5>
+              <div id="com-project" class="grey lighten-2 ">
+                  <h7><?= $coms['titre']?></h7>
+                  <p><?= $coms['comments']?></p>
+                  <p style="font-style: italic;font-size: 0.8em;">publié le<?= $coms['date']?></p>     
+              </div>
+            <?php endforeach;?> 
           </div>
-          <div id="com-project" class="grey lighten-2">
-              <h7>pascalette</h7>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus quaerat quam quibusdam modi enim, fugit! Quod voluptatem quisquam ducimus dolorem nisi blanditiis vitae iste error. Minima necessitatibus, natus minus.</p>
-              <p style="font-style: italic;font-size: 0.8em;">posté le 02/04/2156</p> 
-          </div>
-        </div>
+          <!-- Pb d'ajout de texte intempestif en base de données
+          J'essaie de régler ce problème, je teste donc avec un nouveau contenu de texte si ma page se recharge sans rajouter du texte en base de données... -->
+          <?php var_dump($utilisateur) ?>
           <form class="col s12 m12 l8" method="POST" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
-          <?php if($formError):?>
-            <p style="color:red"><?=implode('<br>', $err)?></p>
-          <?php endif;?>  
-          <?php if($formValid):?>
-            <p style="color:green">Votre commentaire a bien été envoyé !</p>';
-          <?php endif;?>  
+            <?php if($formError):?>
+              <p style="color:red"><?= $erreurs ?></p>
+            <?php endif;?>  
+
+            <?php if($formValid):?>
+              <p style="color:green">Votre commentaire a bien été envoyé !</p>
+            <?php endif;?>  
     
-  
             <h5 class="container center-align ">Publier un commentaire </h5>
             <div class="row">
               <div class="input-field col s12 m12 l12">
-                <input id="title" type="text" class="validate" name="title">
-                <label for="title">titre de votre commentaire</label>
+                <input id="titre" type="text" class="validate" name="titre">
+                <label for="titre">titre de votre commentaire</label>
               </div>
               <div id="line-postcom" class="input-field col s12 m12 l12">
-                  <textarea id="content" type="text" class="materialize-textarea validate" name=""></textarea>
-                  <label for="content">votre commentaire</label>
+                  <textarea id="comments" type="text" class="materialize-textarea validate" name="comments"></textarea>
+                  <label for="comments">votre commentaire</label>
                   <p class="left" style="padding-top: 5%; padding-left: 1%; color: darkgrey; font-size: 75%;">0/400 caractères</p>
               </div>
             </div>
@@ -88,9 +83,9 @@
                 <button type="submit" class="waves-effect waves-light btn right">Envoyer</button>
             </div>
           </form>  
-      </div>  
-    </div>
-      <?php endif;?>  
+          </div>  
+        </div>
+    <?php endif;?>  
 
     <?php if(!$w_user) :?><!-- zone de commentaires où j'afficherai 'les commentaires', si je ne suis pas inscrit -->
       <h5 class="center-align">Derniers commentaires sur le projet</h5>
