@@ -1,6 +1,5 @@
 <?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
-
 <?php $this->start('main_content') ?>
 	<div id="mainphoto2">
 		<div class="row">
@@ -10,15 +9,15 @@
 	</div>
 	<h1 class="center-align">Nos métiers</h1>
 	<div class="container">
-		<ul class="pagination center" >
+		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>
-				<li class="waves-effect">
+				<li class="waves-effect grey lighten-1 btn">
 					<a class="paginations paginmet" href="<?= $i?>"><?= $i?></a>
 				</li>
 			<?php endfor;?>
 		</ul>
 	</div>
-	<section id="allworks" class="row container">
+	<section id="allworks" class="row section container">
 		<?php foreach ($metiers as $met):?>
 				<article class="col s12 m6 l4">
 					<div>

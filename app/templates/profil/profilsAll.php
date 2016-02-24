@@ -11,13 +11,12 @@
 	<div class="container">
 		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>
-				<li class="waves-effect">
+				<li class="waves-effect grey lighten-1 btn">
 					<a class="paginations paginprofil" href="<?= $i?>"><?= $i?></a>
 				</li>
 			<?php endfor;?>
 		</ul>
 	</div>
-
 	<section id="allworks" class="row section container">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<?php foreach ($users as $use):?>
