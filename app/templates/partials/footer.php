@@ -2,14 +2,12 @@
 <footer>
 	<div class="brown row">
 		<div class="container">
-			<div class="col l4">
-				<ul class="col l6">
-					<li class="col l4"><i class="fa fa-facebook-square fa-3x"></i></li>
-					<li class="col l4"><i class="fa fa-twitter-square fa-3x"></i></li>
-					<li class="col l4"><i class="fa fa-instagram fa-3x"></i></li>
-				</ul>
+			<div class="col l6 m6 s6 divfooter">
+					<i class="fa fa-facebook-square fa-3x"></i>
+					<i class="fa fa-twitter-square fa-3x"></i>
+					<i class="fa fa-instagram fa-3x"></i>
 			</div>
-			<div class="right col l2">
+			<div class="right-align col l6 m6 s6 divfooter">
 				<ul>
 					<li><a href="<?= $this->url('contactAdmin') ?>"><u>Contact</u></a></li>
 					<br>

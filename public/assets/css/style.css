@@ -112,9 +112,6 @@ nav {
     background-color: #128b82;
 }
 /*---FOOTER---*/
-footer div ul {
-	margin: 0 !important;
-}
 footer div{
 	height: 200px;
 }
@@ -124,8 +121,11 @@ footer div h5 {
 footer .row{
 	margin: 0;
 }
-footer div div ul, footer div div ul.col.l6{
-	padding-top: 50px;
+.divfooter{
+	padding-top: 70px !important;
+}
+.fa-3x{
+	margin: 0 10px;
 }
 /***************** start : RESPONSIVE SUR BIG IMAGE ***************/
 /***/
@@ -151,16 +151,25 @@ footer div div ul, footer div div ul.col.l6{
 /***/		 footer div{
 /***/		   height: 150px;
 /***/		 }
+			.divfooter{
+				padding-top: 50px !important;
+			}
+			.fa-3x{
+				margin: 0 5px;
+			}
 /***/	}
 /***/	@media screen and (max-width: 450px) {
 			footer div{
 /***/		   height: 125px;
 /***/		 }
 
-/***/		footer div div ul {
-    			padding-top: 0px;
+/***/		.divfooter{
+    			padding-top: 35px !important;
 			}
-/***/
+/***/		.fa-3x{
+				font-size: 2.5em !important;
+				margin: 0;
+			}
 /***/	}
 /***/
 /***************** end : RESPONSIVE FOOTER ***************/
