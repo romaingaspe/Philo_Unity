@@ -11,8 +11,8 @@
 	<div class="container">
 		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>
-				<li class="waves-effect grey lighten-1 btn">
-					<a class="paginations paginprofil" href="<?= $i?>"><?= $i?></a>
+				<li class="waves-effect btn">
+					<a class="paginations paginprofil white-text" href="<?= $i?>"><?= $i?></a>
 				</li>
 			<?php endfor;?>
 		</ul>

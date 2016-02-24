@@ -1,5 +1,5 @@
 <header>
-	<nav class="brown">
+	<nav class="teal">
 		<div class="container nav-wrapper">
 			<a href="<?= $this->url('index') ?>">
 				<img class="left" src="<?= $this->assetUrl('img/logo_final.png') ?>"></img>
