@@ -20,8 +20,8 @@
 	<section id="allworks" class="row section container">
 		<?php foreach ($metiers as $met):?>
 				<article class="col s12 m6 l4">
-					<div>
-						<img src="<?= $met['photo']?>" alt="">
+					<div class="contain-img">
+						<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
 					</div>
 					<div class="text-works center">
 						<h6><?= $met['section']?></h6>
