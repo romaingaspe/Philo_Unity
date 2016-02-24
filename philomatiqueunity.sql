@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2016 at 02:51 PM
+-- Generation Time: Feb 24, 2016 at 05:24 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `philomatiqueunity`
 --
+CREATE DATABASE IF NOT EXISTS `philomatiqueunity` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `philomatiqueunity`;
 
 -- --------------------------------------------------------
 
@@ -30,7 +32,8 @@ CREATE TABLE `commentaires` (
   `id` int(11) NOT NULL,
   `iduserspost` int(11) NOT NULL,
   `idprojet` int(11) NOT NULL,
-  `comments` text CHARACTER SET latin1 NOT NULL,
+  `titre` varchar(100) NOT NULL,
+  `comments` text NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -38,8 +41,13 @@ CREATE TABLE `commentaires` (
 -- Dumping data for table `commentaires`
 --
 
-INSERT INTO `commentaires` (`id`, `iduserspost`, `idprojet`, `comments`, `date`) VALUES
-(0, 1, 8, 'Super mouvement !!\r\nJ,y suis depui un moment et j''aime beaucoup l''ambiance, très animée...\r\nQu''une phrase à dire des paroles et des actes !! Vive l''éco-orgasme !!', '2016-02-21 19:11:53');
+INSERT INTO `commentaires` (`id`, `iduserspost`, `idprojet`, `titre`, `comments`, `date`) VALUES
+(1, 1, 2, 'je teste de nouveau', 'hislhboùùrwobipvo^qùwshmyvsi lw:m\r\n', '2016-02-24 11:10:06'),
+(2, 1, 2, 'je teste de nouveau', 'hislhboùùrwobipvo^qùwshmyvsi lw:m\r\n', '2016-02-24 11:20:23'),
+(3, 1, 2, '3eme commentaire', '3 eme texte du 3eme commentaire', '2016-02-24 11:24:20'),
+(4, 1, 2, '3eme commentaire', '3 eme texte du 3eme commentaire', '2016-02-24 11:39:16'),
+(5, 1, 2, '3eme commentaire', '3 eme texte du 3eme commentaire', '2016-02-24 11:40:12'),
+(17, 1, 2, 'try again', 'That''s Fat not Vince !!', '2016-02-24 14:10:25');
 
 -- --------------------------------------------------------
 
@@ -52,7 +60,7 @@ CREATE TABLE `metiers` (
   `section` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `photo` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `description` text CHARACTER SET latin1 NOT NULL
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -60,15 +68,15 @@ CREATE TABLE `metiers` (
 --
 
 INSERT INTO `metiers` (`id`, `section`, `alias`, `photo`, `description`) VALUES
-(1, 'Broderie', 'broderie', 'https://s-media-cache-ak0.pinimg.com/236x/00/d3/46/00d346b41ec2537b6263598d61f41ca8.jpg', 'La broderie est un art de décoration des tissus qui consiste à ajouter sur un tissu un motif plat ou en relief fait de fils simples, parfois en intégrant des matériaux tels que paillettes, perles voire pierres précieuses.\r\n\r\nOn peut la diviser en trois grandes classes :\r\n\r\nmanuelle : faite à la main, au moyen d''une aiguille ou faite au crochet ;\r\nsemi-mécanique : à la machine ;\r\n mécanique : industrielle.'),
-(16, 'Cartonnage', 'cartonnage', 'http://a404.idata.over-blog.com/3/65/36/70/Cartonnage-et-broderies--.Vos-realisations/DSC04762.JPG', 'La fabrication d''un objet en carton comporte les étapes suivantes :\r\n\r\nle tracé du patron comportant les lignes de découpe, de pliage et éventuellement les marques d''assemblage ;\r\nla spécification du carton de structure et de grammage adapté à l''objet envisagé et éventuellement son impression ;\r\nla découpe à l''aide d''outil de découpage ou d''une forme spécialisée (munie de filets coupants) et de marquage des plis (par rainage ou refoulage) ;\r\nle pliage et l''assemblage de l''objet.\r\nDans le cas d''une fabrication en grande série, une machine peut faire le découpage, le pliage-collage ou l''agrafage.'),
-(17, 'Couture', 'couture', 'http://clubtissus.com/assets/img/bkgr/bg-accessoires-couture.jpg', 'Une couture est l''assemblage de deux ou plusieurs pièces à l''aide de fil à coudre, soit manuellement avec une aiguille, soit en utilisant une machine à coudre ou une surjeteuse. La couture est utilisée dans la fabrication des vêtements, du linge de maison (draps, mouchoirs, etc.), des éléments de décoration (nappes, rideaux, tentures, etc.), des chaussures, de la maroquinerie (bagages, sacs, etc.), etc. La première utilisation connue du mot daterait du xive siècle1.'),
-(18, 'Menuiserie', 'menuiserie', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Kairouan_Great_Mosque_doors.jpg/240px-Kairouan_Great_Mosque_doors.jpg', 'La menuiserie, art et métier, est l''ensemble des techniques mises en œuvre pour construire des ouvrages de taille relativement petite (par opposition aux ouvrages de charpente) par la mise en forme et l''assemblage de menues pièces de bois1. Ces assemblages se font de largeur, de longueur ou en angle.'),
-(19, 'Réfection de Sièges', 'refectionsieges', 'http://www.espacesorano.com/wp-content/uploads/2015/03/Photo-R%C3%A9fection-de-si%C3%A8ges-DR-Recadrage-site-990x460.jpg', 'Ici, vous apprendrez à restaurer vous-mêmes vos sièges, selon la méthode traditionnelle : pose de sangles, fixation des ressorts, mise en place du crin, des toiles de soutien, et, pour finir, du tissu de votre choix agrémenté ou non de clous dorés, de galons… Chaque élève travaille avec ses propres outils, soit sur un siège ancien à restaurer (tabouret, chaise ou fauteuil de tous styles), soit sur une structure en bois brut.'),
-(20, 'Plomberie', 'plomberie', 'http://www.allo-plombier-paris2.fr/uploads/446/externe/originals/installation-evier.jpg', 'La plomberie est une spécialité de l''ingénieur en Mécanique appliquée au bâtiment et du plombier spécialisé, regroupant l''ensemble des techniques utilisées pour faire circuler des fluides (liquide ou gaz) à l''aide de tuyaux, tubes, vannes, robinets, soupapes, pompes aux différents points d''usage d''une installation. Le mot a pour origine le terme latin pour plomb (plumbum) et provient de l''utilisation de ce métal malléable pour réaliser les installations de plomberie au cours des siècles précédents.'),
-(21, 'Stylisme', 'stylisme', 'http://uploads.cecilemancion.com/2010/10/collec_hiver08-09_1.jpg', 'Le stylisme est un métier de la mode consistant à imaginer et dessiner des modèles destinés au prêt-à-porter. La personne exerçant ce métier est appelée un ou une styliste. Le styliste est aussi appelé fashion designer designer de mode ou encore dessinateur(trice) de mode, car le mot « styliste » en anglais désigne un coiffeur.'),
-(22, 'Webforce3', 'webforce', 'http://www.wf3.fr/wp-content/uploads/2015/03/DSC_00271.jpg', 'La Web@cadémie, c''est un peu la seconde chance pour des 18-25 ans qui ont claqué la porte de l''école avant le bac. \r\nBien sûr, il faut aimer l''informatique et les nouvelles technos, car l''école forme, en deux ans, des développeurs web en partenariat avec Epitech, une autre école d''informatique dont elle partage le campus et les enseignants. '),
-(23, 'Electricité', 'electricite', 'http://www.ville-levallois.fr/wp-content/uploads/2014/09/electricit%C3%A9.jpg', 'L’électricité est l''effet du déplacement de particules chargées, à l’intérieur d''un « conducteur », sous l''effet d''une différence de potentiel aux extrémités de ce conducteur. Ce phénomène physique est présent dans de nombreux contextes : l''électricité constitue aussi bien l''influx nerveux des êtres vivants que les éclairs d''un orage. Elle est largement utilisée dans les sociétés développées pour transporter de grandes quantités d''énergie facilement utilisable.');
+(1, 'Broderie', 'broderie', 'https://s-media-cache-ak0.pinimg.com/236x/00/d3/46/00d346b41ec2537b6263598d61f41ca8.jpg', 'La broderie est un art de d?coration des tissus qui consiste ? ajouter sur un tissu un motif plat ou en relief fait de fils simples, parfois en int?grant des mat?riaux tels que paillettes, perles voire pierres pr?cieuses.\r\n\r\nOn peut la diviser en trois grandes classes :\r\n\r\nmanuelle : faite ? la main, au moyen d''une aiguille ou faite au crochet ;\r\nsemi-m?canique : ? la machine ;\r\n m?canique : industrielle.'),
+(16, 'Cartonnage', 'cartonnage', 'http://a404.idata.over-blog.com/3/65/36/70/Cartonnage-et-broderies--.Vos-realisations/DSC04762.JPG', 'La fabrication d''un objet en carton comporte les ?tapes suivantes :\r\n\r\nle trac? du patron comportant les lignes de d?coupe, de pliage et ?ventuellement les marques d''assemblage ;\r\nla sp?cification du carton de structure et de grammage adapt? ? l''objet envisag? et ?ventuellement son impression ;\r\nla d?coupe ? l''aide d''outil de d?coupage ou d''une forme sp?cialis?e (munie de filets coupants) et de marquage des plis (par rainage ou refoulage) ;\r\nle pliage et l''assemblage de l''objet.\r\nDans le cas d''une fabrication en grande s?rie, une machine peut faire le d?coupage, le pliage-collage ou l''agrafage.'),
+(17, 'Couture', 'couture', 'http://clubtissus.com/assets/img/bkgr/bg-accessoires-couture.jpg', 'Une couture est l''assemblage de deux ou plusieurs pi?ces ? l''aide de fil ? coudre, soit manuellement avec une aiguille, soit en utilisant une machine ? coudre ou une surjeteuse. La couture est utilis?e dans la fabrication des v?tements, du linge de maison (draps, mouchoirs, etc.), des ?l?ments de d?coration (nappes, rideaux, tentures, etc.), des chaussures, de la maroquinerie (bagages, sacs, etc.), etc. La premi?re utilisation connue du mot daterait du xive si?cle1.'),
+(18, 'Menuiserie', 'menuiserie', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Kairouan_Great_Mosque_doors.jpg/240px-Kairouan_Great_Mosque_doors.jpg', 'La menuiserie, art et m?tier, est l''ensemble des techniques mises en ?uvre pour construire des ouvrages de taille relativement petite (par opposition aux ouvrages de charpente) par la mise en forme et l''assemblage de menues pi?ces de bois1. Ces assemblages se font de largeur, de longueur ou en angle.'),
+(19, 'Réfection de Sièges', 'refectionsieges', 'http://www.espacesorano.com/wp-content/uploads/2015/03/Photo-R%C3%A9fection-de-si%C3%A8ges-DR-Recadrage-site-990x460.jpg', 'Ici, vous apprendrez ? restaurer vous-m?mes vos si?ges, selon la m?thode traditionnelle : pose de sangles, fixation des ressorts, mise en place du crin, des toiles de soutien, et, pour finir, du tissu de votre choix agr?ment? ou non de clous dor?s, de galons? Chaque ?l?ve travaille avec ses propres outils, soit sur un si?ge ancien ? restaurer (tabouret, chaise ou fauteuil de tous styles), soit sur une structure en bois brut.'),
+(20, 'Plomberie', 'plomberie', 'http://www.allo-plombier-paris2.fr/uploads/446/externe/originals/installation-evier.jpg', 'La plomberie est une sp?cialit? de l''ing?nieur en M?canique appliqu?e au b?timent et du plombier sp?cialis?, regroupant l''ensemble des techniques utilis?es pour faire circuler des fluides (liquide ou gaz) ? l''aide de tuyaux, tubes, vannes, robinets, soupapes, pompes aux diff?rents points d''usage d''une installation. Le mot a pour origine le terme latin pour plomb (plumbum) et provient de l''utilisation de ce m?tal mall?able pour r?aliser les installations de plomberie au cours des si?cles pr?c?dents.'),
+(21, 'Stylisme', 'stylisme', 'http://uploads.cecilemancion.com/2010/10/collec_hiver08-09_1.jpg', 'Le stylisme est un m?tier de la mode consistant ? imaginer et dessiner des mod?les destin?s au pr?t-?-porter. La personne exer?ant ce m?tier est appel?e un ou une styliste. Le styliste est aussi appel? fashion designer designer de mode ou encore dessinateur(trice) de mode, car le mot ? styliste ? en anglais d?signe un coiffeur.'),
+(22, 'Webforce3', 'webforce', 'http://www.wf3.fr/wp-content/uploads/2015/03/DSC_00271.jpg', 'La Web@cad?mie, c''est un peu la seconde chance pour des 18-25 ans qui ont claqu? la porte de l''?cole avant le bac. \r\nBien s?r, il faut aimer l''informatique et les nouvelles technos, car l''?cole forme, en deux ans, des d?veloppeurs web en partenariat avec Epitech, une autre ?cole d''informatique dont elle partage le campus et les enseignants. '),
+(23, 'Electricité', 'electricite', 'http://www.ville-levallois.fr/wp-content/uploads/2014/09/electricit%C3%A9.jpg', 'L??lectricit? est l''effet du d?placement de particules charg?es, ? l?int?rieur d''un ? conducteur ?, sous l''effet d''une diff?rence de potentiel aux extr?mit?s de ce conducteur. Ce ph?nom?ne physique est pr?sent dans de nombreux contextes : l''?lectricit? constitue aussi bien l''influx nerveux des ?tres vivants que les ?clairs d''un orage. Elle est largement utilis?e dans les soci?t?s d?velopp?es pour transporter de grandes quantit?s d''?nergie facilement utilisable.');
 
 -- --------------------------------------------------------
 
@@ -94,7 +102,9 @@ INSERT INTO `photos` (`id`, `id_projet`, `photo`, `caption`) VALUES
 (4, 5, 'https://c1.staticflickr.com/7/6059/6338461990_7828cf326e_b.jpg', 'Uké simple'),
 (5, 6, 'http://ekladata.com/GZUu4Bc4-dLV8K4j--v9b_VyltY.jpg', 'Le tracteur bleu'),
 (6, 7, 'http://www.jolpress.com/sites/default/files/styles/article_content_big/public/field/image/picasso.jpg?itok=mAMwgjHr', 'Les copines'),
-(7, 8, 'http://estunart.fr/wp-content/uploads/2016/01/box-eco-orgasme-300x300.jpg', 'Post-it ecommandements');
+(7, 8, 'http://estunart.fr/wp-content/uploads/2016/01/box-eco-orgasme-300x300.jpg', 'Post-it ecommandements'),
+(8, 2, 'http://www.stoneartanddesign.com/sculpture-pierre/img/sculpture6.jpg', 'La lune se lève'),
+(9, 2, 'http://www.sculpturesdelabaie.com/wp-content/uploads/2011/08/nuesculpturepierredecaen.jpg', 'elle s''endort');
 
 -- --------------------------------------------------------
 
@@ -169,6 +179,12 @@ INSERT INTO `users` (`id`, `prenom`, `nom`, `password`, `confirmedToken`, `dateC
 --
 
 --
+-- Indexes for table `commentaires`
+--
+ALTER TABLE `commentaires`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `metiers`
 --
 ALTER TABLE `metiers`
@@ -197,6 +213,11 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `commentaires`
+--
+ALTER TABLE `commentaires`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
 -- AUTO_INCREMENT for table `metiers`
 --
 ALTER TABLE `metiers`
@@ -205,7 +226,7 @@ ALTER TABLE `metiers`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `projets`
 --
