@@ -20,6 +20,9 @@ class ProfilController extends Controller
         $login = new AuthentificationManager();
         $userManager = new FixUserManager;
         $infosUser = $this->getUser();
+        $maxSize = 3024 * 3000;
+        $dirUpload = 'photo';
+        $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
 
         $errors = array();
         $params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
@@ -53,6 +56,19 @@ class ProfilController extends Controller
           if (empty($_POST['linkedin'])) {
             $errors[]='Votre linkedin ne doit pas est vide';
           }
+          if(empty($_FILES['photo'])){
+          $errors[] = 'veuiller entrer une photo de votre projet';
+          }
+
+          elseif($_FILES['photo']['size'] >$maxSize){
+          $errors[] = 'l\'image exède le poids autorisé';
+          }
+
+          $fileMineType = $finfo->file($_FILES['photo']['tmp_name'], FILEINFO_MINE_TYPE);
+
+          if(!in_array($fileMineType, $mineTypeAllowed)){
+          $errors[] = 'le fichier n\'est pas une image';
+          }
 
           // il n'y a pas d'erreurs,  inserer l'utilisateur a bien rentré en bdd :
           if(count($errors) == 0){
@@ -62,6 +78,7 @@ class ProfilController extends Controller
               'prenom'            => $_POST['prenom'],
               'email'             => $_POST['email'],
               'description'       =>$_POST['description'],
+              'photo'             => $_FILES['photo'],
               'date_update'       => 'NOW()',
             ],$infosUser['id']);
             $login->refreshUser();
@@ -188,7 +205,6 @@ class ProfilController extends Controller
         $projectmanager = new ProjectManager();
         $errors = array();
         $params = array();
-
         $maxSize = 3024 * 3000;
         $dirUpload = 'photo';
         $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png');
