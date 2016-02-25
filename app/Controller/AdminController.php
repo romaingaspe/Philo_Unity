@@ -102,7 +102,7 @@ class AdminController extends Controller
 	}
 	public function connect()
 	{
-		$userManager = new FixUserManager();
+		$userManager = new UserManager();
 		$login = new AuthentificationManager();
 		$errors = array();
 		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
