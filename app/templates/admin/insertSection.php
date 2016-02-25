@@ -1,7 +1,7 @@
 <?php $this->layout('layout2',['title' => 'Accueil']) ?>
 <?php $this->start('main_content') ?>
     <div class="container center">
-        <h4>Inserer une nouvelle section</h4>
+        <h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align">Inserer une nouvelle section</h3>
         <div class="row">
             <form method="POST" class="col s12 m12 l6 offset-l3" >
                 <div class="input-field">
@@ -10,11 +10,12 @@
                 </div>
                 <div class="input-field">
                     <label for="description">description section</label>
-                    <input type="text" name="description" placeholder="description">
+                    <textarea name="description" class="materialize-textarea" placeholder="Votre description"></textarea>
+        </div>
                 </div>
                 <div class="input-field">
-                    <label for="alias">alias metier</label>
-                    <input type="text" name="alias" placeholder="alias section">
+                    <label id="alias-m" for="alias">alias metier</label>
+                    <input id="alias" type="text" name="alias" placeholder="alias section">
                 </div>
                 <label for="photo"><h5>inserer une image</h5></label>
                     <!-- champ de type file pour choisir un fichier -->

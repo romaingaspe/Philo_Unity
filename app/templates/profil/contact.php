@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 <div class="container center">
-<h1>contact</h1>
+<h3 id="marge-titre" class"container grey lighten-4 z-depth-1">contact</h3>
 <div class="row ">
 
     <form method="POST" class="col s12 m12 l6 offset-l3">
@@ -13,7 +13,7 @@
         <div class="input-field">
             <label for="objet">Objet</label>
             <input type="text" name="objet" placeholder="Votre Objet">
-        </div>        
+        </div>
         <div class="input-field">
             <label for="email">E-mail</label>
             <input type="text" name="email" placeholder="Votre email">

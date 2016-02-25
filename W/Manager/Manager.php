@@ -192,7 +192,6 @@ abstract class Manager
 			$value = ($stripTags) ? strip_tags($value) : $value;
 			$sth->bindValue(":".$key, $value);
 		}
-
 		if (!$sth->execute()){
 			return false;
 		}

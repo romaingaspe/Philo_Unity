@@ -1,4 +1,8 @@
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,300,400,600,700);
+body{
+	font-family: 'Raleway', sans-serif;
+}
 /************************* START HOVER IMAGE PROFILS METIER...********************/
 
 .contain-img:hover .hov-zoom {
@@ -25,6 +29,10 @@
 .contain-img:hover .text-box {
 	opacity:0.5;
 }
+.text-box h2{
+	padding-top: 3em;
+	font-size: 1.5em;
+}
 .text-box {
 	position: absolute;
 	text-align: center;
@@ -41,9 +49,21 @@
   transition: all 0.7s ease;
 }
 
+
 /*************************END HOVER IMAGE PROFILS METIER...********************/
+#marge-titre{
+	margin-top: 3%;
+	margin-bottom: 2%;
+	padding: 0.25em 0;
+}
+#alias{
+	width: 48.5%;
+}
+#alias-m{
+	margin-left: 26%;
+}
 .louil{
-	height: 600px !important;
+	height: 400px !important;
 }
 .slida{
 	height: 100%;
@@ -281,6 +301,7 @@ footer .row{
 }
 .box h3{ /* retrait de quelques rem du margin bottom pour équilibrer contenu box */
 	margin: 1.46rem 0 0.8rem 0;
+	color: #128b82 !important;
 }
 .shadow-effect{
 	position: relative !important;
@@ -359,8 +380,9 @@ footer .row{
 	margin: 3%;
 }
 #allworks h6{
-	padding: 3%;
+	padding: 5% 0 5% 0;
 	text-align: justify;
+	margin: 0;
 }
 #allworks article{
 	margin-bottom: 3%;
@@ -398,21 +420,20 @@ footer .row{
 /*--------- start : TYPO (texts) gallery projects---------*/
 
 #presentation h5{
-	padding: 1% 3%;
-	background-color: #128B82;
-	display: inline-block;
-	color: #fff;
-	font-size: 1.2em;
+	padding: 1%;
+    background-color: #128B82;
+    display: inline-block;
+    color: #fff;
+    /* font-size: 1.2em; */
 }
 #presentation h4{
 	color: #128B82;
+	text-transform: capitalize;
 }
+
 #gallery-title h6{
-	padding: 2% 10%;
-	background-color: #128B82;
-	color: #fff;
 	display: inline-block;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 /*--------- end :TYPO (texts) gallery projects---------*/
 
@@ -421,11 +442,15 @@ footer .row{
 	object-fit: cover;
 	height: 300px;
 }
-
-
+#presentation div:first-child{
+	padding:0 !important;
+}
 
 #presentation p{
 	padding: 3%;
+	background-color: rgba(0,0,0,.05);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    font-size: 0.7em;
 }
 #presentation div:nth-child(2){
 	padding: 0 1rem;
@@ -434,6 +459,16 @@ footer .row{
 #presentation{
 	margin-top: 4em;
 	margin-bottom: 4em;
+	background-image: url("http://www.transparenttextures.com/patterns/grid-noise.png");
+    padding: 10px 0;
+}
+#titre-index p{
+	margin-top: 4em;
+	margin-bottom: 4em;
+  padding: 20px;
+	font-size: 1.4em;
+	text-align: justify;
+
 }
 .patch-rightside{
 	background-color: #128B82;
@@ -448,7 +483,10 @@ footer .row{
 .patch-centered{
 	padding: 20px 2px !important;
 	color: #128B82;
+	/* background-color: #e9f2f2; */
+	background-image: url("http://www.transparenttextures.com/patterns/grid-noise.png");
 }
+
 #cards-folio{
 	position: relative;
 	height: 50em;

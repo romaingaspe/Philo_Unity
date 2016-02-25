@@ -20,7 +20,7 @@
 	<section id="allworks" class="row section container">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<?php foreach ($users as $use):?>
-			<article class="col s12 m6 l4">
+			<article class="grey lighten-4 col s12 m6 l4">
 				<div class="grey lighten-4">
 					<div class=" contain-img">
 						<img class="hov-zoom photo-work responsive-img" src="<?= $use['photo']?>" alt="">
@@ -29,9 +29,9 @@
 						<a class="link-metier" href="/philo_unity/public/profil/profiluser/<?= $use['id']?>"></a>
 					</div>
 					</div>
-					<div class="text-works center ">
-						<h6 ><?= $use['prenom'].' '.$use['nom']?></h6>
-						<p class="teal lighten-5"><?= mb_substr($use['description'], 0 , 400 )?></p>
+					<div class="text-works center">
+						<h6><?= $use['prenom'].' '.$use['nom']?></h6>
+						<p class="grey lighten-4"><?= mb_substr($use['description'], 0 , 400 )?></p>
 				</div>
 			</div>
 			</article>

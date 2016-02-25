@@ -25,9 +25,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12 m12 l12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <div class="input-field col s12 m12 l12">                    
                     <label for="message">Message</label>
+                    <textarea id="textarea1" name="message" class="materialize-textarea"placeholder="Votre message"></textarea>                    
                 </div>
             </div>
             <div class="input-field">

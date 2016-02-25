@@ -7,7 +7,7 @@
 			<img id="resp-logo" class="col s12"src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
 		</div>
 	</div>
-	<h1 class="center-align">Nos métiers</h1>
+	<h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align">Nos métiers</h3>
 	<div class="container">
 		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>
@@ -20,7 +20,7 @@
 	<section id="allworks" class="row section container">
 		<?php foreach ($metiers as $met):?>
 				<article class="col s12 m6 l4">
-					<div class=" grey lighten-3 lighten-4 z-depth-1">
+					<div class="grey lighten-4 z-depth-1">
 						<div class=" contain-img">
 							<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
 							<div class="text-box">
@@ -28,7 +28,7 @@
 							<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
 						</div>
 					</div>
-					<div class=" text-works center">
+					<div class="text-works center">
 						<h6><?= $met['section']?></h6>
 						<p class=""><?= mb_substr($met['description'], 0 , 400 ).'...'?></p>
 					</div>

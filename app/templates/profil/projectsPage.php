@@ -10,7 +10,6 @@
       <!-- <div class="cote-titre"></div> -->
     </div>
   </div>
-
 <!-- 2ème ligne ZONE présentation de projet (description projet à gauche et slide projet à droite) -->
 
   <section id="description" class="container section">
@@ -47,7 +46,7 @@
         <!-- Gauche : commentaires des utilisateurs -->
           <div class="affich-com col s12 m12 l4">
             <?php foreach($commentaires as $coms):?>
-              <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
+              <h5 class="center-align">Commentaire de <?= $w_user['prenom'].' '.$w_user['nom']?></h5>
               <div id="com-project" class="grey lighten-2 ">
                   <h7><?= $coms['titre']?></h7>
                   <p><?= $coms['comments']?></p>
@@ -84,8 +83,8 @@
           </form>
         </div>
       </div>
-
     <?php endif;?>
+    
     <div class="container">
         <ul class="pagination center">
             <?php for($i=1; $i<=$totalpages; $i++):?>
@@ -99,7 +98,7 @@
     <?php if(!$w_user) :?>
         <div class="comments">
           <?php foreach($commentaires as $coms):?>
-                <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
+                <h5 class="center-align">Commentaire de <?= $coms['prenomUser'].' '.$coms['nomUser']?></h5>
                 <div id="com-project" class="grey lighten-2 ">
                     <h7><?= $coms['titre']?></h7>
                     <p><?= $coms['comments']?></p>

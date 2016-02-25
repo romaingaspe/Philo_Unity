@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Profils']) ?>
 
 <?php $this->start('main_content') ?>
-	<h1 class="center-align">Tous les profils</h1>
+	<h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align">Tous les profils</h3>
 	<div class="container">
 		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>
@@ -15,7 +15,7 @@
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<?php foreach ($users as $use):?>
 			<article class="col s12 m6 l4">
-				<div class="TEAL">
+				<div class=" grey lighten-4 z-depth-1">
 					<div class=" contain-img">
 						<img class="hov-zoom photo-work responsive-img" src="<?= $use['photo']?>" alt="">
 					<div class="text-box">
