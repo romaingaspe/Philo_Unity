@@ -60,17 +60,17 @@
 
 						                
 										<div class="input-field">
-											<input type="submit" name="but" value="Envoyer" class="left waves-effect waves-light btn">
+											<button type="submit" name="submit" value="edit_profil" class="left waves-effect waves-light btn">Envoyer</button>
 										</div>	
 										<br>
 									    <div class="container center">
-											<?php if(!empty($errors)) :?>
+											<?php if(!empty($errors_updateprofil)) :?>
 									        	<p class='red-text text-darken-1'>
-									        	<?= implode('<br />', $errors)?>
+									        	<?= implode('<br />', $errors_updateprofil)?>
 									        	</p>
 											<?php endif; ?>
-											<?php if(!empty($success)) :?>
-									        	<p class='green-text text-darken-1'><?=$success?></p>
+											<?php if(!empty($success_updateprofil)) :?>
+									        	<p class='green-text text-darken-1'><?=$success_updateprofil?></p>
 											<?php endif; ?>
 										</div>
 				            		</form>
@@ -82,46 +82,48 @@
 		      				</div>
 		      				<div class="collapsible-body">
 		      					<div class="row">
-	  								<form method="POST" class="col l8 offset-l2" action="<?= $this->url('updatePhotoProjet') ?>" method="POST" enctype="multipart/form-data">
+	  								<form method="POST" class="col l8 offset-l2" action="<?= $this->url('updateProfil') ?>" method="POST" enctype="multipart/form-data">
 	        							<div class="input-field">
 	              							<label for="project_title">Titre projet</label>
 	                  						<input type="text" name="project_title" placeholder="titre projet">
 	        							</div>
 								        <div class="input-field">
 								            <label for="description">description projet</label>
-								            <input type="text" name="description" placeholder="description">
-								        </div>
-              							
-	        							<div class="input-field margetop">
-	                  						<input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
-	        							</div>
-
-					<div class="file-field input-field">
-						<div class="btn btn-add">
-							<span class="add">photo </span>
-							<input type="file"  id="photo" name="photo">
-						</div>
-						<div class="file-path-wrapper">
-							<input class="file-path validate" type="text">
-						</div>
-					</div>
-				</form>
-	        							<br>
-									    <div class="container center">
-											<?php if(!empty($errors)) :?>
-									        	<p class='red-text text-darken-1'>
-									        	<?= implode('<br />', $errors)?>
-									        	</p>
-											<?php endif; ?>
-											<?php if(!empty($success)) :?>
-									        	<p class='green-text text-darken-1'><?=$success?></p>
-											<?php endif; ?>
+								            <input type="text" name="description" placeholder="Votre description de la photo">							         
+								        </div>             								        		
+										<div class="file-field input-field">
+											<div class="btn btn-add">
+												<span class="add">photo </span>
+												<input type="file"  id="photo" name="photo">
+											</div>
+											<div class="file-path-wrapper">
+												<input class="file-path validate" type="text">
+											</div>
+											<div class="input-field">
+								            	<label for="caption">description photo</label>
+								            	<input type="text" name="caption" placeholder="Votre description de la photo">
+								        	</div> 
+											<div class="input-field margetop">
+					      						<button type="submit" name="submit" value="add_project" class="waves-effect waves-light btn">Envoyer</button>
+											</div>
 										</div>
-	      							</form>
+									</form>
+        							<br>
+								    <div class="container center">
+										<?php if(!empty($errors_addprojet)) :?>
+								        	<p class='red-text text-darken-1'>
+								        	<?= implode('<br />', $errors_addprojet)?>
+								        	</p>
+										<?php endif; ?>
+										<?php if(!empty($success_addprojet)) :?>
+								        	<p class='green-text text-darken-1'><?=$success_addprojet?></p>
+										<?php endif; ?>
+									</div>	      							
       							</div>
       						</div>
     					</li>
     					<li>
+    						<?php var_dump($projets) ?>
 		      				<div class="collapsible-header"><i class="material-icons">whatshot</i>Modifier projet 1
 		      				</div>
 		      				<div class="collapsible-body">

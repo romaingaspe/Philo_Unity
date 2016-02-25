@@ -10,7 +10,8 @@
                 </div>
                 <div class="input-field">
                     <label for="description">description section</label>
-                    <input type="text" name="description" placeholder="description">
+                    <textarea name="description" class="materialize-textarea" placeholder="Votre description"></textarea>
+        </div>
                 </div>
                 <div class="input-field">
                     <label for="alias">alias metier</label>

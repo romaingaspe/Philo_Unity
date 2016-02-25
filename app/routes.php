@@ -12,14 +12,16 @@
 		['GET', '/profil/profiluser/[:id]', 'Profil#profilUser', 'profiluser'],
 		['GET', '/profil/allprofiles', 'Profil#allprofiles', 'allprofiles'],
 		['GET', '/profil/allprofiles/ajaxpaginallprofiles', 'Profil#ajaxpaginallprofiles', 'ajaxpaginallprofiles'],
+		
+		                            //contacter Profil//  
 		['GET|POST', '/profil/contact', 'profil#contact', 'contact'],
-
-		['GET|POST', '/profil/insertprojects', 'profil#insertProjects', 'insertProject'],
-		//['GET|POST', '/profil/update', 'profil#updatesPages', 'update'],
+									//inserer un projet//
+		['GET|POST', '/profil/insertprojects', 'profil#insertProjects', 'insertProjects'],
+		
 
 		['GET|POST', '/profil/updatesprofil', 'profil#updatesProfil', 'updateProfil'],
 		['POST', '/profil/updatephoto', 'profil#updatePhoto', 'updatePhoto'],
-
+		['POST', '/profil/updatephotoproject', 'profil#updatePhotoProjet', 'updatePhotoProjet'],
 
 
 		['GET|POST', '/profil/portfolio/projectspage/[:id]', 'Profil#projectsPage', 'projectsPage'],
