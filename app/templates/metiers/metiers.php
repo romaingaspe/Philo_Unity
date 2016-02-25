@@ -20,7 +20,7 @@
 	<section id="allworks" class="row section container">
 		<?php foreach ($metiers as $met):?>
 				<article class="col s12 m6 l4">
-					<div class="lighten-4 z-depth-1">
+					<div class="grey lighten-4 z-depth-1">
 						<div class=" contain-img">
 							<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
 							<div class="text-box">

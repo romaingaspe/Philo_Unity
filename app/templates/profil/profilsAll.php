@@ -20,7 +20,7 @@
 	<section id="allworks" class="row section container">
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<?php foreach ($users as $use):?>
-			<article class="col s12 m6 l4">
+			<article class="grey lighten-4 col s12 m6 l4">
 				<div class="grey lighten-4">
 					<div class=" contain-img">
 						<img class="hov-zoom photo-work responsive-img" src="<?= $use['photo']?>" alt="">
