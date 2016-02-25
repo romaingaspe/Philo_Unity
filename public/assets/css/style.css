@@ -436,6 +436,7 @@ footer .row{
 #gallery-title h6{
 	display: inline-block;
 	text-transform: capitalize;
+	font-weight: 700;
 }
 /*--------- end :TYPO (texts) gallery projects---------*/
 
@@ -510,6 +511,7 @@ footer .row{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
     margin: 0 auto;
+    width: 100%;
 
 }
 #cards-folio div.card-image div{
