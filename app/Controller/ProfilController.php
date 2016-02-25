@@ -8,6 +8,7 @@ use Manager\FixUserManager;
 use \W\Security\AuthentificationManager;
 use Manager\ProjetManager;
 use Manager\CommentaireManager;
+use Manager\PhotoManager;
 
 class ProfilController extends Controller
 {
@@ -241,6 +242,7 @@ class ProfilController extends Controller
         $userManager = new FixUserManager;
         $infosUser = $this->getUser();
         $projectManager = new ProjetManager;
+        $photoManager = new PhotoManager;
         $errors = array();
         $params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
         // Faire vérification des champs ICI
@@ -325,9 +327,10 @@ class ProfilController extends Controller
               $projet = $projectManager->insert([
                 'project_title'   => $_POST['project_title'],
                 'description'     => $_POST['description'],
-                'date_publish'    => 'NOW()',
-                'id_user '        => $infosUser['id'],
+                'date_publish'    => date('Y-m-d'),
+                'id_user'        => $infosUser['id'],
               ]);
+
               //fichier image projets
               $finfo =new \finfo();
 
@@ -335,11 +338,16 @@ class ProfilController extends Controller
               $uploads_dir_projets = $_SERVER['DOCUMENT_ROOT'].$_SERVER['REDIRECT_W_BASE'].'/assets/projets';
               $tmp_name = $_FILES['photo']['tmp_name'];
               $namePhoto = $infosUser['id'].$_FILES['photo']['name'];
+
+              // On upload le fichier
+              //$uploadAvatar = move_uploaded_file(filename, destination)
+              $uploadAvatar=move_uploaded_file($tmp_name, $uploads_dir_projets.'/'.$namePhoto);
+
               //Pour que le nom soit unique et eviter les probleme de nom de fichier on l'incrémente de l'id appartenant à user
               //supprimer ou remplacer le fichier
-              $photo=$projectManager->insert([
+              $photo=$photoManager->insert([
                 'id_projet' => $projet['id'],
-                'photo'     => $namePhoto,
+                'photo'     => 'projets/'.$namePhoto,
                 'caption'   => $_POST['caption'],
               ]); 
 
@@ -348,6 +356,9 @@ class ProfilController extends Controller
             else{
               $params['errors_addprojet'] = $errors;
             }  
+          }
+          elseif($_POST["submit"] == "modify_project"){
+
           }
         }
 

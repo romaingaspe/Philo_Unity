@@ -89,7 +89,7 @@
 	        							</div>
 								        <div class="input-field">
 								            <label for="description">description projet</label>
-								            <input type="text" name="description" placeholder="Votre description de la photo">							         
+								            <input type="text" name="description" placeholder="Votre description du projet">							         
 								        </div>             								        		
 										<div class="file-field input-field">
 											<div class="btn btn-add">
@@ -122,42 +122,62 @@
       							</div>
       						</div>
     					</li>
-    					<li>
-    						<?php var_dump($projets) ?>
-		      				<div class="collapsible-header"><i class="material-icons">whatshot</i>Modifier projet 1
-		      				</div>
-		      				<div class="collapsible-body">
-		      					<div class="row">
-	  								<form method="POST" class="col l8 offset-l2" >
-	        							<div class="input-field">
-	              							<label for="project_title">Titre projet</label>
-	                  						<input type="text" name="project_title" placeholder="titre projet">
-	        							</div>
-								        <div class="input-field">
-								            <label for="description">description projet</label>
-								            <input type="text" name="description" placeholder="description">
-								        </div>
+	    				
+						<?php foreach ($projets as $projet) { ?>
+							
+						
+	    					<li>
+			      				<div class="collapsible-header"><i class="material-icons">whatshot</i>Modifier projet <?= $projet['project_title']  ?>
+			      				</div>
+			      				<div class="collapsible-body">
+			      					<div class="row">
+		  								<form method="POST" class="col l8 offset-l2" >
+		        							<div class="input-field">
+		              							<label for="project_title">Titre projet</label>
+		                  						<input type="text" name="project_title" placeholder="titre projet" value="<?= $projet['project_title']?>" >
+		        							</div>
+									        <div class="input-field">
+									            <label for="description">description projet</label>									            
+									            <textarea name="description" placeholder="description" class="materialize-textarea" > <?= $projet['description']?></textarea>
+									        </div> 
 
-              							
-	        							<div class="input-field margetop">
-	                  						<input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
-	        							</div>
-	      							</form>
-	      							<br>
-								    <div class="container center">
-										<?php if(!empty($errors)) :?>
-								        	<p class='red-text text-darken-1'>
-								        	<?= implode('<br />', $errors)?>
-								        	</p>
-										<?php endif; ?>
-										<?php if(!empty($success)) :?>
-								        	<p class='green-text text-darken-1'><?=$success?></p>
-										<?php endif; ?>
-									</div>
-      							</div>
-      						</div>
-    					</li>
-    					vb 
+									        <?php foreach ($projet['photos'] as $photo) { ?>
+													
+												<div class="file-field input-field">
+													<img src="<?= $this->assetUrl($photo['photo']) ?>">
+													<div class="btn btn-add">
+														<span class="add">photo</span>
+														<input type="file"  id="photo" name="photo">
+													</div>
+													<div class="file-path-wrapper">
+														<input class="file-path validate" type="text">
+													</div>
+													<div class="input-field">
+										            	<label for="caption">description photo</label>
+										            	<input type="text" name="caption" placeholder="Votre description de la photo" value="<?= $photo['caption']?>">
+										        	</div> 
+													<div class="input-field margetop">
+							      						<button type="submit" name="submit" value="add_project" class="waves-effect waves-light btn">Envoyer</button>
+													</div>
+												</div>
+											
+											<?php } ?>
+		        						</form>
+		      							<br>
+									    <div class="container center">
+											<?php if(!empty($errors)) :?>
+									        	<p class='red-text text-darken-1'>
+									        	<?= implode('<br />', $errors)?>
+									        	</p>
+											<?php endif; ?>
+											<?php if(!empty($success)) :?>
+									        	<p class='green-text text-darken-1'><?=$success?></p>
+											<?php endif; ?>
+										</div>
+	      							</div>
+	      						</div>
+	    					</li>
+						<?php } ?>
   					</ul>		
 				</div>		
 		    </div>   
