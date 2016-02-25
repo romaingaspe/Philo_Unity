@@ -14,8 +14,8 @@
         </div>
                 </div>
                 <div class="input-field">
-                    <label for="alias">alias metier</label>
-                    <input type="text" name="alias" placeholder="alias section">
+                    <label id="alias-m" for="alias">alias metier</label>
+                    <input id="alias" type="text" name="alias" placeholder="alias section">
                 </div>
                 <label for="photo"><h5>inserer une image</h5></label>
                     <!-- champ de type file pour choisir un fichier -->

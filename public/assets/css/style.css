@@ -56,7 +56,12 @@ body{
 	margin-bottom: 2%;
 	padding: 0.25em 0;
 }
-
+#alias{
+	width: 48.5%;
+}
+#alias-m{
+	margin-left: 26%;
+}
 .louil{
 	height: 400px !important;
 }
