@@ -26,7 +26,6 @@
 					<div class="text-works center">
 						<h6 ><?= $use['prenom'].' '.$use['nom']?></h6>
 						<p><?= mb_substr($use['description'], 0 , 400 )?></p>
-						<br>
 				</div>
 			</div>
 			</article>

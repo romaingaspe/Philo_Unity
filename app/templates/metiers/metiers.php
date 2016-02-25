@@ -20,7 +20,7 @@
 	<section id="allworks" class="row section container">
 		<?php foreach ($metiers as $met):?>
 				<article class=" col s12 m6 l4">
-					<div class="teal lighten-5">
+					<div class="teal lighten-2">
 						<div class=" contain-img">
 							<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
 							<div class="text-box">
@@ -33,7 +33,6 @@
 					<div class=" text-works center">
 						<h6><?= $met['section']?></h6>
 						<p class=""><?= mb_substr($met['description'], 0 , 400 ).'...'?></p>
-						<br>
 					</div>
 					</div>
 				</article>
