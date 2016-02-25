@@ -22,12 +22,6 @@
 					</div>
 					<div class="input-field row">
 						<div class="col l6">
-							<input name="valeur" type="radio" id="aaa" class="with-gap" value="user"/>
-							<label for="aaa">Par Utilisateur</label>
-						</div>
-						<div class="col l6">
-							<input class="with-gap" name="valeur" type="radio" id="bbb" value="metier" />
-							<label for="bbb">Par Métier</label>
 							<input name="valeur" type="radio" id="test1" value="user"/>
 							<label for="test1">Par Utilisateur</label>
 						</div>
