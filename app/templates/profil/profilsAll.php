@@ -29,9 +29,9 @@
 						<a class="link-metier" href="/philo_unity/public/profil/profiluser/<?= $use['id']?>"></a>
 					</div>
 					</div>
-					<div class="text-works center ">
-						<h6 ><?= $use['prenom'].' '.$use['nom']?></h6>
-						<p class="teal lighten-5"><?= mb_substr($use['description'], 0 , 400 )?></p>
+					<div class="text-works center">
+						<h6><?= $use['prenom'].' '.$use['nom']?></h6>
+						<p class="grey lighten-4"><?= mb_substr($use['description'], 0 , 400 )?></p>
 				</div>
 			</div>
 			</article>
