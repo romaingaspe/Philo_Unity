@@ -31,7 +31,7 @@
 <?php endif;?>
 
 <?php if(!empty($success)):?>
-    <p class="red-text text-darken-1"><?= $success?></p>
+    <p class="green-text text-darken-1"><?= $success?></p>
 <?php endif;?>
 
 <?php $this->stop('main_content') ?>
