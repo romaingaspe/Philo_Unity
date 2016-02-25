@@ -240,10 +240,57 @@ footer .row{
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START : CONNECT/DECONNECT/REINIPASS*/
 
-/* ne pas oublier de caler les margins à l' intitulé connexion */
+
 .margetop{
 	margin-top:50px;
 }
+.margetop div:first-child{
+	box-shadow: none !important;
+}
+.box p{
+	padding-bottom: 13px;
+}
+.box h3{ /* retrait de quelques rem du margin bottom pour équilibrer contenu box */
+	margin: 1.46rem 0 0.8rem 0;
+}
+.shadow-effect{
+	position: relative !important;
+}
+.shadow-effect:before, .shadow-effect:after {
+    z-index: -1 !important;
+    position: absolute !important;
+    content: "" !important;
+    bottom: 28px !important;
+    left: 10px !important;
+    width: 50% !important;
+    top: 44% !important;
+    max-width: 300px !important;
+    background: #777 !important;
+    -webkit-box-shadow: 0px 38px 35px #777 !important;
+    -moz-box-shadow: 0 35px 20px #777 !important;
+    box-shadow: 0 35px 20px #777 !important;
+    -webkit-transform: rotate(-8deg) !important;
+    -moz-transform: rotate(-5deg) !important;
+    -o-transform: rotate(-5deg) !important;
+    -ms-transform: rotate(-5deg) !important;
+    transform: rotate(-5deg) !important;
+}
+    
+    /* bottom: 23px !important; 
+    top: 36% !important;
+    -webkit-transform: rotate(-6deg) !important; */
+   
+.shadow-effect:after{
+	-webkit-transform: rotate(8deg) !important;
+    -moz-transform: rotate(8deg) !important;
+    -o-transform: rotate(8deg) !important;
+    -ms-transform: rotate(8deg) !important;
+    transform: rotate(5deg) !important;
+    right: 10px !important;
+    left: auto !important;
+}
+
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END : CONNECT/DECONNECT/REINIPASS*/
 
 							      		/* ######## */
