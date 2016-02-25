@@ -21,7 +21,6 @@
   position:absolute;
   top:0;
   left:0;
-
 }
 .contain-img:hover .text-box {
 	opacity:0.5;
@@ -43,6 +42,10 @@
 }
 
 /*************************END HOVER IMAGE PROFILS METIER...********************/
+body{
+	background-image: url();
+}
+
 .louil{
 	height: 600px !important;
 }
@@ -304,7 +307,7 @@ footer .row{
     -ms-transform: rotate(-5deg) !important;
     transform: rotate(-5deg) !important;
 }
-   
+
 .shadow-effect:after{
 	-webkit-transform: rotate(8deg) !important;
     -moz-transform: rotate(8deg) !important;
@@ -315,7 +318,7 @@ footer .row{
     left: auto !important;
 }
 	/* border-radius: 2px; */
-	
+
 .margetop .deco-btn,.deco-btn2{
 	border: none;
     border-radius: 2px;
@@ -331,7 +334,7 @@ footer .row{
     height: 0px;
     padding: 1rem;
     margin-top: 16px;
-   
+
 }
 
 
