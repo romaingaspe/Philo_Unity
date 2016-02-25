@@ -11,7 +11,6 @@
                 <div class="input-field">
                     <label for="description">description section</label>
                     <textarea name="description" class="materialize-textarea" placeholder="Votre description"></textarea>
-        </div>
                 </div>
                 <div class="input-field">
                     <label id="alias-m" for="alias">alias metier</label>
@@ -21,10 +20,10 @@
                     <!-- champ de type file pour choisir un fichier -->
                     <input type="file" id="photo" name="photo">
                 <div class="input-field margetop">
-
                     <input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
                 </div>
             </form>
+
 
             <?php if(!empty($errors)) :?>
                     <p class='red-text text-darken-1'>

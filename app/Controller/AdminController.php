@@ -89,13 +89,14 @@ class AdminController extends Controller
 					'description' 	=> $_POST['description'],
 					'photo' 	    => $_POST['photo'],
 				]);
-			}
 
+				$params['success'] = 'votre nouvelle section à bien été rajouté !';
+			}
 			// sinon on affiche les erreurs:
 			else{
 				$params['errors'] = $errors;
 			}
-			$params['success'] = 'votre nouvelle section à bien été rajouté !';
+
 		}
 
 		$this->show('admin/insertSection', $params);
