@@ -48,12 +48,12 @@
 								</div>
 								<div class="input-field">
 									<div class="col l6">
-										<input name="valeur" type="radio" id="test1" value="user"/>
-										<label for="test1">Par Utilisateur</label>
+										<input name="valeur" type="radio" id="test3" value="user"/>
+										<label for="test3">Par Utilisateur</label>
 									</div>
 									<div class="col l6">
-										<input name="valeur" type="radio" id="test2" value="metier" />
-										<label for="test2">Par Métier</label>
+										<input name="valeur" type="radio" id="test4" value="metier" />
+										<label for="test4">Par Métier</label>
 									</div>
 								</div>
 								<div>

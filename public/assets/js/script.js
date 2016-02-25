@@ -1,7 +1,6 @@
 $(document).ready(function(){$('.slider').slider({full_width: true});
 var H = $('.slider').height();
-$('.slider').height(H-40);
-$('.carousel').carousel();});
+$('.slider').height(H-40);});
 $(".button-collapse").sideNav({  edge: 'right'});
 $(document).ready(function(){
     $('.collapsible').collapsible({
