@@ -74,6 +74,7 @@
 								<div class="collapsible-header white black-text">
 									<img src="<?= $this->assetUrl($w_user['photo']) ?>" alt="" class="left circle profilePic" id="circleprofil"/>
 										&nbsp;&nbsp;&nbsp;Mon profil
+										<i class="material-icons right black-text">arrow_drop_down</i>
 								</div>
 								<form class="center collapsible-body" action="<?= $this->url('recherche') ?>" method="GET" >
 									<a class="center" href="<?= $this->url('profiluser', ['id' => $_SESSION['user']['id'] ])?>">Mon profil</a>
