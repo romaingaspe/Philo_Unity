@@ -25,6 +25,7 @@ class ProfilController extends Controller
       $userManager = new FixUserManager();
       $params = [
         'profil' => $userManager->find($id),
+        'section' => $userManager->getUserMetier($id),
         // récupérer la liste de projets de cet utilisateur
         // pour les afficher dans la vue profilUser
         'projets' => $userManager->getUserProjects($id)

@@ -9,7 +9,7 @@
       </div>
       <div class="col m6 l6">
         <h4><?= $profil['prenom'].' '.$profil['nom'] ?></h4>
-        <h5><?= $profil['id']?></h5>
+        <h5><?= $section?></h5>
         <p class=""><?= $profil['description']?></p>
       </div>
   </section>

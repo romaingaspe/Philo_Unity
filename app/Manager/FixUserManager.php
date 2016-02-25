@@ -26,6 +26,15 @@ class FixUserManager extends \W\Manager\UserManager {
 		return;
 	}
 
+	public function getUserMetier($id) {
+				$sql = "SELECT section FROM metiers m LEFT JOIN users u ON u.id_metier = m.id WHERE u.id = :id";
+				$sth = $this->dbh->prepare($sql);
+				$sth->bindValue(":id", $id);
+				$sth->execute();
+
+				return $sth->fetchColumn();
+	}
+
 	public function getUserProjects($id) {
 		if (!is_numeric($id)){
 			return false;
