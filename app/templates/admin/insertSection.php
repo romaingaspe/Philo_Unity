@@ -16,13 +16,20 @@
                     <label id="alias-m" for="alias">alias metier</label>
                     <input id="alias" type="text" name="alias" placeholder="alias section">
                 </div>
-                <label for="photo"><h5>inserer une image</h5></label>
-                    <!-- champ de type file pour choisir un fichier -->
-                    <input type="file" id="photo" name="photo">
+                <div class="file-field input-field">
+                  <div class="btn btn-add">
+                    <span class="add">photo </span>
+                    <input type="file"  id="photo" name="photo">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                  </div>
+                </div>
                 <div class="input-field margetop">
                     <input type="submit" name="but" value="Envoyer" class="waves-effect waves-light btn">
                 </div>
             </form>
+          </div>
 
 
             <?php if(!empty($errors)) :?>
