@@ -275,10 +275,6 @@ footer .row{
     -ms-transform: rotate(-5deg) !important;
     transform: rotate(-5deg) !important;
 }
-    
-    /* bottom: 23px !important; 
-    top: 36% !important;
-    -webkit-transform: rotate(-6deg) !important; */
    
 .shadow-effect:after{
 	-webkit-transform: rotate(8deg) !important;
@@ -288,6 +284,25 @@ footer .row{
     transform: rotate(5deg) !important;
     right: 10px !important;
     left: auto !important;
+}
+	/* border-radius: 2px; */
+	
+.margetop .deco-btn,.deco-btn2{
+	border: none;
+    border-radius: 2px;
+    display: inline-block;
+    /* height: 36px; */
+    line-height: 0px;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.margetop .deco-btn2{
+    height: 0px;
+    padding: 1rem;
+    margin-top: 16px;
+   
 }
 
 

@@ -10,12 +10,12 @@
     </div>
   <form method="POST" class="s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
   <div class="input-field">
-      <input type="submit" name="but" value="deconnexion" class="waves-effect waves-light btn">
+      <input type="submit" name="but" value="deconnexion" class="waves-effect waves-light btn deco-btn">
   </div>
   </form>
 </div>
   <div class="center">
-      <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil</a>
+      <a class="btn waves-effect waves-light red darken-1 deco-btn2" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil</a>
   </div>
 
 <?php endif;?>
