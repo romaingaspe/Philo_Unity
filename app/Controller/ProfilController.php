@@ -150,7 +150,6 @@ class ProfilController extends Controller
         'erreurs'=> implode('<br>', $err),
         'formValid' => $formValid,
         'formError' => $formError,
-        'user' => $this->getUser(),
 
       ];
 
