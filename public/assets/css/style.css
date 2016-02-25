@@ -1,7 +1,7 @@
 
 /************************* START HOVER IMAGE PROFILS METIER...********************/
 
-.hov-zoom:hover{
+.contain-img:hover .hov-zoom {
 	-webkit-transform:scale(1.3);
 	transform:scale(1.3);
 }
@@ -11,12 +11,37 @@
 }
 .contain-img{
 	overflow:hidden;
+	height: 15em;
+	position: relative;
+}
+.link-metier {
+	display: block;
+	height: 100%;
+	width: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.contain-img:hover .text-box {
+	opacity:0.5;
+}
+.text-box {
+	position: absolute;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+  top:0;
+  left:0;
+  opacity:0;
+  border-radius:5px;
+  background-color: rgba(148, 228, 180, 0.67);
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,.75);
+  box-shadow: 0px 0px 15px 2px rgba(255,255,255,.75);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 /*************************END HOVER IMAGE PROFILS METIER...********************/
-body{
-	background-image: url(http://im1.peldata.com/bl6/50154/9sm.jpg);
-}
 .louil{
 	height: 600px !important;
 }
@@ -243,10 +268,72 @@ footer .row{
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : START : CONNECT/DECONNECT/REINIPASS*/
 
-/* ne pas oublier de caler les margins à l' intitulé connexion */
+
 .margetop{
 	margin-top:50px;
 }
+.margetop div:first-child{
+	box-shadow: none !important;
+}
+.box p{
+	padding-bottom: 13px;
+}
+.box h3{ /* retrait de quelques rem du margin bottom pour équilibrer contenu box */
+	margin: 1.46rem 0 0.8rem 0;
+}
+.shadow-effect{
+	position: relative !important;
+}
+.shadow-effect:before, .shadow-effect:after {
+    z-index: -1 !important;
+    position: absolute !important;
+    content: "" !important;
+    bottom: 28px !important;
+    left: 10px !important;
+    width: 50% !important;
+    top: 44% !important;
+    max-width: 300px !important;
+    background: #777 !important;
+    -webkit-box-shadow: 0px 38px 35px #777 !important;
+    -moz-box-shadow: 0 35px 20px #777 !important;
+    box-shadow: 0 35px 20px #777 !important;
+    -webkit-transform: rotate(-8deg) !important;
+    -moz-transform: rotate(-5deg) !important;
+    -o-transform: rotate(-5deg) !important;
+    -ms-transform: rotate(-5deg) !important;
+    transform: rotate(-5deg) !important;
+}
+
+.shadow-effect:after{
+	-webkit-transform: rotate(8deg) !important;
+    -moz-transform: rotate(8deg) !important;
+    -o-transform: rotate(8deg) !important;
+    -ms-transform: rotate(8deg) !important;
+    transform: rotate(5deg) !important;
+    right: 10px !important;
+    left: auto !important;
+}
+	/* border-radius: 2px; */
+
+.margetop .deco-btn,.deco-btn2{
+	border: none;
+    border-radius: 2px;
+    display: inline-block;
+    /* height: 36px; */
+    line-height: 0px;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.margetop .deco-btn2{
+    height: 0px;
+    padding: 1rem;
+    margin-top: 16px;
+
+}
+
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * PART : END : CONNECT/DECONNECT/REINIPASS*/
 
 							      		/* ######## */
@@ -267,9 +354,8 @@ footer .row{
 }
 #allworks p{
 	height:15em;
-	padding: 3%;
-    text-align: justify;
-    background-color: #E9FCFB;
+  text-align: justify;
+	margin: 3%;
 }
 #allworks h6{
 	padding: 3%;
@@ -418,9 +504,17 @@ footer .row{
 	padding: 15px;
 	color: transparent;
 }
+.cote-titre{
 
-#titleentete{
+}
+
+/* #titleentete{
 	background-color: #e0f2f1;
+} */
+.nw-titleentete{
+	    margin-top: 51px;
+    font-size: 25px;
+    text-transform: uppercase;
 }
 div #slideprojet{
 	padding: 0 !important;
@@ -434,12 +528,13 @@ div #slideprojet h5{
 }
 
 #titleprojet h4{
-    background-color: #128b82;
+    background-color: #fff;
     margin-top: 0 !important;
     font-size: 1.7em;
     text-align: center;
-    color: white;
+    color: #128b82;
     padding: 10px 0;
+    border: 0.001em solid #128b82;
 }
 #titleprojet p{
 	margin-bottom: 10px;
@@ -501,6 +596,15 @@ div #slideprojet h5{
 	padding: 0;
 	margin-bottom: 25px;
 }
+#line-postcom p{
+	padding: 0;
+	margin-bottom: 25px;
+	padding-top: 5%; 
+	padding-left: 1%; 
+	color: darkgrey; 
+	font-size: 75%;
+}
+
 p.date-publi{
 	font-style: italic;
 	font-size: 0.8em;

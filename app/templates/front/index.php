@@ -18,14 +18,29 @@
 	    <ul class="slides louil" >
 			<?php foreach ($users as $use): ?>
 				<li class="row">
-				  <img class="col l4"src="<?= $use['photo'];?>">
-			    <div class="teal col l8 slida">
-					<h3><?= $use['nom'].' '.$use['prenom'];?></h3>
-					<?php if (strlen($use['description']) > 50): ?>
-						<h5 class="light grey-text text-lighten-3"><?= mb_substr($use['description'], 0 , 50).'...';?></h5>
-						<?php else: ?>
-							<h5 class="light grey-text text-lighten-3"><?= $use['description'];?></h5>
-					<?php endif; ?>
+				  <img class="col l5"src="<?= $use['photo'];?>">
+			    <div class="brown col l7 slida valign-wrapper">
+					<div class="valign">
+						<h3 class="white-text "><?= ucfirst($use['nom']).' '.ucfirst($use['prenom']);?></h3>
+						<?php if (strlen($use['description']) > 50): ?>
+							<?php
+							function chunk_split_unicode($str, $l = 76, $e = "\r\n") {
+							    $tmp = array_chunk(
+							        preg_split("//u", $str, -1, PREG_SPLIT_NO_EMPTY), $l);
+							    $str = "";
+							    foreach ($tmp as $t) {
+							        $str .= join("", $t) . $e;
+							    }
+							    return $str;
+							}
+							?>
+							<h5 class="light grey-text text-lighten-3"><?= $str = $use['description'];
+							chunk_split($use['description'], 50);?></h5>
+
+							<?php else: ?>
+								<h5 class="light grey-text text-lighten-3"><?= $use['description'];?></h5>
+						<?php endif; ?>
+					</div>
 				</div>
 				</li>
 			<?php endforeach; ?>

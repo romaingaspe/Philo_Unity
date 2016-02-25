@@ -1,4 +1,4 @@
-<?php $this->layout('layout2', ['title' => 'Contact']) ?>
+<?php $this->layout('layout', ['title' => 'Contact']) ?>
 
 <?php $this->start('main_content') ?>
 <div class="container section center margetop">
@@ -6,7 +6,7 @@
         <h2>Contacter l'administrateur</h2>
     </div>
     <div class="row">
-        
+
         <form class="col s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
             <div class="row">
                 <div class="input-field col s12 m12 l6">
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="input-field">
-                <input type="submit" name="but" value="Envoyer" class="red accent-2 waves-effect waves-light btn">
+                <input type="submit" name="but" value="Envoyer" class="teal waves-effect waves-light btn">
             </div>
         </form>
     </div>

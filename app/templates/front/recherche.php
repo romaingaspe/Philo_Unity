@@ -8,7 +8,7 @@
 <?php $this->start('main_content') ?>
 
 <section id="allworks" class="row section container">
-
+<h2 class="center">Résultats :</h2>
 <?php foreach ($resultatUser as $resuse):?>
 	<article class="col s12 m6 l4">
 		<div>

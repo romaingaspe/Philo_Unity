@@ -20,14 +20,18 @@
 	<section id="allworks" class="row section container">
 		<?php foreach ($metiers as $met):?>
 				<article class="col s12 m6 l4">
-					<div class="contain-img">
-						<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
+					<div class="grey lighten-4 z-depth-1">
+						<div class=" contain-img">
+							<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
+							<div class="text-box">
+								<h2 class="lighten-4">Voir les profils</h2>
+							<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
+						</div>
 					</div>
 					<div class="text-works center">
 						<h6><?= $met['section']?></h6>
-						<p><?= mb_substr($met['description'], 0 , 400 )?></p>
-						<br>
-						<a href="metiers/<?= $met['alias']?>/profilsall"><?= $met['section']?></a>
+						<p class=""><?= mb_substr($met['description'], 0 , 400 ).'...'?></p>
+					</div>
 					</div>
 				</article>
 		<?php endforeach;?>
