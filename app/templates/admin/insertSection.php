@@ -1,4 +1,4 @@
-<?php $this->layout('layout2',['title' => 'Accueil']) ?>
+<?php $this->layout('layout',['title' => 'Accueil']) ?>
 <?php $this->start('main_content') ?>
     <div class="container center">
         <h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align">Inserer une nouvelle section</h3>
