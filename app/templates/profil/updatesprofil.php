@@ -156,12 +156,13 @@
 										            	<label for="caption">description photo</label>
 										            	<input type="text" name="caption" placeholder="Votre description de la photo" value="<?= $photo['caption']?>">
 										        	</div> 
-													<div class="input-field margetop">
-							      						<button type="submit" name="submit" value="add_project" class="waves-effect waves-light btn">Envoyer</button>
-													</div>
+												
 												</div>
 											
 											<?php } ?>
+											<div class="input-field margetop">
+				      							<button type="submit" name="submit" value="add_project" class="waves-effect waves-light btn">Envoyer</button>
+											</div>
 		        						</form>
 		      							<br>
 									    <div class="container center">
