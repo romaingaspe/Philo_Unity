@@ -13,7 +13,7 @@ $w_config = [
 	'security_id_property' => 'id',					//nom de la colonne pour la clef primaire
 	'security_username_property' => 'prenom',		//nom de la colonne pour le "pseudo"
 	'security_email_property' => 'email',			//nom de la colonne pour l'"email"
-	'security_password_property' => 'password',		//nom de la colonne pour le "mot de passe"
+	'security_password_property' => 'pass',		//nom de la colonne pour le "mot de passe"
 	'security_role_property' => 'role',				//nom de la colonne pour le "role"
 
 	'security_login_route_name' => 'connect',			//nom de la route affichant le formulaire de connexion
