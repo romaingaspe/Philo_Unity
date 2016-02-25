@@ -7,7 +7,7 @@
 			<img class="col s12 col m8 offset-m2 col l6 offset-l3" src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
 		</div>
 	</div>
-	<h1 class="center-align"><?= implode('', $sectionchoix);?></h1>
+	<h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align"><?= implode('', $sectionchoix);?></h1>
 	<div class="container">
 		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>

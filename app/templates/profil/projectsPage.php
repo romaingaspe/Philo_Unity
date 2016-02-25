@@ -96,8 +96,6 @@
             <p class="date-publi">publié le<?= $coms['date']?></p>
         </div>
       <?php endforeach;?>
-      <div class="affich-com col s12 m12 l4">
-      </div>
     <?php endif;?>
   </section>
 
