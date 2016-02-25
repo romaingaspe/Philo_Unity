@@ -10,7 +10,7 @@
       <!-- <div class="cote-titre"></div> -->
     </div>
   </div>
-
+<?php var_dump($photos) ?>
 <!-- 2ème ligne ZONE présentation de projet (description projet à gauche et slide projet à droite) --> 
 
   <section id="description" class="container section">

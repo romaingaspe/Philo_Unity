@@ -7,7 +7,7 @@
 			<img id="resp-logo" class="col s12"src="<?= $this->assetUrl('img/LogoPhilomathique.png') ?>" alt="" />
 		</div>
 	</div>
-	<h1 class="container grey lighten-4 z-depth-1 center-align">Nos métiers</h1>
+	<h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align">Nos métiers</h3>
 	<div class="container">
 		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>
