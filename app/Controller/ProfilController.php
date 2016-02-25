@@ -94,11 +94,11 @@ class ProfilController extends Controller
 
     }
     public function updatePhoto(){
-  
+
       $this->allowTo(['user','Admin']);
       $login = new AuthentificationManager();
       $userManager = new FixUserManager;
-      $infosUser = $this->getUser();  
+      $infosUser = $this->getUser();
       $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png','image/gif');
       $errors =[];
       $validForm = false;
@@ -143,11 +143,11 @@ class ProfilController extends Controller
       $this->showJson($params);
     }
     public function updateProjet(){
-  
+
       $this->allowTo(['user','Admin']);
       $login = new AuthentificationManager();
       $projetsManager = new FixUserManager;
-      $infosUser = $this->getUser();  
+      $infosUser = $this->getUser();
       $mimeTypeAllowed = array('image/jpg', 'image/jpeg', 'image/png','image/gif');
       $errors =[];
       $validForm = false;
@@ -170,8 +170,8 @@ class ProfilController extends Controller
           $nameProjet = $infosUser['id'].$_FILES['photo']['name'];
           //Pour que le nom soit unique et eviter les probleme de nom de fichier on l'incrémente de l'id appartenant à projets
 
-          //chose à faire supprimer ou remplacer le ficher 
-          
+          //chose à faire supprimer ou remplacer le ficher
+
 
           // On upload le fichier
           //$uploadProjet = move_uploaded_file(filename, destination)
@@ -295,7 +295,7 @@ class ProfilController extends Controller
         $login = new AuthentificationManager();
         $projectmanager = new ProjectManager();
         $userManager = new FixUserManager;
-        $infosUser = $this->getUser();  
+        $infosUser = $this->getUser();
         $errors = array();
         $params = array();
         $maxSize = 3024 * 3000;
@@ -320,7 +320,7 @@ class ProfilController extends Controller
         else{
           $params['errors'] = $errors;
         }
-        
+
         //fichier image projets
         if(isset($_FILES['photo']) && $_FILES['photo']['size'] !=0){
           $maxSize = 3*100*1024; //3Mo
@@ -337,7 +337,7 @@ class ProfilController extends Controller
           $tmp_name = $_FILES['photo']['tmp_name'];
           $nameAvatar = $infosUser['id'].$_FILES['photo']['name'];
           //Pour que le nom soit unique et eviter les probleme de nom de fichier on l'incrémente de l'id appartenant à user
-          //supprimer ou remplacer le fichier 
+          //supprimer ou remplacer le fichier
 
 
           $ProjectManager->update([
@@ -354,6 +354,7 @@ class ProfilController extends Controller
         }
         $params['success'] = 'votre nouveaux projet à bien été rajouté vous pouvez rajouter des images plus tard !';
         $this->show('profil/insertProject', $params);
+        }
     }
     public function allprofiles(){
 
