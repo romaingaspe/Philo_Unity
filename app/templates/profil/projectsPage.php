@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-  <!-- 1ère ligne titre --> 
+  <!-- 1ère ligne titre -->
   <div id="gallery-title" class="container row">
     <div class="col s12 m12 l12">
       <div class="center">
@@ -10,8 +10,7 @@
       <!-- <div class="cote-titre"></div> -->
     </div>
   </div>
-<?php var_dump($photos) ?>
-<!-- 2ème ligne ZONE présentation de projet (description projet à gauche et slide projet à droite) --> 
+<!-- 2ème ligne ZONE présentation de projet (description projet à gauche et slide projet à droite) -->
 
   <section id="description" class="container section">
     <div class="row">
@@ -39,7 +38,7 @@
   <!-- ZONE de commentaires où j'afficherai 'commentaire et formulaire' si je suis inscrit-->
   <section class="container comments-bloc">
 
-    
+
     <?php if($w_user) :?>
       <div id="form-com"class="">
         <div class="row">
@@ -84,10 +83,8 @@
           </form>
         </div>
       </div>
-        
-    <?php endif;?>
-    <?php var_dump($user)?>
 
+    <?php endif;?>
     <!-- ZONE de commentaires où j'afficherai SEULEMENT'les commentaires', si je ne suis pas inscrit -->
     <?php if(!$w_user) :?>
       <?php foreach($commentaires as $coms):?>
