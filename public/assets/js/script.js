@@ -11,6 +11,24 @@ $(function(){
     $('.pagination li:first-child').addClass('active');
 });
 $(function(){
+    $('.paginations.pagincomms').click(function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        $('.pagination li').removeClass('active');
+        $(this).parent().removeClass('waves-effect').addClass('active');
+        var data = {
+            page: href
+        }
+        $.ajax({
+            url: pageUrl,
+            data: data,
+            success: function(reponse) {
+                $('.comments').empty();
+            }
+        })
+    });
+})
+$(function(){
     $('.paginations.paginallprofiles').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');

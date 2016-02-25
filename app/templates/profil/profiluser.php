@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-  <!-- 1ère ligne de présentation --> 
+  <!-- 1ère ligne de présentation -->
   <section id="presentation" class="container row">
       <div class="col m6 l6">
         <img class="responsive-img" src="<?= $_SESSION['user']['photo'] ?>" alt="gfr"/>
@@ -13,8 +13,8 @@
         <p class="teal lighten-5"><?= $profil['description']?></p>
       </div>
   </section>
-  
-  <!-- 2ème ligne titre --> 
+
+  <!-- 2ème ligne titre -->
 	<div id="gallery-title" class="container row">
 		<div class="col s12 m12 l12">
 			<span class="col s1 m1 l1 center-align patch-leftside">2</span>
@@ -25,7 +25,7 @@
 
 
 	<!-- 3ème ligne gallerie -->
-	
+
 		<div id="cards-folio" class="container row isotope">
 			<div id="cards-global-content"> <!-- div qui contient toutes mes cartes de projets -->
 
@@ -40,21 +40,21 @@
 								<span class="card-title activator brown-text text-darken-4"><?= $projet['date_publish']?></span>
 							</a>
 						</div>
-						<div class="card-image waves-effect waves-block waves-light">
+						<div class="card-image waves-block waves-light">
 							<a href="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
 								<div>
 									<p><?= mb_substr($projet['description'], 0 , 130)?>...</p>
 									<div class="contain-img">
-										<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class=" hov-zoom responsive-img wp-post-image" alt="Le Café Des Bois / Plateau Mont-Royal, Montréal" title="Le Café Des Bois / Plateau Mont-Royal, Montréal">
+										<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class=" hov-zoom responsive-img wp-post-image">
 									</div>
-									
+
 								</div>
 						</div>
 					</div>
 				</div>
 			<?php endforeach;?>
 		</div>
-	
-     
+
+
 
 <?php $this->stop('main_content') ?>

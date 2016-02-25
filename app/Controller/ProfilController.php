@@ -240,24 +240,39 @@ class ProfilController extends Controller
       }
 
       $projetManager = new ProjetManager(); // methode manager qui va chercher le projet d'id $id
+      $num = 6;
+      $page = 1;
+      $start = ($page-1) * $num;
       $params = [
         'projets' => $projetManager->find($id),
         // récupérer la liste de photos de ce projet
         // pour les afficher dans la vue projectsPage
         'photos'=> $projetManager->getProjectPhotos($id),
-        'commentaires' => $commentaireManager->getProjectCommentaires($id),
         'erreurs'=> implode('<br>', $err),
         'formValid' => $formValid,
         'formError' => $formError,
         'user' => $this->getUser(),
+        ];
+        $allcomms = $commentaireManager->getProjectCommentaires($id, 'date', $num, $start);
+        $params['commentaires'] = $allcomms;
 
-      ];
 
+      $commz = count($commentaireManager->getProjectCommentaires($id));
+      $totalpages = ceil($commz/$num);
+      $params['totalpages'] = $totalpages;
 
       $this->show('profil/projectsPage', $params);
-
     }
 
+    public function ajaxprojectspagepagin($id){
+
+        $commsdb = new CommentaireManager;
+        $num = 6;
+        $page = $_GET['page'];
+        $start = ($page-1) * $num;
+        $comms = $commsdb->getProjectCommentaires($id, 'date' , $num, $start);
+        $this->showJson($comms);
+    }
     public function profilsAll($section)
     {
       $metier = new MetierManager;

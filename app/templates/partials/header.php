@@ -67,14 +67,27 @@
 				<li class="white"><a href="<?= $this->url('allprofiles') ?>" class="white">Les profils</a></li>
 				<?php if(!$w_user) :?><li class="white"><a href="<?= $this->url('connect') ?>" class="white">Se connecter</a></li><?php endif;?>
 				<?php if($w_user) :?><li class="white"><a href="<?= $this->url('deconnect') ?>" class="white">Se deconnecter</a></li><?php endif;?>
-				<?php if($w_user)  :?>
-					<li>
-						<a href="#" class="col l6 dropdown-button" data-beloworigin="true" data-activates="dropdown1" id="loginfo">
-								<img src="<?= $this->assetUrl($w_user['photo']) ?>" alt="" class="left circle  profilePic" id="circleprofil"/>
-						&nbsp;&nbsp;&nbsp;Mon profil
-						<i class="material-icons right">arrow_drop_down</i>
-					</a>
+				<?php if($w_user) :?>
+					<li class="white">
+						<ul data-collapsible="accordion" class="collapsible">
+							<li>
+								<div class="collapsible-header white black-text">
+									<img src="<?= $this->assetUrl($w_user['photo']) ?>" alt="" class="left circle profilePic" id="circleprofil"/>
+										&nbsp;&nbsp;&nbsp;Mon profil
+								</div>
+								<form class="center collapsible-body" action="<?= $this->url('recherche') ?>" method="GET" >
+									<a class="center" href="<?= $this->url('profiluser', ['id' => $_SESSION['user']['id'] ])?>">Mon profil</a>
+								  	<a class="black-text" href="<?= $this->url('updateProfil') ?>">Mes infos</a>
+								  	<?php if($w_user['role']=='Admin'):?>
+						  			<a class="black-text" href="<?= $this->url('insertProfil') ?>">Entrer un nouvel utilisateur</a>
+						  			<?php endif;?>
+						  			<?php if($w_user['role']=='Admin'):?>
+						  			<a class="black-text" href="<?= $this->url('insertSection') ?>">Entrer une nouvelle section</a>
+								</form>
+							</li>
+						</ul>
 					</li>
+			  	<?php endif;?>
 				<?php endif;?>
 			</ul>
 			<ul id="nav-resp" class=" col s12 m6 l4 right hide-on-med-and-down">

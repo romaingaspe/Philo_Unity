@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-  <!-- 1ère ligne titre --> 
+  <!-- 1ère ligne titre -->
   <div id="gallery-title" class="container row">
     <div class="col s12 m12 l12">
       <div class="center">
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-<!-- 2ème ligne ZONE présentation de projet (description projet à gauche et slide projet à droite) --> 
+<!-- 2ème ligne ZONE présentation de projet (description projet à gauche et slide projet à droite) -->
 
   <section id="description" class="container section">
     <div class="row">
@@ -39,7 +39,7 @@
   <!-- ZONE de commentaires où j'afficherai 'commentaire et formulaire' si je suis inscrit-->
   <section class="container comments-bloc">
 
-    
+
     <?php if($w_user) :?>
       <div id="form-com"class="">
         <div class="row">
@@ -84,23 +84,38 @@
           </form>
         </div>
       </div>
-        
-    <?php endif;?>
-    <?php var_dump($user)?>
 
+    <?php endif;?>
+    <div class="container">
+        <ul class="pagination center">
+            <?php for($i=1; $i<=$totalpages; $i++):?>
+                <li class="waves-effect btn">
+                    <a class="paginations pagincomms white-text" href="<?=$i?>"><?= $i?></a>
+                </li>
+            <?php endfor;?>
+        </ul>
+    </div>
     <!-- ZONE de commentaires où j'afficherai SEULEMENT'les commentaires', si je ne suis pas inscrit -->
     <?php if(!$w_user) :?>
-      <?php foreach($commentaires as $coms):?>
-        <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
-        <div id="com-project" class="grey lighten-2 ">
-            <h7><?= $coms['titre']?></h7>
-            <p><?= $coms['comments']?></p>
-            <p class="date-publi">publié le<?= $coms['date']?></p>
+        <div class="comments">
+          <?php foreach($commentaires as $coms):?>
+                <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
+                <div id="com-project" class="grey lighten-2 ">
+                    <h7><?= $coms['titre']?></h7>
+                    <p><?= $coms['comments']?></p>
+                    <p class="date-publi">publié le<?= $coms['date']?></p>
+                </div>
+          <?php endforeach;?>
         </div>
-      <?php endforeach;?>
       <div class="affich-com col s12 m12 l4">
       </div>
     <?php endif;?>
   </section>
 
 <?php $this->stop('main_content') ?>
+
+<?php $this->start('script') ?>
+	<script type="text/javascript">
+		var pageUrl = '<?= $this->url('ajaxprojectspagepagin', ["id" => $projets['id']]) ?>';
+	</script>
+<?php $this->stop('script') ?>

@@ -81,8 +81,9 @@ ul.pagination{
 	max-height: 40px;
 	max-width: 40px;
 }
-i{
+nav i{
 	color:white;
+	height: auto !important;
 }
 #profil{
 	height: 600px;
@@ -599,9 +600,9 @@ div #slideprojet h5{
 #line-postcom p{
 	padding: 0;
 	margin-bottom: 25px;
-	padding-top: 5%; 
-	padding-left: 1%; 
-	color: darkgrey; 
+	padding-top: 5%;
+	padding-left: 1%;
+	color: darkgrey;
 	font-size: 75%;
 }
 

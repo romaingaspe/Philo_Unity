@@ -23,6 +23,7 @@
 
 
 		['GET|POST', '/profil/portfolio/projectspage/[:id]', 'Profil#projectsPage', 'projectsPage'],
+		['GET', '/profil/portfolio/projectspage/[:id]/ajaxpagin', 'Profil#ajaxprojectspagepagin', 'ajaxprojectspagepagin'],
 
 		////////////////////////////METIERS////////////////////////////////////////////////////////
 		['GET', '/metiers', 'metiers#metiers', 'metiers'],
