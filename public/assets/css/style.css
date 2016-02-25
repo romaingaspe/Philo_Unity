@@ -29,6 +29,10 @@ body{
 .contain-img:hover .text-box {
 	opacity:0.5;
 }
+.text-box h2{
+	padding-top: 3em;
+	font-size: 1.5em;
+}
 .text-box {
 	position: absolute;
 	text-align: center;
@@ -44,6 +48,7 @@ body{
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
+
 
 /*************************END HOVER IMAGE PROFILS METIER...********************/
 #marge-titre{
@@ -368,8 +373,9 @@ footer .row{
 	margin: 3%;
 }
 #allworks h6{
-	padding: 3%;
+	padding: 4%;
 	text-align: justify;
+	margin: 0;
 }
 #allworks article{
 	margin-bottom: 3%;
