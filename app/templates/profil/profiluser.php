@@ -5,21 +5,19 @@
   <!-- 1ère ligne de présentation --> 
   <section id="presentation" class="container row">
       <div class="col m6 l6">
-        <img class="responsive-img" src="<?= $_SESSION['user']['photo'] ?>" alt="gfr"/>
+        <img class="responsive-img" src="<?= $profil['photo']?>" alt="gfr"/>
       </div>
       <div class="col m6 l6">
         <h4><?= $profil['prenom'].' '.$profil['nom'] ?></h4>
-        <h5><?= $profil['id_metier']?></h5>
-        <p class="teal lighten-5"><?= $profil['description']?></p>
+        <h5><?= $profil['id']?></h5>
+        <p class=""><?= $profil['description']?></p>
       </div>
   </section>
   
   <!-- 2ème ligne titre --> 
 	<div id="gallery-title" class="container row">
 		<div class="col s12 m12 l12">
-			<span class="col s1 m1 l1 center-align patch-leftside">2</span>
-			<span class="col s10 m10 l10 center-align patch-centered teal lighten-5">Gallerie des projets</span>
-			<span class="col s1 m1 l1 center-align patch-rightside">2</span>
+			<span class="col s12 m12 l12 center-align patch-centered ">Gallerie des projets de <h6><?= $profil['prenom'].' '.$profil['nom'] ?></h6></span>
 		</div>
 	</div>
 
