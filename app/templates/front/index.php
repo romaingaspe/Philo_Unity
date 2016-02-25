@@ -18,9 +18,9 @@
 	    <ul class="slides louil" >
 			<?php foreach ($users as $use): ?>
 				<li class="row">
-				  <img class="col l4"src="<?= $use['photo'];?>">
-			    <div class="teal col l8 slida">
-					<h3><?= $use['nom'].' '.$use['prenom'];?></h3>
+				  <img class="col l6"src="<?= $use['photo'];?>">
+			    <div class="teal col l6 slida">
+					<h3 class="white-text"><?= $use['nom'].' '.$use['prenom'];?></h3>
 					<?php if (strlen($use['description']) > 50): ?>
 						<h5 class="light grey-text text-lighten-3"><?= mb_substr($use['description'], 0 , 50).'...';?></h5>
 						<?php else: ?>

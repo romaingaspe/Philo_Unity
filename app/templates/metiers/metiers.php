@@ -19,15 +19,17 @@
 	</div>
 	<section id="allworks" class="row section container">
 		<?php foreach ($metiers as $met):?>
-				<article class="col s12 m6 l4">
-					<div class="contain-img">
+				<article class=" col s12 m6 l4">
+					<div class="teal lighten-5">
+					<div class=" contain-img">
 						<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
 					</div>
-					<div class="text-works center">
+					<div class=" text-works center">
 						<h6><?= $met['section']?></h6>
-						<p><?= mb_substr($met['description'], 0 , 400 )?></p>
+						<p class=""><?= mb_substr($met['description'], 0 , 400 ).'...'?></p>
 						<br>
 						<a href="metiers/<?= $met['alias']?>/profilsall"><?= $met['section']?></a>
+					</div>
 					</div>
 				</article>
 		<?php endforeach;?>
