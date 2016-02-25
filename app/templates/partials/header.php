@@ -83,11 +83,11 @@
 						  			<?php endif;?>
 						  			<?php if($w_user['role']=='Admin'):?>
 						  			<a class="black-text" href="<?= $this->url('insertSection') ?>">Entrer une nouvelle section</a>
+			  						<?php endif;?>
 								</form>
 							</li>
 						</ul>
 					</li>
-			  	<?php endif;?>
 				<?php endif;?>
 			</ul>
 			<ul id="nav-resp" class=" col s12 m6 l4 right hide-on-med-and-down">
