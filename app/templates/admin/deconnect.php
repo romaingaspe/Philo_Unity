@@ -4,14 +4,14 @@
 <?php if($vue == true ):?>
 <div class="container section center margetop">
   <div class="row center">
-    <div class="col s8 offset-s2  m8 offset-m2 l6 offset-l3 center align card-panel brown lighten-2 box shadow-effect">
+    <div class="col s8 offset-s2  m8 offset-m2 l6 offset-l3 center align card-panel grey lighten-3 box shadow-effect">
       <h3 class="white-text">Déconnexion</h3>
-      <p class="white-text">Etes vous sur de vouloir vous déconnecter ?</p>
+      <p class="white-text grey lighten-3">Etes vous sur de vouloir vous déconnecter ?</p>
     </div>
   <form method="POST" class="s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
-  <div class="input-field">
-      <input type="submit" name="but" value="deconnexion" class="waves-effect waves-light btn deco-btn">
-  </div>
+    <div class="input-field">
+        <input type="submit" name="but" value="deconnexion" class="waves-effect waves-light btn deco-btn">
+    </div>
   </form>
 </div>
   <div class="center">
@@ -23,7 +23,7 @@
 
   <div class="container section center">
     <div class="row center">
-      <div class="col s8 offset-s2  m8 offset-m2col l6 offset-l3 center align card-panel brown lighten-2 box shadow-effect">
+      <div class="col s8 offset-s2  m8 offset-m2col l6 offset-l3 center align card-panel grey lighten-3 box shadow-effect">
         <h3 class="white-text">Vous êtes déconnecté(e) </h3>
         <p class="white-text">Philomathique Unity vous souhaite une excellente Journée :) </p>
       </div>
