@@ -300,6 +300,7 @@ footer .row{
 }
 .box h3{ /* retrait de quelques rem du margin bottom pour équilibrer contenu box */
 	margin: 1.46rem 0 0.8rem 0;
+	color: #128b82 !important;
 }
 .shadow-effect{
 	position: relative !important;
@@ -378,7 +379,7 @@ footer .row{
 	margin: 3%;
 }
 #allworks h6{
-	padding: 4%;
+	padding: 5% 0 5% 0;
 	text-align: justify;
 	margin: 0;
 }
