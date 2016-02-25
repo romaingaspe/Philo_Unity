@@ -37,14 +37,11 @@
 
   <!-- ZONE de commentaires où j'afficherai 'commentaire et formulaire' si je suis inscrit-->
   <section class="container comments-bloc">
-
-
-    <?php if($w_user) :?>
       <div id="form-com"class="">
         <div class="row">
 
         <!-- Gauche : commentaires des utilisateurs -->
-          <div class="affich-com col s12 m12 l4">
+          <div class="comments affich-com col s12 m12 <?php if($w_user) { echo 'l4'; } else { echo 'l12';} ?>">
             <?php foreach($commentaires as $coms):?>
               <h5 class="center-align">Commentaire de <?= $w_user['prenom'].' '.$w_user['nom']?></h5>
               <div id="com-project" class="grey lighten-2 ">
@@ -54,6 +51,8 @@
               </div>
             <?php endforeach;?>
           </div>
+
+        <?php if($w_user) :?>
           <!-- Droite : formulaire apparant pour les utilisateurs-->
           <form class="col s12 m12 l8" method="POST" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
             <?php if($formError):?>
@@ -84,7 +83,7 @@
         </div>
       </div>
     <?php endif;?>
-    
+
     <div class="container">
         <ul class="pagination center">
             <?php for($i=1; $i<=$totalpages; $i++):?>
@@ -94,21 +93,6 @@
             <?php endfor;?>
         </ul>
     </div>
-    <!-- ZONE de commentaires où j'afficherai SEULEMENT'les commentaires', si je ne suis pas inscrit -->
-    <?php if(!$w_user) :?>
-        <div class="comments">
-          <?php foreach($commentaires as $coms):?>
-                <h5 class="center-align">Commentaire de <?= $coms['prenomUser'].' '.$coms['nomUser']?></h5>
-                <div id="com-project" class="grey lighten-2 ">
-                    <h7><?= $coms['titre']?></h7>
-                    <p><?= $coms['comments']?></p>
-                    <p class="date-publi">publié le<?= $coms['date']?></p>
-                </div>
-          <?php endforeach;?>
-        </div>
-      <div class="affich-com col s12 m12 l4">
-      </div>
-    <?php endif;?>
   </section>
 
 <?php $this->stop('main_content') ?>

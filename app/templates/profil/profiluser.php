@@ -45,8 +45,8 @@
 									<div class="contain-img">
 										<img width="640" height="480" src="<?= $projet['photos'][0]['photo']?>" class=" hov-zoom responsive-img wp-post-image">
 									</div>
-
 								</div>
+                            </a>
 						</div>
 					</div>
 				</div>
