@@ -2,16 +2,6 @@
 
 <?php $this->start('main_content') ?>
 
-	<div class="row">
-
-		<div id="banner-project" class="container center-align col s6 m8 offset-m2 offset-l3 offset-s3 l6 card-panel hoverable grey lighten-2"
-		 			style=""><span class="left"style="background-color: #128b82;padding: 15px;color: transparent;">1 1
-		 			</span>condition d'utilisation<span class="right"style="background-color: #128b82;padding: 15px;color: transparent;">2 2
-		 			</span>
-
-		</div>
-	</div>
-	</div></br></br>
 
 	<div class="container">
 
@@ -23,14 +13,14 @@
 
 		<section id="cont-des-CGU" class=" center-align container center-align card- grey lighten-5">
 
-		<h4 id"titre-CGU" class="center-align container center-align card- teal bn">1) Propriété intellectuelle</h4></br>
+		<h4 id"titre-CGU" class="center-align container center-align card- red-text text-lighten-2 bn">1) Propriété intellectuelle</h4></br>
 
 			<p>Les marques "Philomatique et philomatique Unity" sont des marques déposées.Toute représentation et/ou reproduction et/ou exploitation partielle ou totale de ces marques, de quelque nature que ce soit, est totalement prohibée.<br><br>Tous les éléments de ce site, y compris les documents téléchargeables, sont libres de droit. A l’exception de l’iconographie, la reproduction des pages de ce site est autorisée à la condition d’y mentionner la source. Elles ne peuvent être utilisées à des fins commerciales et publicitaires.</p><br>
 		</section>
 
 		<section id="cont-des-CGU" class=" container center-align card- teal grey lighten-5">
 
-		<h4 id"titre-CGU" class="container card- teal bn">2) Liens hypertextes</h4></br>
+		<h4 id"titre-CGU" class="container card- red-text text-lighten-2 bn">2) Liens hypertextes</h4></br>
 
 			<p>Le site Philomatque Unity peut contenir des liens hypertextes vers d’autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site Philomatque Unity,<br><br>
 			Il est possible de créer un lien vers la page de présentation de ce site sans autorisation expresse de l’EDITEUR. Aucune autorisation ou demande d’information préalable ne peut être exigée par l’éditeur à l’égard d’un site qui souhaite établir un lien vers le site de l’éditeur. Il convient toutefois d’afficher ce site dans une nouvelle fenêtre du navigateur. Cependant, l’EDITEUR se réserve le droit de demander la suppression d’un lien qu’il estime non conforme à l’objet du site Philomatque Unity</p><br>
@@ -39,7 +29,7 @@
 
 		<section id="cont-des-CGU" class=" container center-align card- teal grey lighten-5">
 
-		<h4 id"titre-CGU" class="center-align container  card- teal bn">3) Responsabilité de l’éditeur</h4></br>
+		<h4 id"titre-CGU" class="center-align container  card- red-text text-lighten-2  bn">3) Responsabilité de l’éditeur</h4></br>
 
 			<p>Les informations et/ou documents figurant sur ce site et/ou accessibles par ce site proviennent de sources considérées comme étant fiables.<br><br>
 
@@ -58,7 +48,7 @@
 		</section>
 		<section id="cont-des-CGU" class=" container center-align card- teal grey lighten-5">
 
-		<h4 id"titre-CGU" class="center-align container card- teal bn">4) Règles d'usage d'Internet</h4></br>
+		<h4 id"titre-CGU" class="center-align container card- red-text text-lighten-2  bn">4) Règles d'usage d'Internet</h4></br>
 
 			<p>L’utilisateur déclare accepter les caractéristiques et les limites d’Internet, et notamment reconnaît que :
 
@@ -75,7 +65,7 @@
 		</section>
 		<section id="cont-des-CGU" class=" container center-align card- teal grey lighten-5">
 
-		<h4 id"titre-CGU" class="center-align container card- teal bn">5) Droit applicable</h4></br>
+		<h4 id"titre-CGU" class="center-align container card- red-text text-lighten-2  bn">5) Droit applicable</h4></br>
 
 			<p>Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit français, quel que soit le lieu d’utilisation.En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.
 
@@ -85,7 +75,7 @@
 		</section>
 		<section id="cont-des-CGU" class=" container center-align card- teal grey lighten-5">
 
-		<h4 id"titre-CGU" class="center-align container card- teal bn">6) Accès au site</h4></br>
+		<h4 id"titre-CGU" class="center-align container card- red-text text-lighten-2  bn">6) Accès au site</h4></br>
 
 			<p>L’éditeur s’efforce de permettre l’accès au site 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d’un événement hors du contrôle de l’EDITEUR, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du site et des services.<br><br>
 
@@ -99,7 +89,7 @@
 
 		<section id="cont-des-CGU" class=" container center-align card- teal grey lighten-5">
 
-		<h4 id"titre-CGU" class="center-align container card- teal">7) Modification des conditions d’utilisation</h4></br>
+		<h4 id"titre-CGU" class="center-align container card- red-text text-lighten-2 ">7) Modification des conditions d’utilisation</h4></br>
 
 			<p>L’EDITEUR se réserve la possibilité de modifier, à tout moment et sans préavis, les présentes conditions d’utilisation afin de les adapter aux évolutions du site et/ou de son exploitation.</p></br>
 		</section>
