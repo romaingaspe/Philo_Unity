@@ -70,7 +70,7 @@ $(function(){
                     .append($('<div>')
                         .append($('<img>').attr('src', reponse[m].photo).addClass('hov-zoom')))
                         .append($('<div>').addClass('text-box')
-                        .append($('<h2>').text('Visiter le Profil'))
+                        .append($('<h2>').text('Voir les profils'))
                         .append($('<a>').attr('href', '/philo_unity/public/metiers/'+reponse[m].alias+'/profilsall'))))
                     .append($('<div>').addClass('text-works')
                     .addClass('center')

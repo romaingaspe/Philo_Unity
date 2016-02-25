@@ -24,9 +24,7 @@
 						<div class=" contain-img">
 							<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
 							<div class="text-box">
-								<h2 class="lighten-4">
-									<?= $met['section']?>
-								</h2>
+								<h2 class="lighten-4">Voir les profils</h2>
 							<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
 						</div>
 					</div>
