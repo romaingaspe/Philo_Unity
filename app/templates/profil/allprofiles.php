@@ -1,7 +1,7 @@
 <?php $this->layout('layout', ['title' => 'Profils']) ?>
 
 <?php $this->start('main_content') ?>
-	<h3 class="container grey lighten-4 z-depth-1 center-align">Tous les profils</h3>
+	<h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align">Tous les profils</h3>
 	<div class="container">
 		<ul class="pagination center">
 			<?php for($i=1; $i<=$totalpages; $i++):?>
