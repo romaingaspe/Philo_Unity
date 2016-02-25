@@ -2,16 +2,16 @@
 
 <?php $this->start('main_content') ?>
 
-  <div class="row">
-    <div id="banner-project" class="container center-align card-panel hoverable grey lighten-2 col l8 offset-l2">
-      <span class="left">1 1
-      </span>
-        PROJETS:
-      <span class="right">2 2
-      </span>
+  <!-- 1ère ligne titre --> 
+  <div id="gallery-title" class="container row">
+    <div class="col s12 m12 l12">
+      <div class="center">
+      <span class="col offset-s1 s10 offset-m1 m10 offset-l1 l10 center-align patch-centered teal lighten-5">Projets</span></div>
+      <!-- <div class="cote-titre"></div> -->
     </div>
   </div>
 
+<!-- 2ème ligne ZONE présentation de projet (description projet à gauche et slide projet à droite) --> 
 
   <section id="description" class="container section">
     <div class="row">
@@ -36,10 +36,10 @@
   </section>
 
 
-  <!-- zone de commentaires où j'afficherai 'commentaire et formulaire' si je suis inscrit-->
+  <!-- ZONE de commentaires où j'afficherai 'commentaire et formulaire' si je suis inscrit-->
   <section class="container comments-bloc">
 
-    <!-- formulaire -->
+    
     <?php if($w_user) :?>
       <div id="form-com"class="">
         <div class="row">
@@ -55,9 +55,7 @@
               </div>
             <?php endforeach;?>
           </div>
-          <!-- Pb d'ajout de texte intempestif en base de données
-          J'essaie de régler ce problème, je teste donc avec un nouveau contenu de texte si ma page se recharge sans rajouter du texte en base de données... -->
-
+          <!-- formulaire -->
           <form class="col s12 m12 l8" method="POST" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
             <?php if($formError):?>
               <p class="error"><?= $erreurs ?></p>
@@ -71,11 +69,11 @@
             <div class="row">
               <div class="input-field col s12 m12 l12">
                 <input id="titre" type="text" class="validate" name="titre">
-                <label for="titre">titre de votre commentaire</label>
+                <label for="titre">Titre de votre commentaire</label>
               </div>
               <div id="line-postcom" class="input-field col s12 m12 l12">
                   <textarea id="comments" type="text" class="materialize-textarea validate" name="comments"></textarea>
-                  <label for="comments">votre commentaire</label>
+                  <label for="comments">Votre commentaire</label>
                   <p class="left" style="padding-top: 5%; padding-left: 1%; color: darkgrey; font-size: 75%;">0/400 caractères</p>
               </div>
             </div>
@@ -86,8 +84,10 @@
           </div>
         </div>
     <?php endif;?>
-    <?php var_dump($user)?>
-    <?php if(!$w_user) :?><!-- zone de commentaires où j'afficherai 'les commentaires', si je ne suis pas inscrit -->
+    <!-- <?php var_dump($user)?> -->
+
+    <!-- ZONE de commentaires où j'afficherai SEULEMENT'les commentaires', si je ne suis pas inscrit -->
+    <?php if(!$w_user) :?>
       <?php foreach($commentaires as $coms):?>
           <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
           <div id="com-project" class="grey lighten-2 ">
