@@ -23,7 +23,7 @@
 			<article class="grey lighten-4 col s12 m6 l4">
 				<div class="grey lighten-4">
 					<div class=" contain-img">
-						<img class="hov-zoom photo-work responsive-img" src="<?= $use['photo']?>" alt="">
+						<img class="hov-zoom photo-work responsive-img" src="<?=  $this->assetUrl($use['photo'])?>" alt="">
 					<div class="text-box ">
 						<h2>Visiter le Profil</h2>
 						<a class="link-metier" href="/philo_unity/public/profil/profiluser/<?= $use['id']?>"></a>
