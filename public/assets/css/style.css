@@ -42,10 +42,6 @@
 }
 
 /*************************END HOVER IMAGE PROFILS METIER...********************/
-body{
-	background-image: url();
-}
-
 .louil{
 	height: 600px !important;
 }
@@ -358,8 +354,8 @@ footer .row{
 }
 #allworks p{
 	height:15em;
-	padding: 3%;
-    text-align: justify;
+  text-align: justify;
+	margin: 3%;
 }
 #allworks h6{
 	padding: 3%;
