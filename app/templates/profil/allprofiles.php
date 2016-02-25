@@ -15,15 +15,20 @@
 	<!-- les articles ne doivent être cliquables que si il y a du contenu généré(voir avec js) -->
 		<?php foreach ($users as $use):?>
 			<article class="col s12 m6 l4">
-				<div>
-					<img class="photo-work responsive-img" src="<?= $use['photo']?>" alt="">
+				<div class="TEAL">
+					<div class=" contain-img">
+						<img class="hov-zoom photo-work responsive-img" src="<?= $use['photo']?>" alt="">
+					<div class="text-box">
+						<h2>Visiter le Profil</h2>
+						<a class="link-metier" href="/philo_unity/public/profil/profiluser/<?= $use['id']?>"></a>
+					</div>
+					</div>
+					<div class="text-works center">
+						<h6 ><?= $use['prenom'].' '.$use['nom']?></h6>
+						<p><?= mb_substr($use['description'], 0 , 400 )?></p>
+						<br>
 				</div>
-				<div class="text-works center">
-					<h6><?= $use['prenom'].' '.$use['nom']?></h6>
-					<p><?= mb_substr($use['description'], 0 , 400 )?></p>
-					<br>
-					<a href="/philo_unity/public/profil/profiluser/<?= $use['id']?>">Visiter le Profil</a>
-				</div>
+			</div>
 			</article>
 		<?php endforeach;?>
 	</section>

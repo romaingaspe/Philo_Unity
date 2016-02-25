@@ -21,15 +21,14 @@
 		<?php foreach ($metiers as $met):?>
 				<article class=" col s12 m6 l4">
 					<div class="teal lighten-5">
-					<div class=" contain-img">
-						<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
-						<div class="text-box">
-							<h2 class="lighten-4">
-								<?= $met['section']?>
-							</h2>
-						<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
-					</div>
-					</img>
+						<div class=" contain-img">
+							<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
+							<div class="text-box">
+								<h2 class="lighten-4">
+									<?= $met['section']?>
+								</h2>
+							<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
+						</div>
 					</div>
 					<div class=" text-works center">
 						<h6><?= $met['section']?></h6>
