@@ -39,7 +39,7 @@ class FixUserManager extends \W\Manager\UserManager {
 		$projets = $sth->fetchAll();
 
 		foreach ($projets as &$projet) {
-			$sql = "SELECT * FROM `photos` WHERE id_projet = :id";
+			$sql = "SELECT * FROM photos WHERE id_projet = :id";
 			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(":id", $projet['id']);
 			$sth->execute();

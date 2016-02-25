@@ -102,7 +102,7 @@ class AdminController extends Controller
 	}
 	public function connect()
 	{
-
+		$userManager = new FixUserManager();
 		$login = new AuthentificationManager();
 		$errors = array();
 		$params = array(); // Les paramètres qu'on envoi a la vue, on utilisera les clés du tableau précédé par un $ pour les utiliser dans la vue
@@ -111,7 +111,7 @@ class AdminController extends Controller
 			if(empty($_POST['login'])){
 				$errors[] = 'Le Login est vide';
 			}
-			elseif(!filter_var($_POST['login'], FILTER_VALIDATE_EMAIL) !== false){
+			elseif(!filter_var($_POST['login'], FILTER_VALIDATE_EMAIL) != false){
 				$errors[] = 'Le Login est invalide';
 			}
 			if(empty($_POST['pass'])){
@@ -122,7 +122,7 @@ class AdminController extends Controller
 				// si ces infos sont valides en BD
 				$userId = $login->isValidLoginInfo($_POST['login'], $_POST['pass']);
 				if(is_int($userId) && $userId != 0){
-					$userManager = new UserManager();
+
 					$userDatas = $userManager->find($userId);
 					// alors démarrer la session (logUserIn)
 					$login->logUserIn($userDatas);
