@@ -6,7 +6,7 @@
   <div id="gallery-title" class="container row">
     <div class="col s12 m12 l12">
       <div class="center">
-      <span class="col offset-s1 s10 offset-m1 m10 offset-l1 l10 center-align patch-centered teal lighten-5">Projets</span></div>
+      <span class="col offset-s1 s10 offset-m1 m10 offset-l1 l10 center-align patch-centered nw-titleentete">Projet n° <?= $projets['id']?></span></div>
       <!-- <div class="cote-titre"></div> -->
     </div>
   </div>
@@ -44,7 +44,7 @@
       <div id="form-com"class="">
         <div class="row">
 
-          <!-- commentaires -->
+        <!-- Gauche : commentaires des utilisateurs -->
           <div class="affich-com col s12 m12 l4">
             <?php foreach($commentaires as $coms):?>
               <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
@@ -55,7 +55,7 @@
               </div>
             <?php endforeach;?>
           </div>
-          <!-- formulaire -->
+          <!-- Droite : formulaire apparant pour les utilisateurs-->
           <form class="col s12 m12 l8" method="POST" action="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
             <?php if($formError):?>
               <p class="error"><?= $erreurs ?></p>
@@ -74,28 +74,32 @@
               <div id="line-postcom" class="input-field col s12 m12 l12">
                   <textarea id="comments" type="text" class="materialize-textarea validate" name="comments"></textarea>
                   <label for="comments">Votre commentaire</label>
-                  <p class="left" style="padding-top: 5%; padding-left: 1%; color: darkgrey; font-size: 75%;">0/400 caractères</p>
+                  <p class="left">0/400 caractères</p>
               </div>
             </div>
             <div class="col s12 m12 l12">
                 <button type="submit" class="waves-effect waves-light btn right">Envoyer</button>
             </div>
+
           </form>
-          </div>
         </div>
+      </div>
+        
     <?php endif;?>
-    <!-- <?php var_dump($user)?> -->
+    <?php var_dump($user)?>
 
     <!-- ZONE de commentaires où j'afficherai SEULEMENT'les commentaires', si je ne suis pas inscrit -->
     <?php if(!$w_user) :?>
       <?php foreach($commentaires as $coms):?>
-          <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
-          <div id="com-project" class="grey lighten-2 ">
-              <h7><?= $coms['titre']?></h7>
-              <p><?= $coms['comments']?></p>
-              <p class="date-publi">publié le<?= $coms['date']?></p>
-          </div>
-        <?php endforeach;?>
+        <h5 class="center-align">Commentaire de <?= $user['prenom'].' '.$user['nom']?></h5>
+        <div id="com-project" class="grey lighten-2 ">
+            <h7><?= $coms['titre']?></h7>
+            <p><?= $coms['comments']?></p>
+            <p class="date-publi">publié le<?= $coms['date']?></p>
+        </div>
+      <?php endforeach;?>
+      <div class="affich-com col s12 m12 l4">
+      </div>
     <?php endif;?>
   </section>
 

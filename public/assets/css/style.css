@@ -512,8 +512,13 @@ footer .row{
 
 }
 
-#titleentete{
+/* #titleentete{
 	background-color: #e0f2f1;
+} */
+.nw-titleentete{
+	    margin-top: 51px;
+    font-size: 25px;
+    text-transform: uppercase;
 }
 div #slideprojet{
 	padding: 0 !important;
@@ -527,12 +532,13 @@ div #slideprojet h5{
 }
 
 #titleprojet h4{
-    background-color: #128b82;
+    background-color: #fff;
     margin-top: 0 !important;
     font-size: 1.7em;
     text-align: center;
-    color: white;
+    color: #128b82;
     padding: 10px 0;
+    border: 0.001em solid #128b82;
 }
 #titleprojet p{
 	margin-bottom: 10px;
@@ -594,6 +600,15 @@ div #slideprojet h5{
 	padding: 0;
 	margin-bottom: 25px;
 }
+#line-postcom p{
+	padding: 0;
+	margin-bottom: 25px;
+	padding-top: 5%; 
+	padding-left: 1%; 
+	color: darkgrey; 
+	font-size: 75%;
+}
+
 p.date-publi{
 	font-style: italic;
 	font-size: 0.8em;
