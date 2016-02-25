@@ -23,12 +23,18 @@
 					<div class="teal lighten-5">
 					<div class=" contain-img">
 						<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
+						<div class="text-box">
+							<h2 class="lighten-4">
+								<?= $met['section']?>
+							</h2>
+						<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
+					</div>
+					</img>
 					</div>
 					<div class=" text-works center">
 						<h6><?= $met['section']?></h6>
 						<p class=""><?= mb_substr($met['description'], 0 , 400 ).'...'?></p>
 						<br>
-						<a href="metiers/<?= $met['alias']?>/profilsall"><?= $met['section']?></a>
 					</div>
 					</div>
 				</article>
