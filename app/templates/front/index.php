@@ -9,25 +9,25 @@
 	</div>
 </div>
 <div class="row section center container" id="presentation">
-	<p>
+	<p class="grey lighten-4 z-depth-1 center-align">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</p>
 </div>
 <div class="container">
-	<div class="slider louil">
+	<div class="slider louil z-depth-1">
 	    <ul class="slides louil" >
 			<?php foreach ($users as $use): ?>
 				<li class="row">
 				  <img class="col l5"src="<?= $use['photo'];?>">
-			    <div class="brown col l7 slida valign-wrapper">
+			    <div class="grey lighten-4 z-depth-1 col l7 slida valign-wrapper">
 					<div class="valign">
-						<h3 class="white-text "><?= ucfirst($use['nom']).' '.ucfirst($use['prenom']);?></h3>
+						<h3 class="black-text "><?= ucfirst($use['nom']).' '.ucfirst($use['prenom']);?></h3>
 						<?php if (strlen($use['description']) > 50): ?>
-							
-							<h5 class="light grey-text text-lighten-3"><?=chunk_split($use['description'])?></h5>
+
+							<h5 class="light black-text text-lighten-3"><?=chunk_split($use['description'])?></h5>
 
 							<?php else: ?>
-								<h5 class="light grey-text text-lighten-3"><?= $use['description'];?></h5>
+								<h5 class="light black-text text-lighten-3"><?= $use['description'];?></h5>
 						<?php endif; ?>
 					</div>
 				</div>
