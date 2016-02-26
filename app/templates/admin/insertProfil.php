@@ -1,7 +1,7 @@
 <?php $this->layout('layout2',['title' => 'inscription']) ?>
 <?php $this->start('main_content') ?>
     <div class="container center">
-        <h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align">Inserer un nouvel utilisateur</h3>
+        <h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align shadow-effect teal-text text-lighten-2">Inserer un nouvel utilisateur</h3>
         <div class="row">
             <form method="POST" class="col s12 m12 l6 offset-l3" >
                 <div class="input-field">

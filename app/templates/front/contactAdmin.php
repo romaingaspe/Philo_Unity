@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 <div class="container section center margetop">
-    <div class="col s6 m8 l10">
+    <div class="col s8 offset-s2  m8 offset-m2 l6 offset-l3 center align card-panel grey lighten-3 box shadow-effect">
         <h2>Contacter l'administrateur</h2>
     </div>
     <div class="row">
@@ -25,9 +25,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12 m12 l12">                    
+                <div class="input-field col s12 m12 l12">
                     <label for="message">Message</label>
-                    <textarea id="textarea1" name="message" class="materialize-textarea"placeholder="Votre message"></textarea>                    
+                    <textarea id="textarea1" name="message" class="materialize-textarea"placeholder="Votre message"></textarea>
                 </div>
             </div>
             <div class="input-field">

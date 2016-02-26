@@ -299,11 +299,9 @@ footer .row{
 }
 .box p{
 	padding-bottom: 13px;
-	color: #128b82 !important;
 }
 .box h3{ /* retrait de quelques rem du margin bottom pour équilibrer contenu box */
 	margin: 1.46rem 0 0.8rem 0;
-	color: #128b82 !important;
 }
 .shadow-effect{
 	position: relative !important;
