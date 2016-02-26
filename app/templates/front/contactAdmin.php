@@ -10,23 +10,23 @@
         <form class="col s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
             <div class="row">
                 <div class="input-field col s12 m12 l6">
+                  <i class="material-icons prefix">perm_identity</i>
                     <input placeholder="Prénom" id="prénom" type="text" class="validate">
-                    <label for="prénom">Prénom</label>
                 </div>
                 <div class="input-field col s12 m12 l6">
+                  <i class="material-icons prefix">perm_identity</i>
                     <input placeholder="Nom" id="nom" type="text" class="validate">
-                    <label for="nom">Nom</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m12 l12">
+                  <i class="material-icons prefix">info_outline</i>
                     <input placeholder="Objet du message" id="objet" type="text" class="validate">
-                    <label for="objet">Objet</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12 m12 l12">
-                    <label for="message">Message</label>
+                    <i class="material-icons prefix">chat_bubble_outline</i>
                     <textarea id="textarea1" name="message" class="materialize-textarea"placeholder="Votre message"></textarea>
                 </div>
             </div>
