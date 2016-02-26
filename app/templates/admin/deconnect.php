@@ -24,8 +24,8 @@
   <div class="container section center">
     <div class="row center">
       <div class="col s8 offset-s2  m8 offset-m2col l6 offset-l3 center align card-panel grey lighten-3 box shadow-effect">
-        <h3 class="white-text">Vous êtes déconnecté(e) </h3>
-        <p class="white-text">Philomathique Unity vous souhaite une excellente Journée :) </p>
+        <h3 class="teal-text text-lighten-2">Vous êtes déconnecté(e) </h3>
+        <p class="teal-text text-lighten-2">Philomathique Unity vous souhaite une excellente Journée :) </p>
       </div>
     </div>
       <div class="center">
