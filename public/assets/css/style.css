@@ -3,6 +3,9 @@
 body{
 	font-family: 'Raleway', sans-serif;
 }
+body{
+	background-color: rgba(130, 230, 182, 0.1);
+}
 /************************* START HOVER IMAGE PROFILS METIER...********************/
 html {height: 100%}
 body {min-height: 100%; position:relative; padding-bottom: 200px;}
