@@ -1,4 +1,4 @@
-<?php $this->layout('layout2', ['title' => 'Deconnect']) ?>
+<?php $this->layout('layout', ['title' => 'Deconnect']) ?>
 
 <?php $this->start('main_content') ?>
 <?php if($vue == true ):?>
