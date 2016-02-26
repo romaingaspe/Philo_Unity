@@ -5,7 +5,7 @@
 <div class="container section center">
     <div class="row center">
         <div class="s8 offset-s2 col m8 offset-m2 l6 offset-l3 center align card-panel grey lighten-3 margetop box shadow-effect">
-            <h3 class="white-text">Connexion</h3>
+            <h3 class="teal-text text-lighten-2">Connexion</h3>
         </div>
         <form method="POST" class="col s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
             <div class="input-field">

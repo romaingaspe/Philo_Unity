@@ -5,8 +5,8 @@
 <div class="container section center margetop">
   <div class="row center">
     <div class="col s8 offset-s2  m8 offset-m2 l6 offset-l3 center align card-panel grey lighten-3 box shadow-effect">
-      <h3 class="white-text">Déconnexion</h3>
-      <p class="white-text grey lighten-3">Etes vous sur de vouloir vous déconnecter ?</p>
+      <h3 class="teal-text text-lighten-2">Déconnexion</h3>
+      <p class="teal-text text-lighten-2 grey lighten-3">Etes vous sur de vouloir vous déconnecter ?</p>
     </div>
   <form method="POST" class="s6 offset-s3 col m6 offset-m3 col l6 offset-l3 margetop">
     <div class="input-field">
