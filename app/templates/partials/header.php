@@ -12,7 +12,7 @@
 	  			<li><a href="<?= $this->url('insertProfil') ?>">Entrer un nouvel utilisateur</a></li>
 	  			<?php endif;?>
 	  			<?php if($w_user['role']=='Admin'):?>
-	  			<li><a href="<?= $this->url('insertSection') ?>">Entrer une nouvelle section</a></li>
+	  			<li><a href="<?= $this->url('insertSection') ?>">Entrer un nouveau metier</a></li>
 	  			<?php endif;?>
 			</ul>
 			<ul id="dropdown2" class="dropdown-content">

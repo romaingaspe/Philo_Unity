@@ -1,15 +1,15 @@
 <?php $this->layout('layout',['title' => 'Insertion Section']) ?>
 <?php $this->start('main_content') ?>
     <div class="container center">
-        <h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align shadow-effect">Inserer une nouvelle section</h3>
+        <h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align shadow-effect teal-text text-lighten-2">Inserer un nouveau metier</h3>
         <div class="row">
             <form method="POST" class="col s12 m12 l6 offset-l3" >
                 <div class="input-field">
-                    <label for="section">Intitulé section</label>
+                    <label for="section">Intitulé metier</label>
                     <input type="text" name="section" placeholder="section">
                 </div>
                 <div class="input-field">
-                    <label for="description">description section</label>
+                    <label for="description">description metier</label>
                     <textarea name="description" class="materialize-textarea" placeholder="Votre description"></textarea>
                 </div>
                 <div class="input-field">
