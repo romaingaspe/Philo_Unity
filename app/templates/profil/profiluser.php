@@ -3,8 +3,8 @@
 <?php $this->start('main_content') ?>
 
   <!-- 1ère ligne de présentation -->
-  <section id="presentation" class="container row">
-      <div class="col m6 l6">
+  <section id="presentation" class="container row grey lighten-4 z-depth-1 center-align teal-text text-lighten-2">
+      <div class="col m6 l6 grey lighten-4 z-depth-1 center-align teal-text text-lighten-2">
         <img class="responsive-img" src="<?= $this->assetUrl($profil['photo']) ?>" alt="gfr"/>
       </div>
       <div class="col m6 l6">
@@ -17,7 +17,7 @@
   <!-- 2ème ligne titre -->
 	<div id="gallery-title" class="container row">
 		<div class="col s12 m12 l12">
-			<span class="col s12 m12 l12 center-align patch-centered ">Gallerie des projets de <h6><?= $profil['prenom'].' '.$profil['nom'] ?></h6></span>
+			<span class="col s12 m12 l12 center-align grey lighten-4 z-depth-1 center-align teal-text text-lighten-2">Gallerie des projets de <h4><?= $profil['prenom'].' '.$profil['nom'] ?></h4></span>
 		</div>
 	</div>
 
