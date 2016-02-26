@@ -32,29 +32,29 @@
 				<div class="container center">
 					<ul class="collapsible" data-collapsible="expandable">
     					<li>
-      						<div class="collapsible-header active"><i class="material-icons">filter_drama</i>Modifier son profil</div>
+      						<div class="collapsible-header active"><i class="material-icons">perm_identity</i>Modifier son profil</div>
       						<div class="collapsible-body">
 	      						<div class="row">
 				            		<form method="POST" class="col l8 offset-l2"  >
 						                <div class="input-field">
-						                    <label for="nom">Nom</label>
+						                    <i class="material-icons prefix">perm_identity</i>
 						                    <input type="text" name="nom" placeholder="Votre nom" value="<?php if(isset($w_user['nom'])){  echo $w_user['nom'];} ?>">
 						                </div>
 						                <div class="input-field">
-						                    <label for="prenom">Prénom</label>
+						                    <i class="material-icons prefix">perm_identity</i>
 						                    <input type="text" name="prenom" placeholder="Votre Prénom" value="<?php if(isset($w_user['prenom'])){  echo $w_user['prenom'];} ?>">
 						                </div>
 						                <div class="input-field">
-						                    <label for="email">E-mail</label>
+						                    <i class="material-icons prefix">email</i>
 						                    <input type="email" name="email" placeholder="Votre email" value="<?php if(isset($w_user['email'])){  echo $w_user['email'];} ?>">
 						                </div>
 						                <div class="input-field">
-						                    <label for="description">description</label>
+						                    <i class="material-icons prefix">chat_bubble_outline</i>
 						                    <textarea id="description" class="materialize-textarea" name="description" placeholder="Votre description" ><?php if(isset($w_user['description'])){  echo $w_user['description'];} ?></textarea>
 
 						                </div>
 						                <div class="input-field">
-						                    <label for="linkedin">linkedin</label>
+						                    <i class="material-icons prefix">chat_bubble_outline</i>
 						                    <input type="text" name="linkedin" placeholder="Votre linkedin" value="<?php if(isset($w_user['linkedin'])){  echo $w_user['linkedin'];} ?>">
 						                </div>
 
@@ -78,7 +78,7 @@
       						</div>
     					</li>
     					<li>
-		      				<div class="collapsible-header"><i class="material-icons">whatshot</i>Ajouter un projet
+		      				<div class="collapsible-header"><i class="material-icons">playlist_add</i>Ajouter un projet
 		      				</div>
 		      				<div class="collapsible-body">
 		      					<div class="row">
@@ -88,7 +88,7 @@
 	                  						<input type="text" name="project_title" placeholder="titre projet">
 	        							</div>
 								        <div class="input-field">
-								            <label for="description">description projet</label>
+								            <i class="material-icons prefix">chat_bubble_outline</i>
 								            <input type="text" name="description" placeholder="Votre description du projet">
 								        </div>
 										<div class="file-field input-field">
@@ -100,7 +100,7 @@
 												<input class="file-path validate" type="text">
 											</div>
 											<div class="input-field">
-								            	<label for="caption">description photo</label>
+								            	<i class="material-icons prefix">perm_media</i>
 								            	<input type="text" name="caption" placeholder="Votre description de la photo">
 								        	</div>
 											<div class="input-field margetop">
@@ -127,7 +127,7 @@
 
 
 	    					<li>
-			      				<div class="collapsible-header"><i class="material-icons">whatshot</i>Modifier projet <?= $projet['project_title']  ?>
+			      				<div class="collapsible-header"><i class="material-icons">loop</i>Modifier projet <?= $projet['project_title']  ?>
 			      				</div>
 			      				<div class="collapsible-body">
 			      					<div class="row">
