@@ -71,7 +71,7 @@ body{
 #presentation{
 	font-size: 1.5em;
 }
-.paginations.paginprofil, .paginations.paginmet,.paginations.paginallprofiles{
+.paginations.paginprofil, .paginations.paginmet,.paginations.paginallprofiles, .paginations.pagincomms{
 	padding: 10px 20px;
 }
 li.btn{
