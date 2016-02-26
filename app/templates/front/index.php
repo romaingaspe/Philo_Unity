@@ -18,7 +18,7 @@
 	    <ul class="slides louil" >
 			<?php foreach ($users as $use): ?>
 				<li class="row">
-				  <img class="col l5"src="<?= $use['photo'];?>">
+				  <img class="col l5" src='<?= $this->assetUrl($use['photo']);?>'>
 			    <div class="grey lighten-4 z-depth-1 col l7 slida valign-wrapper">
 					<div class="valign">
 						<h3 class="teal-text text-lighten-2"><?= ucfirst($use['nom']).' '.ucfirst($use['prenom']);?></h3>
