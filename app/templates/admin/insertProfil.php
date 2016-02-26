@@ -5,15 +5,15 @@
         <div class="row">
             <form method="POST" class="col s12 m12 l6 offset-l3" >
                 <div class="input-field">
-                    <label for="nom">Nom</label>
+                    <i class="material-icons prefix">perm_identity</i>
                     <input type="text" name="nom" placeholder="Votre nom">
                 </div>
                 <div class="input-field">
-                    <label for="prenom">Prénom</label>
+                    <i class="material-icons prefix">perm_identity</i>
                     <input type="text" name="prenom" placeholder="Votre Prénom">
                 </div>
                 <div class="input-field">
-                    <label for="email">E-mail</label>
+                    <i class="material-icons prefix">email</i>
                     <input type="text" name="email" placeholder="Votre email">
                 </div>
                 <div class="input-field">
