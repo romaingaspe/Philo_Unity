@@ -1,8 +1,8 @@
-<?php $this->layout('layout2', ['title' => 'Contact Profil']) ?>
+<?php $this->layout('layout', ['title' => 'Contact Profil']) ?>
 
 <?php $this->start('main_content') ?>
 <div class="container center">
-<h3 id="marge-titre" class"container grey lighten-4 z-depth-1">contact</h3>
+<h3 id="marge-titre" class"container grey lighten-4 z-depth-1">Contact</h3>
 <div class="row ">
 
     <form method="POST" class="col s12 m12 l6 offset-l3">

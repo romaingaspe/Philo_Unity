@@ -1,4 +1,4 @@
-<?php $this->layout('layout2',['title' => 'Inscription']) ?>
+<?php $this->layout('layout',['title' => 'Inscription']) ?>
 <?php $this->start('main_content') ?>
     <div class="container center">
         <h3 id="marge-titre" class="container grey lighten-4 z-depth-1 center-align shadow-effect teal-text text-lighten-2">Inserer un nouvel utilisateur</h3>
