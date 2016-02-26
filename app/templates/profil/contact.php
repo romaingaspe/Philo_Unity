@@ -1,4 +1,4 @@
-<?php $this->layout('layout2', ['title' => 'Accueil']) ?>
+<?php $this->layout('layout2', ['title' => 'Contact Profil']) ?>
 
 <?php $this->start('main_content') ?>
 <div class="container center">

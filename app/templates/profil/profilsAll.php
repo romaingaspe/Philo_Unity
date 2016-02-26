@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Profils']) ?>
+<?php $this->layout('layout', ['title' => 'Profils par métier']) ?>
 
 <?php $this->start('main_content') ?>
 	<div id="mainphoto3">

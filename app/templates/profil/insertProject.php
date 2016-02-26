@@ -1,4 +1,4 @@
-<?php $this->layout('layout2',['title' => 'Accueil']) ?>
+<?php $this->layout('layout2',['title' => 'Ajouter un projet']) ?>
 <?php $this->start('main_content') ?>
 
     <div class="container center">
@@ -42,4 +42,3 @@
             <?php endif; ?>
 
 <?php $this->stop('main_content') ?>
-

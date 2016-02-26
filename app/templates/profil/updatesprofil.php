@@ -6,7 +6,7 @@
 	<section class="container update-content">
 
 		<div id="entete" class="row">
-			
+
 			<div class="col l4">
 				<h6 class="center-align nom-prenom"><?php if(isset($w_user['nom'])){  echo $w_user['nom'];} ?></h6>
 
@@ -24,8 +24,8 @@
 					</div>
 				</form>
 				<p id='message'></p>
-				
-                
+
+
 			</div>
 			<div class="col l8 right  center-align">
 				<h6 class="center-align teal lighten-5">Editer vos informations</h6>
@@ -51,17 +51,17 @@
 						                <div class="input-field">
 						                    <label for="description">description</label>
 						                    <textarea id="description" class="materialize-textarea" name="description" placeholder="Votre description" ><?php if(isset($w_user['description'])){  echo $w_user['description'];} ?></textarea>
-						                    
+
 						                </div>
 						                <div class="input-field">
 						                    <label for="linkedin">linkedin</label>
 						                    <input type="text" name="linkedin" placeholder="Votre linkedin" value="<?php if(isset($w_user['linkedin'])){  echo $w_user['linkedin'];} ?>">
 						                </div>
 
-						                
+
 										<div class="input-field">
 											<button type="submit" name="submit" value="edit_profil" class="left waves-effect waves-light btn">Envoyer</button>
-										</div>	
+										</div>
 										<br>
 									    <div class="container center">
 											<?php if(!empty($errors_updateprofil)) :?>
@@ -74,7 +74,7 @@
 											<?php endif; ?>
 										</div>
 				            		</form>
-			        			</div>	
+			        			</div>
       						</div>
     					</li>
     					<li>
@@ -89,8 +89,8 @@
 	        							</div>
 								        <div class="input-field">
 								            <label for="description">description projet</label>
-								            <input type="text" name="description" placeholder="Votre description du projet">							         
-								        </div>             								        		
+								            <input type="text" name="description" placeholder="Votre description du projet">
+								        </div>
 										<div class="file-field input-field">
 											<div class="btn btn-add">
 												<span class="add">photo </span>
@@ -102,7 +102,7 @@
 											<div class="input-field">
 								            	<label for="caption">description photo</label>
 								            	<input type="text" name="caption" placeholder="Votre description de la photo">
-								        	</div> 
+								        	</div>
 											<div class="input-field margetop">
 					      						<button type="submit" name="submit" value="add_project" class="waves-effect waves-light btn">Envoyer</button>
 											</div>
@@ -118,14 +118,14 @@
 										<?php if(!empty($success_addprojet)) :?>
 								        	<p class='green-text text-darken-1'><?=$success_addprojet?></p>
 										<?php endif; ?>
-									</div>	      							
+									</div>
       							</div>
       						</div>
     					</li>
-	    				
+
 						<?php foreach ($projets as $projet) { ?>
-							
-						
+
+
 	    					<li>
 			      				<div class="collapsible-header"><i class="material-icons">whatshot</i>Modifier projet <?= $projet['project_title']  ?>
 			      				</div>
@@ -137,12 +137,12 @@
 		                  						<input type="text" name="project_title" placeholder="titre projet" value="<?= $projet['project_title']?>" >
 		        							</div>
 									        <div class="input-field">
-									            <label for="description">description projet</label>									            
+									            <label for="description">description projet</label>
 									            <textarea name="description" placeholder="description" class="materialize-textarea" > <?= $projet['description']?></textarea>
-									        </div> 
+									        </div>
 
 									        <?php foreach ($projet['photos'] as $photo) { ?>
-													
+
 												<div class="file-field input-field">
 													<img src="<?= $this->assetUrl($photo['photo']) ?>">
 													<div class="btn btn-add">
@@ -155,10 +155,10 @@
 													<div class="input-field">
 										            	<label for="caption">description photo</label>
 										            	<input type="text" name="caption" placeholder="Votre description de la photo" value="<?= $photo['caption']?>">
-										        	</div> 
-												
+										        	</div>
+
 												</div>
-											
+
 											<?php } ?>
 											<div class="input-field margetop">
 				      							<button type="submit" name="submit" value="add_project" class="waves-effect waves-light btn">Envoyer</button>
@@ -179,12 +179,12 @@
 	      						</div>
 	    					</li>
 						<?php } ?>
-  					</ul>		
-				</div>		
-		    </div>   
+  					</ul>
+				</div>
+		    </div>
 		</div>
 	</section>
-<?php $this->stop('main_content') ?>				
+<?php $this->stop('main_content') ?>
 <?php $this->start('script') ?>
 <script src="<?= $this->assetUrl('js/updateProfil.js') ?>"></script>
-<?php $this->stop('script') ?>	
+<?php $this->stop('script') ?>

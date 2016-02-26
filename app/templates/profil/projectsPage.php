@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Accueil']) ?>
+<?php $this->layout('layout', ['title' => 'Page de projet']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -18,7 +18,7 @@
         <h4><?= $projets['project_title']?></h4>
         <p><?= $projets['description']?></p>
       </div>
-      
+
       <div id="slideprojet" class="col s12 m12 l8 slider">
         <ul class="slides">
           <?php foreach($photos as $picture):?>

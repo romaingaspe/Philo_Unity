@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Contact']) ?>
+<?php $this->layout('layout', ['title' => 'Contact Admin']) ?>
 
 <?php $this->start('main_content') ?>
 <div class="container section center margetop">

@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Profils']) ?>
+<?php $this->layout('layout', ['title' => 'Tous les Profils']) ?>
 
 <?php $this->start('main_content') ?>
 	<h3 id="marge-titre" class="container grey lighten-4 shadow-effect center-align teal-text text-lighten-2">Tous les profils</h3>

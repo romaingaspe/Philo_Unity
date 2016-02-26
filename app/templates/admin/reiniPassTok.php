@@ -1,4 +1,4 @@
-<?php $this->layout('layout2', ['title' => 'Login']) ?>
+<?php $this->layout('layout2', ['title' => 'ReiniToken']) ?>
 
 <?php $this->start('main_content') ?>
 <div class="container section center">

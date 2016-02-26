@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Accueil']) ?>
+<?php $this->layout('layout', ['title' => 'Profil d\'utilisateur']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -42,7 +42,7 @@
 							<a href="<?= $this->url('projectsPage',['id' => $projet['id']])?>">
 								<div>
 									<p><?= mb_substr($projet['description'], 0 , 130)?>...</p>
-									<div class="contain-img">				
+									<div class="contain-img">
 										<img width="640" height="480" src="<?= $this->assetUrl( $projet['photos'][0]['photo']) ?>" class=" hov-zoom responsive-img wp-post-image">
 									</div>
 								</div>
