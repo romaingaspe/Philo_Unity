@@ -12,11 +12,11 @@
 </head>
 <body>
 	<?php $this->insert('partials/header') ?>
-	<div>
+	<main>
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
-	</div>
+	</main>
 	<?php $this->insert('partials/footer') ?>
 
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery-2.2.0.js') ?>"></script>
