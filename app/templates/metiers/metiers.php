@@ -25,13 +25,13 @@
 							<img class="hov-zoom" src="<?= $met['photo']?>" alt="">
 							<div class="text-box">
 								<h2 class="lighten-4">Voir les profils</h2>
-							<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
+								<a class="link-metier" href="metiers/<?= $met['alias']?>/profilsall"></a>
+							</div>
 						</div>
-					</div>
-					<div class="text-works center">
-						<h6><?= $met['section']?></h6>
-						<p class=""><?= mb_substr($met['description'], 0 , 400 ).'...'?></p>
-					</div>
+						<div class="text-works center">
+							<h6><?= $met['section']?></h6>
+							<p class=""><?= mb_substr($met['description'], 0 , 400 ).'...'?></p>
+						</div>
 					</div>
 				</article>
 		<?php endforeach;?>
