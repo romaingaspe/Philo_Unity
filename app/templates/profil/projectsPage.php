@@ -6,7 +6,7 @@
   <div id="gallery-title" class="container row">
     <div class="col s12 m12 l12">
       <div class="center">
-      <span class="col offset-s1 s10 offset-m1 m10 offset-l1 l10 center-align patch-centered nw-titleentete">Projet n° <?= $projets['id']?></span></div>
+      <h3 class="col offset-s1 s10 offset-m1 m10 offset-l1 l10 grey lighten-4 z-depth-1 center-align teal-text text-lighten-2">Projet n° <?= $projets['id']?></h3></div>
       <!-- <div class="cote-titre"></div> -->
     </div>
   </div>

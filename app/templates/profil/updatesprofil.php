@@ -28,7 +28,7 @@
 
 			</div>
 			<div class="col l8 right  center-align">
-				<h6 class="center-align teal lighten-5">Editer vos informations</h6>
+				<h4 class="center-align grey lighten-4 z-depth-1 center-align teal-text text-lighten-2">Editer vos informations</h4>
 				<div class="container center">
 					<ul class="collapsible" data-collapsible="expandable">
     					<li>
