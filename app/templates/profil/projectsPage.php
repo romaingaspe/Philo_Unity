@@ -18,13 +18,14 @@
         <h4><?= $projets['project_title']?></h4>
         <p><?= $projets['description']?></p>
       </div>
+      
       <div id="slideprojet" class="col s12 m12 l8 slider">
         <ul class="slides">
-          <?php foreach($photos as $pictures):?>
+          <?php foreach($photos as $picture):?>
             <li>
-              <img src="<?= $pictures['photo']?>"> <!-- random image -->
+              <img src="<?= $this->assetUrl($picture['photo'])?>" alt="essai"> <!-- random image -->
               <div class="caption center-align">
-                <h3><?= $pictures['caption']?></h3>
+                <h3><?= $picture['caption']?></h3>
                 <h5 class="light grey-text text-darken-2">Projet<?= $projets['project_title']?></h5>
                 </div>
             </li>

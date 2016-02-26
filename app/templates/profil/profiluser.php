@@ -25,7 +25,7 @@
 	<!-- 3ème ligne gallerie -->
 
 		<div id="cards-folio" class="container row isotope">
-			<div id="cards-global-content"> <!-- div qui contient toutes mes cartes de projets -->
+			<div id="col l12 cards-global-content"> <!-- div qui contient toutes mes cartes de projets -->
 
 			<?php foreach($projets as $projet):?>
 				<div class=" col m6 l4 ">
