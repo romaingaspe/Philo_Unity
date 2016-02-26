@@ -25,12 +25,14 @@ $(function(){
             success: function(reponse) {
                 $('.comments').empty();
                 for (m in reponse) {
+                    var h5 = ($('<h5>').addClass('center-align').text('Commentaire de'+' '+reponse[m].prenomUser+' '+reponse[m].nomUser));
                     var htmlcomms =
-                    ($('<h5>').addClass('center-align').text('Commentaire de'+' '+reponse[m].prenomUser+' '+reponse[m].nomUser))
-                    .append($('<div>').attr('id', 'com-project').addClass('grey').addClass('lighten-2').append($('<h7>').text(reponse[m].titre))
+                    ($('<div>').attr('id', 'com-project').addClass('grey').addClass('lighten-2')
+                    .append($('<h7>').text(reponse[m].titre))
                     .append($('<p>').text(reponse[m].comments))
                     .append($('<p>').addClass('date-publi').text('publié le'+' '+reponse[m].date)))
-                    $('.comments').append(htmlcomms);
+                    .insertAfter($('<h5>').addClass('center-align').text('Commentaire de'+' '+reponse[m].prenomUser+' '+reponse[m].nomUser))
+                    $('.comments').append(h5).append(htmlcomms);
                 }
             }
         })
