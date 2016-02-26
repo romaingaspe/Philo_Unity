@@ -1,4 +1,4 @@
-<?php $this->layout('layout2', ['title' => 'Login']) ?>
+<?php $this->layout('layout', ['title' => 'Login']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -27,14 +27,14 @@
 
 
 <div class="center">
-    <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>">Retour à l'accueil </a>
+    <a class="btn waves-effect waves-light red darken-1" name="action" href="<?= $this->url('index') ?>" style="margin-bottom:2%">Retour à l'accueil </a>
 </div>
 
-<? if(!empty($errors)):?>
+<?php if(!empty($errors)):?>
     <p class="red-text text-darken-1">
         <?= implode('<br />', $errors);?>
     </p>
-<? endif;?>
+<?php endif;?>
 
 
 <?php $this->stop('main_content') ?>
